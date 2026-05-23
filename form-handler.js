@@ -13,6 +13,7 @@
 
   function handleForm(form, endpoint, getPayload) {
     form.addEventListener('submit', function (e) {
+      console.log('[Zyflow] Form submit intercepted:', endpoint, getPayload(form));
       e.preventDefault();
       e.stopImmediatePropagation();
 
