@@ -28,7 +28,6 @@
         .then(function (data) {
           if (btn) btn.textContent = originalText;
           if (data.success) {
-            showMessage(form, '✓ Got it — thank you!', false);
             form.reset();
           } else {
             showMessage(form, data.error || 'Something went wrong. Please try again.', true);
