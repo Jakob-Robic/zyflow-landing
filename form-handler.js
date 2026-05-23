@@ -13,9 +13,7 @@
 
   function handleForm(form, endpoint, getPayload) {
     form.addEventListener('submit', function (e) {
-      console.log('[Zyflow] Form submit intercepted:', endpoint, getPayload(form));
       e.preventDefault();
-      e.stopImmediatePropagation();
 
       var btn = form.querySelector('button[type="submit"], button');
       var originalText = btn ? btn.textContent : '';
@@ -40,7 +38,7 @@
           if (btn) btn.textContent = originalText;
           showMessage(form, 'Connection error. Please try again.', true);
         });
-    }, true); // capture phase — fires before Framer's handlers
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function () {
