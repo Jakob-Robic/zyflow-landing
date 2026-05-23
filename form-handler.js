@@ -15,20 +15,22 @@
       .catch(function (err) { console.warn('[Zyflow] fetch failed:', err); });
   }
 
+  function wireWaitlistForm(form) {
+    var btn = form.querySelector('button');
+    var input = form.querySelector('input[name="Email"]');
+    if (!btn || !input) return;
+
+    btn.addEventListener('click', function () {
+      var email = input.value.trim();
+      if (!email || email.indexOf('@') < 0) return; // basic validation, let Framer show its own error
+      postToApi('/api/waitlist', { email: email });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
 
-    // Waitlist forms — email only
-    document.querySelectorAll('form.framer-o5csdi').forEach(function (form) {
-      var btn = form.querySelector('button');
-      var input = form.querySelector('input[name="Email"]');
-      if (!btn || !input) return;
-
-      btn.addEventListener('click', function () {
-        var email = input.value.trim();
-        if (!email || email.indexOf('@') < 0) return; // basic validation, let Framer show its own error
-        postToApi('/api/waitlist', { email: email });
-      });
-    });
+    // Waitlist forms — email only (footer + waitlist page hero)
+    document.querySelectorAll('form.framer-o5csdi, form.framer-1hq1u9z').forEach(wireWaitlistForm);
 
     // Contact form
     var contactForm = document.querySelector('form.framer-16m9ew3');
