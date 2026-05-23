@@ -1,11 +1,11 @@
 // Zyflow form handler — intercepts Framer forms and posts to Vercel API
 (function () {
-  function showMessage(form, text, isError) {
+  function showError(form, text) {
     var existing = form.querySelector('.zyflow-msg');
     if (existing) existing.remove();
     var msg = document.createElement('p');
     msg.className = 'zyflow-msg';
-    msg.style.cssText = 'margin-top:12px;font-size:14px;font-weight:500;color:' + (isError ? '#e53e3e' : '#38a169');
+    msg.style.cssText = 'margin-top:12px;font-size:14px;font-weight:500;color:#e53e3e';
     msg.textContent = text;
     form.appendChild(msg);
     setTimeout(function () { if (msg.parentNode) msg.remove(); }, 5000);
@@ -14,6 +14,7 @@
   function handleForm(form, endpoint, getPayload) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      // No stopImmediatePropagation — let Framer handle its own button state/animations
 
       var btn = form.querySelector('button[type="submit"], button');
       var originalText = btn ? btn.textContent : '';
@@ -27,17 +28,16 @@
         .then(function (r) { return r.json(); })
         .then(function (data) {
           if (btn) btn.textContent = originalText;
-          if (data.success) {
-            form.reset();
-          } else {
-            showMessage(form, data.error || 'Something went wrong. Please try again.', true);
+          if (!data.success) {
+            showError(form, data.error || 'Something went wrong. Please try again.');
           }
+          // Success: Framer shows its own confirmation state — no custom message needed
         })
         .catch(function () {
           if (btn) btn.textContent = originalText;
-          showMessage(form, 'Connection error. Please try again.', true);
+          showError(form, 'Connection error. Please try again.');
         });
-    });
+    }); // bubble phase — Framer's handlers also fire normally
   }
 
   document.addEventListener('DOMContentLoaded', function () {
