@@ -1,0 +1,13 @@
+{
+  "tool": "FramerClone",
+  "version": "1.0.0",
+  "clonedAt": "2026-05-23T15:33:34.991Z",
+  "sourceUrl": "https://www.zyflow.eu/",
+  "stats": {
+    "pages": 9,
+    "assets": 327,
+    "totalSize": 94659999,
+    "duration": 17707
+  },
+  "migrate": false
+}
