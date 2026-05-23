@@ -1,6 +1,6 @@
 // Zyflow form handler — mirrors Framer form submissions to Vercel API
-// Strategy: listen for button click (not submit), read values immediately,
-// fire API in the background. Let Framer handle its own form UI entirely.
+// Strategy: document-level click delegation (survives React hydration),
+// read values at click time, fire API in background. Framer owns the UI.
 (function () {
   function postToApi(endpoint, payload) {
     fetch(endpoint, {
@@ -15,42 +15,37 @@
       .catch(function (err) { console.warn('[Zyflow] fetch failed:', err); });
   }
 
-  function wireWaitlistForm(form) {
-    var btn = form.querySelector('button');
+  function handleWaitlistForm(form) {
     var input = form.querySelector('input[name="Email"]');
-    if (!btn || !input) return;
-
-    btn.addEventListener('click', function () {
-      var email = input.value.trim();
-      if (!email || email.indexOf('@') < 0) return; // basic validation, let Framer show its own error
-      postToApi('/api/waitlist', { email: email });
-    });
+    if (!input) return;
+    var email = input.value.trim();
+    if (!email || email.indexOf('@') < 0) return;
+    postToApi('/api/waitlist', { email: email });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function handleContactForm(form) {
+    var get = function (sel) {
+      var el = form.querySelector(sel);
+      return el ? el.value.trim() : '';
+    };
+    var name = get('input[name="Name"]');
+    var subject = get('input[name="Subject"]');
+    var email = get('input[name="Email"]');
+    var message = get('textarea[name="Message"]');
+    if (!name || !email || !message) return;
+    postToApi('/api/contact', { name: name, subject: subject, email: email, message: message });
+  }
 
-    // Waitlist forms — email only (footer + waitlist page hero)
-    document.querySelectorAll('form.framer-o5csdi, form.framer-1hq1u9z').forEach(wireWaitlistForm);
-
-    // Contact form
-    var contactForm = document.querySelector('form.framer-16m9ew3');
-    if (contactForm) {
-      var btn = contactForm.querySelector('button');
-      if (btn) {
-        btn.addEventListener('click', function () {
-          var get = function (sel) {
-            var el = contactForm.querySelector(sel);
-            return el ? el.value.trim() : '';
-          };
-          var name    = get('input[name="Name"]');
-          var subject = get('input[name="Subject"]');
-          var email   = get('input[name="Email"]');
-          var message = get('textarea[name="Message"]');
-          if (!name || !email || !message) return; // required fields missing
-          postToApi('/api/contact', { name: name, subject: subject, email: email, message: message });
-        });
-      }
+  document.addEventListener('click', function (e) {
+    var waitlistBtn = e.target.closest('form.framer-o5csdi button, form.framer-1hq1u9z button');
+    if (waitlistBtn) {
+      handleWaitlistForm(waitlistBtn.closest('form'));
+      return;
     }
 
+    var contactBtn = e.target.closest('form.framer-16m9ew3 button');
+    if (contactBtn) {
+      handleContactForm(contactBtn.closest('form'));
+    }
   });
 })();
