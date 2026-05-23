@@ -13,12 +13,10 @@
 
   function handleForm(form, endpoint, getPayload) {
     form.addEventListener('submit', function (e) {
+      // Capture phase: prevent browser navigation, but let event keep propagating so
+      // React's bubble-phase delegation still fires → Framer button state updates normally.
+      // Do NOT call stopImmediatePropagation — that would kill React's handlers.
       e.preventDefault();
-      // No stopImmediatePropagation — let Framer handle its own button state/animations
-
-      var btn = form.querySelector('button[type="submit"], button');
-      var originalText = btn ? btn.textContent : '';
-      if (btn) btn.textContent = 'Sending…';
 
       fetch(endpoint, {
         method: 'POST',
@@ -27,17 +25,15 @@
       })
         .then(function (r) { return r.json(); })
         .then(function (data) {
-          if (btn) btn.textContent = originalText;
           if (!data.success) {
             showError(form, data.error || 'Something went wrong. Please try again.');
           }
           // Success: Framer shows its own confirmation state — no custom message needed
         })
         .catch(function () {
-          if (btn) btn.textContent = originalText;
           showError(form, 'Connection error. Please try again.');
         });
-    }); // bubble phase — Framer's handlers also fire normally
+    }, true); // capture phase — fires before React's bubble delegation, preventing navigation
   }
 
   document.addEventListener('DOMContentLoaded', function () {
