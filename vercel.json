@@ -1,8 +1,11 @@
 {
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" }
+    { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" },
+    { "source": "/sl/legal-pages/(.*)", "destination": "/sl/legal-pages/$1.html" }
   ],
   "headers": [
     {
@@ -10,7 +13,7 @@
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     },
     {

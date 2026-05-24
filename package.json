@@ -1,7 +1,17 @@
 {
   "name": "zyflow-landing",
   "version": "1.0.0",
+  "scripts": {
+    "build:i18n": "node scripts/build-locale.js",
+    "annotate:i18n": "node scripts/annotate-html.js",
+    "locales:export": "node scripts/export-locales.js",
+    "build": "node scripts/build-locale.js && node scripts/prepare-public.js",
+    "check:leaks": "node scripts/check-leaks.js"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
   }
 }

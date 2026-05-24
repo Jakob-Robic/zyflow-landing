@@ -2,3 +2,6 @@
 *.log
 node_modules/
 serve.py
+sl/
+public/
+.vercel
