@@ -159,6 +159,6 @@ function buildLocaleBlock(prefixQ, prefixB) {
 const faqPage = buildLocaleBlock("faq.page.q", "faq.b");
 faqPage.en["faq.page.cta"] =
   "Didn\u2019t find what you\u2019re looking for?";
-faqPage.sl["faq.page.cta"] = "Nisi našel, kar iščeš?";
+faqPage.sl["faq.page.cta"] = "Niste našli, kar iščete?";
 
 module.exports = faqPage;
