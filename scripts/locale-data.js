@@ -2,6 +2,8 @@
  * Source strings for locales/en.json and locales/sl.json.
  * Run: node scripts/export-locales.js
  */
+const faqPageLocale = require("./faq-page-i18n");
+
 module.exports = {
   en: {
     "nav.features": "Features",
@@ -14,6 +16,15 @@ module.exports = {
     "hero.headline": "Ride further and plan smarter.",
     "hero.subline": "Know your battery, elevation, and weather before you leave the driveway.",
     "hero.cta.testflight": "Download on TestFlight",
+
+    "home.body.battery":
+      "Traditional apps ignore your battery. Miss a charge stop and your ride ends early.",
+    "home.body.routing":
+      "Smart routing that fits into every ride. Battery aware planning, live charging stops, and weather forecasts help you go further with confidence.",
+    "home.body.charging":
+      "*Charging stops placed automatically based on your battery range.",
+    "home.mock.plan": "Plan the next day",
+    "home.mock.tidy": "Tidy up and prepare for tomorrow.",
 
     "about.animated.plan": "Plan",
     "about.animated.epic": "epic",
@@ -117,6 +128,7 @@ module.exports = {
     "faq.a4": "Android is in development. Join the waitlist and we'll email you as soon as a beta spot opens.",
     "faq.q5": "How do I give feedback?",
     "faq.a5": "Use the in-app feedback option or contact us at support@zyflow.eu — we read every message.",
+    ...faqPageLocale.en,
 
     "cta.final.title": "Ride further starting today",
     "cta.final.ios": "Download for iPhone",
@@ -144,20 +156,25 @@ module.exports = {
     "about.page.download": "Download the app",
     "about.page.partners": "Partnered with",
     "about.page.why.title": "Why Zyflow exists",
-    "about.page.why.body": "Real e-bike riding is messy. Headwinds, steep climbs, charging stations that are out of the way — planning a long ride shouldn't feel like guesswork.",
+    "about.page.why.body": "Real e-bike riding is messy. Headwinds, steep climbs, charging stations that are out of service. Zyflow plans around all of it so you can focus on the ride.",
     "about.page.feature1": "Plans your route around your actual range, not just distance.",
     "about.page.feature2": "Accounts for climbs and descents so your battery estimate is accurate.",
     "about.page.feature3": "Checks conditions at each segment, not just at your start point.",
     "about.page.feature4": "Finds chargers along your route and factors stop time into your plan.",
     "about.page.numbers": "Zyflow in numbers",
     "about.page.team": "Small team, big rides.",
+    "about.body.fullday":
+      "A full-day e-bike ride planned end-to-end with battery, elevation, and charging stops.",
+    "about.feature.weather": "Weather along the route",
+    "about.team.title": "Our Team",
 
-    "contact.page.title": "Contact us",
-    "contact.page.intro": "If you have questions, feedback, or need support, reach out and we'll get back to you as soon as we can.",
+    "contact.page.title": "We\u2019re here to help",
+    "contact.page.intro": "If you have questions, feedback, or need support, reach out and we\u2019ll get back to you as soon as we can.",
     "contact.form.name": "Your name*",
     "contact.form.email": "Email address*",
     "contact.form.subject": "Subject",
-    "contact.form.message": "Message",
+    "contact.form.message": "Write your message",
+    "contact.form.topic": "Topic of your request",
     "contact.form.submit": "Send a message",
     "contact.common": "Common questions",
     "contact.reach": "Reach us directly",
@@ -228,6 +245,15 @@ module.exports = {
     "hero.headline": "Kolesari dlje in načrtuj pametneje.",
     "hero.subline": "Preveri baterijo, nadmorsko višino in vreme, preden se odpraviš na pot.",
     "hero.cta.testflight": "Prenesi na TestFlight",
+
+    "home.body.battery":
+      "Običajne aplikacije ignorirajo tvojo baterijo. Zamudi polnilnico in vožnja se konča prezgodaj.",
+    "home.body.routing":
+      "Pametno usmerjanje, ki se prilega vsaki vožnji. Načrtovanje z mislijo na baterijo, polnilne postaje v živo in vremenske napovedi ti pomagajo voziti dlje z več zanesljivosti.",
+    "home.body.charging":
+      "*Polnilne postaje se samodejno postavijo glede na doseg tvoje baterije.",
+    "home.mock.plan": "Načrtuj naslednji dan",
+    "home.mock.tidy": "Uredi in pripravi se na jutri.",
 
     "about.animated.plan": "Načrtuj",
     "about.animated.epic": "epske",
@@ -331,6 +357,7 @@ module.exports = {
     "faq.a4": "Android je v razvoju. Pridruži se čakalni listi in obvestili te bomo, ko se odpre mesto.",
     "faq.q5": "Kako pošljem povratne informacije?",
     "faq.a5": "Uporabi povratne informacije v aplikaciji ali piši na support@zyflow.eu — preberemo vsako sporočilo.",
+    ...faqPageLocale.sl,
 
     "cta.final.title": "Začni kolesariti dlje že danes",
     "cta.final.ios": "Prenesi za iPhone",
@@ -358,20 +385,25 @@ module.exports = {
     "about.page.download": "Prenesi aplikacijo",
     "about.page.partners": "Partnerji",
     "about.page.why.title": "Zakaj obstaja Zyflow",
-    "about.page.why.body": "Resnična vožnja z e-kolesom je nepredvidljiva. Veter, strmi vzponi, polnilnice ob strani — načrtovanje ne bi smelo biti ugibanje.",
+    "about.page.why.body": "Resnična vožnja z e-kolesom je komplicirana. Proti veter, strmi vzponi, polnilnice, ki ne delujejo. Zyflow z vsem tem računa, da se lahko osredotočiš na vožnjo.",
     "about.page.feature1": "Načrtuje pot glede na dejanski doseg, ne samo razdaljo.",
     "about.page.feature2": "Upošteva vzpone in spuste za natančno oceno baterije.",
     "about.page.feature3": "Preveri razmere na vsakem odseku, ne samo na začetku.",
     "about.page.feature4": "Najde polnilnice na poti in vključi čas postanka v načrt.",
     "about.page.numbers": "Zyflow v številkah",
     "about.page.team": "Majhna ekipa, velike vožnje.",
+    "about.body.fullday":
+      "Celodnevna vožnja z e-kolesom, načrtovana od začetka do konca z baterijo, nadmorsko višino in polnilnimi postajami.",
+    "about.feature.weather": "Vreme vzdolž poti",
+    "about.team.title": "Naša ekipa",
 
-    "contact.page.title": "Kontaktiraj nas",
+    "contact.page.title": "Tu smo, da ti pomagamo",
     "contact.page.intro": "Če imaš vprašanja, povratne informacije ali potrebuješ podporo, piši nam — odgovorimo čim prej.",
     "contact.form.name": "Tvoje ime*",
     "contact.form.email": "E-poštni naslov*",
     "contact.form.subject": "Zadeva",
-    "contact.form.message": "Sporočilo",
+    "contact.form.message": "Napiši svoje sporočilo",
+    "contact.form.topic": "Tema tvoje poizvedbe",
     "contact.form.submit": "Pošlji sporočilo",
     "contact.common": "Pogosta vprašanja",
     "contact.reach": "Doseži nas neposredno",

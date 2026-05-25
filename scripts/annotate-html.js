@@ -79,6 +79,14 @@ const PAGES = [
 
 const SHARED_PREFIXES = ["nav.", "footer.", "meta."];
 
+function normalizeText(text) {
+  return text
+    .replace(/\u00a0/g, " ")
+    .replace(/[\u2018\u2019]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function getDirectText($, el) {
   const node = $(el).get(0);
   if (!node) return "";
@@ -86,7 +94,7 @@ function getDirectText($, el) {
   for (const child of node.childNodes || []) {
     if (child.type === "text") text += child.data;
   }
-  return text.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim();
+  return normalizeText(text);
 }
 
 function shouldAnnotateKey(key, scope) {
@@ -121,7 +129,7 @@ function annotateFile(page) {
     if (!direct) return;
 
     for (const [key, text] of textToKey) {
-      if (direct === text.replace(/\u00a0/g, " ").replace(/\s+/g, " ").trim()) {
+      if (direct === normalizeText(text)) {
         $el.attr("data-i18n", key);
         annotated++;
         break;
@@ -135,7 +143,7 @@ function annotateFile(page) {
     if ($el.attr("data-i18n-placeholder")) return;
     const ph = ($el.attr("placeholder") || "").trim();
     for (const [key, text] of textToKey) {
-      if (ph === text) {
+      if (ph === text || ph === normalizeText(text)) {
         $el.attr("data-i18n-placeholder", key);
         annotated++;
         break;
@@ -143,9 +151,14 @@ function annotateFile(page) {
     }
   });
 
-  // Head meta keys
+  // Head meta keys (build-locale reads these; data-i18n on nodes for wiring checks)
   $("head").attr("data-i18n-title", page.metaTitle);
   $("head").attr("data-i18n-meta-description", page.metaDesc);
+  const titleEl = $("title").first();
+  if (titleEl.length) titleEl.attr("data-i18n", page.metaTitle);
+  $('meta[name="description"]').each((_, el) => {
+    $(el).attr("data-i18n", page.metaDesc);
+  });
 
   // Changelog: skip translating release notes body
   if (page.skipMarker) {
