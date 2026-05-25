@@ -139,27 +139,89 @@
   var observer;
   var burstTimer;
   var burstUntil = 0;
+  var hydrationTimeout;
+  var translationsComplete = false;
+
+  function countRemainingEn() {
+    var count = 0;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      if (isSkipped(el)) return;
+      if (el.tagName === "TITLE" || el.tagName === "META") return;
+      var key = el.getAttribute("data-i18n");
+      if (!key || EN[key] == null) return;
+      if (normalizeText(el.textContent || "") === normalizeText(EN[key])) count++;
+    });
+    return count;
+  }
+
+  function disconnectRuntime() {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
+    clearTimeout(debounceTimer);
+    debounceTimer = null;
+    if (burstTimer) {
+      clearInterval(burstTimer);
+      burstTimer = null;
+    }
+    clearTimeout(hydrationTimeout);
+    hydrationTimeout = null;
+  }
+
+  function checkTranslationsComplete() {
+    if (translationsComplete) return;
+    if (countRemainingEn() === 0) {
+      translationsComplete = true;
+      disconnectRuntime();
+    }
+  }
+
+  function mutationsAreRelevant(mutations) {
+    return mutations.some(function (m) {
+      return m.type === "childList" && m.addedNodes.length > 0;
+    });
+  }
 
   function scheduleApply() {
+    if (translationsComplete) return;
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(applyAll, 50);
+    debounceTimer = setTimeout(function () {
+      applyAll();
+      checkTranslationsComplete();
+    }, 50);
+  }
+
+  function onMutations(mutations) {
+    if (translationsComplete) return;
+    if (!mutationsAreRelevant(mutations)) return;
+    scheduleApply();
   }
 
   function startBurst() {
-    burstUntil = Date.now() + 8000;
+    if (translationsComplete) return;
+    burstUntil = Date.now() + 5000;
     if (burstTimer) return;
     burstTimer = setInterval(function () {
       applyAll();
-      if (Date.now() > burstUntil) {
+      checkTranslationsComplete();
+      if (translationsComplete || Date.now() > burstUntil) {
         clearInterval(burstTimer);
         burstTimer = null;
       }
-    }, 150);
+    }, 300);
+  }
+
+  function startHydrationTimeout() {
+    if (hydrationTimeout) return;
+    hydrationTimeout = setTimeout(function () {
+      disconnectRuntime();
+    }, 12000);
   }
 
   function startObserver() {
-    if (!document.body || observer) return;
-    observer = new MutationObserver(scheduleApply);
+    if (translationsComplete || !document.body || observer) return;
+    observer = new MutationObserver(onMutations);
     observer.observe(document.body, {
       childList: true,
       subtree: true,
@@ -169,8 +231,11 @@
 
   function init() {
     applyAll();
+    checkTranslationsComplete();
+    if (translationsComplete) return;
     startObserver();
     startBurst();
+    startHydrationTimeout();
     scheduleApply();
   }
 
@@ -182,7 +247,10 @@
 
   window.addEventListener("load", function () {
     applyAll();
+    checkTranslationsComplete();
+    if (translationsComplete) return;
     startBurst();
+    startHydrationTimeout();
     scheduleApply();
   });
 })();
