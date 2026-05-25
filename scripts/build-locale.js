@@ -35,19 +35,35 @@ const SL_RUNTIME_TEMPLATE = fs.readFileSync(
   "utf8"
 );
 
-function buildSlRuntimeScript() {
-  let script = SL_RUNTIME_TEMPLATE;
+const NAV_SWITCHER_RUNTIME_TEMPLATE = fs.readFileSync(
+  path.join(__dirname, "nav-switcher-runtime-template.js"),
+  "utf8"
+);
+
+function buildLocaleInlineScript(template, templateName) {
+  let script = template;
   for (const [marker, data] of [
     ["__ZF_SL_LOCALE__", sl],
     ["__ZF_EN_LOCALE__", en],
   ]) {
     const parts = script.split(marker);
     if (parts.length !== 2) {
-      throw new Error(`sl-runtime-template.js must contain exactly one ${marker}`);
+      throw new Error(`${templateName} must contain exactly one ${marker}`);
     }
     script = parts[0] + JSON.stringify(data) + parts[1];
   }
   return script;
+}
+
+function buildSlRuntimeScript() {
+  return buildLocaleInlineScript(SL_RUNTIME_TEMPLATE, "sl-runtime-template.js");
+}
+
+function buildNavSwitcherRuntimeScript() {
+  return buildLocaleInlineScript(
+    NAV_SWITCHER_RUNTIME_TEMPLATE,
+    "nav-switcher-runtime-template.js"
+  );
 }
 
 const LANG_SWITCHER_CSS = fs.readFileSync(
@@ -152,11 +168,18 @@ function injectSlRuntime($) {
   $("head").append(`<script id="zf-sl-runtime">${script}</script>`);
 }
 
+function injectNavSwitcherRuntime($) {
+  $("#zf-nav-switcher-js").remove();
+  const script = buildNavSwitcherRuntimeScript();
+  $("head").append(`<script id="zf-nav-switcher-js">${script}</script>`);
+}
+
 function injectLangAssets($, isSl) {
   $("#zf-lang-switcher-css").remove();
   $("head").append(`<style id="zf-lang-switcher-css">${LANG_SWITCHER_CSS}</style>`);
   $("#zf-lang-switcher-js").remove();
   $("body").append(`<script id="zf-lang-switcher-js">${LANG_SWITCHER_JS}</script>`);
+  injectNavSwitcherRuntime($);
 }
 
 function injectLangSwitcher($, isSl) {

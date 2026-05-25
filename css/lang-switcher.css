@@ -112,3 +112,135 @@
 .zf-lang-menu li[aria-selected="true"]::after {
   content: " ✓";
 }
+
+/* —— In-pill desktop nav switcher (injected post-hydration) —— */
+
+.zf-nav-sep {
+  width: 1px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
+.zf-nav-switcher-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.zf-nav-switcher-wrap .zf-lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.zf-nav-switcher-wrap .zf-lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  font-family: inherit;
+  line-height: 1;
+}
+
+.zf-nav-switcher-wrap .zf-lang-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: none;
+}
+
+.zf-nav-switcher-wrap .zf-lang-btn:active,
+.zf-nav-switcher-wrap .zf-lang-btn:focus {
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: none;
+}
+
+.zf-nav-switcher-wrap .zf-lang-chevron {
+  transition: transform 0.2s;
+}
+
+.zf-nav-switcher-wrap .zf-lang-btn[aria-expanded="true"] .zf-lang-chevron {
+  transform: rotate(180deg);
+}
+
+/* Body-portal menu (avoids overflow:clip on Framer nav pill) */
+.zf-nav-lang-menu {
+  position: fixed;
+  z-index: 10000;
+  right: auto;
+  margin: 0;
+}
+
+/* Hide fixed portal on tablet and phone (hamburger row handles language) */
+@media (max-width: 1199px) {
+  #zf-switcher-portal {
+    display: none !important;
+  }
+}
+
+/* Hide fixed portal on desktop when in-pill switcher is active */
+@media (min-width: 1200px) {
+  #zf-switcher-portal {
+    display: none;
+  }
+}
+
+/* Mobile language row */
+.zf-mobile-lang-row {
+  width: 100%;
+}
+
+.zf-mobile-lang-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 4px;
+}
+
+.zf-mobile-lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #1a1a1a;
+  text-align: left;
+}
+
+.zf-mobile-lang-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.zf-mobile-lang-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.zf-mobile-lang-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 14px;
+}
+
+.zf-mobile-lang-arrow {
+  font-size: 16px;
+}
