@@ -30,6 +30,26 @@ const SOURCE_PAGES = [
   "legal-pages/terms-conditions.html",
 ];
 
+const SL_RUNTIME_TEMPLATE = fs.readFileSync(
+  path.join(__dirname, "sl-runtime-template.js"),
+  "utf8"
+);
+
+function buildSlRuntimeScript() {
+  let script = SL_RUNTIME_TEMPLATE;
+  for (const [marker, data] of [
+    ["__ZF_SL_LOCALE__", sl],
+    ["__ZF_EN_LOCALE__", en],
+  ]) {
+    const parts = script.split(marker);
+    if (parts.length !== 2) {
+      throw new Error(`sl-runtime-template.js must contain exactly one ${marker}`);
+    }
+    script = parts[0] + JSON.stringify(data) + parts[1];
+  }
+  return script;
+}
+
 const LANG_SWITCHER_CSS = fs.readFileSync(
   path.join(ROOT, "css", "lang-switcher.css"),
   "utf8"
@@ -121,6 +141,12 @@ function injectHreflang($, relFile) {
       `<link rel="alternate" hreflang="sl" href="${slHref}" data-zf-hreflang>` +
       `<link rel="alternate" hreflang="x-default" href="${enHref}" data-zf-hreflang>`
   );
+}
+
+function injectSlRuntime($) {
+  $("#zf-sl-runtime").remove();
+  const script = buildSlRuntimeScript();
+  $("head").append(`<script id="zf-sl-runtime">${script}</script>`);
 }
 
 function injectLangAssets($, isSl) {
@@ -246,12 +272,19 @@ function main() {
 
     // Slovenian output
     const $sl = cheerio.load(originalHtml, { decodeEntities: false });
-    $sl("html").attr("lang", "sl");
+    const $head = $sl("head");
+    const $html = $sl("html");
+    const titleKey = $head.attr("data-i18n-title");
+    const descKey = $head.attr("data-i18n-meta-description");
+    if (titleKey) $html.attr("data-i18n-title", titleKey);
+    if (descKey) $html.attr("data-i18n-meta-description", descKey);
+    $html.attr("lang", "sl");
     applyTranslations($sl, "sl", relFile);
     rewriteInternalLinks($sl, true);
     injectLangSwitcher($sl, true);
     injectHreflang($sl, relFile);
     injectLangAssets($sl, true);
+    injectSlRuntime($sl);
     const slOut = path.join(SL_DIR, relFile);
     fs.mkdirSync(path.dirname(slOut), { recursive: true });
     fs.writeFileSync(slOut, $sl.html());
