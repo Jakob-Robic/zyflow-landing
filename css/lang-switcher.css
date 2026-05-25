@@ -1,35 +1,80 @@
-.zf-lang-switcher {
+/* Portal — fixed overlay aligned to Framer nav (outside #main) */
+#zf-switcher-portal {
+  position: fixed;
+  top: 0;
+  left: auto;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+#zf-switcher-portal .zf-lang-switcher {
+  pointer-events: all;
   position: relative;
   display: inline-flex;
   align-items: center;
-  margin-left: 12px;
-  z-index: 300;
+  margin: 0;
 }
+
+/* Desktop (≥1200px) — left of CTA icons, aligned to nav bar */
+@media (min-width: 1200px) {
+  #zf-switcher-portal {
+    top: 30px;
+    right: 244px;
+    height: 64px;
+  }
+}
+
+/* Tablet (810px–1199px) — left of menu button */
+@media (min-width: 810px) and (max-width: 1199.98px) {
+  #zf-switcher-portal {
+    top: 30px;
+    right: 162px;
+    height: 60px;
+  }
+}
+
+/* Phone (≤809px) — left of menu button */
+@media (max-width: 809.98px) {
+  #zf-switcher-portal {
+    top: 20px;
+    right: 78px;
+    height: 52px;
+  }
+}
+
 .zf-lang-btn {
   display: flex;
   align-items: center;
   gap: 4px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #1a1a1a;
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: 6px 12px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: border-color 0.2s, color 0.2s;
+  transition: background 0.2s, border-color 0.2s;
   font-family: inherit;
+  line-height: 1;
 }
+
 .zf-lang-btn:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.25);
 }
+
 .zf-lang-chevron {
   transition: transform 0.2s;
 }
+
 .zf-lang-btn[aria-expanded="true"] .zf-lang-chevron {
   transform: rotate(180deg);
 }
+
 .zf-lang-menu {
   position: absolute;
   top: calc(100% + 6px);
@@ -43,6 +88,7 @@
   min-width: 130px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
+
 .zf-lang-menu li {
   padding: 8px 12px;
   border-radius: 5px;
@@ -52,14 +98,17 @@
   cursor: pointer;
   transition: background 0.15s, color 0.15s;
 }
+
 .zf-lang-menu li:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #fff;
 }
+
 .zf-lang-menu li[aria-selected="true"] {
   color: #fff;
   font-weight: 600;
 }
+
 .zf-lang-menu li[aria-selected="true"]::after {
   content: " ✓";
 }

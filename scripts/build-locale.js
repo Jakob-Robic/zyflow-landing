@@ -56,7 +56,7 @@ const LANG_SWITCHER_CSS = fs.readFileSync(
 );
 
 const LANG_SWITCHER_JS = `(function() {
-  var switcher = document.querySelector('.zf-lang-switcher');
+  var switcher = document.querySelector('#zf-switcher-portal .zf-lang-switcher');
   if (!switcher) return;
   var btn = switcher.querySelector('.zf-lang-btn');
   var menu = switcher.querySelector('.zf-lang-menu');
@@ -81,14 +81,17 @@ const LANG_SWITCHER_JS = `(function() {
   });
 
   menu.querySelectorAll('li').forEach(function(li) {
-    li.addEventListener('click', function() {
+    li.addEventListener('click', function(e) {
+      e.stopPropagation();
       if (li.dataset.lang === (isSL ? 'sl' : 'en')) return;
-      var currentPath = location.pathname;
+      var currentPath = location.pathname.replace(/\\/index\\.html$/, '/') || '/';
       var target;
       if (li.dataset.lang === 'sl' && !isSL) {
-        target = '/sl' + (currentPath === '/' ? '/' : currentPath.replace(/\\.html$/, ''));
+        var enPath = currentPath.replace(/\\.html$/, '') || '/';
+        target = enPath === '/' ? '/sl/' : '/sl' + enPath;
       } else if (li.dataset.lang === 'en' && isSL) {
         target = currentPath.replace(/^\\/sl/, '') || '/';
+        if (target !== '/' && !target.endsWith('.html')) target += '/';
       } else {
         return;
       }
@@ -150,24 +153,21 @@ function injectSlRuntime($) {
 }
 
 function injectLangAssets($, isSl) {
-  if (!$("#zf-lang-switcher-css").length) {
-    $("head").append(`<style id="zf-lang-switcher-css">${LANG_SWITCHER_CSS}</style>`);
-  }
-  if (!$("#zf-lang-switcher-js").length) {
-    $("body").append(`<script id="zf-lang-switcher-js">${LANG_SWITCHER_JS}</script>`);
-  }
+  $("#zf-lang-switcher-css").remove();
+  $("head").append(`<style id="zf-lang-switcher-css">${LANG_SWITCHER_CSS}</style>`);
+  $("#zf-lang-switcher-js").remove();
+  $("body").append(`<script id="zf-lang-switcher-js">${LANG_SWITCHER_JS}</script>`);
 }
 
 function injectLangSwitcher($, isSl) {
-  if ($(".zf-lang-switcher").length) return;
-  const navs = $('[data-framer-name="Nav"]');
-  const html = langSwitcherHtml(isSl);
-  if (navs.length) {
-    navs.each((_, nav) => {
-      $(nav).append(html);
-    });
+  $("#main .zf-lang-switcher").remove();
+  $("#zf-switcher-portal").remove();
+  const portal = `<div id="zf-switcher-portal">${langSwitcherHtml(isSl)}</div>`;
+  const main = $("#main");
+  if (main.length) {
+    main.after(portal);
   } else {
-    $("body").prepend(html);
+    $("body").append(portal);
   }
 }
 
