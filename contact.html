@@ -509,42 +509,90 @@ a[href*="framer.com/templates"],a[href*="framer.com/marketplace"]{display:none!i
   transform: rotate(180deg);
 }
 
+/* Portal / mobile language dropdown (outside Framer nav pill) */
 .zf-lang-menu {
   position: absolute;
   top: calc(100% + 6px);
   right: 0;
-  background: #1f1f1f;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 4px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 6px;
   list-style: none;
   margin: 0;
-  min-width: 130px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  min-width: 140px;
+  box-shadow: 0 8px 20px rgba(19, 21, 21, 0.08);
 }
 
 .zf-lang-menu li {
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.2;
+  color: #494d4d;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .zf-lang-menu li:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #fff;
+  background: #eae6dc;
+  color: #1a1a1a;
 }
 
 .zf-lang-menu li[aria-selected="true"] {
-  color: #fff;
+  color: #1a1a1a;
   font-weight: 600;
 }
 
 .zf-lang-menu li[aria-selected="true"]::after {
   content: " ✓";
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Desktop nav pill dropdown (body portal — avoids overflow:clip on Framer nav) */
+.zf-nav-lang-menu {
+  position: fixed;
+  z-index: 10000;
+  right: auto;
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 6px;
+  list-style: none;
+  box-shadow: 0 8px 20px rgba(19, 21, 21, 0.08);
+  min-width: 148px;
+}
+
+.zf-nav-lang-menu li {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #494d4d;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.zf-nav-lang-menu li:hover {
+  background: #eae6dc;
+  color: #1a1a1a;
+}
+
+.zf-nav-lang-menu li[aria-selected="true"] {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.zf-nav-lang-menu li[aria-selected="true"]::after {
+  content: " ✓";
+  margin-left: 6px;
+  font-weight: 600;
+  color: #1a1a1a;
 }
 
 /* —— In-pill desktop nav switcher (injected post-hydration) —— */
@@ -570,33 +618,32 @@ a[href*="framer.com/templates"],a[href*="framer.com/marketplace"]{display:none!i
   margin: 0;
 }
 
+/* Match Framer nav pill links (a.framer-UJvYm / framer-wwdr3y) */
 .zf-nav-switcher-wrap .zf-lang-btn {
   display: flex;
   align-items: center;
-  gap: 5px;
-  padding: 10px 14px;
+  gap: 10px;
+  padding: 16px 28px;
   background: transparent;
   border: none;
   box-shadow: none;
   border-radius: 16px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--token-cd1c7c13-ebd3-41ce-926a-aa3c5ab650b6, #494d4d);
   cursor: pointer;
   white-space: nowrap;
   outline: none;
   font-family: inherit;
   line-height: 1;
+  transition: all 0.45s cubic-bezier(0.44, 0, 0.56, 1);
 }
 
-.zf-nav-switcher-wrap .zf-lang-btn:hover {
-  background: rgba(0, 0, 0, 0.04);
-  box-shadow: none;
-}
-
+.zf-nav-switcher-wrap .zf-lang-btn:hover,
 .zf-nav-switcher-wrap .zf-lang-btn:active,
-.zf-nav-switcher-wrap .zf-lang-btn:focus {
-  background: rgba(0, 0, 0, 0.06);
+.zf-nav-switcher-wrap .zf-lang-btn:focus-visible,
+.zf-nav-switcher-wrap .zf-lang-btn[aria-expanded="true"] {
+  background: var(--token-f2800c26-6e34-4b21-9dca-76fdf5f23c96, rgb(232, 232, 232));
   box-shadow: none;
 }
 
