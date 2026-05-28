@@ -161,6 +161,28 @@
   color: #1a1a1a;
 }
 
+/* Desktop nav — single active item (Default + Collapsed Framer nav variants) */
+@media (min-width: 1200px) {
+  nav.framer-FXVKP a.framer-UJvYm.zf-nav-active {
+    background-color: var(
+      --token-f2800c26-6e34-4b21-9dca-76fdf5f23c96,
+      rgb(232, 232, 232)
+    ) !important;
+    border-radius: 16px;
+  }
+
+  nav.framer-FXVKP a.framer-UJvYm.framer-v-1qxz9if:not(.zf-nav-active) {
+    background-color: transparent !important;
+  }
+
+  nav.framer-FXVKP a.framer-UJvYm.zf-nav-active .framer-text {
+    --framer-text-color: var(
+      --token-56aae5fc-f995-4aaa-9142-1f32f0eb2b60,
+      rgb(19, 21, 21)
+    ) !important;
+  }
+}
+
 /* —— In-pill desktop nav switcher (injected post-hydration) —— */
 
 .zf-nav-sep {
@@ -243,7 +265,13 @@
   }
 }
 
-/* Mobile language row */
+/* Mobile language row (hamburger menu only) */
+@media (min-width: 1200px) {
+  .zf-mobile-lang-row {
+    display: none !important;
+  }
+}
+
 .zf-mobile-lang-row {
   width: 100%;
 }
