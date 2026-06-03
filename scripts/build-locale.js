@@ -3,7 +3,8 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 
-const BASE_URL = "https://zyflow.eu";
+const BASE_URL = "https://www.zyflow.eu";
+const OG_IMAGE = `${BASE_URL}/assets/lFDyHHINpGJpVByWb3OhmmcOgU.jpg`;
 const ROOT = path.join(__dirname, "..");
 const SL_DIR = path.join(ROOT, "sl");
 
@@ -146,6 +147,50 @@ function urlPathForFile(relFile, localePrefix) {
   return base === "/" ? "/" : base;
 }
 
+function injectCanonical($, relFile, localePrefix) {
+  const pagePath = urlPathForFile(relFile, localePrefix);
+  const canonical =
+    pagePath === "/" || pagePath === "/sl/"
+      ? `${BASE_URL}${pagePath}`
+      : `${BASE_URL}${pagePath}`;
+
+  $('link[rel="canonical"][data-zf-canonical]').remove();
+  $("head").append(`<link rel="canonical" href="${canonical}" data-zf-canonical>`);
+}
+
+function applyPageMeta($, locale, relFile) {
+  const dict = locale === "sl" ? sl : en;
+  const head = $("head");
+  const titleKey = head.attr("data-i18n-title");
+  const descKey = head.attr("data-i18n-meta-description");
+
+  const title = titleKey && dict[titleKey] ? dict[titleKey] : null;
+  const desc = descKey && dict[descKey] ? dict[descKey] : null;
+
+  if (title) {
+    $("title").text(title);
+    $('meta[property="og:title"]').attr("content", title);
+    $('meta[name="twitter:title"]').attr("content", title);
+  }
+  if (desc) {
+    $('meta[name="description"]').attr("content", desc);
+    $('meta[property="og:description"]').attr("content", desc);
+    $('meta[name="twitter:description"]').attr("content", desc);
+  }
+
+  const pagePath = urlPathForFile(relFile, locale === "sl" ? "sl" : "en");
+  const ogUrl =
+    pagePath === "/" || pagePath === "/sl/"
+      ? `${BASE_URL}${pagePath}`
+      : `${BASE_URL}${pagePath}`;
+  $('meta[property="og:url"]').attr("content", ogUrl);
+}
+
+function normalizeSocialImages($) {
+  $('meta[property="og:image"]').attr("content", OG_IMAGE);
+  $('meta[name="twitter:image"]').attr("content", OG_IMAGE);
+}
+
 function injectHreflang($, relFile) {
   const enPath = urlPathForFile(relFile, "en");
   const slPath = urlPathForFile(relFile, "sl");
@@ -232,13 +277,7 @@ function applyTranslations($, locale, relFile) {
   });
 
   if (locale === "sl") {
-    const head = $("head");
-    const titleKey = head.attr("data-i18n-title");
-    const descKey = head.attr("data-i18n-meta-description");
-    if (titleKey && dict[titleKey]) $("title").text(dict[titleKey]);
-    if (descKey && dict[descKey]) {
-      $('meta[name="description"]').attr("content", dict[descKey]);
-    }
+    applyPageMeta($, locale, relFile);
   }
 }
 
@@ -304,6 +343,8 @@ function main() {
     $html.attr("lang", "sl");
     applyTranslations($sl, "sl", relFile);
     rewriteInternalLinks($sl, true);
+    injectCanonical($sl, relFile, "sl");
+    normalizeSocialImages($sl);
     injectLangSwitcher($sl, true);
     injectHreflang($sl, relFile);
     injectLangAssets($sl, true);
@@ -313,9 +354,12 @@ function main() {
     fs.writeFileSync(slOut, $sl.html());
     console.log(`✓ Generated sl/${relFile}`);
 
-    // English: hreflang + switcher only (idempotent)
+    // English: meta, canonical, hreflang + switcher (idempotent)
     const $en = cheerio.load(originalHtml, { decodeEntities: false });
     $en("html").attr("lang", "en");
+    applyPageMeta($en, "en", relFile);
+    injectCanonical($en, relFile, "en");
+    normalizeSocialImages($en);
     injectHreflang($en, relFile);
     injectLangAssets($en, false);
     injectLangSwitcher($en, false);

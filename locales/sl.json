@@ -29,6 +29,7 @@
   "about.animated.at": "na",
   "about.animated.glance": "prvi pogled.",
   "about.tagline": "Za kolesarje z e-kolesi.",
+  "about.headline": "Za kolesarje e-koles, ki razmišljajo vnaprej.",
   "about.tag.weekend": "#Vikend kolesarji",
   "about.tag.alpine": "#Alpski kolesarji",
   "about.tag.long": "#Dolge razdalje",
@@ -238,11 +239,11 @@
   "mock.stops.added": "Postanki dodani",
   "mock.long.distance": "Dolga razdalja",
   "meta.home.title": "Zyflow — Pametna navigacija za kolesarje in EV voznike",
-  "meta.home.description": "Načrtuj pametnejše vožnje. Zyflow združuje nadmorsko višino, vreme in EV polnjenje v eni navigacijski aplikaciji.",
+  "meta.home.description": "Načrtuj pametnejše vožnje z Zyflow — nadmorska višina, vreme in EV polnjenje v eni navigacijski aplikaciji za kolesarje.",
   "meta.waitlist.title": "Zyflow — Pridruži se beti",
-  "meta.waitlist.description": "Zyflow je v zasebni beti. Pusti e-pošto in obvestili te bomo, ko se odpre mesto.",
+  "meta.waitlist.description": "Pridruži se zasebni beti Zyflow. Zgodnji dostop, neposreden stik z ekipo in vpliv na kolesarsko in EV navigacijo.",
   "meta.about.title": "Zyflow — Zgrajeno s kolesarji, za kolesarje",
-  "meta.about.description": "Zyflow je nastal za kolesarje, ki so želeli več — višino pred potjo, polnjenje na vzponu in vreme, ki res šteje.",
+  "meta.about.description": "Pametna kolesarska navigacija z višino, vremenom in polnilnicami — zgrajena s kolesarji, ki so želeli aplikacijo, ki je manjkala.",
   "meta.contact.title": "Zyflow — Kontakt",
   "meta.contact.description": "Povratne informacije iz bete? Napaka? Manjkajoča POI? Preberemo vse. support@zyflow.eu",
   "meta.faqs.title": "Zyflow — Pogosta vprašanja",
@@ -250,6 +251,9 @@
   "meta.changelog.title": "Zyflow — Kaj je novega",
   "meta.changelog.description": "Hitro objavljamo in delimo vse. Kaj se je spremenilo v Zyflow.",
   "meta.legal.privacy.title": "Politika zasebnosti",
+  "meta.legal.privacy.description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke pri uporabi kolesarske in EV navigacije Zyflow.",
   "meta.legal.cookies.title": "Politika piškotkov",
-  "meta.legal.terms.title": "Pogoji uporabe"
+  "meta.legal.cookies.description": "Kako Zyflow uporablja piškotke na zyflow.eu, katere podatke zbirajo in kako lahko upravljate svoje nastavitve.",
+  "meta.legal.terms.title": "Pogoji uporabe",
+  "meta.legal.terms.description": "Pogoji uporabe Zyflow — pravila uporabe, naročnine, odgovornost in pravne informacije za uporabnike kolesarske in EV navigacije."
 }

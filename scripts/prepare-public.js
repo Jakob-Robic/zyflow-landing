@@ -50,3 +50,5 @@ for (const name of fs.readdirSync(ROOT)) {
 }
 
 console.log("✓ Prepared public/ for Vercel deploy");
+
+require("./generate-sitemap");
