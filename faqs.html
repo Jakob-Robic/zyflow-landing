@@ -1528,7 +1528,7 @@ a[href*="framer.com/templates"],a[href*="framer.com/marketplace"]{display:none!i
       var target;
       if (li.dataset.lang === 'sl' && !isSL) {
         var enPath = currentPath.replace(/\.html$/, '') || '/';
-        target = enPath === '/' ? '/sl/' : '/sl' + enPath;
+        target = enPath === '/' ? '/sl' : '/sl' + enPath;
       } else if (li.dataset.lang === 'en' && isSL) {
         target = currentPath.replace(/^\/sl/, '') || '/';
         if (target !== '/' && !target.endsWith('.html')) target += '/';
