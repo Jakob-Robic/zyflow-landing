@@ -432,7 +432,7 @@ a[href*="framer.com/templates"],a[href*="framer.com/marketplace"]{display:none!i
 <!-- SnippetEnd: dViv2BcdC -->
 
     <!-- End of headEnd -->
-<link rel="canonical" href="https://www.zyflow.eu/" data-zf-canonical=""><link rel="alternate" hreflang="en" href="https://www.zyflow.eu/" data-zf-hreflang=""><link rel="alternate" hreflang="sl" href="https://www.zyflow.eu/sl/" data-zf-hreflang=""><link rel="alternate" hreflang="x-default" href="https://www.zyflow.eu/" data-zf-hreflang=""><style id="zf-lang-switcher-css">/* Portal — fixed overlay aligned to Framer nav (outside #main) */
+<link rel="canonical" href="https://www.zyflow.eu/" data-zf-canonical=""><link rel="alternate" hreflang="en" href="https://www.zyflow.eu/" data-zf-hreflang=""><link rel="alternate" hreflang="sl" href="https://www.zyflow.eu/sl" data-zf-hreflang=""><link rel="alternate" hreflang="x-default" href="https://www.zyflow.eu/" data-zf-hreflang=""><style id="zf-lang-switcher-css">/* Portal — fixed overlay aligned to Framer nav (outside #main) */
 #zf-switcher-portal {
   position: fixed;
   top: 0;
@@ -1527,7 +1527,7 @@ a[href*="framer.com/templates"],a[href*="framer.com/marketplace"]{display:none!i
       var target;
       if (li.dataset.lang === 'sl' && !isSL) {
         var enPath = currentPath.replace(/\.html$/, '') || '/';
-        target = enPath === '/' ? '/sl/' : '/sl' + enPath;
+        target = enPath === '/' ? '/sl' : '/sl' + enPath;
       } else if (li.dataset.lang === 'en' && isSL) {
         target = currentPath.replace(/^\/sl/, '') || '/';
         if (target !== '/' && !target.endsWith('.html')) target += '/';

@@ -105,7 +105,7 @@ const LANG_SWITCHER_JS = `(function() {
       var target;
       if (li.dataset.lang === 'sl' && !isSL) {
         var enPath = currentPath.replace(/\\.html$/, '') || '/';
-        target = enPath === '/' ? '/sl/' : '/sl' + enPath;
+        target = enPath === '/' ? '/sl' : '/sl' + enPath;
       } else if (li.dataset.lang === 'en' && isSL) {
         target = currentPath.replace(/^\\/sl/, '') || '/';
         if (target !== '/' && !target.endsWith('.html')) target += '/';
@@ -134,25 +134,19 @@ function langSwitcherHtml(isSl) {
 }
 
 function urlPathForFile(relFile, localePrefix) {
-  let p = relFile.replace(/index\.html$/, "").replace(/\.html$/, "");
-  if (!p.endsWith("/") && p.includes("/")) {
-    // legal-pages/privacy-policy -> legal-pages/privacy-policy
-  } else if (p === "") {
-    p = "";
-  }
-  const base = p ? `/${p}` : "/";
+  const p = relFile.replace(/index\.html$/, "").replace(/\.html$/, "");
   if (localePrefix === "sl") {
-    return p ? `/sl${base}` : "/sl/";
+    return p === "" ? "/sl" : `/sl/${p}`;
   }
-  return base === "/" ? "/" : base;
+  return p === "" ? "/" : `/${p}`;
+}
+
+function absolutePageUrl(pagePath) {
+  return pagePath === "/" ? `${BASE_URL}/` : `${BASE_URL}${pagePath}`;
 }
 
 function injectCanonical($, relFile, localePrefix) {
-  const pagePath = urlPathForFile(relFile, localePrefix);
-  const canonical =
-    pagePath === "/" || pagePath === "/sl/"
-      ? `${BASE_URL}${pagePath}`
-      : `${BASE_URL}${pagePath}`;
+  const canonical = absolutePageUrl(urlPathForFile(relFile, localePrefix));
 
   $('link[rel="canonical"][data-zf-canonical]').remove();
   $("head").append(`<link rel="canonical" href="${canonical}" data-zf-canonical>`);
@@ -179,11 +173,7 @@ function applyPageMeta($, locale, relFile) {
   }
 
   const pagePath = urlPathForFile(relFile, locale === "sl" ? "sl" : "en");
-  const ogUrl =
-    pagePath === "/" || pagePath === "/sl/"
-      ? `${BASE_URL}${pagePath}`
-      : `${BASE_URL}${pagePath}`;
-  $('meta[property="og:url"]').attr("content", ogUrl);
+  $('meta[property="og:url"]').attr("content", absolutePageUrl(pagePath));
 }
 
 function normalizeSocialImages($) {
@@ -194,10 +184,8 @@ function normalizeSocialImages($) {
 function injectHreflang($, relFile) {
   const enPath = urlPathForFile(relFile, "en");
   const slPath = urlPathForFile(relFile, "sl");
-  const enUrl = `${BASE_URL}${enPath === "/" ? "" : enPath}`.replace(/\/$/, "") || BASE_URL;
-  const slUrl = `${BASE_URL}${slPath}`.replace(/\/$/, "") || `${BASE_URL}/sl`;
-  const enHref = enPath === "/" ? `${BASE_URL}/` : `${BASE_URL}${enPath}`;
-  const slHref = slPath.endsWith("/") ? `${BASE_URL}${slPath}` : `${BASE_URL}${slPath}`;
+  const enHref = absolutePageUrl(enPath);
+  const slHref = absolutePageUrl(slPath);
 
   $("link[data-zf-hreflang]").remove();
   $("head").append(
@@ -303,7 +291,7 @@ function rewriteInternalLinks($, isSl) {
     if (!isSl) return;
 
     if (href === "./" || href === "/") {
-      $el.attr("href", "/sl/");
+      $el.attr("href", "/sl");
       return;
     }
     if (href.startsWith("./#")) {

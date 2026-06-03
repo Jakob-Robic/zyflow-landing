@@ -23,19 +23,15 @@ const SOURCE_PAGES = [
 ];
 
 function urlPathForFile(relFile, localePrefix) {
-  let p = relFile.replace(/index\.html$/, "").replace(/\.html$/, "");
-  const base = p ? `/${p}` : "/";
+  const p = relFile.replace(/index\.html$/, "").replace(/\.html$/, "");
   if (localePrefix === "sl") {
-    return p ? `/sl${base}` : "/sl/";
+    return p === "" ? "/sl" : `/sl/${p}`;
   }
-  return base === "/" ? "/" : base;
+  return p === "" ? "/" : `/${p}`;
 }
 
 function pageUrl(relFile, localePrefix) {
   const pagePath = urlPathForFile(relFile, localePrefix);
-  if (localePrefix === "sl") {
-    return pagePath.endsWith("/") ? `${BASE_URL}${pagePath}` : `${BASE_URL}${pagePath}`;
-  }
   return pagePath === "/" ? `${BASE_URL}/` : `${BASE_URL}${pagePath}`;
 }
 
