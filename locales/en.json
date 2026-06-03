@@ -29,6 +29,7 @@
   "about.animated.at": "at",
   "about.animated.glance": "glance.",
   "about.tagline": "Built for e-bike riders.",
+  "about.headline": "Built for e-bike riders who think ahead.",
   "about.tag.weekend": "#Weekend tourers",
   "about.tag.alpine": "#Alpine riders",
   "about.tag.long": "#Long distance",
@@ -238,11 +239,11 @@
   "mock.stops.added": "Stops added",
   "mock.long.distance": "Long distance",
   "meta.home.title": "Zyflow — Smart Navigation for Cyclists & EV Rider",
-  "meta.home.description": "Plan smarter rides. Zyflow combines real-time elevation, weather, and EV charging into one intelligent navigation app built for cyclists and electric vehicle riders.",
+  "meta.home.description": "Plan smarter rides with Zyflow — elevation, weather, and EV charging in one smart navigation app for cyclists and e-bike riders.",
   "meta.waitlist.title": "Zyflow - Join the beta",
-  "meta.waitlist.description": "Zyflow is in private beta. Drop your email and we'll let you know when a spot opens up. Early access members get a direct line to the team and shape what we build next.",
+  "meta.waitlist.description": "Join the Zyflow private beta. Get early access, talk directly to the team, and help shape our cycling and EV navigation app.",
   "meta.about.title": "Zyflow -  Built by riders, for riders",
-  "meta.about.description": "Zyflow was built for riders who wanted more — elevation before committing to a route, charging stops mid-climb, and weather that actually matters. We built the navigation app we always wished existed.",
+  "meta.about.description": "Smart cycling navigation with elevation, weather, and EV charging stops — built by riders who wanted the app they always wished existed.",
   "meta.contact.title": "Zyflow - Get in touch",
   "meta.contact.description": "Have feedback from the beta? Found a bug? Want to suggest a POI we're missing? We read everything. Reach us at support@zyflow.eu",
   "meta.faqs.title": "Zyflow - FAQs",
@@ -250,6 +251,9 @@
   "meta.changelog.title": "Zyflow - What's new",
   "meta.changelog.description": "We ship fast and share everything. Here's what's changed, fixed, and improved in Zyflow.",
   "meta.legal.privacy.title": "Privacy Policy",
+  "meta.legal.privacy.description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use the Zyflow cycling and EV navigation app.",
   "meta.legal.cookies.title": "Cookie Policy",
-  "meta.legal.terms.title": "Terms of Service"
+  "meta.legal.cookies.description": "How Zyflow uses cookies and similar technologies on zyflow.eu, what data they collect, and how you can control your preferences.",
+  "meta.legal.terms.title": "Terms of Service",
+  "meta.legal.terms.description": "Terms of Service for Zyflow — usage rules, subscriptions, liability, and legal information for users of our cycling and EV navigation app."
 }
