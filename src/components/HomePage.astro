@@ -3,7 +3,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
 import Hero from "../components/home/Hero.astro";
-import Features from "../components/home/Features.astro";
+import PlanEpic from "../components/home/PlanEpic.astro";
+import LayoutClear from "../components/home/LayoutClear.astro";
 import Riders from "../components/home/Riders.astro";
 import Metrics from "../components/home/Metrics.astro";
 import Beta from "../components/home/Beta.astro";
@@ -27,7 +28,8 @@ const { locale } = Astro.props;
   <SiteHeader locale={locale} />
   <main>
     <Hero locale={locale} />
-    <Features locale={locale} />
+    <PlanEpic locale={locale} />
+    <LayoutClear locale={locale} />
     <Riders locale={locale} />
     <Metrics locale={locale} />
     <Beta locale={locale} />

@@ -35,7 +35,7 @@ body {
   margin: 0;
   font-family: var(--zf-font-body);
   color: var(--zf-ink);
-  background: var(--zf-paper);
+  background: #ffffff;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -138,6 +138,13 @@ select {
 .zf-reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+.rolling-glyph {
+  display: inline-block;
+  min-width: 1.2em;
+  text-align: center;
+  vertical-align: baseline;
 }
 
 .metrics__big,
