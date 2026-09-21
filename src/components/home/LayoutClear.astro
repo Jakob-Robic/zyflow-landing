@@ -1,0 +1,196 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const tickers = [
+  "features.ticker.battery",
+  "features.ticker.elevation",
+  "features.ticker.route",
+  "features.ticker.weather",
+] as const;
+---
+
+<section class="layout-clear zf-section">
+  <div class="zf-container">
+    <div class="layout-clear__intro zf-reveal">
+      <h2>{t(locale, "features.section.subtitle")}</h2>
+      <p>{t(locale, "features.section.title")}</p>
+    </div>
+
+    <div class="layout-clear__grid">
+      <article class="card card--cream zf-reveal">
+        <h3>{t(locale, "features.battery.title")}</h3>
+        <p>{t(locale, "features.battery.desc")}</p>
+        <div class="streak">
+          <strong>28 Day Streak Active 🔥</strong>
+          <div class="streak__days" aria-hidden="true">
+            {["M", "T", "W", "T", "F", "S", "S"].map((d) => <span>{d}</span>)}
+          </div>
+        </div>
+        <div class="chips">
+          {tickers.map((key) => <span>{t(locale, key)}</span>)}
+        </div>
+      </article>
+
+      <article class="card card--green zf-reveal">
+        <h3>{t(locale, "features.elevation.title")}</h3>
+        <p>{t(locale, "features.elevation.desc")}</p>
+        <div class="route-table">
+          <div class="route-table__head">
+            <span>{t(locale, "riders.demo.route")}</span>
+            <strong>{t(locale, "riders.demo.elevation")}</strong>
+          </div>
+          <div class="route-table__row">
+            <span>{t(locale, "riders.climb.label")}</span>
+            <strong>{t(locale, "riders.climb.elevation")}</strong>
+          </div>
+          <div class="route-table__row">
+            <span>{t(locale, "riders.descent.label")}</span>
+            <strong>{t(locale, "riders.descent.elevation")}</strong>
+          </div>
+          <div class="route-table__row">
+            <span>{t(locale, "riders.final.label")}</span>
+            <strong>{t(locale, "riders.final.elevation")}</strong>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .layout-clear {
+    background: #fafafa;
+  }
+
+  .layout-clear__intro {
+    text-align: center;
+    max-width: 40rem;
+    margin: 0 auto 2.5rem;
+  }
+
+  .layout-clear__intro h2 {
+    margin: 0;
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    letter-spacing: -0.04em;
+  }
+
+  .layout-clear__intro p {
+    color: var(--zf-ink-muted);
+  }
+
+  .layout-clear__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+
+  .card {
+    border-radius: 28px;
+    padding: 1.6rem;
+    min-height: 22rem;
+  }
+
+  .card h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1.45rem;
+    letter-spacing: -0.03em;
+  }
+
+  .card p {
+    margin: 0 0 1.2rem;
+    opacity: 0.86;
+  }
+
+  .card--cream {
+    background: #efe8dc;
+    color: #151515;
+  }
+
+  .card--green {
+    background: #1e3a2f;
+    color: #fff;
+  }
+
+  .streak {
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 18px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .streak strong {
+    display: block;
+    margin-bottom: 0.7rem;
+  }
+
+  .streak__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.35rem;
+  }
+
+  .streak__days span {
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.45rem 0;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .chips span {
+    padding: 0.4rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    font-size: 0.8rem;
+    font-weight: 650;
+  }
+
+  .route-table {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 0.85rem;
+  }
+
+  .route-table__head,
+  .route-table__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 0.2rem;
+  }
+
+  .route-table__head {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+  }
+
+  .route-table__row {
+    color: rgba(255, 255, 255, 0.86);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .route-table__row:last-child {
+    border-bottom: 0;
+  }
+
+  @media (max-width: 900px) {
+    .layout-clear__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

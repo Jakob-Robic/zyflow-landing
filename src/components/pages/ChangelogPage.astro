@@ -1,0 +1,104 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../SiteHeader.astro";
+import SiteFooter from "../SiteFooter.astro";
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const entries =
+  locale === "sl"
+    ? [
+        {
+          date: "2026-09",
+          title: "Trgovine v živo",
+          body: "Zyflow je na voljo v App Storu in na Google Play. Čakalna lista je arhivirana.",
+        },
+        {
+          date: "2026-05",
+          title: "Javna beta",
+          body: "Začetna javna predstavitev načrtovanja poti, baterije in polnilnic.",
+        },
+      ]
+    : [
+        {
+          date: "2026-09",
+          title: "Live on both stores",
+          body: "Zyflow is available on the App Store and Google Play. Waitlist is archived.",
+        },
+        {
+          date: "2026-05",
+          title: "Public beta",
+          body: "Initial public launch of route planning with battery and charging stops.",
+        },
+      ];
+---
+
+<BaseLayout
+  locale={locale}
+  path="changelog"
+  title={t(locale, "meta.changelog.title")}
+  description={t(locale, "meta.changelog.description")}
+>
+  <SiteHeader locale={locale} path="changelog" />
+  <main>
+    <section class="change-hero">
+      <div class="zf-container zf-reveal is-visible">
+        <h1>{t(locale, "meta.changelog.title")}</h1>
+        <p>{t(locale, "meta.changelog.description")}</p>
+      </div>
+    </section>
+    <section class="zf-section">
+      <div class="zf-container">
+        {
+          entries.map((entry) => (
+            <article class="entry zf-reveal">
+              <time>{entry.date}</time>
+              <h2>{entry.title}</h2>
+              <p>{entry.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>
+
+<style>
+  .change-hero {
+    padding: 8rem 0 3rem;
+    background: #15191e;
+    color: white;
+  }
+
+  .change-hero h1 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    letter-spacing: -0.04em;
+  }
+
+  .entry {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .entry time {
+    color: var(--zf-orange);
+    font-weight: 700;
+  }
+
+  .entry h2 {
+    margin: 0.35rem 0;
+  }
+
+  .entry p {
+    margin: 0;
+    color: var(--zf-ink-muted);
+  }
+</style>

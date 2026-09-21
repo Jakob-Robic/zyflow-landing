@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../SiteHeader.astro";
+import SiteFooter from "../SiteFooter.astro";
+import StoreButtons from "../StoreButtons.astro";
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const features = [
+  "about.page.feature1",
+  "about.page.feature2",
+  "about.page.feature3",
+  "about.page.feature4",
+] as const;
+---
+
+<BaseLayout
+  locale={locale}
+  path="about"
+  title={t(locale, "meta.about.title")}
+  description={t(locale, "meta.about.description")}
+>
+  <SiteHeader locale={locale} path="about" />
+  <main class="page">
+    <section class="page-hero">
+      <div class="zf-container zf-reveal is-visible">
+        <h1>{t(locale, "about.page.title")}</h1>
+        <p>{t(locale, "about.page.why.body")}</p>
+        <StoreButtons locale={locale} />
+      </div>
+    </section>
+    <section class="zf-section">
+      <div class="zf-container page-grid">
+        {
+          features.map((key) => (
+            <article class="zf-reveal">
+              <p>{t(locale, key)}</p>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding: 8rem 0 3rem;
+    background:
+      linear-gradient(180deg, rgba(15, 20, 25, 0.55), rgba(15, 20, 25, 0.75)),
+      url("/images/09xUvyJFvYJ1ravqtWEYsS31qo_d0c075.webp") center/cover;
+    color: white;
+  }
+
+  .page-hero h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: -0.04em;
+  }
+
+  .page-hero p {
+    max-width: 40rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .page-grid article {
+    background: var(--zf-cream);
+    border-radius: 20px;
+    padding: 1.4rem;
+    font-weight: 600;
+  }
+
+  @media (max-width: 700px) {
+    .page-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

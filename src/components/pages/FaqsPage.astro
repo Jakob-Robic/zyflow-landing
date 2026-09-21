@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../SiteHeader.astro";
+import SiteFooter from "../SiteFooter.astro";
+import type { Locale } from "../../lib/i18n";
+import { localePath, t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const sections = [
+  {
+    title: "faqs.page.general",
+    items: [
+      ["faq.page.q1", "faq.b1"],
+      ["faq.page.q2", "faq.b2"],
+      ["faq.page.q3", "faq.b3"],
+      ["faq.page.q4", "faq.b4"],
+    ],
+  },
+  {
+    title: "faqs.page.navigation",
+    items: [
+      ["faq.page.q5", "faq.b5"],
+      ["faq.page.q6", "faq.b6"],
+      ["faq.page.q7", "faq.b7"],
+      ["faq.page.q8", "faq.b8"],
+      ["faq.page.q9", "faq.b9"],
+      ["faq.page.q10", "faq.b10"],
+      ["faq.page.q11", "faq.b11"],
+      ["faq.page.q12", "faq.b12"],
+      ["faq.page.q13", "faq.b13"],
+      ["faq.page.q14", "faq.b14"],
+      ["faq.page.q15", "faq.b15"],
+      ["faq.page.q16", "faq.b16"],
+    ],
+  },
+  {
+    title: "faqs.page.account",
+    items: [
+      ["faq.page.q17", "faq.b17"],
+      ["faq.page.q18", "faq.b18"],
+      ["faq.page.q19", "faq.b19"],
+    ],
+  },
+  {
+    title: "faqs.page.troubleshooting",
+    items: [
+      ["faq.page.q20", "faq.b20"],
+      ["faq.page.q21", "faq.b21"],
+      ["faq.page.q22", "faq.b22"],
+      ["faq.page.q23", "faq.b23"],
+    ],
+  },
+] as const;
+---
+
+<BaseLayout
+  locale={locale}
+  path="faqs"
+  title={t(locale, "meta.faqs.title")}
+  description={t(locale, "meta.faqs.description")}
+>
+  <SiteHeader locale={locale} path="faqs" />
+  <main class="faqs">
+    <section class="faqs__hero">
+      <div class="zf-container zf-reveal is-visible">
+        <h1>{t(locale, "faqs.page.title")}</h1>
+        <a class="zf-btn zf-btn--dark" href={localePath(locale, "contact")}>{t(locale, "faqs.page.touch")}</a>
+      </div>
+    </section>
+    <section class="zf-section">
+      <div class="zf-container">
+        {
+          sections.map((section) => (
+            <div class="faq-block zf-reveal">
+              <h2>{t(locale, section.title)}</h2>
+              {section.items.map(([q, a]) => (
+                <details>
+                  <summary>{t(locale, q)}</summary>
+                  <p>{t(locale, a)}</p>
+                </details>
+              ))}
+            </div>
+          ))
+        }
+        <p class="cta">{t(locale, "faq.page.cta")} <a href={localePath(locale, "contact")}>{t(locale, "footer.contact")}</a></p>
+      </div>
+    </section>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>
+
+<style>
+  .faqs__hero {
+    padding: 8rem 0 3rem;
+    background: #15191e;
+    color: white;
+  }
+
+  .faqs__hero h1 {
+    margin: 0 0 1.2rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: -0.04em;
+  }
+
+  .faq-block {
+    margin-bottom: 2.5rem;
+  }
+
+  .faq-block h2 {
+    margin: 0 0 1rem;
+    letter-spacing: -0.03em;
+  }
+
+  details {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.95rem 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  details p {
+    margin: 0.7rem 0 0;
+    color: var(--zf-ink-muted);
+  }
+
+  .cta {
+    font-weight: 600;
+  }
+</style>

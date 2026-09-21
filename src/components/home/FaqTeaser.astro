@@ -1,0 +1,82 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { localePath, t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const faqs = [
+  ["faq.q1", "faq.a1"],
+  ["faq.q2", "faq.a2"],
+  ["faq.q3", "faq.a3"],
+  ["faq.q4", "faq.a4"],
+  ["faq.q5", "faq.a5"],
+] as const;
+---
+
+<section class="faq-teaser zf-section" id="faq">
+  <div class="zf-container">
+    <div class="faq-teaser__head zf-reveal">
+      <h2>{t(locale, "faq.title")}</h2>
+      <a href={localePath(locale, "faqs")}>{t(locale, "faq.cantfind")}</a>
+    </div>
+    <div class="faq-teaser__list">
+      {
+        faqs.map(([q, a]) => (
+          <details class="zf-reveal">
+            <summary>{t(locale, q)}</summary>
+            <p>{t(locale, a)}</p>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-teaser {
+    background: white;
+  }
+
+  .faq-teaser__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .faq-teaser__head h2 {
+    margin: 0;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    letter-spacing: -0.03em;
+  }
+
+  .faq-teaser__head a {
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  details {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1rem 0;
+  }
+
+  details:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  details p {
+    margin: 0.75rem 0 0;
+    color: var(--zf-ink-muted);
+    max-width: 48rem;
+  }
+</style>

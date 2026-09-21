@@ -1,0 +1,300 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+import RollingGlyph from "../RollingGlyph";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const tags = [
+  "about.tag.weekend",
+  "about.tag.alpine",
+  "about.tag.long",
+  "about.tag.commuters",
+] as const;
+
+const orbit = [
+  {
+    label: t(locale, "mock.elevation.checked"),
+    tone: "orange",
+    icon: "/images/38EivRTUD86UdDi4ptLVvUiyP8_c131ca.svg",
+    photo: null as string | null,
+  },
+  {
+    label: "",
+    tone: "photo",
+    icon: null,
+    photo: "/images/e3PSFRD5qTiG55KSmJttkZw4Ok_ffb449.webp",
+  },
+  {
+    label: t(locale, "mock.battery.charged"),
+    tone: "green",
+    icon: "/images/qkMRrRT4d5Xoi2FCXF7V17eEE6E_a43cb1.svg",
+    photo: null,
+  },
+  {
+    label: "",
+    tone: "photo",
+    icon: null,
+    photo: "/images/CtIZoAdXKvFYI27vFW7U6PwFs_c7187c.webp",
+  },
+  {
+    label: t(locale, "mock.charger.located"),
+    tone: "green",
+    icon: "/images/pUHkyH58LSJDgk8jqtzFiFqUyvY_1333ff.svg",
+    photo: null,
+  },
+  {
+    label: "",
+    tone: "photo",
+    icon: null,
+    photo: "/images/IrcfFLaKCkZH5a56AKdI2c44_ad959a.webp",
+  },
+];
+---
+
+<section class="plan-epic" id="features">
+  <div class="zf-container">
+    <div class="plan-epic__intro zf-reveal">
+      <h2>
+        <span>{t(locale, "about.animated.plan")}</span>
+        <span>{t(locale, "about.animated.epic")}</span>
+        <RollingGlyph client:visible glyphs={["🚵", "☀️", "⛰️"]} />
+        <span>{t(locale, "about.animated.routes")}</span>
+        <span>{t(locale, "about.animated.with")}</span>
+        <span>a</span>
+        <span>{t(locale, "about.animated.layout")}</span>
+        <span>{t(locale, "about.animated.that")}</span>
+        <span>{t(locale, "about.animated.shows")}</span>
+        <span>{t(locale, "about.animated.your")}</span>
+        <span>{t(locale, "about.animated.battery")}</span>
+        <span>{t(locale, "about.animated.elevation")}</span>
+        <RollingGlyph client:visible glyphs={["☁️", "☀️", "⛈️"]} />
+        <span>{t(locale, "about.animated.and")}</span>
+        <span>{t(locale, "about.animated.charging")}</span>
+        <span>{t(locale, "about.animated.stops")}</span>
+        <span>{t(locale, "about.animated.at")}</span>
+        <span>a</span>
+        <span>{t(locale, "about.animated.glance")}</span>
+      </h2>
+      <p>{t(locale, "about.tagline")}</p>
+      <div class="tags">
+        {tags.map((key) => <span>{t(locale, key)}</span>)}
+      </div>
+    </div>
+
+    <div class="plan-epic__stage zf-reveal">
+      <div class="orbit">
+        {
+          orbit.map((item) =>
+            item.photo ? (
+              <article class="orbit-card orbit-card--photo">
+                <img src={item.photo} alt="" width="220" height="220" />
+              </article>
+            ) : (
+              <article class:list={["orbit-card", `orbit-card--${item.tone}`]}>
+                {item.icon && (
+                  <div class="orbit-card__icon">
+                    <img src={item.icon} alt="" width="28" height="28" />
+                  </div>
+                )}
+                <p>{item.label}</p>
+              </article>
+            ),
+          )
+        }
+      </div>
+
+      <div class="plan-epic__phone">
+        <img
+          src="/images/pgjagVu8zszU1nZKEj6XKAUvCPs_4c8119.png"
+          alt=""
+          width="390"
+          height="844"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .plan-epic {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    /* Clear the overlapping hero phone/cards */
+    padding: 9.5rem 0 4rem;
+    overflow: clip;
+  }
+
+  .plan-epic__intro {
+    text-align: center;
+    max-width: 52rem;
+    margin: 0 auto 3rem;
+  }
+
+  .plan-epic__intro h2 {
+    margin: 0;
+    font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+    line-height: 1.18;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    color: #151515;
+  }
+
+  .plan-epic__intro h2 > span,
+  .plan-epic__intro h2 :global(.rolling-glyph) {
+    display: inline;
+  }
+
+  .plan-epic__intro p {
+    margin: 1rem 0 0;
+    color: #6b7280;
+    font-size: 1.05rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 1.35rem;
+  }
+
+  .tags span {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: #efe8dc;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .plan-epic__stage {
+    position: relative;
+    min-height: 34rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .orbit {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 0.85rem;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .orbit-card {
+    width: min(100%, 11rem);
+    justify-self: center;
+    border-radius: 22px;
+    padding: 1rem;
+    background: #fff;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.08);
+  }
+
+  .orbit-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .orbit-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 3rem;
+  }
+  .orbit-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .orbit-card:nth-child(4) {
+    grid-column: 6;
+    grid-row: 1;
+    margin-top: 2rem;
+  }
+  .orbit-card:nth-child(5) {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .orbit-card:nth-child(6) {
+    grid-column: 6;
+    grid-row: 2;
+  }
+
+  .orbit-card--photo {
+    padding: 0;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+
+  .orbit-card--photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .orbit-card__icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.7rem;
+  }
+
+  .orbit-card--orange .orbit-card__icon {
+    background: var(--zf-orange);
+  }
+
+  .orbit-card--green .orbit-card__icon {
+    background: var(--zf-green);
+  }
+
+  .orbit-card__icon img {
+    filter: brightness(0) invert(1);
+  }
+
+  .orbit-card p {
+    margin: 0;
+    font-weight: 650;
+    font-size: 0.95rem;
+    color: #171717;
+  }
+
+  .plan-epic__phone {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 300px);
+    border-radius: 36px;
+    overflow: hidden;
+    border: 3px solid #111;
+    background: #111;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  }
+
+  .plan-epic__phone img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 980px) {
+    .orbit {
+      display: none;
+    }
+
+    .plan-epic {
+      padding-top: 5rem;
+    }
+
+    .plan-epic__stage {
+      min-height: auto;
+    }
+  }
+</style>

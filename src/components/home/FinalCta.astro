@@ -1,0 +1,99 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+import StoreButtons from "../StoreButtons.astro";
+import { STORE_URLS } from "../../lib/stores";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<section class="final-cta zf-section" id="download">
+  <div class="zf-container final-cta__grid">
+    <div class="final-cta__copy zf-reveal">
+      <h2>{t(locale, "cta.final.title")}</h2>
+      <StoreButtons locale={locale} size="final" />
+      <div class="scan">
+        <div class="scan__qr" aria-hidden="true">
+          <img
+            src={`https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(STORE_URLS.ios)}`}
+            alt=""
+            width="120"
+            height="120"
+          />
+        </div>
+        <div>
+          <strong>{t(locale, "cta.final.scan")}</strong>
+          <p>{t(locale, "cta.final.scan.desc")}</p>
+        </div>
+      </div>
+    </div>
+    <div class="final-cta__visual zf-reveal">
+      <img src="/images/IrcfFLaKCkZH5a56AKdI2c44_ad959a.webp" alt="" width="420" height="820" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    background: #15191e;
+    color: white;
+  }
+
+  .final-cta__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .final-cta h2 {
+    margin: 0 0 1.4rem;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+  }
+
+  .scan {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.8rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background: var(--zf-cream);
+    color: var(--zf-ink);
+    max-width: 28rem;
+  }
+
+  .scan__qr {
+    background: white;
+    border-radius: 14px;
+    padding: 0.5rem;
+  }
+
+  .scan p {
+    margin: 0.25rem 0 0;
+    color: var(--zf-ink-muted);
+  }
+
+  .final-cta__visual {
+    justify-self: center;
+  }
+
+  .final-cta__visual img {
+    width: min(100%, 280px);
+    border-radius: 28px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: var(--zf-shadow);
+  }
+
+  @media (max-width: 900px) {
+    .final-cta__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
