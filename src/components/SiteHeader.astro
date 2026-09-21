@@ -1,0 +1,141 @@
+---
+import type { Locale } from "../lib/i18n";
+import { localePath, t } from "../lib/i18n";
+import { STORE_URLS } from "../lib/stores";
+
+interface Props {
+  locale: Locale;
+  path?: string;
+}
+
+const { locale, path = "" } = Astro.props;
+const home = localePath(locale);
+const other = locale === "en" ? "SL" : "EN";
+const otherHref = locale === "en" ? localePath("sl", path) : localePath("en", path);
+
+const links = [
+  { href: `${home}#features`, label: t(locale, "nav.features") },
+  { href: `${home}#riders`, label: t(locale, "nav.riders") },
+  { href: `${home}#metrics`, label: t(locale, "nav.metrics") },
+  { href: `${home}#download`, label: t(locale, "nav.download") },
+];
+---
+
+<header class="site-header">
+  <div class="site-header__inner zf-container">
+    <a class="site-logo" href={home} aria-label="Zyflow">
+      <span>Zyflow</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))
+      }
+      <span class="site-nav__divider" aria-hidden="true"></span>
+      <a class="site-nav__lang" href={otherHref}>{other}</a>
+    </nav>
+
+    <div class="site-header__stores">
+      <a href={STORE_URLS.ios} aria-label={t(locale, "cta.final.ios")} target="_blank" rel="noopener noreferrer">
+        <img src="/images/BZYkl56vzaLH9uCPqEid8uQg9ZE_42204b.svg" alt="" width="16" height="16" />
+      </a>
+      <a href={STORE_URLS.android} aria-label={t(locale, "cta.final.android")} target="_blank" rel="noopener noreferrer">
+        <img src="/images/J4VPLNaOdWSrA6fBUpuZ0eLYNAI_8debd7.svg" alt="" width="16" height="16" />
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: absolute;
+    inset: 0 0 auto;
+    z-index: 20;
+    padding-top: 1.1rem;
+  }
+
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .site-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.6rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .site-nav {
+    justify-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.35rem;
+    border-radius: 999px;
+    background: var(--zf-nav-pill);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .site-nav a {
+    padding: 0.55rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--zf-ink);
+  }
+
+  .site-nav a:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .site-nav__divider {
+    width: 1px;
+    height: 1.1rem;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 0 0.2rem;
+  }
+
+  .site-nav__lang {
+    min-width: 2.6rem;
+    text-align: center;
+  }
+
+  .site-header__stores {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  .site-header__stores a {
+    display: grid;
+    place-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .site-header__inner {
+      grid-template-columns: 1fr auto;
+    }
+
+    .site-nav {
+      display: none;
+    }
+  }
+</style>

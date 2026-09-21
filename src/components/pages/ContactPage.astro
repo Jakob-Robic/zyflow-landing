@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../SiteHeader.astro";
+import SiteFooter from "../SiteFooter.astro";
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<BaseLayout
+  locale={locale}
+  path="contact"
+  title={t(locale, "meta.contact.title")}
+  description={t(locale, "meta.contact.description")}
+>
+  <SiteHeader locale={locale} path="contact" />
+  <main class="contact">
+    <section class="contact__hero">
+      <div class="zf-container zf-reveal is-visible">
+        <h1>{t(locale, "contact.page.title")}</h1>
+        <p>{t(locale, "contact.page.intro")}</p>
+      </div>
+    </section>
+    <section class="zf-section">
+      <div class="zf-container contact__grid">
+        <form class="contact-form zf-reveal" id="contact-form">
+          <label>
+            <span>{t(locale, "contact.form.name")}</span>
+            <input name="name" required />
+          </label>
+          <label>
+            <span>{t(locale, "contact.form.email")}</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>{t(locale, "contact.form.subject")}</span>
+            <input name="subject" />
+          </label>
+          <label>
+            <span>{t(locale, "contact.form.message")}</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="zf-btn zf-btn--dark" type="submit">{t(locale, "contact.form.submit")}</button>
+          <p class="form-status" hidden></p>
+        </form>
+        <aside class="zf-reveal">
+          <h2>{t(locale, "contact.reach")}</h2>
+          <p><strong>{t(locale, "contact.support.label")}</strong><br /><a href="mailto:support@zyflow.eu">support@zyflow.eu</a></p>
+          <p><strong>{t(locale, "contact.partners.label")}</strong><br /><a href="mailto:hello@zyflow.eu">hello@zyflow.eu</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>
+
+<script define:vars={{ successMsg: t(locale, "contact.success"), errorMsg: t(locale, "contact.error") }}>
+  const form = document.getElementById("contact-form");
+  const status = form?.querySelector(".form-status");
+  form?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!(form instanceof HTMLFormElement) || !(status instanceof HTMLElement)) return;
+    const data = Object.fromEntries(new FormData(form).entries());
+    status.hidden = false;
+    status.textContent = "...";
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("fail");
+      status.textContent = successMsg;
+      form.reset();
+    } catch {
+      status.textContent = errorMsg;
+    }
+  });
+</script>
+
+<style>
+  .contact__hero {
+    padding: 8rem 0 3rem;
+    background: #15191e;
+    color: white;
+  }
+
+  .contact__hero h1 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: -0.04em;
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2rem;
+  }
+
+  .contact-form {
+    display: grid;
+    gap: 1rem;
+    background: var(--zf-cream);
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+
+  label {
+    display: grid;
+    gap: 0.4rem;
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    padding: 0.85rem 1rem;
+    background: white;
+  }
+
+  aside h2 {
+    margin-top: 0;
+  }
+
+  @media (max-width: 800px) {
+    .contact__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,82 @@
+---
+import type { Locale } from "../lib/i18n";
+import { absoluteUrl, alternatePath, localePath, t } from "../lib/i18n";
+import { pathWithoutLocale } from "../lib/paths";
+import "../styles/global.css";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  path?: string;
+}
+
+const { locale, title, description, path = "" } = Astro.props;
+const pathname = localePath(locale, path);
+const altLocale = locale === "en" ? "sl" : "en";
+const altPath = alternatePath(locale, path);
+const canonical = absoluteUrl(pathname);
+const ogLocale = locale === "en" ? "en_US" : "sl_SI";
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href={absoluteUrl(localePath("en", path))}
+    />
+    <link
+      rel="alternate"
+      hreflang="sl"
+      href={absoluteUrl(localePath("sl", path))}
+    />
+    <link rel="alternate" hreflang="x-default" href={absoluteUrl(localePath("en", path))} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zyflow" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:image" content="https://www.zyflow.eu/images/09xUvyJFvYJ1ravqtWEYsS31qo_d0c075.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="icon" href="/images/cVvkhz5ISbeCPLJDDE78rQEZqhI_f58dfe.png" />
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=geist@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <slot name="head" />
+  </head>
+  <body data-locale={locale}>
+    <slot />
+    <script>
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (!reduce) {
+        const nodes = document.querySelectorAll(".zf-reveal");
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { threshold: 0.18, rootMargin: "0px 0px -8% 0px" },
+        );
+        nodes.forEach((n) => io.observe(n));
+      } else {
+        document.querySelectorAll(".zf-reveal").forEach((n) => n.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>

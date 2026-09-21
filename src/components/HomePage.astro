@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import Hero from "../components/home/Hero.astro";
+import Features from "../components/home/Features.astro";
+import Riders from "../components/home/Riders.astro";
+import Metrics from "../components/home/Metrics.astro";
+import Beta from "../components/home/Beta.astro";
+import FinalCta from "../components/home/FinalCta.astro";
+import FaqTeaser from "../components/home/FaqTeaser.astro";
+import type { Locale } from "../lib/i18n";
+import { t } from "../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<BaseLayout
+  locale={locale}
+  title={t(locale, "meta.home.title")}
+  description={t(locale, "meta.home.description")}
+>
+  <SiteHeader locale={locale} />
+  <main>
+    <Hero locale={locale} />
+    <Features locale={locale} />
+    <Riders locale={locale} />
+    <Metrics locale={locale} />
+    <Beta locale={locale} />
+    <FinalCta locale={locale} />
+    <FaqTeaser locale={locale} />
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>

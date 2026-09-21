@@ -1,0 +1,195 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const tags = [
+  "about.tag.weekend",
+  "about.tag.alpine",
+  "about.tag.long",
+  "about.tag.commuters",
+  "about.tag.gravel",
+  "about.tag.mtb",
+] as const;
+
+const features = [
+  {
+    title: "features.battery.title",
+    desc: "features.battery.desc",
+    tone: "cream",
+  },
+  {
+    title: "features.elevation.title",
+    desc: "features.elevation.desc",
+    tone: "green",
+  },
+  {
+    title: "features.planning.title",
+    desc: "features.planning.desc",
+    tone: "dark",
+  },
+  {
+    title: "features.charging.title",
+    desc: "features.charging.desc",
+    tone: "cream",
+  },
+  {
+    title: "features.weather.title",
+    desc: "features.weather.desc",
+    tone: "green",
+  },
+] as const;
+---
+
+<section class="features zf-section" id="features">
+  <div class="zf-container">
+    <div class="features__intro zf-reveal">
+      <p class="kicker">{t(locale, "about.tagline")}</p>
+      <h2>{t(locale, "about.headline")}</h2>
+      <div class="tags">
+        {tags.map((key) => <span>{t(locale, key)}</span>)}
+      </div>
+    </div>
+
+    <div class="features__showcase zf-reveal">
+      <img
+        class="features__phone"
+        src="/images/0kQkUD7xPaoZSWiizPLMVWiJEY_573118.webp"
+        alt=""
+        width="420"
+        height="820"
+      />
+      <div class="features__copy">
+        <h3>{t(locale, "features.section.title")}</h3>
+        <p>{t(locale, "features.section.subtitle")}</p>
+        <p>{t(locale, "home.body.routing")}</p>
+      </div>
+    </div>
+
+    <div class="features__grid">
+      {
+        features.map((feature) => (
+          <article class:list={["feature-card", `feature-card--${feature.tone}`, "zf-reveal"]}>
+            <h3>{t(locale, feature.title)}</h3>
+            <p>{t(locale, feature.desc)}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .features {
+    background: var(--zf-paper);
+  }
+
+  .features__intro {
+    text-align: center;
+    max-width: 46rem;
+    margin: 0 auto 3rem;
+  }
+
+  .kicker {
+    color: var(--zf-ink-muted);
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .features__intro h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.4rem;
+  }
+
+  .tags span {
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.05);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .features__showcase {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .features__phone {
+    width: min(100%, 280px);
+    margin-inline: auto;
+    border-radius: 28px;
+    box-shadow: var(--zf-shadow);
+  }
+
+  .features__copy h3 {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    letter-spacing: -0.03em;
+  }
+
+  .features__copy p {
+    color: var(--zf-ink-muted);
+  }
+
+  .features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .feature-card {
+    border-radius: var(--zf-radius-card);
+    padding: 1.4rem;
+    min-height: 11rem;
+  }
+
+  .feature-card h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.2rem;
+  }
+
+  .feature-card p {
+    margin: 0;
+    color: inherit;
+    opacity: 0.85;
+  }
+
+  .feature-card--cream {
+    background: var(--zf-cream);
+  }
+
+  .feature-card--green {
+    background: var(--zf-green);
+    color: white;
+  }
+
+  .feature-card--dark {
+    background: #15191e;
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    .features__showcase,
+    .features__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

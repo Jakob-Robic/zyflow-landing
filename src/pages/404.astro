@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath } from "../lib/i18n";
+---
+
+<BaseLayout locale="en" title="Not found · Zyflow" description="Page not found">
+  <main class="zf-section">
+    <div class="zf-container">
+      <h1>404</h1>
+      <p>Page not found.</p>
+      <a class="zf-btn zf-btn--dark" href={localePath("en")}>Home</a>
+    </div>
+  </main>
+</BaseLayout>

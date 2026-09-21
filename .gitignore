@@ -1,7 +1,8 @@
-.DS_Store
-*.log
 node_modules/
-serve.py
-sl/
-public/
-.vercel
+dist/
+.astro/
+.DS_Store
+.env
+.env.*
+!.env.example
+public/sl/

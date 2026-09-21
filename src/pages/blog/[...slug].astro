@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../../components/SiteHeader.astro";
+import SiteFooter from "../../components/SiteFooter.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts
+    .filter((post) => post.data.locale === "en" && !post.data.draft)
+    .map((post) => ({
+      params: { slug: post.id },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  locale="en"
+  path={`blog/${post.id}`}
+  title={post.data.title}
+  description={post.data.description}
+>
+  <SiteHeader locale="en" path={`blog/${post.id}`} />
+  <main class="zf-section">
+    <article class="zf-container prose">
+      <h1>{post.data.title}</h1>
+      <Content />
+    </article>
+  </main>
+  <SiteFooter locale="en" />
+</BaseLayout>
+
+<style>
+  .prose {
+    max-width: 42rem;
+  }
+</style>

@@ -1,6 +1,6 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "outputDirectory": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
@@ -8,10 +8,6 @@
     { "source": "/waitlist.html", "destination": "/", "permanent": true },
     { "source": "/sl/waitlist", "destination": "/sl", "permanent": true },
     { "source": "/sl/waitlist.html", "destination": "/sl", "permanent": true }
-  ],
-  "rewrites": [
-    { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" },
-    { "source": "/sl/legal-pages/(.*)", "destination": "/sl/legal-pages/$1.html" }
   ],
   "headers": [
     {

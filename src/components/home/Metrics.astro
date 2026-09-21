@@ -1,0 +1,147 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+import RollingNumber from "../RollingNumber";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const secondary = [
+  {
+    valueKey: "metrics.count.routes",
+    labelKey: "metrics.count.routes.label",
+  },
+  {
+    valueKey: "metrics.count.places",
+    labelKey: "metrics.count.places.label",
+  },
+  {
+    valueKey: "metrics.count.countries",
+    labelKey: "metrics.count.countries.label",
+  },
+] as const;
+---
+
+<section class="metrics zf-section" id="metrics">
+  <div class="zf-container">
+    <div class="metrics__intro zf-reveal">
+      <h2>{t(locale, "metrics.title")}</h2>
+      <p>{t(locale, "metrics.subtitle")}</p>
+    </div>
+
+    <div class="metrics__hero zf-reveal">
+      <RollingNumber client:visible value={t(locale, "metrics.charging.count")} className="metrics__big" />
+      <p>{t(locale, "metrics.charging.label")}</p>
+      <p class="caveat">{t(locale, "metrics.caveat")}</p>
+    </div>
+
+    <div class="metrics__grid">
+      {
+        secondary.map((item) => (
+          <article class="metrics__card zf-reveal">
+            <RollingNumber client:visible value={t(locale, item.valueKey)} className="metrics__mid" />
+            <p>{t(locale, item.labelKey)}</p>
+          </article>
+        ))
+      }
+    </div>
+
+    <div class="metrics__globe zf-reveal" aria-hidden="true">
+      <img src="/images/pEwl510Gi0C383xriIYeMeT4Q_66a651.webp" alt="" width="720" height="420" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .metrics {
+    background: white;
+  }
+
+  .metrics__intro {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .metrics__intro h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .metrics__intro p {
+    color: var(--zf-ink-muted);
+  }
+
+  .metrics__hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .metrics__big {
+    display: block;
+    font-size: clamp(4rem, 12vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    color: var(--zf-orange);
+  }
+
+  .metrics__hero > p {
+    margin: 0.75rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .caveat {
+    max-width: 34rem;
+    margin: 0.85rem auto 0 !important;
+    color: var(--zf-ink-muted) !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+  }
+
+  .metrics__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .metrics__card {
+    background: var(--zf-paper);
+    border-radius: var(--zf-radius-card);
+    padding: 1.4rem;
+    text-align: center;
+  }
+
+  .metrics__mid {
+    display: block;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--zf-orange);
+    letter-spacing: -0.04em;
+  }
+
+  .metrics__card p {
+    margin: 0.5rem 0 0;
+    color: var(--zf-ink-muted);
+  }
+
+  .metrics__globe {
+    margin-top: 2.5rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .metrics__globe img {
+    width: min(100%, 640px);
+  }
+
+  @media (max-width: 800px) {
+    .metrics__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

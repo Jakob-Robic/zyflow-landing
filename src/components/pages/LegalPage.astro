@@ -1,0 +1,93 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SiteHeader from "../SiteHeader.astro";
+import SiteFooter from "../SiteFooter.astro";
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+  kind: "privacy" | "cookies" | "terms";
+}
+
+const { locale, kind } = Astro.props;
+
+const meta = {
+  privacy: {
+    path: "legal-pages/privacy-policy",
+    title: "meta.legal.privacy.title",
+    description: "meta.legal.privacy.description",
+  },
+  cookies: {
+    path: "legal-pages/cookie-policy",
+    title: "meta.legal.cookies.title",
+    description: "meta.legal.cookies.description",
+  },
+  terms: {
+    path: "legal-pages/terms-conditions",
+    title: "meta.legal.terms.title",
+    description: "meta.legal.terms.description",
+  },
+} as const;
+
+const cfg = meta[kind];
+
+const body =
+  kind === "privacy"
+    ? locale === "sl"
+      ? "HERKO d.o.o. obdeluje osebne podatke v skladu z veljavno zakonodajo. Za celotno besedilo politike zasebnosti pišite na support@zyflow.eu ali preverite arhivsko različico po potrebi."
+      : "HERKO d.o.o. processes personal data in line with applicable law. For the full privacy policy text, contact support@zyflow.eu or request the archived long-form document."
+    : kind === "cookies"
+      ? locale === "sl"
+        ? "Zyflow.eu uporablja nujne in analitične piškotke. Nastavitve lahko upravljate v brskalniku. Več podrobnosti: support@zyflow.eu."
+        : "Zyflow.eu uses essential and analytics cookies. Manage preferences in your browser. More detail: support@zyflow.eu."
+      : locale === "sl"
+        ? "Z uporabo Zyflow sprejemate pogoje uporabe storitve HERKO d.o.o. Vprašanja: support@zyflow.eu."
+        : "By using Zyflow you accept the terms of service of HERKO d.o.o. Questions: support@zyflow.eu.";
+---
+
+<BaseLayout
+  locale={locale}
+  path={cfg.path}
+  title={t(locale, cfg.title)}
+  description={t(locale, cfg.description)}
+>
+  <SiteHeader locale={locale} path={cfg.path} />
+  <main>
+    <section class="legal-hero">
+      <div class="zf-container zf-reveal is-visible">
+        <h1>{t(locale, cfg.title)}</h1>
+        <p>{t(locale, cfg.description)}</p>
+      </div>
+    </section>
+    <section class="zf-section">
+      <div class="zf-container prose zf-reveal">
+        <p>{body}</p>
+        <p>
+          <a href="mailto:support@zyflow.eu">support@zyflow.eu</a>
+        </p>
+      </div>
+    </section>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>
+
+<style>
+  .legal-hero {
+    padding: 8rem 0 3rem;
+    background: #15191e;
+    color: white;
+  }
+
+  .legal-hero h1 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    letter-spacing: -0.04em;
+  }
+
+  .prose {
+    max-width: 46rem;
+    color: var(--zf-ink-muted);
+    line-height: 1.7;
+  }
+</style>

@@ -1,0 +1,128 @@
+---
+import type { Locale } from "../lib/i18n";
+import { localePath, t } from "../lib/i18n";
+import { STORE_URLS } from "../lib/stores";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const home = localePath(locale);
+---
+
+<footer class="site-footer">
+  <div class="zf-container site-footer__grid">
+    <div class="site-footer__brand">
+      <a class="site-footer__logo" href={home}>Zyflow</a>
+      <p>{t(locale, "footer.newsletter.title")}</p>
+      <p class="muted">{t(locale, "footer.newsletter.hint")}</p>
+      <form class="site-footer__form" action={localePath(locale, "contact")} method="get">
+        <input type="email" name="email" placeholder="email@example.com" required />
+        <button class="zf-btn zf-btn--dark" type="submit">{t(locale, "footer.newsletter.cta")}</button>
+      </form>
+    </div>
+
+    <div>
+      <h3>{t(locale, "footer.quicklinks")}</h3>
+      <a href={`${home}#features`}>{t(locale, "nav.features")}</a>
+      <a href={`${home}#riders`}>{t(locale, "nav.riders")}</a>
+      <a href={`${home}#metrics`}>{t(locale, "nav.metrics")}</a>
+      <a href={STORE_URLS.ios} target="_blank" rel="noopener noreferrer">{t(locale, "footer.waitlist")}</a>
+    </div>
+
+    <div>
+      <h3>{t(locale, "footer.pages")}</h3>
+      <a href={localePath(locale, "about")}>{t(locale, "footer.about")}</a>
+      <a href={localePath(locale, "changelog")}>{t(locale, "footer.changelog")}</a>
+      <a href={localePath(locale, "faqs")}>{t(locale, "footer.faqs")}</a>
+      <a href={localePath(locale, "contact")}>{t(locale, "footer.contact")}</a>
+    </div>
+
+    <div>
+      <h3>{t(locale, "footer.support")}</h3>
+      <a href={localePath(locale, "legal-pages/privacy-policy")}>{t(locale, "footer.privacy")}</a>
+      <a href={localePath(locale, "legal-pages/cookie-policy")}>{t(locale, "footer.cookies")}</a>
+      <a href={localePath(locale, "legal-pages/terms-conditions")}>{t(locale, "footer.terms")}</a>
+      <a href="mailto:support@zyflow.eu">support@zyflow.eu</a>
+    </div>
+  </div>
+  <div class="zf-container site-footer__copy">
+    <p>{t(locale, "footer.copyright")}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: #111418;
+    color: rgba(255, 255, 255, 0.88);
+    padding: 4rem 0 2rem;
+  }
+
+  .site-footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .site-footer__logo {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .site-footer h3 {
+    margin: 0 0 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .site-footer a,
+  .site-footer p {
+    display: block;
+    margin: 0 0 0.65rem;
+    color: inherit;
+  }
+
+  .muted {
+    color: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  .site-footer__form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .site-footer__form input {
+    flex: 1 1 12rem;
+    min-height: 3rem;
+    border: 0;
+    border-radius: 999px;
+    padding: 0 1rem;
+  }
+
+  .site-footer__copy {
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 900px) {
+    .site-footer__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .site-footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

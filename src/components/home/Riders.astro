@@ -1,0 +1,153 @@
+---
+import type { Locale } from "../../lib/i18n";
+import { t } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tabs = ["riders.tab.alpine", "riders.tab.weekend", "riders.tab.commuters"] as const;
+---
+
+<section class="riders zf-section" id="riders">
+  <div class="zf-container">
+    <div class="riders__intro zf-reveal">
+      <h2>{t(locale, "riders.title")}</h2>
+      <p>{t(locale, "riders.subtitle")}</p>
+      <div class="tabs">
+        {tabs.map((key) => <span>{t(locale, key)}</span>)}
+      </div>
+    </div>
+
+    <div class="riders__panel zf-reveal">
+      <div class="riders__stats">
+        <p class="route">{t(locale, "riders.demo.route")}</p>
+        <div class="stat-row">
+          <div>
+            <strong>{t(locale, "riders.demo.elevation")}</strong>
+            <span>{t(locale, "riders.climb.label")}</span>
+          </div>
+          <div>
+            <strong>{t(locale, "riders.demo.distance")}</strong>
+            <span>{t(locale, "mock.total")}</span>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="/images/5WjHKXFB1GXvNgqm5H4Bw95ppHM_a890ec.webp" alt="" width="640" height="360" />
+        </div>
+      </div>
+      <div class="riders__copy">
+        <h3>{t(locale, "riders.copy.headline")}</h3>
+        <p>{t(locale, "riders.copy.body")}</p>
+        <ul>
+          <li>{t(locale, "riders.chargers.label")}</li>
+          <li>{t(locale, "features.weather.title")}</li>
+          <li>{t(locale, "features.battery.title")}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .riders {
+    background: #10151a;
+    color: white;
+  }
+
+  .riders__intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .riders__intro h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: -0.04em;
+  }
+
+  .riders__intro p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .tabs span {
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+
+  .riders__panel {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .riders__stats {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 1.4rem;
+  }
+
+  .route {
+    margin: 0 0 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-row strong {
+    display: block;
+    color: var(--zf-orange);
+    font-size: 1.5rem;
+  }
+
+  .stat-row span {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+  }
+
+  .profile {
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .riders__copy h3 {
+    margin-top: 0;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    letter-spacing: -0.03em;
+  }
+
+  .riders__copy p,
+  .riders__copy li {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .riders__copy ul {
+    padding-left: 1.1rem;
+  }
+
+  @media (max-width: 900px) {
+    .riders__panel {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
