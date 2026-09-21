@@ -140,6 +140,25 @@ select {
   transform: none;
 }
 
+.metrics__big,
+.metrics__mid {
+  font-family: var(--zf-font-display);
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: var(--zf-orange) !important;
+}
+
+.metrics__big {
+  display: block;
+  font-size: clamp(4rem, 12vw, 7.5rem);
+  line-height: 0.95;
+}
+
+.metrics__mid {
+  display: block;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

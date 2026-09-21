@@ -32,18 +32,68 @@ const meta = {
 
 const cfg = meta[kind];
 
-const body =
+const privacyEn = [
+  "Effective Date: 30. 6. 2026 · Version: 1.1",
+  "Your privacy matters. This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR and Slovenian data protection law (ZVOP-2).",
+  "Controller: HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia. Tax SI56613555 · Reg. 8830045000. Privacy: legal@zyflow.eu · Support: support@zyflow.eu.",
+  "We collect account data (email, optional name), location data tied to routes you save, community POI reports, optional push tokens, analytics and crash data, and optional Strava import data when you connect Strava.",
+  "We do not sell personal data, process payments, use ad networks, track location continuously in the background, or collect health/biometric data.",
+  "Data is primarily stored in the EU. Transfers outside the EEA use SCCs or the EU–US Data Privacy Framework where applicable.",
+  "You may request access, rectification, erasure, portability, and object to certain processing by emailing legal@zyflow.eu. You may also complain to Informacijski pooblaščenec (ip-rs.si).",
+  "Zyflow is not intended for persons under 16. Material policy changes are notified in-app and/or by email.",
+];
+
+const privacySl = [
+  "Veljavnost: 30. 6. 2026 · Različica: 1.1",
+  "Ta politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira pri uporabi Zyflow, zakaj jih zbira in katere pravice imate po GDPR in ZVOP-2.",
+  "Upravljavec: HERKO d.o.o., Pševska cesta 10, 4000 Kranj. Davčna SI56613555 · Matična 8830045000. Zasebnost: legal@zyflow.eu · Podpora: support@zyflow.eu.",
+  "Zbiramo podatke računa, lokacije ob shranjenih poteh, prispevke POI, morebitne push žetone, analitiko in poročila o napakah ter po želji podatke uvoza s Strave.",
+  "Osebnih podatkov ne prodajamo, ne obdelujemo plačil, ne uporabljamo oglaševalskih omrežij in ne sledimo lokaciji neprekinjeno v ozadju.",
+  "Podatki so pretežno v EU. Prenosi izven EGP temeljijo na ustreznih zaščitnih ukrepih (SCC / Data Privacy Framework).",
+  "Pravice (dostop, popravek, izbris, prenosljivost, ugovor) uveljavljate na legal@zyflow.eu. Pritožba: Informacijski pooblaščenec (ip-rs.si).",
+  "Zyflow ni namenjen osebam, mlajšim od 16 let.",
+];
+
+const cookiesEn = [
+  "Zyflow.eu may use essential cookies required to run the site and optional analytics cookies to understand usage.",
+  "You can control cookies in your browser settings. The mobile app uses local device storage for session state rather than browser cookies.",
+  "Questions: legal@zyflow.eu / support@zyflow.eu.",
+];
+
+const cookiesSl = [
+  "Zyflow.eu lahko uporablja nujne piškotke za delovanje strani in morebitne analitične piškotke.",
+  "Nastavitve upravljate v brskalniku. Mobilna aplikacija za sejo uporablja lokalno shrambo naprave.",
+  "Vprašanja: legal@zyflow.eu / support@zyflow.eu.",
+];
+
+const termsEn = [
+  "By downloading or using Zyflow you agree to these Terms of Service with HERKO d.o.o. (Pševska cesta 10, 4000 Kranj, Slovenia).",
+  "Zyflow provides cycling and e-bike route planning tools. Features may change as we improve the product. The service is currently free.",
+  "You are responsible for safe riding and for verifying chargers, weather, and road conditions in the real world. Estimates are informational, not guarantees.",
+  "Do not misuse the service, attempt unauthorized access, or submit unlawful content. We may suspend accounts that violate these terms.",
+  "Governing law: Slovenia. Contact: support@zyflow.eu · legal@zyflow.eu.",
+];
+
+const termsSl = [
+  "Z uporabo Zyflow sprejemate te pogoje podjetja HERKO d.o.o. (Pševska cesta 10, 4000 Kranj).",
+  "Zyflow ponuja orodja za načrtovanje kolesarskih in e-kolesarskih poti. Funkcije se lahko spreminjajo. Storitev je trenutno brezplačna.",
+  "Odgovorni ste za varno vožnjo in preverjanje polnilnic, vremena ter razmer na cesti. Ocene so informativne, ne jamstva.",
+  "Ne zlorabljajte storitve in ne oddajajte nezakonitih vsebin. Ob kršitvah lahko omejimo dostop.",
+  "Pravo RS. Kontakt: support@zyflow.eu · legal@zyflow.eu.",
+];
+
+const blocks =
   kind === "privacy"
     ? locale === "sl"
-      ? "HERKO d.o.o. obdeluje osebne podatke v skladu z veljavno zakonodajo. Za celotno besedilo politike zasebnosti pišite na support@zyflow.eu ali preverite arhivsko različico po potrebi."
-      : "HERKO d.o.o. processes personal data in line with applicable law. For the full privacy policy text, contact support@zyflow.eu or request the archived long-form document."
+      ? privacySl
+      : privacyEn
     : kind === "cookies"
       ? locale === "sl"
-        ? "Zyflow.eu uporablja nujne in analitične piškotke. Nastavitve lahko upravljate v brskalniku. Več podrobnosti: support@zyflow.eu."
-        : "Zyflow.eu uses essential and analytics cookies. Manage preferences in your browser. More detail: support@zyflow.eu."
+        ? cookiesSl
+        : cookiesEn
       : locale === "sl"
-        ? "Z uporabo Zyflow sprejemate pogoje uporabe storitve HERKO d.o.o. Vprašanja: support@zyflow.eu."
-        : "By using Zyflow you accept the terms of service of HERKO d.o.o. Questions: support@zyflow.eu.";
+        ? termsSl
+        : termsEn;
 ---
 
 <BaseLayout
@@ -62,8 +112,10 @@ const body =
     </section>
     <section class="zf-section">
       <div class="zf-container prose zf-reveal">
-        <p>{body}</p>
+        {blocks.map((paragraph) => <p>{paragraph}</p>)}
         <p>
+          <a href="mailto:legal@zyflow.eu">legal@zyflow.eu</a>
+          ·
           <a href="mailto:support@zyflow.eu">support@zyflow.eu</a>
         </p>
       </div>
@@ -89,5 +141,9 @@ const body =
     max-width: 46rem;
     color: var(--zf-ink-muted);
     line-height: 1.7;
+  }
+
+  .prose p {
+    margin: 0 0 1rem;
   }
 </style>

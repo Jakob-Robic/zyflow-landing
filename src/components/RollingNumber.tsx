@@ -41,7 +41,7 @@ export default function RollingNumber({ value, className }: Props) {
   }, [end, inView, prefix, suffix, value]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={className} style={{ color: "var(--zf-orange, #ff6b35)" }}>
       {value}
     </span>
   );

@@ -9,16 +9,19 @@ interface Props {
 }
 
 const { locale, size = "hero" } = Astro.props;
+const iosLabel = size === "hero" ? t(locale, "hero.cta.ios") : t(locale, "cta.final.ios");
+const androidLabel =
+  size === "hero" ? t(locale, "hero.cta.android") : t(locale, "cta.final.android");
 ---
 
 <div class:list={["store-btns", size === "final" && "store-btns--final"]}>
-  <a class="zf-btn zf-btn--dark" href={STORE_URLS.ios} target="_blank" rel="noopener noreferrer">
+  <a class="store-btns__ios" href={STORE_URLS.ios} target="_blank" rel="noopener noreferrer">
     <img src="/images/BZYkl56vzaLH9uCPqEid8uQg9ZE_42204b.svg" alt="" width="18" height="18" />
-    {size === "hero" ? t(locale, "hero.cta.ios") : t(locale, "cta.final.ios")}
+    {iosLabel}
   </a>
-  <a class="zf-btn zf-btn--light" href={STORE_URLS.android} target="_blank" rel="noopener noreferrer">
+  <a class="store-btns__android" href={STORE_URLS.android} target="_blank" rel="noopener noreferrer">
     <img src="/images/J4VPLNaOdWSrA6fBUpuZ0eLYNAI_8debd7.svg" alt="" width="18" height="18" />
-    {size === "hero" ? t(locale, "hero.cta.android") : t(locale, "cta.final.android")}
+    {androidLabel}
   </a>
 </div>
 
@@ -34,11 +37,37 @@ const { locale, size = "hero" } = Astro.props;
     justify-content: flex-start;
   }
 
-  .store-btns img {
-    filter: invert(1);
+  .store-btns__ios,
+  .store-btns__android {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 3rem;
+    padding: 0.7rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease;
   }
 
-  .store-btns .zf-btn--light img {
-    filter: none;
+  .store-btns__ios:hover,
+  .store-btns__android:hover {
+    transform: translateY(-1px);
+  }
+
+  .store-btns__ios {
+    background: #111;
+    color: #fff;
+  }
+
+  .store-btns__ios img {
+    filter: brightness(0) invert(1);
+  }
+
+  .store-btns__android {
+    background: #fff;
+    color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.08);
   }
 </style>
