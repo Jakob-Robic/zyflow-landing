@@ -3,6 +3,12 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/waitlist", "destination": "/", "permanent": true },
+    { "source": "/waitlist.html", "destination": "/", "permanent": true },
+    { "source": "/sl/waitlist", "destination": "/sl", "permanent": true },
+    { "source": "/sl/waitlist.html", "destination": "/sl", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" },
     { "source": "/sl/legal-pages/(.*)", "destination": "/sl/legal-pages/$1.html" }

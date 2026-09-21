@@ -12,7 +12,6 @@ const OUT = path.join(ROOT, "public");
 
 const SOURCE_PAGES = [
   "index.html",
-  "waitlist.html",
   "about.html",
   "contact.html",
   "faqs.html",

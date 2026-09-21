@@ -244,9 +244,7 @@ function applyTranslations($, locale, relFile) {
     if (!dict[key]) {
       throw new Error(`Missing translation for key "${key}" in ${relFile}`);
     }
-    if (locale === "sl") {
-      $el.text(dict[key]);
-    }
+    $el.text(dict[key]);
   });
 
   $("[data-i18n-placeholder]").each((_, el) => {
@@ -254,19 +252,17 @@ function applyTranslations($, locale, relFile) {
     if (locale === "sl" && isInsideSkip($el)) return;
     const key = $el.attr("data-i18n-placeholder");
     if (!dict[key]) throw new Error(`Missing placeholder key "${key}"`);
-    if (locale === "sl") $el.attr("placeholder", dict[key]);
+    $el.attr("placeholder", dict[key]);
   });
 
   $("[data-i18n-alt]").each((_, el) => {
     const $el = $(el);
     const key = $el.attr("data-i18n-alt");
     if (!dict[key]) throw new Error(`Missing alt key "${key}"`);
-    if (locale === "sl") $el.attr("alt", dict[key]);
+    $el.attr("alt", dict[key]);
   });
 
-  if (locale === "sl") {
-    applyPageMeta($, locale, relFile);
-  }
+  applyPageMeta($, locale, relFile);
 }
 
 function rewriteInternalLinks($, isSl) {
@@ -342,10 +338,10 @@ function main() {
     fs.writeFileSync(slOut, $sl.html());
     console.log(`✓ Generated sl/${relFile}`);
 
-    // English: meta, canonical, hreflang + switcher (idempotent)
+    // English: apply locale strings + meta, canonical, hreflang + switcher (idempotent)
     const $en = cheerio.load(originalHtml, { decodeEntities: false });
     $en("html").attr("lang", "en");
-    applyPageMeta($en, "en", relFile);
+    applyTranslations($en, "en", relFile);
     injectCanonical($en, relFile, "en");
     normalizeSocialImages($en);
     injectHreflang($en, relFile);
