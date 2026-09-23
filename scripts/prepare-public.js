@@ -19,8 +19,6 @@ const EXCLUDE = new Set([
   "package-lock.json",
   ".gitignore",
   "serve.py",
-  // Archived: keep in repo for reuse, do not publish
-  "waitlist.html",
 ]);
 
 function shouldSkip(name) {
