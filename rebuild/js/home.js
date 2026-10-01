@@ -124,6 +124,107 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
 })();
 
 /**
+ * Mobile nav panel — hamburger toggle, focus trap, Escape / outside close.
+ */
+(function initNavMenu() {
+  const nav = document.querySelector(".nav");
+  const toggle = document.querySelector("[data-nav-menu-toggle]");
+  const panel = document.querySelector("[data-nav-panel]");
+  if (!nav || !toggle || !panel) return;
+
+  const mq = window.matchMedia("(max-width: 1100px)");
+  let lastFocus = null;
+
+  function focusableIn(root) {
+    return Array.from(
+      root.querySelectorAll(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )
+    ).filter((el) => !el.hasAttribute("disabled") && el.offsetParent !== null);
+  }
+
+  function setOpen(open) {
+    if (open) {
+      lastFocus = document.activeElement;
+      nav.classList.add("is-open");
+      panel.hidden = false;
+      toggle.setAttribute("aria-expanded", "true");
+      toggle.setAttribute("aria-label", "Close menu");
+      const items = focusableIn(panel);
+      if (items[0]) items[0].focus();
+      else toggle.focus();
+    } else {
+      nav.classList.remove("is-open");
+      panel.hidden = true;
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.setAttribute("aria-label", "Menu");
+      if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
+      else toggle.focus();
+    }
+  }
+
+  function isOpen() {
+    return nav.classList.contains("is-open");
+  }
+
+  toggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (!mq.matches) return;
+    setOpen(!isOpen());
+  });
+
+  panel.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (isOpen()) setOpen(false);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!isOpen()) return;
+
+    if (event.key === "Escape") {
+      event.preventDefault();
+      setOpen(false);
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const items = focusableIn(panel);
+    const controls = [toggle, ...items];
+    if (!controls.length) return;
+
+    const first = controls[0];
+    const last = controls[controls.length - 1];
+    const active = document.activeElement;
+
+    if (event.shiftKey && (active === first || active === toggle)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!isOpen()) return;
+    if (nav.contains(event.target)) return;
+    setOpen(false);
+  });
+
+  function onViewportChange() {
+    if (!mq.matches && isOpen()) setOpen(false);
+  }
+
+  if (typeof mq.addEventListener === "function") {
+    mq.addEventListener("change", onViewportChange);
+  } else if (typeof mq.addListener === "function") {
+    mq.addListener(onViewportChange);
+  }
+})();
+
+/**
  * Active legal document switcher from body[data-legal].
  */
 (function initLegalActive() {

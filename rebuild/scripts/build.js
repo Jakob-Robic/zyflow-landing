@@ -219,9 +219,9 @@ function injectLangSwitcher(html, page, locale) {
       </div>`;
 
   if (html.includes("<!-- lang-switch -->")) {
-    return html.replace("<!-- lang-switch -->", switcher);
+    return html.replaceAll("<!-- lang-switch -->", switcher);
   }
-  // Insert before theme toggle if marker missing
+  // Insert before first theme toggle if marker missing
   return html.replace(
     /(<div class="theme-toggle")/,
     `${switcher}\n      $1`

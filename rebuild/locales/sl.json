@@ -5,35 +5,35 @@
     "source": "zyflow",
     "pages": {
       "home": {
-        "title": "Zyflow — Pametna navigacija za kolesarje in e-kolesarje",
-        "description": "Načrtuj pametnejše vožnje z Zyflow. Višina, vreme in polnilne postaje v eni aplikaciji za kolesarje in e-kolesarje."
+        "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
+        "description": "Najdi kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice v 8 državah. Brezplačna aplikacija za kolesarje in e-kolesarje za iOS in Android."
       },
       "about": {
-        "title": "Zyflow — Ustvarjeno s strani kolesarjev",
-        "description": "Pametna kolesarska navigacija z višino, vremenom in polnilnimi postajami."
+        "title": "Zyflow: ekipa za kolesarjem prijaznimi kraji",
+        "description": "Spoznaj ekipo za Zyflowom, aplikacijo za iskanje kolesarjem prijaznih nastanitev, kavarn, restavracij in polnilnic. Narejeno v Sloveniji, HERKO d.o.o."
       },
       "tours": {
-        "title": "Zyflow — Poti",
-        "description": "Explore curated cycling and e-bike routes with battery-aware planning, elevation, and charging stops along the way."
+        "title": "Zyflow: kolesarske poti skozi kolesarjem prijazne kraje",
+        "description": "Kolesarske poti in poti za e-kolesa po Sloveniji, Hrvaški, Avstriji in Italiji, s kolesarjem prijaznimi nastanitvami, kavarnami, restavracijami in polnilnicami ob poti."
       },
       "tour": {
         "title": "Zyflow — Ljubljana to Trieste",
-        "description": "Plan the Ljubljana to Trieste ride in Zyflow with elevation, charge stops, and weather before you leave."
+        "description": "Z Zyflowom od Ljubljane do Trsta: 134 km mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami ob poti."
       },
       "blog": {
-        "title": "Zyflow — Dnevnik",
-        "description": "Stories, tips, and product updates from the Zyflow team for cyclists and e-bike adventurers."
+        "title": "Zyflow: Dnevnik",
+        "description": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti ekipe Zyflow za kolesarje in e-kolesarje."
       },
       "blog-article": {
-        "title": "Zyflow — Why e-bike charging stops matter",
-        "description": "If a charger is not visible online, many riders never find it. How better maps change longer rides."
+        "title": "Zyflow: zakaj so polnilni postanki za e-kolesa pomembni",
+        "description": "Če polnilnice ni mogoče najti na spletu, je veliko kolesarjev nikoli ne najde. Kako boljši zemljevidi spremenijo daljše vožnje."
       },
       "contact": {
-        "title": "Zyflow — Kontakt",
-        "description": "Have feedback, found a bug, or want to suggest a stop we are missing? Reach the Zyflow team at support@zyflow.eu."
+        "title": "Zyflow: Kontakt",
+        "description": "Dodaj svoj kraj, vprašaj o poteh ali se z nami pogovori o partnerstvih in naložbah. Ekipa Zyflow je dosegljiva na support@zyflow.eu."
       },
       "legal": {
-        "title": "Zyflow — Pravno",
+        "title": "Zyflow: Pravno",
         "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
       },
       "legal-privacy": {
@@ -49,7 +49,7 @@
         "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
       },
       "404": {
-        "title": "Zyflow — Strani ni mogoče najti",
+        "title": "Zyflow: Stran ne obstaja",
         "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
       },
       "styleguide": {
@@ -57,19 +57,19 @@
         "description": "Internal design tokens and components for the Zyflow rebuild."
       },
       "business": {
-        "title": "Zyflow: For Businesses",
-        "description": "Put your café, restaurant, stay or bike shop in front of cyclists and e-bike riders. Show your bike parking, storage or charger on the Zyflow map."
+        "title": "Zyflow: za podjetja",
+        "description": "Pokaži svojo kavarno, restavracijo, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Parkirišče za kolesa, shramba ali polnilnica na zemljevidu Zyflow."
       },
       "press": {
-        "title": "Zyflow: Press & Investors",
-        "description": "Facts, team and contact for press and investors. Zyflow helps cyclists find bike-friendly places and ride there feeling safe."
+        "title": "Zyflow: mediji in vlagatelji",
+        "description": "Dejstva, ekipa in kontakt za medije in vlagatelje. Zyflow kolesarjem pomaga najti kolesarjem prijazne kraje in tja kolesariti brez skrbi."
       }
     }
   },
   "chrome": {
     "announcement": {
       "label": "App Update:",
-      "text": "Zyflow is live on iOS and Android. Plan smarter rides with battery-aware routing.",
+      "text": "Zyflow je na voljo za iOS in Android. Najdi kolesarjem prijazne kraje v 8 državah.",
       "cta": "Download"
     },
     "nav": {
@@ -80,7 +80,7 @@
         "about": "O nas",
         "journal": "Dnevnik",
         "contact": "Kontakt",
-        "business": "For businesses"
+        "business": "Za podjetja"
       }
     },
     "footer": {
@@ -90,25 +90,25 @@
         "about": "O nas",
         "journal": "Dnevnik",
         "contact": "Kontakt",
-        "press": "Press & investors",
+        "press": "Mediji in vlagatelji",
         "legal": "Pravno"
       },
       "cats": {
-        "kayak": "Tour",
-        "bike": "Commute",
-        "hike": "Alpine",
-        "fourwd": "Gravel"
+        "kayak": "Nastanitve",
+        "bike": "Kava",
+        "hike": "Restavracije",
+        "fourwd": "Storitve"
       },
       "newsletter": {
         "title": "newsletter",
-        "body": "Ride updates, product news, and useful tips for e-bike adventurers. No spam. Ever.",
+        "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
         "note": "We never share your details."
       },
       "copyright": "© 2026 Zyflow. All rights reserved."
     },
     "notFound": {
       "title": "Strani ni mogoče najti",
-      "body": "Ta pot ne obstaja. Pojdi na domov ali razišči poti.",
+      "body": "Ta stran je zavila napačno. Vrni se domov ali razišči poti.",
       "home": "Nazaj domov",
       "tours": "Razišči poti"
     },
@@ -119,32 +119,34 @@
     },
     "appModal": {
       "title": "Get the Zyflow app",
-      "lede": "Free navigation for cyclists and e-bike riders. Plan with battery, elevation, chargers, and weather.",
+      "lede": "Najdi kolesarjem prijazne nastanitve, kavarne in restavracije, s polnilnicami in kolesarskimi storitvami na zemljevidu. Brezplačno za iOS in Android.",
       "badge": "Free on iOS and Android",
       "downloadTitle": "Download Zyflow now",
-      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone."
+      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
+      "mockStat": "Kolesarjem prijazni postanki",
+      "mockLine": "Nastanitve, kava in polnilnice ob poti"
     }
   },
   "home": {
     "hero": {
-      "titleHtml": "ride<br />further.",
-      "subtitle": "Smart navigation for cyclists and e-bike riders. Battery, elevation, and weather before you leave.",
-      "cta": "Plan your first route",
-      "nextDepartureLabel": "Featured Route",
+      "titleHtml": "raziskuj<br>dlje.",
+      "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
+      "cta": "Prenesi aplikacijo",
+      "nextDepartureLabel": "Izpostavljena pot",
       "nextDepartureTitle": "Ljubljana to Trieste",
-      "nextDepartureDate": "134 km · +1,766 m"
+      "nextDepartureDate": "134 km · +1.766 m"
     },
     "appBanner": {
       "eyebrow": "The Zyflow app",
-      "titleHtml": "Built for the<br />ride, not a tour desk.",
-      "body": "Free navigation for cyclists and e-bike riders. Plan with battery, elevation, chargers, and weather before you leave.",
+      "titleHtml": "Vsak postanek.<br>En zemljevid.",
+      "body": "Nastanitve, kavarne, restavracije, polnilnice, pitna voda in servis koles, pri vsakem pa vidiš, zakaj je prijazen kolesarjem. Brezplačno za iOS in Android.",
       "cta": "Download"
     },
     "trust": {
-      "one": "Regional mapping and route data",
-      "two": "Local cycling community and rides",
-      "three": "E-bike travel and charging insight",
-      "four": "Open mobility data for better plans"
+      "one": "Regionalni zemljevidi in podatki o poteh",
+      "two": "Lokalna kolesarska skupnost",
+      "three": "Znanje o polnjenju e-koles",
+      "four": "Odprti podatki o krajih in mobilnosti"
     },
     "adventures": {
       "titleHtml": "featured<br />routes",
@@ -158,9 +160,9 @@
           "meta0": "Touring",
           "meta1": "1 day",
           "meta2": "134 km",
-          "body": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard, the kind of route Zyflow plans around your battery.",
+          "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
           "price": "134 km",
-          "unit": " · example"
+          "unit": " · 1 dan"
         },
         {
           "place": "Julian Alps",
@@ -169,7 +171,7 @@
           "meta0": "Alpine",
           "meta1": "1 day",
           "meta2": "89 km",
-          "body": "Serious climbing where battery drain is hardest to predict. Charging stops and elevation profile keep the ride confident instead of stressful.",
+          "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
           "price": "+890 m",
           "unit": " · climb"
         },
@@ -180,52 +182,52 @@
           "meta0": "Gravel",
           "meta1": "2 days",
           "meta2": "156 km",
-          "body": "Sea air, rolling gravel, and multi-stop planning. An example of the country-level routes Zyflow is built to showcase as coverage grows.",
+          "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
           "price": "156 km",
-          "unit": " · example"
+          "unit": " · 2 dni"
         }
       ]
     },
     "intro": {
       "greeting": "Hey there!",
-      "body": "We’re the small team behind Zyflow, building smart navigation for riders who want to go further without guessing their battery. Questions? We’re listening.",
+      "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
       "link": "About Zyflow"
     },
     "featuredTour": {
-      "eyebrow": "Featured Route",
+      "eyebrow": "Vsaka pot, v celoti na zemljevidu",
       "title": "ljubljana to trieste",
       "metaDuration": "134 km",
-      "metaSeason": "Touring",
-      "cta": "Explore Route",
-      "metaStops": "24 bike-friendly stops",
-      "metaChargers": "2 chargers"
+      "metaSeason": "+1.766 m",
+      "cta": "Poglej, kaj je ob poti",
+      "metaStops": "Nastanitve, kava in polnilnice",
+      "metaChargers": "1 dan"
     },
     "categories": {
-      "cycle": "tour",
-      "hike": "alpine",
-      "kayak": "commute",
-      "fourwd": "gravel"
+      "cycle": "nastanitve",
+      "hike": "kava",
+      "kayak": "restavracije",
+      "fourwd": "storitve"
     },
     "testimonial": {
-      "quote": "“Finally, routing that respects my battery.”",
-      "body": "“I used to guess charging stops and still end up short on the climbs. Zyflow laid out elevation, weather, and chargers for the whole day. I just rode.”",
-      "cta": "List your place",
-      "ctaSecondary": "Investors and press"
+      "quote": "Je tvoj kraj prijazen kolesarjem?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Vlagatelji in mediji"
     },
     "whyUs": {
       "titleHtml": "Why<br />Zyflow?",
       "items": [
         {
-          "title": "battery-aware routing",
-          "body": "Traditional apps ignore your battery. Zyflow plans around your range, elevation, and how hard the climbs hit, so the ride doesn’t end early."
+          "title": "kraji, ki jih drugi zemljevidi spregledajo",
+          "body": "Večina zemljevidov ti pokaže ceste. Zyflow ti pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, z označenim parkiriščem, shrambo in polnjenjem."
         },
         {
-          "title": "live charging stops",
-          "body": "Chargers are placed where you need them along the route, with detour time and plug details, mapped across thousands of locations and growing by country."
+          "title": "varnost, ki jo vidiš",
+          "body": "Zapore cest, dela na cesti in dogodki na tvoji poti, kraje koles po območjih in polnilnice tam, kjer jih baterija potrebuje."
         },
         {
-          "title": "weather along the route",
-          "body": "Short, timely alerts for rain, wind, and temperature changes on your path, not just a forecast for where you started."
+          "title": "načrt baterije, ki mu lahko zaupaš",
+          "body": "Zyflow načrtuje glede na tvoj doseg, vzpone, veter in temperaturo, da se vožnja ne konča prezgodaj."
         }
       ]
     },
@@ -237,45 +239,45 @@
       "ctaAndroid": "Get it on Android"
     },
     "appFlow": {
-      "titleHtml": "From plan<br />to ride.",
+      "titleHtml": "Od zemljevida<br>do vožnje.",
       "steps": [
         {
-          "title": "plan",
-          "body": "Set your bike and range. Zyflow builds a route around elevation and how hard the climbs hit."
+          "title": "raziskuj",
+          "body": "Odpri zemljevid in najdi nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ob približevanju pa še polnilnice, vodo in servis."
         },
         {
-          "title": "charge",
-          "body": "Stops land where you need them, with detour time and plug details before you roll out."
+          "title": "načrtuj",
+          "body": "Poveži kraje v vožnjo. Zyflow načrtuje baterijo glede na vzpone in postavi polnilnice, preden jih potrebuješ."
         },
         {
-          "title": "ride",
-          "body": "Weather along the path, not just at the start. Ride further without guessing the finish."
+          "title": "kolesari",
+          "body": "Pred odhodom preveri zapore cest in poglej, kje kradejo kolesa. Potem kolesari in se ustavi, kjer ti je všeč."
         }
       ]
     },
     "features": {
-      "titleHtml": "Routes with<br /><span class=\"accent\">intelligence.</span>",
+      "titleHtml": "Kraji, ki<br><span class=\"accent\">sprejmejo kolesa.</span>",
       "items": [
         {
-          "title": "plan smarter",
-          "body": "Battery range, elevation, charging stops, and weather for every kilometre, clear before you leave the driveway.",
+          "title": "najdi kolesarjem prijazne kraje",
+          "body": "Parkirišče za kolesa, varna shramba, tlačilka ali polnilnica, označeno pri vsakem kraju. Zemljevid lahko filtriraš, da pokaže samo kraje, ki sprejmejo kolesa.",
           "link": "Download"
         },
         {
-          "title": "built for riders",
-          "body": "Weekend tourers, daily commuters, alpine climbers, gravel explorers. Adapted to how you actually ride.",
+          "title": "kolesari brez skrbi",
+          "body": "Pred odhodom poglej zapore cest in dela na cesti, preveri kraje koles po območjih in načrtuj baterijo s polnilnicami ob poti.",
           "link": "Explore Routes"
         },
         {
-          "title": "growing coverage",
-          "body": "From Slovenia, Croatia, and Austria outward. Continents and countries of showcased routes are next on the map.",
+          "title": "rastemo po Evropi",
+          "body": "Na voljo v 8 državah, začenši s Slovenijo, Hrvaško in Avstrijo, in rastemo država za državo.",
           "link": "Read Journal"
         }
       ]
     },
     "journal": {
       "titleHtml": "The Zyflow<br />journal",
-      "cta": "Explore Blog",
+      "cta": "Preberi dnevnik",
       "posts": [
         {
           "tag": "Tips",
@@ -284,37 +286,37 @@
           "link": "Read Story"
         },
         {
-          "tag": "Product",
-          "title": "Battery-aware routing, explained simply",
-          "excerpt": "How Zyflow uses range, elevation, and weather so your plan matches the ride you’ll actually do.",
+          "tag": "Vodniki",
+          "title": "Kaj naredi kraj prijazen kolesarjem?",
+          "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
           "link": "Read Story"
         }
       ]
     },
     "faq": {
       "title": "common questions",
-      "footnote": "If you have any further questions, reach out to our team.",
+      "footnote": "Vprašanja, povratne informacije ali kraj, ki nam manjka? Piši na support@zyflow.eu. Preberemo vsako sporočilo.",
       "contactLink": "Contact us",
       "items": [
         {
-          "q": "What is Zyflow?",
-          "a": "Zyflow is a route planning app built for cyclists and e-bike riders. It plans cycling routes with automatic charging-stop suggestions, factoring in your battery range, elevation, wind, and temperature so you can ride further with confidence."
+          "q": "Kaj je Zyflow?",
+          "a": "Zyflow je brezplačna aplikacija za iskanje kolesarjem prijaznih krajev: nastanitev, kavarn, restavracij, polnilnic in kolesarskih storitev. Vidiš lahko zapore cest in kraje koles po območjih ter med kraji načrtuješ vožnjo z mislijo na baterijo."
         },
         {
-          "q": "Is Zyflow free?",
-          "a": "Yes. Zyflow is free to download and use on iOS and Android. Beta riders also keep full access at no cost as we grow."
+          "q": "Je Zyflow brezplačen?",
+          "a": "Da. Zyflow je brezplačen za prenos in uporabo na iOS in Android."
         },
         {
-          "q": "What bikes does Zyflow support?",
-          "a": "Zyflow works with e-bikes, road, gravel, touring, and mountain bikes. You set your bike type and e-bike range, and we adapt planning to your setup."
+          "q": "Katera kolesa Zyflow podpira?",
+          "a": "Vsa: cestna, gravel, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
         },
         {
-          "q": "Is Zyflow on iOS and Android?",
-          "a": "Yes. Download from the App Store or Google Play. It only takes a minute."
+          "q": "Kako vem, da je kraj prijazen kolesarjem?",
+          "a": "Kraji s parkiriščem za kolesa, varno shrambo, tlačilko ali polnilnico so označeni, zemljevid pa lahko filtriraš, da pokaže samo kolesarjem prijazne kraje."
         },
         {
-          "q": "How do I give feedback?",
-          "a": "Use the in-app feedback option or email support@zyflow.eu. We read every message."
+          "q": "Imam kavarno, hotel ali kolesarsko trgovino. Sem lahko na Zyflowu?",
+          "a": "Seveda. Piši nam prek kontaktnega obrazca in dodali bomo tvoj kraj, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu."
         }
       ]
     },
@@ -333,13 +335,13 @@
   "tours": {
     "hero": {
       "title": "our routes",
-      "lede": "Example rides across countries we cover today. And a preview of the continent and country route library Zyflow is building.",
+      "lede": "Vožnje skozi kolesarjem prijazne kraje, z nastanitvami, kavarnami, restavracijami in polnilnicami ob poti. Izberi pot in jo odpri v aplikaciji.",
       "quals": [
-        "Battery-aware routing",
-        "7,400+ chargers mapped",
-        "iOS & Android",
-        "Europe coverage growing",
-        "Free to download"
+        "Kolesarjem prijazni postanki na vsaki poti",
+        "7.400+ polnilnic na zemljevidu",
+        "8 držav",
+        "iOS in Android",
+        "Brezplačen prenos"
       ]
     },
     "filter": {
@@ -351,7 +353,7 @@
       "gravel": "gravel"
     },
     "viewCta": "View route",
-    "empty": "No routes in this category yet. Check back as coverage grows.",
+    "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
     "cards": [
       {
         "place": "Ljubljana",
@@ -360,9 +362,9 @@
         "meta0": "Touring",
         "meta1": "1 day",
         "meta2": "134 km",
-        "body": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard. Exactly the kind of route Zyflow plans around your battery.",
+        "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
         "price": "134 km",
-        "unit": " · example"
+        "unit": " · 1 dan"
       },
       {
         "place": "Julian Alps",
@@ -371,7 +373,7 @@
         "meta0": "Alpine",
         "meta1": "1 day",
         "meta2": "89 km",
-        "body": "Serious climbing where battery drain is hardest to predict. Charging stops and elevation profile keep the ride confident instead of stressful.",
+        "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
         "price": "+890 m",
         "unit": " · climb"
       },
@@ -382,9 +384,9 @@
         "meta0": "Gravel",
         "meta1": "2 days",
         "meta2": "156 km",
-        "body": "Sea air, rolling gravel, and multi-stop planning. An example of the country-level routes Zyflow is built to showcase as coverage grows.",
+        "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
         "price": "156 km",
-        "unit": " · example"
+        "unit": " · 2 dni"
       },
       {
         "place": "Vienna",
@@ -393,9 +395,9 @@
         "meta0": "Commute",
         "meta1": "1 day",
         "meta2": "42 km",
-        "body": "Everyday riding done right. Range, wind, and charger awareness for the trip to work and the longer weekend ride that grows from it.",
+        "body": "Vsakodnevna vožnja s kavo na poti, parkiriščem za kolesa na cilju in polnilnicami, če se obrne veter.",
         "price": "42 km",
-        "unit": " · example"
+        "unit": " · 1 dan"
       },
       {
         "place": "Lake Bled",
@@ -404,9 +406,9 @@
         "meta0": "Touring",
         "meta1": "1 day",
         "meta2": "68 km",
-        "body": "Lakeside roads and rolling climbs with clear elevation and range cues. The kind of day ride that benefits from planning before you leave.",
+        "body": "Ceste ob jezeru, kavarne z razgledom in kolesarjem prijazna gostišča, če želiš ostati čez noč.",
         "price": "68 km",
-        "unit": " · example"
+        "unit": " · 1 dan"
       },
       {
         "place": "Dolomites",
@@ -415,7 +417,7 @@
         "meta0": "Alpine",
         "meta1": "2 days",
         "meta2": "118 km",
-        "body": "High passes and long descents where temperature and climb load reshape range. A preview of alpine coverage Zyflow is expanding.",
+        "body": "Dva dneva visokih prelazov, planinskih koč in polnilnic pred dolgimi vzponi.",
         "price": "+1,420 m",
         "unit": " · climb"
       },
@@ -426,20 +428,20 @@
         "meta0": "Gravel",
         "meta1": "1 day",
         "meta2": "94 km",
-        "body": "Mixed surface and quiet forest tracks with charging options mapped along the way. Built for riders who leave the asphalt behind.",
+        "body": "Mirne gozdne poti s pitno vodo, servisom koles in toplim obrokom na cilju.",
         "price": "94 km",
-        "unit": " · example"
+        "unit": " · 1 dan"
       },
       {
         "place": "Ljubljana",
         "region": "Slovenia",
-        "title": "City Loop & Chargers",
+        "title": "Ljubljanski krog",
         "meta0": "Commute",
         "meta1": "½ day",
         "meta2": "28 km",
-        "body": "A short urban loop that shows how Zyflow folds local chargers into even everyday rides. Start small, then go further.",
+        "body": "Kratek krog mimo ljubljanskih kavarn, z označenimi parkirišči za kolesa in polnilnicami.",
         "price": "28 km",
-        "unit": " · example"
+        "unit": " · ½ dneva"
       },
       {
         "place": "Soča Valley",
@@ -448,9 +450,9 @@
         "meta0": "Touring",
         "meta1": "2 days",
         "meta2": "162 km",
-        "body": "River valleys and overnight planning with battery-aware stop suggestions. A multi-day template for the route library ahead.",
+        "body": "Dva dneva ob smaragdni reki, s kolesarjem prijaznimi nastanitvami za noč vmes.",
         "price": "162 km",
-        "unit": " · example"
+        "unit": " · 2 dni"
       }
     ]
   },
@@ -459,12 +461,12 @@
       "crumbParent": "Routes",
       "crumbType": "Touring",
       "titleHtml": "ljubljana<br />to trieste",
-      "lede": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard, and Zyflow plans charging stops around your battery.",
+      "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
       "price": "134 km",
-      "unit": " · example",
+      "unit": " · 1 dan",
       "nextLabel": "Best season",
       "nextValue": "Apr – Oct",
-      "cta": "Open in Zyflow"
+      "cta": "Načrtuj to pot"
     },
     "meta": {
       "place": "ljubljana",
@@ -477,43 +479,42 @@
       "climbLabel": "Elevation"
     },
     "body": {
-      "intro": "There’s a particular kind of quiet you only find once the city falls away. Wind in the trees, climbs that ask something of your legs and your battery, and a coastline waiting on the far side. This example route shows how Zyflow keeps elevation, weather, and chargers in the plan before you leave.",
+      "intro": "Pot od Ljubljane do Trsta v enem dnevu prečka tri pokrajine: zeleni rob prestolnice, kamnite vasi Krasa in jadransko obalo. Zyflow vmes postavi kolesarjem prijazne kraje, zato vožnja ni le to, kako daleč prideš, ampak tudi, kje se ustaviš.",
       "sections": [
         {
           "title": "Leaving Ljubljana",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Roll out through quiet suburbs toward the karst edge, where early climbs and wind begin to shape range. Zyflow surfaces the first charging window before the bigger hills bite."
+          "body": "Mimo Vrhnike se odpelješ po mirnih cestah. Prvi postanek za kavo pride hitro in se splača: kmalu zatem se začne vzpon na planoto. Zyflow pokaže pričakovano stanje baterije na celotni poti, zato lahko začetek odpelješ premišljeno in ne na pamet."
         },
         {
-          "title": "Karst ridges & chargers",
-          "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Undulating roads and sudden elevation make battery drain hard to guess. Exactly where automatic stop suggestions earn their keep.",
+          "title": "Kraške vasi in postanki",
+          "body": "Med Postojno in Divačo se cesta dviga in spušča skozi kamnite vasi, z družinskimi restavracijami in gostišči, ki sprejmejo kolesa. Polnilnice in voda so tam, kjer se začnejo najtežji odseki.",
           "bullets": [
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+            "Pred odhodom poglej zapore cest in dela na cesti na poti",
+            "Vedi, kateri kraji imajo parkirišče za kolesa, varno shrambo ali polnilnico"
           ]
         },
         {
           "title": "Descent to the Adriatic",
-          "body": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The final stretch rolls toward Trieste with sea air and a clear arrival. A continent-and-country library preview of what Zyflow is building."
+          "body": "Za Sežano se planota konča in cesta se spusti proti Tržaškemu zalivu. Končaj s kavo ob morju ali ostani čez noč in se jutri vrni."
         }
       ]
     },
     "aside": {
-      "title": "this route includes:",
+      "title": "kolesari brez skrbi:",
       "items": [
-        "Battery-aware routing",
-        "Elevation profile",
-        "Charging stop suggestions",
-        "Weather & wind factors",
-        "Offline-ready planning",
-        "iOS & Android"
+        "Zapore cest pred odhodom",
+        "Kraje koles po območjih",
+        "Načrt baterije s polnilnicami",
+        "Kolo je dobrodošlo, kjer spiš",
+        "Načrtovanje tudi brez povezave",
+        "iOS in Android"
       ],
-      "cta": "Open in Zyflow",
-      "note": "Example route. Free to explore in the app."
+      "cta": "Načrtuj to pot",
+      "note": "Brezplačno za iOS in Android."
     },
     "quote": {
-      "quote": "“Finally, routing that respects my battery.”",
-      "body": "“I used to guess charging stops and still end up short on the climbs. Zyflow laid out elevation, weather, and chargers for the whole day. I just rode.”",
-      "attribution": "Lorem Rider, Ljubljana"
+      "quote": "Je tvoj kraj ob tej poti?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, prav na poti, ki jo vozijo."
     },
     "more": {
       "title": "more routes",
@@ -523,7 +524,7 @@
   "blog": {
     "hero": {
       "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
-      "lede": "News, advice, and resources from the Zyflow team."
+      "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
     },
     "featured": {
       "tag": "Tips",
@@ -535,25 +536,25 @@
       {
         "tag": "Tips",
         "title": "Planning your first battery-aware day ride",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elevation, wind, and range before you leave.",
+        "excerpt": "Doseg, vzponi in polnilnice: preprost način, kako načrtovati dnevno vožnjo, ki jo boš res končal.",
         "link": "Read Story"
       },
       {
-        "tag": "Product",
-        "title": "Battery-aware routing, explained simply",
-        "excerpt": "How Zyflow uses range, elevation, and weather so your plan matches the ride you’ll actually do.",
+        "tag": "Vodniki",
+        "title": "Kaj naredi kraj prijazen kolesarjem?",
+        "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
         "link": "Read Story"
       },
       {
         "tag": "News",
         "title": "Zyflow is live on iOS and Android",
-        "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Download free and plan smarter.",
+        "excerpt": "Brezplačno v obeh trgovinah in na voljo v 8 državah. Tole preizkusi na naslednji vožnji.",
         "link": "Read Story"
       },
       {
         "tag": "Guides",
         "title": "Reading elevation before a cross-border ride",
-        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation. A short guide for Trieste-bound days.",
+        "excerpt": "Kako prebrati vzpone na poti, kot je Ljubljana do Trsta, in kje načrtovati postanke.",
         "link": "Read Story"
       }
     ]
@@ -563,23 +564,23 @@
       "tag": "Tips",
       "date": "12.05.26"
     },
-    "title": "why e-bike charging at hospitality stops matters",
-    "lede": "A little preparation goes a long way toward making sure your first long ride is memorable for the right reasons.",
+    "title": "zakaj so polnilnice v gostinskih obratih pomembne za e-kolesa",
+    "lede": "Polnilnica v kavarni ali gostišču lahko odloči, kako daleč te pelje vožnja. Zakaj je tako in kako jo najdeš.",
     "body": {
-      "p1": "There’s a particular kind of confidence you only get when you know the next charger isn’t a rumour. If a stop isn’t visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.",
-      "h1": "visibility is everything",
-      "p2": "The biggest misconception first-timers carry is that “there will be somewhere to plug in.” There often is. But only if you’ve planned for it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Battery drain swings with elevation and wind, so a map of real hospitality and service stops changes what a day can look like.",
-      "p3": "Before your first cross-border day, check where chargers sit relative to the hardest climbs. It takes a few minutes and can transform the whole experience.",
-      "h2": "plan for the climb, not the cafe",
-      "p4": "It might feel warm at the start, but the hills tell a different story. The golden rule is to plan for the load you’ll put on the battery, not the flat stretch you remember from last weekend. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "li1": "Range check. Set your e-bike range honestly, including assist level you actually use",
-      "li2": "Elevation window. Watch where climb clusters sit between known charging stops",
-      "li3": "Weather & wind. Headwinds and cold can reshape the same route overnight",
-      "p5": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Zyflow folds these factors into the plan so you’re not inventing stops mid-climb.",
-      "h3": "start on the right day ride",
-      "p6": "Not all routes are created equal. A rolling countryside day is where almost every rider should start. The rhythm is predictable, and you have time to learn how your battery behaves without the mountains making decisions for you.",
-      "quote": "“If a charger isn’t visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.”",
-      "p7": "Bigger alpine days are a different discipline. They’re exhilarating, but they demand a foundation of planning. Our example routes are designed around appropriate distance and climb for learning. And we’ll keep expanding the continent and country library as coverage grows."
+      "p1": "Obstaja posebna vrsta samozavesti, ki jo dobiš šele, ko veš, kje je naslednja polnilnica. Če postanka ni mogoče najti na spletu, ga veliko kolesarjev nikoli ne najde, daljše vožnje pa se skrčijo na to, kar se zdi varno ugibati.",
+      "h1": "vidnost je vse",
+      "p2": "Veliko kavarn, restavracij in gostišč kolesarjem že dovoli polnjenje e-kolesa. Le redki to povedo kje, kjer bi kolesar to iskal. Polnilnica torej obstaja, za načrtovanje pa je, kot da je ni.",
+      "p3": "Pred daljšo vožnjo preveri, kje so polnilnice glede na najtežje vzpone. Vzame nekaj minut in spremeni, kako je lahko videti cel dan.",
+      "h2": "načrtuj za vzpon, ne za kavarno",
+      "p4": "Baterija se ne prazni enakomerno. Raven odsek porabi malo, dolg vzpon, čelni veter ali mrzlo jutro pa lahko veliko. Načrtuj glede na obremenitev baterije, ne glede na lahke kilometre, ki se jih spomniš.",
+      "li1": "Preveri doseg. Doseg e-kolesa nastavi iskreno, vključno s stopnjo pomoči, ki jo res uporabljaš",
+      "li2": "Okno vzponov. Poglej, kje so najtežji vzponi med znanimi polnilnicami",
+      "li3": "Vreme in veter. Čelni veter in mraz lahko isto pot čez noč povsem spremenita",
+      "p5": "Zyflow to upošteva v načrtu baterije in pokaže polnilnice ob poti, zato si ti ni treba sredi vzpona izmišljati postankov.",
+      "h3": "začni s pravo dnevno vožnjo",
+      "p6": "Niso vse poti enake. Valovit podeželski dan je tisto, s čimer naj začne skoraj vsak kolesar. Ritem je predvidljiv in imaš čas spoznati, kako se obnaša tvoja baterija, ne da bi namesto tebe odločale gore.",
+      "quote": "»Če polnilnice ni mogoče najti na spletu, je veliko kolesarjev nikoli ne najde. Daljše vožnje pa se skrčijo na to, kar se zdi varno ugibati.«",
+      "p7": "Večji alpski dnevi so druga disciplina. So navdušujoči, a nagradijo načrtovanje. Začni z valovito dnevno vožnjo, spoznaj, kako se obnaša tvoja baterija, potem pojdi dlje. Če imaš kavarno ali gostišče z eno prosto vtičnico, nam piši. Kolesarji te iščejo."
     },
     "more": {
       "titleHtml": "more from<br />the journal",
@@ -588,31 +589,31 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "Est 2024",
-      "titleHtml": "born<br />to ride<br /><span class=\"is-accent\">further</span>",
-      "place": "Europe · battery-aware",
-      "storyTitle": "It started with a long climb, a flat battery, and a better plan.",
-      "storyBody": "We’re the small team behind Zyflow. Building smart navigation for cyclists and e-bike riders who want to go further without guessing their range. Today we map chargers across Europe and keep expanding the continent and country route library. We’ve never lost sight of what that first hard ride taught us: elevation, weather, and charging stops belong in the plan before you leave.",
-      "sign": "The Zyflow team"
+      "eyebrow": "Ustanovljeno 2024",
+      "titleHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
+      "place": "Slovenija · na voljo v 8 državah",
+      "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
+      "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
+      "sign": "Jakob in Tanja"
     },
     "values": {
       "title": "our values",
       "items": [
         {
-          "titleHtml": "ride further<br />with confidence.",
-          "body": "Battery-aware routing isn’t a gimmick. It’s how you stop guessing on the climbs. We plan around range, elevation, and weather so longer days feel possible."
+          "titleHtml": "raziskuj<br>brez skrbi.",
+          "body": "Zyflow je tu zato, da lahko rečeš da ovinku. Pri vsakem kraju vidiš, ali je tvoje kolo dobrodošlo, zato je naslednji postanek izbira in ne loterija."
         },
         {
-          "titleHtml": "chargers you<br />can actually find.",
-          "body": "If a stop isn’t visible online, many riders never find it. We map hospitality and service locations so the next plug-in isn’t a rumour."
+          "titleHtml": "varnost, ki<br>jo vidiš.",
+          "body": "Zapore cest, kraje koles po območjih in polnilnice ob poti. Pokažemo, kar vemo, da se lahko odločiš, preden se odpelješ."
         },
         {
-          "titleHtml": "honesty over<br />hype.",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. We ship what’s useful, say what’s still growing, and listen when riders tell us what to fix next."
+          "titleHtml": "iskrenost pred<br>pompom.",
+          "body": "Obljubimo samo to, kar aplikacija zna danes. Ko nekaj še nastaja, to povemo, in prisluhnemo, ko nam kolesarji povedo, kaj naj popravimo."
         },
         {
-          "titleHtml": "free to<br />download.",
-          "body": "Sed do eiusmod tempor incididunt ut labore. Zyflow is free on iOS and Android. Start with a day ride, then go further as coverage grows."
+          "titleHtml": "brezplačno za<br>vsakega kolesarja.",
+          "body": "Zyflow je brezplačen za iOS in Android, za vsakega kolesarja in vsako kolo. Začni z enim postankom, potem pojdi dlje."
         }
       ]
     },
@@ -621,21 +622,21 @@
       "members": [
         {
           "name": "jakob",
-          "role": "Founder",
-          "bio": "Building Zyflow so e-bike riders can plan further without guessing their battery. Obsessed with elevation profiles, charger maps, and making the next long day feel obvious instead of stressful.",
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva. Gradi aplikacijo, podatke v ozadju in mrežo partnerjev, s katero zemljevid raste.",
           "quals": [
-            "Product & routing",
-            "Europe coverage",
-            "iOS & Android"
+            "Produkt in podatki",
+            "Partnerstva",
+            "iOS in Android"
           ]
         },
         {
-          "name": "lorem rider",
-          "role": "Route design",
-          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scouting example rides across countries we cover today. And drafting the continent library Zyflow is building next.",
+          "name": "tanja",
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, pa tudi marketing, raziskave trga in lokalne partnerje.",
           "quals": [
-            "Touring & gravel",
-            "Elevation profiles"
+            "Operativa in pravo",
+            "Marketing in raziskave"
           ]
         }
       ]
@@ -647,15 +648,15 @@
       "email": "hello@zyflow.eu",
       "support": "support@zyflow.eu",
       "social": [
-        "Linkedin",
+        "LinkedIn",
         "Instagram",
         "Bluesky",
-        "Twitter"
+        "X"
       ]
     },
     "form": {
       "title": "send a message",
-      "lede": "Whether you want to ask about routing, chargers, partnerships, or just say hi. We’re all ears.",
+      "lede": "Vprašaj o krajih, poteh ali polnilnicah, dodaj svojo kavarno, restavracijo ali nastanitev ali se z nami pogovori o partnerstvih in naložbah. Odgovorimo na vsako sporočilo.",
       "firstName": "First name",
       "lastName": "Last name",
       "email": "Email",
@@ -663,12 +664,12 @@
       "topic": "Topic (optional)",
       "topicPlaceholder": "Choose",
       "topics": [
-        "Routing & battery range",
-        "Charging map",
-        "Partnership",
-        "Press",
-        "Other",
-        "Other"
+        "Kraji in poti",
+        "Dodaj moj kraj",
+        "Partnerstvo",
+        "Vlagatelji",
+        "Mediji",
+        "Drugo"
       ],
       "message": "Message",
       "submit": "Send message"
@@ -712,211 +713,211 @@
   },
   "business": {
     "hero": {
-      "crumb1": "For businesses",
-      "crumb2": "Cafés, stays, bike shops",
-      "titleHtml": "put your place<br />on the map",
-      "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door.",
-      "price": "Free",
-      "unit": " · during launch",
-      "nextLabel": "Live in",
-      "nextValue": "8 countries",
-      "cta": "List your place"
+      "crumb1": "Za podjetja",
+      "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
+      "titleHtml": "postavi svoj kraj<br>na zemljevid",
+      "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "nextLabel": "Na voljo v",
+      "nextValue": "8 državah",
+      "cta": "Dodaj svoj kraj"
     },
     "tiles": [
       {
-        "value": "On the map",
-        "label": "Riders see you in Explore"
+        "value": "Na zemljevidu",
+        "label": "Kolesarji te vidijo v Raziskuj"
       },
       {
-        "value": "Bike facilities",
-        "label": "Parking, storage, pump, charger"
+        "value": "Kolesarska oprema",
+        "label": "Parkirišče, shramba, tlačilka, polnilnica"
       },
       {
-        "value": "On routes",
-        "label": "Shown on routes that pass you"
+        "value": "Na poteh",
+        "label": "Prikazan na poteh, ki vodijo mimo tebe"
       },
       {
-        "value": "Always current",
-        "label": "Update your details any time"
+        "value": "Vse imaš v rokah",
+        "label": "Urejaj urnik, fotografije in podatke"
       }
     ],
     "who": {
-      "title": "who it’s for",
-      "link": "Ask us anything",
-      "chip": "on the map",
-      "price": "Free",
-      "unit": " · during launch",
-      "cta": "List your place",
+      "title": "komu je namenjeno",
+      "link": "Vprašaj nas karkoli",
+      "chip": "na zemljevidu",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "cta": "Dodaj svoj kraj",
       "cards": [
         {
-          "tag": "Coffee & food",
-          "title": "Cafés & restaurants",
-          "meta0": "Coffee",
-          "meta1": "Restaurants",
-          "body": "Be the stop riders plan their break around. Show that bikes are welcome, where to park them and whether they can charge."
+          "tag": "Kava in hrana",
+          "title": "Kavarne in restavracije",
+          "meta0": "Kava",
+          "meta1": "Restavracije",
+          "body": "Bodi postanek, okoli katerega kolesarji načrtujejo odmor. Pokaži, da so kolesa dobrodošla, kje jih parkirati in ali jih lahko napolnijo."
         },
         {
-          "tag": "Stays",
-          "title": "Hotels & guesthouses",
-          "meta0": "Stay",
-          "meta1": "Overnight",
-          "body": "Riders on multi-day routes look for one thing first: a safe place for the bike. Show your storage and charging and get picked for the night."
+          "tag": "Nastanitve",
+          "title": "Hoteli in gostišča",
+          "meta0": "Nastanitev",
+          "meta1": "Prenočitev",
+          "body": "Kolesarji na večdnevnih poteh najprej iščejo eno stvar: varno mesto za kolo. Pokaži svojo shrambo in polnjenje in bodi izbran za noč."
         },
         {
-          "tag": "Utility",
-          "title": "Bike shops & services",
-          "meta0": "Repair",
-          "meta1": "Charging",
-          "body": "Repair, rental, charging or a pump at the door. Appear in the utility layer riders open when something goes wrong."
+          "tag": "Storitve",
+          "title": "Kolesarske trgovine in servisi",
+          "meta0": "Servis",
+          "meta1": "Polnjenje",
+          "body": "Servis, izposoja, polnjenje ali tlačilka pred vrati. Pojavi se v sloju storitev, ki ga kolesarji odprejo, ko gre kaj narobe."
         }
       ]
     },
     "how": {
-      "title": "how it works",
-      "stepLabel": "step",
+      "title": "kako deluje",
+      "stepLabel": "korak",
       "steps": [
         {
-          "title": "Tell us about your place",
-          "body": "Name, address and what you offer riders. Two minutes in the form."
+          "title": "Zaprosi za dostop",
+          "body": "Ustvari račun in nam povej o svojem podjetju. Vzame dve minuti."
         },
         {
-          "title": "We check and add it",
-          "body": "We confirm the details and mark your bike facilities on the map."
+          "title": "Odobrimo tvoj kraj",
+          "body": "Preverimo tvojo prošnjo in tvoj kraj povežemo z zemljevidom."
         },
         {
-          "title": "Riders find you",
-          "body": "You show up in Explore and on the routes that pass you."
+          "title": "Urejaj ga sam",
+          "body": "Kadarkoli urejaj podatke, odpiralni čas, fotografije in kolesarsko opremo."
         },
         {
-          "title": "Keep it current",
-          "body": "Opening hours or facilities changed? Tell us and we update it."
+          "title": "Kolesarji te najdejo",
+          "body": "Pojaviš se v Raziskuj in na poteh, ki vodijo mimo tebe."
         }
       ]
     },
     "data": {
-      "title": "tourism boards & data partners",
-      "body": "We work with open data providers and local partners to keep places, chargers and routes accurate. If you manage cycling data, tourism listings or a network of venues, let’s connect it.",
-      "cta": "Become a data partner"
+      "title": "turistične organizacije in podatkovni partnerji",
+      "body": "Z odprtimi viri podatkov in lokalnimi partnerji skrbimo, da so kraji, polnilnice in poti točni. Če upravljaš kolesarske podatke, turistične vnose ali mrežo lokalov, jih povežimo.",
+      "cta": "Postani podatkovni partner"
     },
     "faq": {
-      "title": "questions from businesses",
+      "title": "vprašanja podjetij",
       "items": [
         {
-          "q": "Does it cost anything?",
-          "a": "Listing your place is free during our launch phase. Later we plan to add paid options, for example extra visibility on routes. We’ll tell you well in advance before anything changes."
+          "q": "Ali to kaj stane?",
+          "a": "Dodajanje kraja je v času zagona brezplačno. Kasneje nameravamo dodati plačljive možnosti, na primer večjo vidnost na poteh. O vsaki spremembi te bomo obvestili dovolj zgodaj."
         },
         {
-          "q": "What counts as bike-friendly?",
-          "a": "Any of these helps: a place to park or lock a bike, secure storage, a pump or tools, or a socket where riders can charge an e-bike."
+          "q": "Kaj šteje kot prijazno kolesarjem?",
+          "a": "Pomaga karkoli od tega: prostor za parkiranje ali zaklepanje kolesa, varna shramba, tlačilka ali orodje ali vtičnica, kjer lahko kolesarji napolnijo e-kolo."
         },
         {
-          "q": "Which countries do you cover?",
-          "a": "Zyflow is live in 8 countries, starting from Slovenia and its neighbours."
+          "q": "Katere države pokrivate?",
+          "a": "Zyflow je na voljo v 8 državah, začenši s Slovenijo in sosednjimi državami."
         },
         {
-          "q": "How do I change my details?",
-          "a": "Send us a message through the contact form and we’ll update your place, usually within a few days."
+          "q": "Kako spremenim svoje podatke?",
+          "a": "Prijavi se v partnerski portal in svoj kraj uredi neposredno. Spremembe lokacije na zemljevidu ali vrste kraja gredo prek naše ekipe."
         }
       ],
-      "footnote": "Not sure if you fit?",
-      "footLink": "Ask us"
+      "footnote": "Nisi prepričan, ali spadaš sem?",
+      "footLink": "Vprašaj nas"
     },
     "final": {
-      "title": "ready when you are",
-      "body": "Tell us about your place and we’ll put it in front of the riders already planning to pass by.",
-      "cta": "List your place",
-      "ctaSecondary": "Talk to us first"
+      "title": "pripravljeni, ko si ti",
+      "body": "Povej nam o svojem kraju in pokazali ga bomo kolesarjem, ki se že odpravljajo mimo.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Najprej se pogovorimo"
     },
-    "signin": "Already a partner? Sign in"
+    "signin": "Že sodeluješ z nami? Prijava"
   },
   "press": {
     "hero": {
-      "crumb1": "Press & investors",
-      "crumb2": "Fact sheet",
-      "titleHtml": "zyflow<br />at a glance",
-      "lede": "We’re just getting started. Zyflow helps cyclists and e-bike riders find bike-friendly places and ride between them feeling safe. Here are the facts, the team and how to reach us.",
-      "price": "Early stage",
+      "crumb1": "Mediji in vlagatelji",
+      "crumb2": "Dejstva",
+      "titleHtml": "zyflow<br>na kratko",
+      "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
+      "price": "Zgodnja faza",
       "unit": " · 2026",
-      "nextLabel": "Made in",
-      "nextValue": "Slovenia",
-      "cta": "Request our deck"
+      "nextLabel": "Narejeno v",
+      "nextValue": "Sloveniji",
+      "cta": "Zaprosi za predstavitev"
     },
     "tiles": [
       {
         "value": "iOS + Android",
-        "label": "Live in both stores"
+        "label": "Na voljo v obeh trgovinah"
       },
       {
         "value": "8",
-        "label": "Countries live"
+        "label": "Držav"
       },
       {
-        "value": "7,400+",
-        "label": "Chargers mapped"
+        "value": "7.400+",
+        "label": "Polnilnic na zemljevidu"
       },
       {
         "value": "Open Data Hub",
-        "label": "Signed data partner"
+        "label": "Podpisan podatkovni partner"
       }
     ],
     "about": {
-      "title": "the short version",
-      "p1": "Most maps show cyclists roads. Zyflow shows them where to stop: stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair. Road closures and bike theft by area are on the map too, so riders can explore without worry.",
-      "p2": "Zyflow is built by HERKO d.o.o. in Slovenia and launched publicly on iOS and Android in 2026."
+      "title": "na kratko",
+      "p1": "Večina zemljevidov kolesarjem pokaže ceste. Zyflow jim pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ter polnilnice, vodo in servis. Na zemljevidu so tudi zapore cest in kraje koles po območjih, da lahko kolesarji raziskujejo brez skrbi.",
+      "p2": "Zyflow razvija HERKO d.o.o. v Sloveniji, javno je bil zagnan za iOS in Android leta 2026."
     },
     "next": {
-      "title": "what’s next",
+      "title": "kaj sledi",
       "items": [
-        "More countries and places",
-        "More safety features",
-        "Better route planning",
-        "A bike passport",
-        "Rider community"
+        "Več držav in krajev",
+        "Več varnostnih funkcij",
+        "Boljše načrtovanje poti",
+        "Kolesarski potni list",
+        "Skupnost kolesarjev"
       ]
     },
     "team": {
-      "title": "the team",
-      "link": "About us",
+      "title": "ekipa",
+      "link": "O nas",
       "members": [
         {
           "name": "jakob",
-          "role": "Co-founder & CEO",
-          "bio": "Leads product and partnerships: the app, the data behind it and the partner network."
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva: aplikacijo, podatke v ozadju in mrežo partnerjev."
         },
         {
           "name": "tanja",
-          "role": "Co-founder & COO",
-          "bio": "Runs the company: administration, contracts, legal and tax, marketing and local partners."
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, marketing in lokalne partnerje."
         }
       ]
     },
     "kit": {
-      "title": "press kit",
-      "body": "We haven’t been in the press yet, so this is a first. If you’re writing about cycling, e-bikes or travel in the region, we’d love to talk, and we’ll send everything you need.",
+      "title": "medijski paket",
+      "body": "V medijih še nismo bili, zato bi bilo to prvič. Če pišeš o kolesarjenju, e-kolesih ali potovanjih v regiji, se z veseljem pogovorimo in pošljemo vse, kar potrebuješ.",
       "items": [
         {
-          "name": "Logo files",
+          "name": "Logotipi",
           "note": "SVG + PNG"
         },
         {
-          "name": "App screenshots",
+          "name": "Posnetki zaslona",
           "note": "iOS + Android"
         },
         {
-          "name": "Founder photos",
-          "note": "On request"
+          "name": "Fotografije ustanoviteljev",
+          "note": "Na zahtevo"
         },
         {
-          "name": "Fact sheet",
-          "note": "This page"
+          "name": "Dejstva",
+          "note": "Ta stran"
         }
       ]
     },
     "final": {
-      "title": "interested in zyflow?",
-      "body": "We share our deck and numbers directly. Tell us a little about yourself and we’ll get back to you.",
-      "cta": "Request our deck",
-      "ctaSecondary": "Press enquiries"
+      "title": "te zanima zyflow?",
+      "body": "Predstavitev in številke delimo neposredno. Povej nam nekaj o sebi in oglasili se bomo.",
+      "cta": "Zaprosi za predstavitev",
+      "ctaSecondary": "Vprašanja medijev"
     }
   }
 }

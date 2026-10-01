@@ -18,7 +18,7 @@
       },
       "tour": {
         "title": "Zyflow — Ljubljana to Trieste",
-        "description": "Plan the Ljubljana to Trieste ride in Zyflow with elevation, charge stops, and weather before you leave."
+        "description": "Ljubljana to Trieste by bike: 134 km past bike-friendly stays, coffee stops and restaurants, with chargers along the way."
       },
       "blog": {
         "title": "Zyflow: Journal",
@@ -122,7 +122,9 @@
       "lede": "Find bike-friendly stays, coffee stops and restaurants, with chargers and bike services on the map. Free on iOS and Android.",
       "badge": "Free on iOS and Android",
       "downloadTitle": "Download Zyflow now",
-      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone."
+      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
+      "mockStat": "Bike-friendly stops",
+      "mockLine": "Stays, coffee & chargers on route"
     }
   },
   "home": {
@@ -132,7 +134,7 @@
       "cta": "Get the app",
       "nextDepartureLabel": "Featured route",
       "nextDepartureTitle": "Ljubljana to Trieste",
-      "nextDepartureDate": "134 km · 24 bike-friendly stops"
+      "nextDepartureDate": "134 km · +1,766 m"
     },
     "appBanner": {
       "eyebrow": "The Zyflow app",
@@ -197,8 +199,8 @@
       "metaDuration": "134 km",
       "metaSeason": "+1,766 m",
       "cta": "See what’s on the route",
-      "metaStops": "24 bike-friendly stops",
-      "metaChargers": "2 chargers"
+      "metaStops": "Stays, coffee & chargers",
+      "metaChargers": "1 day"
     },
     "categories": {
       "cycle": "stay",
@@ -459,12 +461,12 @@
       "crumbParent": "Routes",
       "crumbType": "Touring",
       "titleHtml": "ljubljana<br />to trieste",
-      "lede": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard, and Zyflow plans charging stops around your battery.",
+      "lede": "134 km from Ljubljana to the Adriatic, past bike-friendly stays, coffee stops and restaurants, with chargers and bike services along the way.",
       "price": "134 km",
-      "unit": " · example",
+      "unit": " · 1 day",
       "nextLabel": "Best season",
       "nextValue": "Apr – Oct",
-      "cta": "Open in Zyflow"
+      "cta": "Plan this route"
     },
     "meta": {
       "place": "ljubljana",
@@ -477,43 +479,42 @@
       "climbLabel": "Elevation"
     },
     "body": {
-      "intro": "There’s a particular kind of quiet you only find once the city falls away. Wind in the trees, climbs that ask something of your legs and your battery, and a coastline waiting on the far side. This example route shows how Zyflow keeps elevation, weather, and chargers in the plan before you leave.",
+      "intro": "Ljubljana to Trieste crosses three landscapes in a day: the green edge of the capital, the stone villages of the Karst and the Adriatic coast. Zyflow lines up the bike-friendly places in between, so the ride is as much about where you stop as how far you go.",
       "sections": [
         {
           "title": "Leaving Ljubljana",
-          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Roll out through quiet suburbs toward the karst edge, where early climbs and wind begin to shape range. Zyflow surfaces the first charging window before the bigger hills bite."
+          "body": "Roll out past Vrhnika on quiet roads. The first coffee stop comes early, and it is worth it: the climb onto the plateau starts soon after. Zyflow shows your expected battery along the whole route, so you can pace the start instead of guessing."
         },
         {
-          "title": "Karst ridges & chargers",
-          "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Undulating roads and sudden elevation make battery drain hard to guess. Exactly where automatic stop suggestions earn their keep.",
+          "title": "Karst villages & stops",
+          "body": "Between Postojna and Divača the road rises and falls through stone villages, with family restaurants and guesthouses that welcome bikes. Charging and water sit right where the hardest sections begin.",
           "bullets": [
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
-            "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+            "See road closures and roadworks on the route before you leave",
+            "Know which places have bike parking, secure storage or a charger"
           ]
         },
         {
           "title": "Descent to the Adriatic",
-          "body": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The final stretch rolls toward Trieste with sea air and a clear arrival. A continent-and-country library preview of what Zyflow is building."
+          "body": "After Sežana the plateau ends and the road drops toward the Gulf of Trieste. Finish with a coffee by the sea, or stay the night and ride back tomorrow."
         }
       ]
     },
     "aside": {
-      "title": "this route includes:",
+      "title": "ride with peace of mind:",
       "items": [
-        "Battery-aware routing",
-        "Elevation profile",
-        "Charging stop suggestions",
-        "Weather & wind factors",
+        "Road closures before you leave",
+        "Bike theft by area",
+        "Battery plan with chargers",
+        "Bikes welcome where you stay",
         "Offline-ready planning",
         "iOS & Android"
       ],
-      "cta": "Open in Zyflow",
-      "note": "Example route. Free to explore in the app."
+      "cta": "Plan this route",
+      "note": "Free on iOS and Android."
     },
     "quote": {
-      "quote": "“Finally, routing that respects my battery.”",
-      "body": "“I used to guess charging stops and still end up short on the climbs. Zyflow laid out elevation, weather, and chargers for the whole day. I just rode.”",
-      "attribution": "Lorem Rider, Ljubljana"
+      "quote": "Is your place on this route?",
+      "body": "Riders choose where to stop in Zyflow before they leave. Put your café, restaurant or stay in front of them, right on the route they are riding."
     },
     "more": {
       "title": "more routes",
@@ -588,7 +589,7 @@
   },
   "about": {
     "hero": {
-      "eyebrow": "Est YEAR",
+      "eyebrow": "Est 2024",
       "titleHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>",
       "place": "Slovenia · live in 8 countries",
       "storyTitle": "Great places to stop are everywhere. Most maps just don’t show them.",
