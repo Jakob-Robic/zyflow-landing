@@ -1,0 +1,922 @@
+{
+  "meta": {
+    "brand": "Zyflow",
+    "locale": "sl",
+    "source": "zyflow",
+    "pages": {
+      "home": {
+        "title": "Zyflow — Pametna navigacija za kolesarje in e-kolesarje",
+        "description": "Načrtuj pametnejše vožnje z Zyflow. Višina, vreme in polnilne postaje v eni aplikaciji za kolesarje in e-kolesarje."
+      },
+      "about": {
+        "title": "Zyflow — Ustvarjeno s strani kolesarjev",
+        "description": "Pametna kolesarska navigacija z višino, vremenom in polnilnimi postajami."
+      },
+      "tours": {
+        "title": "Zyflow — Poti",
+        "description": "Explore curated cycling and e-bike routes with battery-aware planning, elevation, and charging stops along the way."
+      },
+      "tour": {
+        "title": "Zyflow — Ljubljana to Trieste",
+        "description": "Plan the Ljubljana to Trieste ride in Zyflow with elevation, charge stops, and weather before you leave."
+      },
+      "blog": {
+        "title": "Zyflow — Dnevnik",
+        "description": "Stories, tips, and product updates from the Zyflow team for cyclists and e-bike adventurers."
+      },
+      "blog-article": {
+        "title": "Zyflow — Why e-bike charging stops matter",
+        "description": "If a charger is not visible online, many riders never find it. How better maps change longer rides."
+      },
+      "contact": {
+        "title": "Zyflow — Kontakt",
+        "description": "Have feedback, found a bug, or want to suggest a stop we are missing? Reach the Zyflow team at support@zyflow.eu."
+      },
+      "legal": {
+        "title": "Zyflow — Pravno",
+        "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
+      },
+      "legal-privacy": {
+        "title": "Zyflow — Privacy Policy",
+        "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+      },
+      "legal-cookies": {
+        "title": "Zyflow — Cookie Policy",
+        "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
+      },
+      "legal-terms": {
+        "title": "Zyflow — Terms of Service",
+        "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
+      },
+      "404": {
+        "title": "Zyflow — Strani ni mogoče najti",
+        "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+      },
+      "styleguide": {
+        "title": "Zyflow — Design System Styleguide",
+        "description": "Internal design tokens and components for the Zyflow rebuild."
+      },
+      "business": {
+        "title": "Zyflow: For Businesses",
+        "description": "Put your café, restaurant, stay or bike shop in front of cyclists and e-bike riders. Show your bike parking, storage or charger on the Zyflow map."
+      },
+      "press": {
+        "title": "Zyflow: Press & Investors",
+        "description": "Facts, team and contact for press and investors. Zyflow helps cyclists find bike-friendly places and ride there feeling safe."
+      }
+    }
+  },
+  "chrome": {
+    "announcement": {
+      "label": "App Update:",
+      "text": "Zyflow is live on iOS and Android. Plan smarter rides with battery-aware routing.",
+      "cta": "Download"
+    },
+    "nav": {
+      "cta": "Prenesi",
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "business": "For businesses"
+      }
+    },
+    "footer": {
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "press": "Press & investors",
+        "legal": "Pravno"
+      },
+      "cats": {
+        "kayak": "Tour",
+        "bike": "Commute",
+        "hike": "Alpine",
+        "fourwd": "Gravel"
+      },
+      "newsletter": {
+        "title": "newsletter",
+        "body": "Ride updates, product news, and useful tips for e-bike adventurers. No spam. Ever.",
+        "note": "We never share your details."
+      },
+      "copyright": "© 2026 Zyflow. All rights reserved."
+    },
+    "notFound": {
+      "title": "Strani ni mogoče najti",
+      "body": "Ta pot ne obstaja. Pojdi na domov ali razišči poti.",
+      "home": "Nazaj domov",
+      "tours": "Razišči poti"
+    },
+    "lang": {
+      "label": "Language",
+      "en": "EN",
+      "sl": "SL"
+    },
+    "appModal": {
+      "title": "Get the Zyflow app",
+      "lede": "Free navigation for cyclists and e-bike riders. Plan with battery, elevation, chargers, and weather.",
+      "badge": "Free on iOS and Android",
+      "downloadTitle": "Download Zyflow now",
+      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone."
+    }
+  },
+  "home": {
+    "hero": {
+      "titleHtml": "ride<br />further.",
+      "subtitle": "Smart navigation for cyclists and e-bike riders. Battery, elevation, and weather before you leave.",
+      "cta": "Plan your first route",
+      "nextDepartureLabel": "Featured Route",
+      "nextDepartureTitle": "Ljubljana to Trieste",
+      "nextDepartureDate": "134 km · +1,766 m"
+    },
+    "appBanner": {
+      "eyebrow": "The Zyflow app",
+      "titleHtml": "Built for the<br />ride, not a tour desk.",
+      "body": "Free navigation for cyclists and e-bike riders. Plan with battery, elevation, chargers, and weather before you leave.",
+      "cta": "Download"
+    },
+    "trust": {
+      "one": "Regional mapping and route data",
+      "two": "Local cycling community and rides",
+      "three": "E-bike travel and charging insight",
+      "four": "Open mobility data for better plans"
+    },
+    "adventures": {
+      "titleHtml": "featured<br />routes",
+      "allLink": "Explore Routes",
+      "viewCta": "View route",
+      "cards": [
+        {
+          "place": "Ljubljana",
+          "region": "Slovenia to Italy",
+          "title": "Ljubljana to Trieste",
+          "meta0": "Touring",
+          "meta1": "1 day",
+          "meta2": "134 km",
+          "body": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard, the kind of route Zyflow plans around your battery.",
+          "price": "134 km",
+          "unit": " · example"
+        },
+        {
+          "place": "Julian Alps",
+          "region": "Slovenia",
+          "title": "Alpine Pass Loop",
+          "meta0": "Alpine",
+          "meta1": "1 day",
+          "meta2": "89 km",
+          "body": "Serious climbing where battery drain is hardest to predict. Charging stops and elevation profile keep the ride confident instead of stressful.",
+          "price": "+890 m",
+          "unit": " · climb"
+        },
+        {
+          "place": "Istria",
+          "region": "Croatia",
+          "title": "Coastal Gravel Meander",
+          "meta0": "Gravel",
+          "meta1": "2 days",
+          "meta2": "156 km",
+          "body": "Sea air, rolling gravel, and multi-stop planning. An example of the country-level routes Zyflow is built to showcase as coverage grows.",
+          "price": "156 km",
+          "unit": " · example"
+        }
+      ]
+    },
+    "intro": {
+      "greeting": "Hey there!",
+      "body": "We’re the small team behind Zyflow, building smart navigation for riders who want to go further without guessing their battery. Questions? We’re listening.",
+      "link": "About Zyflow"
+    },
+    "featuredTour": {
+      "eyebrow": "Featured Route",
+      "title": "ljubljana to trieste",
+      "metaDuration": "134 km",
+      "metaSeason": "Touring",
+      "cta": "Explore Route",
+      "metaStops": "24 bike-friendly stops",
+      "metaChargers": "2 chargers"
+    },
+    "categories": {
+      "cycle": "tour",
+      "hike": "alpine",
+      "kayak": "commute",
+      "fourwd": "gravel"
+    },
+    "testimonial": {
+      "quote": "“Finally, routing that respects my battery.”",
+      "body": "“I used to guess charging stops and still end up short on the climbs. Zyflow laid out elevation, weather, and chargers for the whole day. I just rode.”",
+      "cta": "List your place",
+      "ctaSecondary": "Investors and press"
+    },
+    "whyUs": {
+      "titleHtml": "Why<br />Zyflow?",
+      "items": [
+        {
+          "title": "battery-aware routing",
+          "body": "Traditional apps ignore your battery. Zyflow plans around your range, elevation, and how hard the climbs hit, so the ride doesn’t end early."
+        },
+        {
+          "title": "live charging stops",
+          "body": "Chargers are placed where you need them along the route, with detour time and plug details, mapped across thousands of locations and growing by country."
+        },
+        {
+          "title": "weather along the route",
+          "body": "Short, timely alerts for rain, wind, and temperature changes on your path, not just a forecast for where you started."
+        }
+      ]
+    },
+    "appStage": {
+      "eyebrow": "Inside the ride",
+      "titleHtml": "The app<br />on the trail.",
+      "body": "Battery, elevation, chargers, and weather in one plan, so you leave knowing the ride will finish.",
+      "ctaIos": "Download for iOS",
+      "ctaAndroid": "Get it on Android"
+    },
+    "appFlow": {
+      "titleHtml": "From plan<br />to ride.",
+      "steps": [
+        {
+          "title": "plan",
+          "body": "Set your bike and range. Zyflow builds a route around elevation and how hard the climbs hit."
+        },
+        {
+          "title": "charge",
+          "body": "Stops land where you need them, with detour time and plug details before you roll out."
+        },
+        {
+          "title": "ride",
+          "body": "Weather along the path, not just at the start. Ride further without guessing the finish."
+        }
+      ]
+    },
+    "features": {
+      "titleHtml": "Routes with<br /><span class=\"accent\">intelligence.</span>",
+      "items": [
+        {
+          "title": "plan smarter",
+          "body": "Battery range, elevation, charging stops, and weather for every kilometre, clear before you leave the driveway.",
+          "link": "Download"
+        },
+        {
+          "title": "built for riders",
+          "body": "Weekend tourers, daily commuters, alpine climbers, gravel explorers. Adapted to how you actually ride.",
+          "link": "Explore Routes"
+        },
+        {
+          "title": "growing coverage",
+          "body": "From Slovenia, Croatia, and Austria outward. Continents and countries of showcased routes are next on the map.",
+          "link": "Read Journal"
+        }
+      ]
+    },
+    "journal": {
+      "titleHtml": "The Zyflow<br />journal",
+      "cta": "Explore Blog",
+      "posts": [
+        {
+          "tag": "Tips",
+          "title": "Why e-bike charging at hospitality stops matters",
+          "excerpt": "If a charger isn’t visible online, many riders never find it. Here’s how better maps change longer rides.",
+          "link": "Read Story"
+        },
+        {
+          "tag": "Product",
+          "title": "Battery-aware routing, explained simply",
+          "excerpt": "How Zyflow uses range, elevation, and weather so your plan matches the ride you’ll actually do.",
+          "link": "Read Story"
+        }
+      ]
+    },
+    "faq": {
+      "title": "common questions",
+      "footnote": "If you have any further questions, reach out to our team.",
+      "contactLink": "Contact us",
+      "items": [
+        {
+          "q": "What is Zyflow?",
+          "a": "Zyflow is a route planning app built for cyclists and e-bike riders. It plans cycling routes with automatic charging-stop suggestions, factoring in your battery range, elevation, wind, and temperature so you can ride further with confidence."
+        },
+        {
+          "q": "Is Zyflow free?",
+          "a": "Yes. Zyflow is free to download and use on iOS and Android. Beta riders also keep full access at no cost as we grow."
+        },
+        {
+          "q": "What bikes does Zyflow support?",
+          "a": "Zyflow works with e-bikes, road, gravel, touring, and mountain bikes. You set your bike type and e-bike range, and we adapt planning to your setup."
+        },
+        {
+          "q": "Is Zyflow on iOS and Android?",
+          "a": "Yes. Download from the App Store or Google Play. It only takes a minute."
+        },
+        {
+          "q": "How do I give feedback?",
+          "a": "Use the in-app feedback option or email support@zyflow.eu. We read every message."
+        }
+      ]
+    },
+    "social": {
+      "handle": "@zyflow",
+      "cta": "Follow Zyflow",
+      "videos": [
+        {
+          "title": "Ljubljana to Trieste",
+          "place": "Slovenia / Italy",
+          "coords": "46.0569° N, 14.5058° E"
+        }
+      ]
+    }
+  },
+  "tours": {
+    "hero": {
+      "title": "our routes",
+      "lede": "Example rides across countries we cover today. And a preview of the continent and country route library Zyflow is building.",
+      "quals": [
+        "Battery-aware routing",
+        "7,400+ chargers mapped",
+        "iOS & Android",
+        "Europe coverage growing",
+        "Free to download"
+      ]
+    },
+    "filter": {
+      "label": "browse:",
+      "all": "all",
+      "tour": "tour",
+      "alpine": "alpine",
+      "commute": "commute",
+      "gravel": "gravel"
+    },
+    "viewCta": "View route",
+    "empty": "No routes in this category yet. Check back as coverage grows.",
+    "cards": [
+      {
+        "place": "Ljubljana",
+        "region": "Slovenia to Italy",
+        "title": "Ljubljana to Trieste",
+        "meta0": "Touring",
+        "meta1": "1 day",
+        "meta2": "134 km",
+        "body": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard. Exactly the kind of route Zyflow plans around your battery.",
+        "price": "134 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Julian Alps",
+        "region": "Slovenia",
+        "title": "Alpine Pass Loop",
+        "meta0": "Alpine",
+        "meta1": "1 day",
+        "meta2": "89 km",
+        "body": "Serious climbing where battery drain is hardest to predict. Charging stops and elevation profile keep the ride confident instead of stressful.",
+        "price": "+890 m",
+        "unit": " · climb"
+      },
+      {
+        "place": "Istria",
+        "region": "Croatia",
+        "title": "Coastal Gravel Meander",
+        "meta0": "Gravel",
+        "meta1": "2 days",
+        "meta2": "156 km",
+        "body": "Sea air, rolling gravel, and multi-stop planning. An example of the country-level routes Zyflow is built to showcase as coverage grows.",
+        "price": "156 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Vienna",
+        "region": "Austria",
+        "title": "Danube Commute Corridor",
+        "meta0": "Commute",
+        "meta1": "1 day",
+        "meta2": "42 km",
+        "body": "Everyday riding done right. Range, wind, and charger awareness for the trip to work and the longer weekend ride that grows from it.",
+        "price": "42 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Lake Bled",
+        "region": "Slovenia",
+        "title": "Bled Lakes Tour",
+        "meta0": "Touring",
+        "meta1": "1 day",
+        "meta2": "68 km",
+        "body": "Lakeside roads and rolling climbs with clear elevation and range cues. The kind of day ride that benefits from planning before you leave.",
+        "price": "68 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Dolomites",
+        "region": "Italy",
+        "title": "Dolomite Ridge Ride",
+        "meta0": "Alpine",
+        "meta1": "2 days",
+        "meta2": "118 km",
+        "body": "High passes and long descents where temperature and climb load reshape range. A preview of alpine coverage Zyflow is expanding.",
+        "price": "+1,420 m",
+        "unit": " · climb"
+      },
+      {
+        "place": "Carinthia",
+        "region": "Austria",
+        "title": "Forest Gravel Circuit",
+        "meta0": "Gravel",
+        "meta1": "1 day",
+        "meta2": "94 km",
+        "body": "Mixed surface and quiet forest tracks with charging options mapped along the way. Built for riders who leave the asphalt behind.",
+        "price": "94 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Ljubljana",
+        "region": "Slovenia",
+        "title": "City Loop & Chargers",
+        "meta0": "Commute",
+        "meta1": "½ day",
+        "meta2": "28 km",
+        "body": "A short urban loop that shows how Zyflow folds local chargers into even everyday rides. Start small, then go further.",
+        "price": "28 km",
+        "unit": " · example"
+      },
+      {
+        "place": "Soča Valley",
+        "region": "Slovenia",
+        "title": "Soča Valley Traverse",
+        "meta0": "Touring",
+        "meta1": "2 days",
+        "meta2": "162 km",
+        "body": "River valleys and overnight planning with battery-aware stop suggestions. A multi-day template for the route library ahead.",
+        "price": "162 km",
+        "unit": " · example"
+      }
+    ]
+  },
+  "tour": {
+    "hero": {
+      "crumbParent": "Routes",
+      "crumbType": "Touring",
+      "titleHtml": "ljubljana<br />to trieste",
+      "lede": "A classic cross-border day ride from Slovenia’s capital to the Adriatic. Elevation swings hard, and Zyflow plans charging stops around your battery.",
+      "price": "134 km",
+      "unit": " · example",
+      "nextLabel": "Best season",
+      "nextValue": "Apr – Oct",
+      "cta": "Open in Zyflow"
+    },
+    "meta": {
+      "place": "ljubljana",
+      "coords": "46.0569° N, 14.5058° E",
+      "durationHtml": "1 day<br />134 km",
+      "durationLabel": "Duration",
+      "difficulty": "intermediate",
+      "difficultyLabel": "Difficulty",
+      "climb": "+1,766 m",
+      "climbLabel": "Elevation"
+    },
+    "body": {
+      "intro": "There’s a particular kind of quiet you only find once the city falls away. Wind in the trees, climbs that ask something of your legs and your battery, and a coastline waiting on the far side. This example route shows how Zyflow keeps elevation, weather, and chargers in the plan before you leave.",
+      "sections": [
+        {
+          "title": "Leaving Ljubljana",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Roll out through quiet suburbs toward the karst edge, where early climbs and wind begin to shape range. Zyflow surfaces the first charging window before the bigger hills bite."
+        },
+        {
+          "title": "Karst ridges & chargers",
+          "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Undulating roads and sudden elevation make battery drain hard to guess. Exactly where automatic stop suggestions earn their keep.",
+          "bullets": [
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris",
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse"
+          ]
+        },
+        {
+          "title": "Descent to the Adriatic",
+          "body": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. The final stretch rolls toward Trieste with sea air and a clear arrival. A continent-and-country library preview of what Zyflow is building."
+        }
+      ]
+    },
+    "aside": {
+      "title": "this route includes:",
+      "items": [
+        "Battery-aware routing",
+        "Elevation profile",
+        "Charging stop suggestions",
+        "Weather & wind factors",
+        "Offline-ready planning",
+        "iOS & Android"
+      ],
+      "cta": "Open in Zyflow",
+      "note": "Example route. Free to explore in the app."
+    },
+    "quote": {
+      "quote": "“Finally, routing that respects my battery.”",
+      "body": "“I used to guess charging stops and still end up short on the climbs. Zyflow laid out elevation, weather, and chargers for the whole day. I just rode.”",
+      "attribution": "Lorem Rider, Ljubljana"
+    },
+    "more": {
+      "title": "more routes",
+      "allLink": "View all"
+    }
+  },
+  "blog": {
+    "hero": {
+      "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
+      "lede": "News, advice, and resources from the Zyflow team."
+    },
+    "featured": {
+      "tag": "Tips",
+      "title": "Why e-bike charging at hospitality stops matters",
+      "excerpt": "If a charger isn’t visible online, many riders never find it. Here’s how better maps change longer rides.",
+      "link": "Read Story"
+    },
+    "posts": [
+      {
+        "tag": "Tips",
+        "title": "Planning your first battery-aware day ride",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Elevation, wind, and range before you leave.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "Product",
+        "title": "Battery-aware routing, explained simply",
+        "excerpt": "How Zyflow uses range, elevation, and weather so your plan matches the ride you’ll actually do.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "News",
+        "title": "Zyflow is live on iOS and Android",
+        "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Download free and plan smarter.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "Guides",
+        "title": "Reading elevation before a cross-border ride",
+        "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation. A short guide for Trieste-bound days.",
+        "link": "Read Story"
+      }
+    ]
+  },
+  "article": {
+    "meta": {
+      "tag": "Tips",
+      "date": "12.05.26"
+    },
+    "title": "why e-bike charging at hospitality stops matters",
+    "lede": "A little preparation goes a long way toward making sure your first long ride is memorable for the right reasons.",
+    "body": {
+      "p1": "There’s a particular kind of confidence you only get when you know the next charger isn’t a rumour. If a stop isn’t visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.",
+      "h1": "visibility is everything",
+      "p2": "The biggest misconception first-timers carry is that “there will be somewhere to plug in.” There often is. But only if you’ve planned for it. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Battery drain swings with elevation and wind, so a map of real hospitality and service stops changes what a day can look like.",
+      "p3": "Before your first cross-border day, check where chargers sit relative to the hardest climbs. It takes a few minutes and can transform the whole experience.",
+      "h2": "plan for the climb, not the cafe",
+      "p4": "It might feel warm at the start, but the hills tell a different story. The golden rule is to plan for the load you’ll put on the battery, not the flat stretch you remember from last weekend. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "li1": "Range check. Set your e-bike range honestly, including assist level you actually use",
+      "li2": "Elevation window. Watch where climb clusters sit between known charging stops",
+      "li3": "Weather & wind. Headwinds and cold can reshape the same route overnight",
+      "p5": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Zyflow folds these factors into the plan so you’re not inventing stops mid-climb.",
+      "h3": "start on the right day ride",
+      "p6": "Not all routes are created equal. A rolling countryside day is where almost every rider should start. The rhythm is predictable, and you have time to learn how your battery behaves without the mountains making decisions for you.",
+      "quote": "“If a charger isn’t visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.”",
+      "p7": "Bigger alpine days are a different discipline. They’re exhilarating, but they demand a foundation of planning. Our example routes are designed around appropriate distance and climb for learning. And we’ll keep expanding the continent and country library as coverage grows."
+    },
+    "more": {
+      "titleHtml": "more from<br />the journal",
+      "cta": "Visit journal"
+    }
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Est 2024",
+      "titleHtml": "born<br />to ride<br /><span class=\"is-accent\">further</span>",
+      "place": "Europe · battery-aware",
+      "storyTitle": "It started with a long climb, a flat battery, and a better plan.",
+      "storyBody": "We’re the small team behind Zyflow. Building smart navigation for cyclists and e-bike riders who want to go further without guessing their range. Today we map chargers across Europe and keep expanding the continent and country route library. We’ve never lost sight of what that first hard ride taught us: elevation, weather, and charging stops belong in the plan before you leave.",
+      "sign": "The Zyflow team"
+    },
+    "values": {
+      "title": "our values",
+      "items": [
+        {
+          "titleHtml": "ride further<br />with confidence.",
+          "body": "Battery-aware routing isn’t a gimmick. It’s how you stop guessing on the climbs. We plan around range, elevation, and weather so longer days feel possible."
+        },
+        {
+          "titleHtml": "chargers you<br />can actually find.",
+          "body": "If a stop isn’t visible online, many riders never find it. We map hospitality and service locations so the next plug-in isn’t a rumour."
+        },
+        {
+          "titleHtml": "honesty over<br />hype.",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. We ship what’s useful, say what’s still growing, and listen when riders tell us what to fix next."
+        },
+        {
+          "titleHtml": "free to<br />download.",
+          "body": "Sed do eiusmod tempor incididunt ut labore. Zyflow is free on iOS and Android. Start with a day ride, then go further as coverage grows."
+        }
+      ]
+    },
+    "team": {
+      "title": "our team",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Founder",
+          "bio": "Building Zyflow so e-bike riders can plan further without guessing their battery. Obsessed with elevation profiles, charger maps, and making the next long day feel obvious instead of stressful.",
+          "quals": [
+            "Product & routing",
+            "Europe coverage",
+            "iOS & Android"
+          ]
+        },
+        {
+          "name": "lorem rider",
+          "role": "Route design",
+          "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scouting example rides across countries we cover today. And drafting the continent library Zyflow is building next.",
+          "quals": [
+            "Touring & gravel",
+            "Elevation profiles"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "contact us",
+      "email": "hello@zyflow.eu",
+      "support": "support@zyflow.eu",
+      "social": [
+        "Linkedin",
+        "Instagram",
+        "Bluesky",
+        "Twitter"
+      ]
+    },
+    "form": {
+      "title": "send a message",
+      "lede": "Whether you want to ask about routing, chargers, partnerships, or just say hi. We’re all ears.",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "topic": "Topic (optional)",
+      "topicPlaceholder": "Choose",
+      "topics": [
+        "Routing & battery range",
+        "Charging map",
+        "Partnership",
+        "Press",
+        "Other",
+        "Other"
+      ],
+      "message": "Message",
+      "submit": "Send message"
+    }
+  },
+  "legal": {
+    "nav": {
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    },
+    "hub": {
+      "tag": "Legal",
+      "title": "legal",
+      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
+      "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
+      "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
+      "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app."
+    },
+    "terms": {
+      "tag": "Updated",
+      "date": "15. 5. 2026",
+      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "title": "terms of service",
+      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+    },
+    "privacy": {
+      "tag": "Updated",
+      "date": "30. 6. 2026",
+      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "title": "privacy policy",
+      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+    },
+    "cookies": {
+      "tag": "Updated",
+      "date": "15. 5. 2026",
+      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "title": "cookie policy",
+      "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu. Essential cookies only on the website today."
+    }
+  },
+  "business": {
+    "hero": {
+      "crumb1": "For businesses",
+      "crumb2": "Cafés, stays, bike shops",
+      "titleHtml": "put your place<br />on the map",
+      "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door.",
+      "price": "Free",
+      "unit": " · during launch",
+      "nextLabel": "Live in",
+      "nextValue": "8 countries",
+      "cta": "List your place"
+    },
+    "tiles": [
+      {
+        "value": "On the map",
+        "label": "Riders see you in Explore"
+      },
+      {
+        "value": "Bike facilities",
+        "label": "Parking, storage, pump, charger"
+      },
+      {
+        "value": "On routes",
+        "label": "Shown on routes that pass you"
+      },
+      {
+        "value": "Always current",
+        "label": "Update your details any time"
+      }
+    ],
+    "who": {
+      "title": "who it’s for",
+      "link": "Ask us anything",
+      "chip": "on the map",
+      "price": "Free",
+      "unit": " · during launch",
+      "cta": "List your place",
+      "cards": [
+        {
+          "tag": "Coffee & food",
+          "title": "Cafés & restaurants",
+          "meta0": "Coffee",
+          "meta1": "Restaurants",
+          "body": "Be the stop riders plan their break around. Show that bikes are welcome, where to park them and whether they can charge."
+        },
+        {
+          "tag": "Stays",
+          "title": "Hotels & guesthouses",
+          "meta0": "Stay",
+          "meta1": "Overnight",
+          "body": "Riders on multi-day routes look for one thing first: a safe place for the bike. Show your storage and charging and get picked for the night."
+        },
+        {
+          "tag": "Utility",
+          "title": "Bike shops & services",
+          "meta0": "Repair",
+          "meta1": "Charging",
+          "body": "Repair, rental, charging or a pump at the door. Appear in the utility layer riders open when something goes wrong."
+        }
+      ]
+    },
+    "how": {
+      "title": "how it works",
+      "stepLabel": "step",
+      "steps": [
+        {
+          "title": "Tell us about your place",
+          "body": "Name, address and what you offer riders. Two minutes in the form."
+        },
+        {
+          "title": "We check and add it",
+          "body": "We confirm the details and mark your bike facilities on the map."
+        },
+        {
+          "title": "Riders find you",
+          "body": "You show up in Explore and on the routes that pass you."
+        },
+        {
+          "title": "Keep it current",
+          "body": "Opening hours or facilities changed? Tell us and we update it."
+        }
+      ]
+    },
+    "data": {
+      "title": "tourism boards & data partners",
+      "body": "We work with open data providers and local partners to keep places, chargers and routes accurate. If you manage cycling data, tourism listings or a network of venues, let’s connect it.",
+      "cta": "Become a data partner"
+    },
+    "faq": {
+      "title": "questions from businesses",
+      "items": [
+        {
+          "q": "Does it cost anything?",
+          "a": "Listing your place is free during our launch phase. Later we plan to add paid options, for example extra visibility on routes. We’ll tell you well in advance before anything changes."
+        },
+        {
+          "q": "What counts as bike-friendly?",
+          "a": "Any of these helps: a place to park or lock a bike, secure storage, a pump or tools, or a socket where riders can charge an e-bike."
+        },
+        {
+          "q": "Which countries do you cover?",
+          "a": "Zyflow is live in 8 countries, starting from Slovenia and its neighbours."
+        },
+        {
+          "q": "How do I change my details?",
+          "a": "Send us a message through the contact form and we’ll update your place, usually within a few days."
+        }
+      ],
+      "footnote": "Not sure if you fit?",
+      "footLink": "Ask us"
+    },
+    "final": {
+      "title": "ready when you are",
+      "body": "Tell us about your place and we’ll put it in front of the riders already planning to pass by.",
+      "cta": "List your place",
+      "ctaSecondary": "Talk to us first"
+    },
+    "signin": "Already a partner? Sign in"
+  },
+  "press": {
+    "hero": {
+      "crumb1": "Press & investors",
+      "crumb2": "Fact sheet",
+      "titleHtml": "zyflow<br />at a glance",
+      "lede": "We’re just getting started. Zyflow helps cyclists and e-bike riders find bike-friendly places and ride between them feeling safe. Here are the facts, the team and how to reach us.",
+      "price": "Early stage",
+      "unit": " · 2026",
+      "nextLabel": "Made in",
+      "nextValue": "Slovenia",
+      "cta": "Request our deck"
+    },
+    "tiles": [
+      {
+        "value": "iOS + Android",
+        "label": "Live in both stores"
+      },
+      {
+        "value": "8",
+        "label": "Countries live"
+      },
+      {
+        "value": "7,400+",
+        "label": "Chargers mapped"
+      },
+      {
+        "value": "Open Data Hub",
+        "label": "Signed data partner"
+      }
+    ],
+    "about": {
+      "title": "the short version",
+      "p1": "Most maps show cyclists roads. Zyflow shows them where to stop: stays, coffee stops and restaurants that welcome bikes, plus chargers, water and repair. Road closures and bike theft by area are on the map too, so riders can explore without worry.",
+      "p2": "Zyflow is built by HERKO d.o.o. in Slovenia and launched publicly on iOS and Android in 2026."
+    },
+    "next": {
+      "title": "what’s next",
+      "items": [
+        "More countries and places",
+        "More safety features",
+        "Better route planning",
+        "A bike passport",
+        "Rider community"
+      ]
+    },
+    "team": {
+      "title": "the team",
+      "link": "About us",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Co-founder & CEO",
+          "bio": "Leads product and partnerships: the app, the data behind it and the partner network."
+        },
+        {
+          "name": "tanja",
+          "role": "Co-founder & COO",
+          "bio": "Runs the company: administration, contracts, legal and tax, marketing and local partners."
+        }
+      ]
+    },
+    "kit": {
+      "title": "press kit",
+      "body": "We haven’t been in the press yet, so this is a first. If you’re writing about cycling, e-bikes or travel in the region, we’d love to talk, and we’ll send everything you need.",
+      "items": [
+        {
+          "name": "Logo files",
+          "note": "SVG + PNG"
+        },
+        {
+          "name": "App screenshots",
+          "note": "iOS + Android"
+        },
+        {
+          "name": "Founder photos",
+          "note": "On request"
+        },
+        {
+          "name": "Fact sheet",
+          "note": "This page"
+        }
+      ]
+    },
+    "final": {
+      "title": "interested in zyflow?",
+      "body": "We share our deck and numbers directly. Tell us a little about yourself and we’ll get back to you.",
+      "cta": "Request our deck",
+      "ctaSecondary": "Press enquiries"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/**
+ * Text links + arrow links — Figma Links/*.
+ */
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-2);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  font-weight: 600;
+  line-height: var(--leading-body);
+  color: var(--color-text-body);
+  text-underline-offset: 3px;
+  transition: opacity 160ms ease;
+}
+
+.link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--color-neutral-0);
+  outline-offset: 3px;
+  border-radius: var(--radius-xs);
+}
+
+.link--small {
+  font-size: var(--type-small);
+}
+
+.link--arrow::after {
+  content: "";
+  display: inline-block;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  background-color: currentColor;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M3.75 9h10.5M9.75 4.5 14.25 9l-4.5 4.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M3.75 9h10.5M9.75 4.5 14.25 9l-4.5 4.5' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}

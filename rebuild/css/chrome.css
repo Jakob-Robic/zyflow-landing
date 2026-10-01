@@ -1,0 +1,26 @@
+/**
+ * Shared chrome placeholders — filled when Home chrome is built.
+ */
+
+.announcement {
+  min-height: 130px;
+  background-color: var(--color-surface-2);
+}
+
+.nav {
+  height: var(--navbar-height);
+  width: 100%;
+  display: block;
+  background-color: var(--color-surface-1);
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: var(--nav-links-gap);
+}
+
+.footer {
+  background-color: var(--color-surface-1);
+  padding-block: var(--section-pad-md);
+}

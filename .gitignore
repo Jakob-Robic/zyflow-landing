@@ -5,3 +5,4 @@ serve.py
 sl/
 public/
 .vercel
+rebuild/dist/

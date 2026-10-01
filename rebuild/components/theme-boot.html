@@ -1,0 +1,11 @@
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("zyflow-theme");
+      if (t !== "light" && t !== "dark") t = "light";
+      document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>

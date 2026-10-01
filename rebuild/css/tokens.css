@@ -1,0 +1,177 @@
+/**
+ * Yonder design DNA — Figma variables → CSS custom properties.
+ * Source: https://www.figma.com/design/4vy34Vky7Rge52oBiK5U2U/Yonder
+ *
+ * Dark (olive) is the baseline. Cream light overrides live on html[data-theme="light"].
+ */
+
+:root,
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* —— Colors / Brand —— */
+  --color-brand-primary: #e94b17;
+  --color-brand-accent-1: #2e551e;
+
+  /* —— Colors / Surfaces —— */
+  --color-surface-1: #2a2e1e;
+  --color-surface-2: #373b2a;
+  --color-surface-3: #434738;
+  --color-surface-4: #4f5247;
+  --color-surface-offset: #373b2a;
+  --color-surface-1-transparent: #2a2e1e00;
+  --color-surface-2-transparent: #373b2a00;
+  /* Map-contour panels (Figma 4004:18427) — always olive */
+  --color-surface-map: #373b2a;
+  --color-text-on-map: #ffffff;
+
+  /* —— Colors / Text —— */
+  --color-text-heading: #ffffff;
+  --color-text-body: #ffffff;
+  --color-text-body-muted: #ffffffcc;
+  --color-text-on-accent: #ffffff;
+  --color-text-on-surface-offset: #ffffff;
+
+  /* —— Colors / Neutrals & borders —— */
+  --color-neutral-0: #ffffff;
+  --color-neutral-1000: #131515; /* soft black — never pure #000 */
+  --color-scrim: #131515;
+  --color-border-default: #434738;
+  --color-motif-glass-dark: #13151524;
+
+  /* —— Typography / Typefaces —— */
+  --font-heading: "Tanker", Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  --font-body: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-badge: "Courier Prime", "Courier New", Courier, monospace;
+
+  /* —— Typography / Type scale (px) —— */
+  --type-display: 76px;
+  --type-h1: 64px;
+  --type-h2: 45px;
+  --type-h3: 32px;
+  --type-h4: 27px;
+  --type-h5: 23px;
+  --type-lead: 19px;
+  --type-body: 16px;
+  --type-small: 14px;
+
+  /* —— Line heights —— */
+  --leading-display: 1;
+  --leading-h1: 1;
+  --leading-h2: 1.1;
+  --leading-h3: 1.2;
+  --leading-h4: 1.1;
+  --leading-h5: 1.35;
+  --leading-lead: 1.4;
+  --leading-body: 1.5;
+
+  /* —— Spacing / Gaps —— */
+  --space-gap-1: 3px;
+  --space-gap-2: 6px;
+  --space-gap-3: 9px;
+  --space-gap-4: 12px;
+  --space-gap-5: 18px;
+  --space-gap-6: 24px;
+  --space-gap-7: 36px;
+  --space-gap-8: 48px;
+  --space-gap-9: 60px;
+  --space-gap-10: 72px;
+  --space-gap-11: 96px;
+  --space-gap-12: 120px;
+  --space-gap-13: 144px;
+
+  /* —— Spacing / Sections —— */
+  --section-pad-sm: 42px;
+  --section-pad-md: 84px;
+  --section-pad-lg: 168px;
+
+  /* —— Grid —— */
+  --artboard-width: 1440px;
+  --grid-gutter: 24px;
+  --grid-col-2: 193px;
+  --grid-col-3: 302px;
+  --grid-col-4: 411px;
+  --grid-col-6: 628px;
+  --grid-col-7: 737px;
+  --grid-col-8: 845px;
+  --grid-col-12: 1280px;
+  --page-inset: 80px; /* (1440 - 1280) / 2 */
+
+  /* —— Border radius —— */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+
+  /* —— Buttons —— */
+  --button-bg-primary: var(--color-brand-primary);
+  --button-stroke-color: var(--color-brand-primary);
+  --button-stroke-width: 0;
+  --button-text-primary: #ffffff;
+  --button-height-md: 48px;
+  --button-height-sm: 36px;
+  --button-padding-md: 24px;
+  --button-padding-sm: 18px;
+  --button-radius-md: 200px;
+
+  /* —— Navigation —— */
+  --navbar-height: 72px;
+  --nav-links-gap: 24px;
+  --nav-items-gap: 24px;
+
+  /* —— Icons —— */
+  --icon-xs: 12px;
+  --icon-sm: 18px;
+  --icon-md: 24px;
+  --icon-color-default: #ffffff;
+
+  /* —— Forms —— */
+  --form-input-padding: 12px;
+  --form-input-height: 48px;
+  --form-input-radius: 6px;
+  --form-input-border-color: #434738;
+
+  /* —— Effects —— */
+  --blur-frosted: 52px;
+  --contour-opacity: 0.85;
+  --contour-blend: overlay;
+}
+
+/* —— Cream light theme (zyflow.eu) —— */
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --color-brand-primary: #e94b17;
+  --color-brand-accent-1: #2e551e;
+
+  /* Page = warmer cream; offset/Why = brighter cream (zyflow band swap) */
+  --color-surface-1: #eae6dc;
+  --color-surface-2: #e0d9cc;
+  --color-surface-3: #d4cdc0;
+  --color-surface-4: #c8bfb0;
+  --color-surface-offset: #f9f8f4;
+  --color-surface-1-transparent: #eae6dc00;
+  --color-surface-2-transparent: #e0d9cc00;
+  /* Keep map-contour cards olive on cream pages */
+  --color-surface-map: #373b2a;
+  --color-text-on-map: #ffffff;
+
+  --color-text-heading: #1a1a1a;
+  --color-text-body: #1a1a1a;
+  --color-text-body-muted: #494d4d;
+  --color-text-on-accent: #ffffff;
+  --color-text-on-surface-offset: #1a1a1a;
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-1000: #131515;
+  --color-scrim: #131515;
+  --color-border-default: #d9d2c4;
+  --color-motif-glass-dark: #13151514;
+
+  --button-text-primary: #ffffff;
+  --icon-color-default: #1a1a1a;
+  --form-input-border-color: #d9d2c4;
+
+  --contour-opacity: 0.35;
+  --contour-blend: multiply;
+}

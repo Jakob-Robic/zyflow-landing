@@ -1,0 +1,313 @@
+/**
+ * App download modal — olive map hero + cream body (site DNA).
+ */
+
+.app-modal {
+  padding: 0;
+  border: 0;
+  margin: auto;
+  background: transparent;
+  max-width: min(560px, calc(100vw - 32px));
+  width: 100%;
+  color: var(--color-text-body);
+}
+
+.app-modal::backdrop {
+  background: color-mix(in srgb, var(--color-scrim) 72%, transparent);
+  backdrop-filter: blur(4px);
+}
+
+.app-modal__panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface-1);
+  box-shadow: 0 24px 64px color-mix(in srgb, var(--color-scrim) 40%, transparent);
+}
+
+.app-modal__hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 300px;
+  padding: var(--space-gap-8) var(--space-gap-8) 0;
+  background: var(--color-surface-map);
+  color: var(--color-text-on-map);
+  overflow: hidden;
+}
+
+.app-modal__bg {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.app-modal__bg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160%;
+  height: 160%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.app-modal__close {
+  position: absolute;
+  top: var(--space-gap-4);
+  right: var(--space-gap-4);
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-text-on-map) 14%, transparent);
+  color: var(--color-text-on-map);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.app-modal__close:hover,
+.app-modal__close:focus-visible {
+  background: color-mix(in srgb, var(--color-text-on-map) 24%, transparent);
+}
+
+.app-modal__close:focus-visible {
+  outline: 2px solid var(--color-text-on-map);
+  outline-offset: 2px;
+}
+
+.phone--modal {
+  position: relative;
+  width: 180px;
+  z-index: 1;
+  transform: translateY(28px) rotate(2deg);
+}
+
+.phone--modal .phone__bezel {
+  background: #1a1a1a;
+  border-radius: 28px;
+  padding: 10px;
+  box-shadow:
+    0 24px 48px color-mix(in srgb, var(--color-scrim) 45%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, #fff 12%, transparent);
+}
+
+.phone--modal .phone__notch {
+  width: 64px;
+  height: 7px;
+  margin: 0 auto 8px;
+  border-radius: 100px;
+  background: #0d0d0d;
+}
+
+.phone--modal .phone__screen {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 300px;
+  background: #2a2e1e;
+}
+
+.phone--modal .phone-ui {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-3);
+  padding: var(--space-gap-5);
+  color: #fff;
+  min-height: 300px;
+}
+
+.phone--modal .phone-ui__label {
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.phone--modal .phone-ui__hero {
+  font-family: var(--font-heading);
+  font-size: var(--type-h3);
+  line-height: 1;
+  margin: 0;
+}
+
+.phone--modal .phone-ui__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.phone--modal .phone-ui__chips span {
+  font-family: var(--font-badge);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, #fff 14%, transparent);
+}
+
+.phone--modal .phone-ui__map {
+  flex: 1;
+  min-height: 88px;
+  margin-top: auto;
+  border-radius: 12px;
+  background:
+    radial-gradient(circle at 70% 35%, #e94b17 0 6px, transparent 7px),
+    linear-gradient(160deg, #434738, #2a2e1e);
+}
+
+.phone--modal .phone-ui__foot {
+  margin: 0;
+  font-size: var(--type-small);
+  opacity: 0.8;
+}
+
+.app-modal__body {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-gap-9) var(--space-gap-7) var(--space-gap-7);
+  background: var(--color-surface-1);
+  text-align: center;
+}
+
+.app-modal__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h3);
+  line-height: 1;
+  margin: 0 0 var(--space-gap-4);
+  color: var(--color-text-heading);
+}
+
+.app-modal__lede {
+  margin: 0 auto var(--space-gap-6);
+  max-width: 34ch;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  color: var(--color-text-body-muted);
+}
+
+.app-modal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-2);
+  margin: 0 0 var(--space-gap-6);
+  padding: var(--space-gap-2) var(--space-gap-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-2);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+}
+
+.app-modal__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-gap-5);
+  align-items: center;
+  text-align: left;
+  padding: var(--space-gap-5);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface-2);
+}
+
+.app-modal__download h3 {
+  font-family: var(--font-heading);
+  font-size: var(--type-h5);
+  margin: 0 0 var(--space-gap-2);
+  text-transform: lowercase;
+}
+
+.app-modal__download p {
+  margin: 0 0 var(--space-gap-5);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
+  color: var(--color-text-body-muted);
+}
+
+.app-modal__stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
+  align-items: center;
+}
+
+.store-badge {
+  display: inline-flex;
+  line-height: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: opacity 160ms ease;
+}
+
+.store-badge:hover,
+.store-badge:focus-visible {
+  opacity: 0.88;
+}
+
+.store-badge:focus-visible {
+  outline: 2px solid var(--color-brand-primary);
+  outline-offset: 3px;
+}
+
+.store-badge img {
+  display: block;
+  width: 135px;
+  height: auto;
+}
+
+.app-modal__qr {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  background: var(--color-neutral-0);
+}
+
+.app-modal__qr > img:first-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.app-modal__qr-mark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translate(-50%, -50%);
+  background: var(--color-neutral-0);
+  border-radius: 6px;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 520px) {
+  .app-modal__card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .app-modal__stores {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-modal,
+  .app-modal::backdrop {
+    transition: none;
+  }
+}

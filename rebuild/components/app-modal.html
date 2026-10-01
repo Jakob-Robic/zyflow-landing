@@ -1,0 +1,87 @@
+<!--
+  App download modal — opens from [data-app-modal-open] triggers.
+-->
+<dialog class="app-modal" id="app-modal" aria-labelledby="app-modal-title">
+  <div class="app-modal__panel">
+    <div class="app-modal__hero">
+      <button type="button" class="app-modal__close" data-app-modal-close aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="app-modal__bg" aria-hidden="true">
+        <img src="./assets/images/home/map-contours-featured.svg" alt="" />
+      </div>
+      <div class="phone phone--modal" aria-hidden="true">
+        <div class="phone__bezel">
+          <div class="phone__notch"></div>
+          <div class="phone__screen phone-ui phone-ui--route">
+            <p class="phone-ui__label">Ljubljana to Trieste</p>
+            <p class="phone-ui__hero">134 km</p>
+            <div class="phone-ui__chips">
+              <span>+1,766 m</span>
+              <span>72% batt</span>
+              <span>clear</span>
+            </div>
+            <div class="phone-ui__map"></div>
+            <p class="phone-ui__foot">3 charge stops · planned</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-modal__body">
+      <h2 class="app-modal__title" id="app-modal-title" data-i18n="chrome.appModal.title">Get the Zyflow app</h2>
+      <p class="app-modal__lede" data-i18n="chrome.appModal.lede">
+        Free navigation for cyclists and e-bike riders. Plan with battery, elevation, chargers, and weather.
+      </p>
+
+      <p class="app-modal__badge">
+        <span class="motif" aria-hidden="true"></span>
+        <span data-i18n="chrome.appModal.badge">Free on iOS and Android</span>
+      </p>
+
+      <div class="app-modal__card">
+        <div class="app-modal__download">
+          <h3 data-i18n="chrome.appModal.downloadTitle">Download Zyflow now</h3>
+          <p data-i18n="chrome.appModal.downloadBody">
+            Visit the App Store, Google Play, or scan the QR code with your phone.
+          </p>
+          <div class="app-modal__stores">
+            <a
+              class="store-badge"
+              href="https://apps.apple.com/app/zyflow/id6763228086"
+              aria-label="Download on the App Store"
+            >
+              <img
+                src="./assets/images/stores/badge-app-store-en-dark.png"
+                width="120"
+                height="40"
+                alt="Download on the App Store"
+              />
+            </a>
+            <a
+              class="store-badge"
+              href="https://play.google.com/store/apps/details?id=com.jakob_robic.zyflowmobileapp"
+              aria-label="Get it on Google Play"
+            >
+              <img
+                src="./assets/images/stores/badge-google-play-en-dark.png"
+                width="120"
+                height="40"
+                alt="Get it on Google Play"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="app-modal__qr">
+          <img
+            src="./assets/images/zyflow-app-qr.png"
+            width="140"
+            height="140"
+            alt="QR code to download Zyflow on the App Store"
+          />
+          <img class="app-modal__qr-mark" src="./assets/images/zyflow-logo-mark.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
