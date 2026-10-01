@@ -1,38 +1,69 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "buildCommand": "npm run build:rebuild",
+  "outputDirectory": "rebuild/dist",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" },
-    { "source": "/sl/legal-pages/(.*)", "destination": "/sl/legal-pages/$1.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/fonts/(.*)",
+      "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/images/(.*)",
+      "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/legal-pages/privacy-policy",
+      "destination": "/legal-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/legal-pages/cookie-policy",
+      "destination": "/legal-cookies",
+      "permanent": true
+    },
+    {
+      "source": "/legal-pages/terms-conditions",
+      "destination": "/legal-terms",
+      "permanent": true
     }
   ]
 }

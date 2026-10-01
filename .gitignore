@@ -6,3 +6,4 @@ sl/
 public/
 .vercel
 rebuild/dist/
+vercel.json.production.bak
