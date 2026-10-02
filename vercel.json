@@ -75,5 +75,15 @@
       "destination": "/sl/blog/e-bike-charging-at-hospitality-stops",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/sl/blog",
+      "destination": "/sl/blog.html"
+    }
   ]
 }
