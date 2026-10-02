@@ -1,6 +1,8 @@
 /**
  * Single source of truth for rebuild routes, SEO, and locale output.
  */
+const { ARTICLE_PAGES } = require("./articles");
+
 const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.zyflow.eu";
 const LOCALES = ["en", "sl"];
 const DEFAULT_LOCALE = "en";
@@ -45,13 +47,7 @@ const PAGES = [
     path: "/blog",
     indexable: true,
   },
-  {
-    id: "blog-article",
-    file: "blog-article.html",
-    out: "blog-article.html",
-    path: "/blog-article",
-    indexable: true,
-  },
+  ...ARTICLE_PAGES,
   {
     id: "contact",
     file: "contact.html",

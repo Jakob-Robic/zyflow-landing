@@ -64,6 +64,16 @@
       "source": "/legal-pages/terms-conditions",
       "destination": "/legal-terms",
       "permanent": true
+    },
+    {
+      "source": "/blog-article",
+      "destination": "/blog/e-bike-charging-at-hospitality-stops",
+      "permanent": true
+    },
+    {
+      "source": "/sl/blog-article",
+      "destination": "/sl/blog/e-bike-charging-at-hospitality-stops",
+      "permanent": true
     }
   ]
 }

@@ -23,6 +23,7 @@ const {
   hrefForPage,
   localizedPath,
 } = require("./pages");
+const { articleBySlug, blogCardI18n } = require("./articles");
 
 const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -218,11 +219,14 @@ function rewriteInternalLinks(html, locale) {
     (_, attr) => `${attr}="${hrefForPage("/", locale)}"`
   );
 
-  // ./about.html → /about or /sl/about (preserve ?query and #hash)
+  // ./about.html or ./blog/slug.html → clean URLs (preserve ?query and #hash)
   html = html.replace(
-    /\b(href)="(?:\.\/)?([a-z0-9-]+)\.html(\?[^"#]*)?(#[^"]*)?"/g,
-    (match, attr, slug, query = "", hash = "") => {
-      const page = PAGES.find((p) => p.out === `${slug}.html` || p.file === `${slug}.html`);
+    /\b(href)="(?:\.\/)?((?:[a-z0-9-]+\/)*[a-z0-9-]+)\.html(\?[^"#]*)?(#[^"]*)?"/g,
+    (match, attr, slugPath, query = "", hash = "") => {
+      const outFile = `${slugPath}.html`;
+      const page = PAGES.find(
+        (p) => p.out === outFile || p.file === outFile || p.path === `/${slugPath}`
+      );
       if (!page) return match;
       const localeForPage = pageLocales(page).includes(locale) ? locale : DEFAULT_LOCALE;
       return `${attr}="${hrefForPage(page.path, localeForPage)}${query || ""}${hash || ""}"`;
@@ -230,6 +234,56 @@ function rewriteInternalLinks(html, locale) {
   );
 
   return html;
+}
+
+function renderArticleMore(slug) {
+  const article = articleBySlug(slug);
+  const cards = article.related.map((relSlug) => {
+    const rel = articleBySlug(relSlug);
+    const { prefix, image } = blogCardI18n(rel);
+    const href = `./blog/${rel.slug}.html`;
+    return `      <article class="blog-story">
+        <a class="blog-story__media" href="${href}"><img src="${image}" alt="" /></a>
+        <div class="blog-story__body">
+          <p class="blog-story__tag"><span class="motif" aria-hidden="true"></span><span data-i18n="${prefix}.tag"></span></p>
+          <h3 class="blog-story__title" data-i18n="${prefix}.title"></h3>
+          <p class="blog-story__excerpt" data-i18n="${prefix}.excerpt"></p>
+          <a class="link link--arrow link--small" href="${href}" data-i18n="${prefix}.link">Read Story</a>
+        </div>
+      </article>`;
+  });
+
+  const divider = `\n      <div class="article-more__divider" aria-hidden="true"></div>\n      `;
+
+  return `<section class="article-more section" data-section="article.more">
+  <div class="article-more__glow" aria-hidden="true">
+    <img src="./assets/images/home/map-contours-featured.svg" alt="" />
+  </div>
+  <div class="container article-more__inner">
+    <div class="article-more__cta">
+      <h2 class="article-more__title" data-i18n-html="articles.more.titleHtml">more from<br />the journal</h2>
+      <a class="btn btn--primary" href="./blog.html" data-i18n="articles.more.cta">Visit journal</a>
+    </div>
+    <div class="article-more__list">
+${cards.join(divider)}
+    </div>
+  </div>
+</section>`;
+}
+
+function injectArticleContent(html, articleSlug) {
+  const bodyPath = path.join(ROOT, "sections/article/bodies", `${articleSlug}.html`);
+  if (!fs.existsSync(bodyPath)) {
+    throw new Error(`Missing article body: sections/article/bodies/${articleSlug}.html`);
+  }
+  const body = resolveIncludes(read(bodyPath));
+  const more = renderArticleMore(articleSlug);
+  if (!html.includes("<!-- ARTICLE_BODY -->") || !html.includes("<!-- ARTICLE_MORE -->")) {
+    throw new Error("blog-article.html must contain ARTICLE_BODY and ARTICLE_MORE placeholders");
+  }
+  return html
+    .replace("<!-- ARTICLE_BODY -->", body)
+    .replace("<!-- ARTICLE_MORE -->", more);
 }
 
 function injectLangSwitcher(html, page, locale) {
@@ -404,6 +458,9 @@ function buildPage(page, locale, messages) {
     throw new Error(`Missing page file: ${page.file}`);
   }
   let html = read(sourcePath);
+  if (page.articleSlug) {
+    html = injectArticleContent(html, page.articleSlug);
+  }
   html = resolveIncludes(html);
   html = applyI18n(html, messages);
   html = rewriteAssetPaths(html);
@@ -422,6 +479,7 @@ function buildPage(page, locale, messages) {
     locale === DEFAULT_LOCALE ? DIST : path.join(DIST, locale);
   ensureDir(outDir);
   const outFile = path.join(outDir, page.out);
+  ensureDir(path.dirname(outFile));
   fs.writeFileSync(outFile, html, "utf8");
   const label =
     locale === DEFAULT_LOCALE ? page.out : path.join(locale, page.out);
