@@ -828,14 +828,9 @@ html[data-theme="light"] .trust__item img {
   font-size: var(--type-small);
 }
 
-/* Continuous marquee */
+/* Continuous marquee — keep moving on hover/focus */
 .trust-carousel[data-mode="marquee"] .trust-carousel__track {
   animation: trust-marquee var(--trust-speed, 35s) linear infinite;
-}
-
-.trust-carousel[data-mode="marquee"]:hover .trust-carousel__track,
-.trust-carousel[data-mode="marquee"]:focus-within .trust-carousel__track {
-  animation-play-state: paused;
 }
 
 @keyframes trust-marquee {
@@ -1136,6 +1131,7 @@ html[data-theme="light"] .trust__item img {
   width: 120px;
   height: 160px;
   object-fit: cover;
+  object-position: center 40%;
   border-radius: var(--radius-md);
 }
 
@@ -1143,6 +1139,7 @@ html[data-theme="light"] .trust__item img {
   width: 168px;
   height: 223px;
   object-fit: cover;
+  object-position: center 35%;
   border-radius: var(--radius-md);
 }
 
@@ -1368,15 +1365,29 @@ html[data-theme="light"] .trust__item img {
   opacity: 1;
 }
 
-.cat-card span {
+.cat-card__text {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-gap-2);
+  text-align: center;
+}
+
+.cat-card__title {
   font-family: var(--font-heading);
   font-size: var(--type-h2);
   line-height: var(--leading-h2);
   text-transform: lowercase;
   color: #fff;
   text-shadow: 0 1px 18px color-mix(in srgb, var(--color-scrim) 45%, transparent);
+}
+
+.cat-card__cta {
+  color: #fff;
+  text-shadow: 0 1px 12px color-mix(in srgb, var(--color-scrim) 40%, transparent);
+  opacity: 0.9;
 }
 
 /* Light theme: soft white frosted wash over the blur */
@@ -1475,9 +1486,11 @@ html[data-theme="light"] .testimonial__bg img {
 
 .testimonial__body {
   position: relative;
-  font-family: var(--font-heading);
-  font-size: var(--type-h3);
-  line-height: var(--leading-h3);
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  text-transform: none;
   max-width: 879px;
   margin: 0 auto var(--space-gap-6);
 }
@@ -2163,7 +2176,7 @@ html[data-theme="light"] .testimonial__bg img {
     height: auto;
     aspect-ratio: 16 / 10;
   }
-  .cat-card span {
+  .cat-card__title {
     font-size: var(--type-h3);
   }
   .feature-card {

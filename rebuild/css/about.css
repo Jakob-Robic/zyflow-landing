@@ -278,6 +278,10 @@
   display: block;
 }
 
+.about-member:first-of-type .about-member__media img {
+  object-position: center 20%;
+}
+
 .about-member__body {
   display: flex;
   flex-direction: column;
