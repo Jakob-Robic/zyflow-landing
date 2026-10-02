@@ -161,6 +161,32 @@ function applyI18n(html, messages) {
     }
   );
 
+  // Attribute i18n: data-i18n-aria-label / data-i18n-placeholder
+  html = html.replace(
+    /\sdata-i18n-aria-label="([^"]+)"/g,
+    (match, key) => {
+      const value = getByPath(messages, key);
+      if (typeof value !== "string") return match;
+      return ` aria-label="${escapeHtml(value)}" data-i18n-aria-label="${key}"`;
+    }
+  );
+  html = html.replace(
+    /\sdata-i18n-placeholder="([^"]+)"/g,
+    (match, key) => {
+      const value = getByPath(messages, key);
+      if (typeof value !== "string") return match;
+      return ` placeholder="${escapeHtml(value)}" data-i18n-placeholder="${key}"`;
+    }
+  );
+  html = html.replace(
+    /\sdata-i18n-label-close="([^"]+)"/g,
+    (match, key) => {
+      const value = getByPath(messages, key);
+      if (typeof value !== "string") return match;
+      return ` data-label-close="${escapeHtml(value)}"`;
+    }
+  );
+
   return html;
 }
 

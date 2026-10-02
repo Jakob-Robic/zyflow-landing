@@ -4,6 +4,10 @@
     "locale": "sl",
     "source": "zyflow",
     "pages": {
+      "404": {
+        "title": "Zyflow: Stran ne obstaja",
+        "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+      },
       "home": {
         "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
         "description": "Najdi kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice v 8 državah. Brezplačna aplikacija za kolesarje in e-kolesarje za iOS in Android."
@@ -42,15 +46,11 @@
       },
       "legal-cookies": {
         "title": "Zyflow — Cookie Policy",
-        "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljaš."
       },
       "legal-terms": {
         "title": "Zyflow — Terms of Service",
-        "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
-      },
-      "404": {
-        "title": "Zyflow: Stran ne obstaja",
-        "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
       },
       "styleguide": {
         "title": "Zyflow — Design System Styleguide",
@@ -68,9 +68,10 @@
   },
   "chrome": {
     "announcement": {
-      "label": "App Update:",
+      "label": "Novost:",
       "text": "Zyflow je na voljo za iOS in Android. Najdi kolesarjem prijazne kraje v 8 državah.",
-      "cta": "Download"
+      "textShort": "Na voljo za iOS in Android",
+      "cta": "Prenesi"
     },
     "nav": {
       "cta": "Prenesi",
@@ -81,7 +82,11 @@
         "journal": "Dnevnik",
         "contact": "Kontakt",
         "business": "Za podjetja"
-      }
+      },
+      "menu": "Meni",
+      "menuClose": "Zapri meni",
+      "themeDark": "Temni način",
+      "themeLight": "Svetli način"
     },
     "footer": {
       "links": {
@@ -100,11 +105,14 @@
         "fourwd": "Storitve"
       },
       "newsletter": {
-        "title": "newsletter",
+        "title": "novice",
         "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
-        "note": "We never share your details."
+        "note": "Tvojih podatkov ne delimo z nikomer.",
+        "subscribe": "Naroči se",
+        "email": "E-pošta",
+        "emailPlaceholder": "E-poštni naslov"
       },
-      "copyright": "© 2026 Zyflow. All rights reserved."
+      "copyright": "© 2026 Zyflow. Vse pravice pridržane."
     },
     "notFound": {
       "title": "Strani ni mogoče najti",
@@ -113,18 +121,22 @@
       "tours": "Razišči poti"
     },
     "lang": {
-      "label": "Language",
+      "label": "Jezik",
       "en": "EN",
       "sl": "SL"
     },
     "appModal": {
-      "title": "Get the Zyflow app",
+      "title": "Prenesi aplikacijo Zyflow",
       "lede": "Najdi kolesarjem prijazne nastanitve, kavarne in restavracije, s polnilnicami in kolesarskimi storitvami na zemljevidu. Brezplačno za iOS in Android.",
-      "badge": "Free on iOS and Android",
-      "downloadTitle": "Download Zyflow now",
-      "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
+      "badge": "Brezplačno za iOS in Android",
+      "downloadTitle": "Prenesi Zyflow zdaj",
+      "downloadBody": "Obišči App Store, Google Play ali s telefonom skeniraj QR kodo.",
       "mockStat": "Kolesarjem prijazni postanki",
-      "mockLine": "Nastanitve, kava in polnilnice ob poti"
+      "mockLine": "Nastanitve, kava in polnilnice ob poti",
+      "close": "Zapri"
+    },
+    "ui": {
+      "step": "Korak"
     }
   },
   "home": {
@@ -133,14 +145,19 @@
       "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
       "cta": "Prenesi aplikacijo",
       "nextDepartureLabel": "Izpostavljena pot",
-      "nextDepartureTitle": "Ljubljana to Trieste",
+      "nextDepartureTitle": "Ljubljana–Trst",
       "nextDepartureDate": "134 km · +1.766 m"
     },
     "appBanner": {
-      "eyebrow": "The Zyflow app",
+      "eyebrow": "Aplikacija Zyflow",
       "titleHtml": "Vsak postanek.<br>En zemljevid.",
       "body": "Nastanitve, kavarne, restavracije, polnilnice, pitna voda in servis koles, pri vsakem pa vidiš, zakaj je prijazen kolesarjem. Brezplačno za iOS in Android.",
-      "cta": "Download"
+      "cta": "Prenesi",
+      "phoneHero": "raziskuj dlje.",
+      "chipBattery": "baterija",
+      "chipChargers": "polnilnice",
+      "chipWeather": "vreme",
+      "phoneFoot": "Brezplačno za iOS in Android"
     },
     "trust": {
       "one": "Regionalni zemljevidi in podatki o poteh",
@@ -149,38 +166,38 @@
       "four": "Odprti podatki o krajih in mobilnosti"
     },
     "adventures": {
-      "titleHtml": "featured<br />routes",
-      "allLink": "Explore Routes",
-      "viewCta": "View route",
+      "titleHtml": "izpostavljene<br />poti",
+      "allLink": "Razišči poti",
+      "viewCta": "Poglej pot",
       "cards": [
         {
           "place": "Ljubljana",
-          "region": "Slovenia to Italy",
-          "title": "Ljubljana to Trieste",
-          "meta0": "Touring",
-          "meta1": "1 day",
+          "region": "Slovenija–Italija",
+          "title": "Ljubljana–Trst",
+          "meta0": "Potovanje",
+          "meta1": "1 dan",
           "meta2": "134 km",
           "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
           "price": "134 km",
           "unit": " · 1 dan"
         },
         {
-          "place": "Julian Alps",
-          "region": "Slovenia",
-          "title": "Alpine Pass Loop",
-          "meta0": "Alpine",
-          "meta1": "1 day",
+          "place": "Julijske Alpe",
+          "region": "Slovenija",
+          "title": "Zanka čez alpske prelaze",
+          "meta0": "Alpsko",
+          "meta1": "1 dan",
           "meta2": "89 km",
           "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
           "price": "+890 m",
-          "unit": " · climb"
+          "unit": " · vzpon"
         },
         {
-          "place": "Istria",
-          "region": "Croatia",
-          "title": "Coastal Gravel Meander",
+          "place": "Istra",
+          "region": "Hrvaška",
+          "title": "Obalni gravel",
           "meta0": "Gravel",
-          "meta1": "2 days",
+          "meta1": "2 dni",
           "meta2": "156 km",
           "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
           "price": "156 km",
@@ -189,13 +206,13 @@
       ]
     },
     "intro": {
-      "greeting": "Hey there!",
+      "greeting": "Živjo!",
       "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
-      "link": "About Zyflow"
+      "link": "O Zyflowu"
     },
     "featuredTour": {
       "eyebrow": "Vsaka pot, v celoti na zemljevidu",
-      "title": "ljubljana to trieste",
+      "title": "ljubljana–trst",
       "metaDuration": "134 km",
       "metaSeason": "+1.766 m",
       "cta": "Poglej, kaj je ob poti",
@@ -215,7 +232,7 @@
       "ctaSecondary": "Vlagatelji in mediji"
     },
     "whyUs": {
-      "titleHtml": "Why<br />Zyflow?",
+      "titleHtml": "Zakaj<br />Zyflow?",
       "items": [
         {
           "title": "kraji, ki jih drugi zemljevidi spregledajo",
@@ -232,11 +249,11 @@
       ]
     },
     "appStage": {
-      "eyebrow": "Inside the ride",
-      "titleHtml": "The app<br />on the trail.",
-      "body": "Battery, elevation, chargers, and weather in one plan, so you leave knowing the ride will finish.",
-      "ctaIos": "Download for iOS",
-      "ctaAndroid": "Get it on Android"
+      "eyebrow": "V aplikaciji",
+      "titleHtml": "Aplikacija<br />na poti.",
+      "body": "Baterija, vzponi, polnilnice in vreme v enem načrtu, da veš, da bo vožnja šla do konca.",
+      "ctaIos": "Prenesi za iOS",
+      "ctaAndroid": "Prenesi za Android"
     },
     "appFlow": {
       "titleHtml": "Od zemljevida<br>do vožnje.",
@@ -261,42 +278,42 @@
         {
           "title": "najdi kolesarjem prijazne kraje",
           "body": "Parkirišče za kolesa, varna shramba, tlačilka ali polnilnica, označeno pri vsakem kraju. Zemljevid lahko filtriraš, da pokaže samo kraje, ki sprejmejo kolesa.",
-          "link": "Download"
+          "link": "Prenesi"
         },
         {
           "title": "kolesari brez skrbi",
           "body": "Pred odhodom poglej zapore cest in dela na cesti, preveri kraje koles po območjih in načrtuj baterijo s polnilnicami ob poti.",
-          "link": "Explore Routes"
+          "link": "Razišči poti"
         },
         {
           "title": "rastemo po Evropi",
           "body": "Na voljo v 8 državah, začenši s Slovenijo, Hrvaško in Avstrijo, in rastemo država za državo.",
-          "link": "Read Journal"
+          "link": "Preberi dnevnik"
         }
       ]
     },
     "journal": {
-      "titleHtml": "The Zyflow<br />journal",
+      "titleHtml": "Zyflow<br />dnevnik",
       "cta": "Preberi dnevnik",
       "posts": [
         {
-          "tag": "Tips",
-          "title": "Why e-bike charging at hospitality stops matters",
-          "excerpt": "If a charger isn’t visible online, many riders never find it. Here’s how better maps change longer rides.",
-          "link": "Read Story"
+          "tag": "Nasveti",
+          "title": "Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
+          "excerpt": "Če polnilnica ni vidna na spletu, je mnogi kolesarji nikoli ne najdejo. Boljši zemljevidi spremenijo daljše vožnje.",
+          "link": "Preberi zgodbo"
         },
         {
           "tag": "Vodniki",
           "title": "Kaj naredi kraj prijazen kolesarjem?",
           "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
-          "link": "Read Story"
+          "link": "Preberi zgodbo"
         }
       ]
     },
     "faq": {
-      "title": "common questions",
+      "title": "pogosta vprašanja",
       "footnote": "Vprašanja, povratne informacije ali kraj, ki nam manjka? Piši na support@zyflow.eu. Preberemo vsako sporočilo.",
-      "contactLink": "Contact us",
+      "contactLink": "Piši nam",
       "items": [
         {
           "q": "Kaj je Zyflow?",
@@ -322,19 +339,29 @@
     },
     "social": {
       "handle": "@zyflow",
-      "cta": "Follow Zyflow",
+      "cta": "Sledi Zyflowu",
       "videos": [
         {
-          "title": "Ljubljana to Trieste",
-          "place": "Slovenia / Italy",
+          "title": "Ljubljana–Trst",
+          "place": "Slovenija / Italija",
           "coords": "46.0569° N, 14.5058° E"
+        },
+        {
+          "title": "Zanka čez alpske prelaze",
+          "place": "Julijske Alpe, Slovenija",
+          "coords": "46.3792° N, 13.8363° E"
+        },
+        {
+          "title": "Obalni gravel",
+          "place": "Istra, Hrvaška",
+          "coords": "45.2396° N, 13.9367° E"
         }
       ]
     }
   },
   "tours": {
     "hero": {
-      "title": "our routes",
+      "title": "naše poti",
       "lede": "Vožnje skozi kolesarjem prijazne kraje, z nastanitvami, kavarnami, restavracijami in polnilnicami ob poti. Izberi pot in jo odpri v aplikaciji.",
       "quals": [
         "Kolesarjem prijazni postanki na vsaki poti",
@@ -345,88 +372,88 @@
       ]
     },
     "filter": {
-      "label": "browse:",
-      "all": "all",
-      "tour": "tour",
-      "alpine": "alpine",
-      "commute": "commute",
+      "label": "pregled:",
+      "all": "vse",
+      "tour": "potovanje",
+      "alpine": "alpsko",
+      "commute": "vsakdan",
       "gravel": "gravel"
     },
-    "viewCta": "View route",
+    "viewCta": "Poglej pot",
     "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
     "cards": [
       {
         "place": "Ljubljana",
-        "region": "Slovenia to Italy",
-        "title": "Ljubljana to Trieste",
-        "meta0": "Touring",
-        "meta1": "1 day",
+        "region": "Slovenija–Italija",
+        "title": "Ljubljana–Trst",
+        "meta0": "Potovanje",
+        "meta1": "1 dan",
         "meta2": "134 km",
         "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
         "price": "134 km",
         "unit": " · 1 dan"
       },
       {
-        "place": "Julian Alps",
-        "region": "Slovenia",
-        "title": "Alpine Pass Loop",
-        "meta0": "Alpine",
-        "meta1": "1 day",
+        "place": "Julijske Alpe",
+        "region": "Slovenija",
+        "title": "Zanka čez alpske prelaze",
+        "meta0": "Alpsko",
+        "meta1": "1 dan",
         "meta2": "89 km",
         "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
         "price": "+890 m",
-        "unit": " · climb"
+        "unit": " · vzpon"
       },
       {
-        "place": "Istria",
-        "region": "Croatia",
-        "title": "Coastal Gravel Meander",
+        "place": "Istra",
+        "region": "Hrvaška",
+        "title": "Obalni gravel",
         "meta0": "Gravel",
-        "meta1": "2 days",
+        "meta1": "2 dni",
         "meta2": "156 km",
         "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
         "price": "156 km",
         "unit": " · 2 dni"
       },
       {
-        "place": "Vienna",
-        "region": "Austria",
-        "title": "Danube Commute Corridor",
-        "meta0": "Commute",
-        "meta1": "1 day",
+        "place": "Dunaj",
+        "region": "Avstrija",
+        "title": "Donavski koridor",
+        "meta0": "Vsakdan",
+        "meta1": "1 dan",
         "meta2": "42 km",
         "body": "Vsakodnevna vožnja s kavo na poti, parkiriščem za kolesa na cilju in polnilnicami, če se obrne veter.",
         "price": "42 km",
         "unit": " · 1 dan"
       },
       {
-        "place": "Lake Bled",
-        "region": "Slovenia",
-        "title": "Bled Lakes Tour",
-        "meta0": "Touring",
-        "meta1": "1 day",
+        "place": "Bled",
+        "region": "Slovenija",
+        "title": "Okoli blejskih jezer",
+        "meta0": "Potovanje",
+        "meta1": "1 dan",
         "meta2": "68 km",
         "body": "Ceste ob jezeru, kavarne z razgledom in kolesarjem prijazna gostišča, če želiš ostati čez noč.",
         "price": "68 km",
         "unit": " · 1 dan"
       },
       {
-        "place": "Dolomites",
-        "region": "Italy",
-        "title": "Dolomite Ridge Ride",
-        "meta0": "Alpine",
-        "meta1": "2 days",
+        "place": "Dolomiti",
+        "region": "Italija",
+        "title": "Greben Dolomitov",
+        "meta0": "Alpsko",
+        "meta1": "2 dni",
         "meta2": "118 km",
         "body": "Dva dneva visokih prelazov, planinskih koč in polnilnic pred dolgimi vzponi.",
         "price": "+1,420 m",
-        "unit": " · climb"
+        "unit": " · vzpon"
       },
       {
-        "place": "Carinthia",
-        "region": "Austria",
-        "title": "Forest Gravel Circuit",
+        "place": "Koroška",
+        "region": "Avstrija",
+        "title": "Gozdna gravel zanka",
         "meta0": "Gravel",
-        "meta1": "1 day",
+        "meta1": "1 dan",
         "meta2": "94 km",
         "body": "Mirne gozdne poti s pitno vodo, servisom koles in toplim obrokom na cilju.",
         "price": "94 km",
@@ -434,21 +461,21 @@
       },
       {
         "place": "Ljubljana",
-        "region": "Slovenia",
+        "region": "Slovenija",
         "title": "Ljubljanski krog",
-        "meta0": "Commute",
-        "meta1": "½ day",
+        "meta0": "Vsakdan",
+        "meta1": "½ dneva",
         "meta2": "28 km",
         "body": "Kratek krog mimo ljubljanskih kavarn, z označenimi parkirišči za kolesa in polnilnicami.",
         "price": "28 km",
         "unit": " · ½ dneva"
       },
       {
-        "place": "Soča Valley",
-        "region": "Slovenia",
-        "title": "Soča Valley Traverse",
-        "meta0": "Touring",
-        "meta1": "2 days",
+        "place": "Dolina Soče",
+        "region": "Slovenija",
+        "title": "Prečenje doline Soče",
+        "meta0": "Potovanje",
+        "meta1": "2 dni",
         "meta2": "162 km",
         "body": "Dva dneva ob smaragdni reki, s kolesarjem prijaznimi nastanitvami za noč vmes.",
         "price": "162 km",
@@ -458,13 +485,13 @@
   },
   "tour": {
     "hero": {
-      "crumbParent": "Routes",
-      "crumbType": "Touring",
-      "titleHtml": "ljubljana<br />to trieste",
+      "crumbParent": "Poti",
+      "crumbType": "Potovanje",
+      "titleHtml": "ljubljana<br />– trst",
       "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
       "price": "134 km",
       "unit": " · 1 dan",
-      "nextLabel": "Best season",
+      "nextLabel": "Najboljša sezona",
       "nextValue": "Apr – Oct",
       "cta": "Načrtuj to pot"
     },
@@ -472,17 +499,17 @@
       "place": "ljubljana",
       "coords": "46.0569° N, 14.5058° E",
       "durationHtml": "1 day<br />134 km",
-      "durationLabel": "Duration",
-      "difficulty": "intermediate",
-      "difficultyLabel": "Difficulty",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednje",
+      "difficultyLabel": "Zahtevnost",
       "climb": "+1,766 m",
-      "climbLabel": "Elevation"
+      "climbLabel": "Višina"
     },
     "body": {
       "intro": "Pot od Ljubljane do Trsta v enem dnevu prečka tri pokrajine: zeleni rob prestolnice, kamnite vasi Krasa in jadransko obalo. Zyflow vmes postavi kolesarjem prijazne kraje, zato vožnja ni le to, kako daleč prideš, ampak tudi, kje se ustaviš.",
       "sections": [
         {
-          "title": "Leaving Ljubljana",
+          "title": "Odhod iz Ljubljane",
           "body": "Mimo Vrhnike se odpelješ po mirnih cestah. Prvi postanek za kavo pride hitro in se splača: kmalu zatem se začne vzpon na planoto. Zyflow pokaže pričakovano stanje baterije na celotni poti, zato lahko začetek odpelješ premišljeno in ne na pamet."
         },
         {
@@ -494,7 +521,7 @@
           ]
         },
         {
-          "title": "Descent to the Adriatic",
+          "title": "Spust do Jadrana",
           "body": "Za Sežano se planota konča in cesta se spusti proti Tržaškemu zalivu. Končaj s kavo ob morju ali ostani čez noč in se jutri vrni."
         }
       ]
@@ -517,51 +544,51 @@
       "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, prav na poti, ki jo vozijo."
     },
     "more": {
-      "title": "more routes",
-      "allLink": "View all"
+      "title": "več poti",
+      "allLink": "Poglej vse"
     }
   },
   "blog": {
     "hero": {
-      "titleHtml": "the<br />zyflow<br /><span class=\"is-accent\">journal</span>",
+      "titleHtml": "zyflow<br />dnevnik",
       "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
     },
     "featured": {
-      "tag": "Tips",
-      "title": "Why e-bike charging at hospitality stops matters",
-      "excerpt": "If a charger isn’t visible online, many riders never find it. Here’s how better maps change longer rides.",
-      "link": "Read Story"
+      "tag": "Nasveti",
+      "title": "Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
+      "excerpt": "Če polnilnica ni vidna na spletu, je mnogi kolesarji nikoli ne najdejo. Boljši zemljevidi spremenijo daljše vožnje.",
+      "link": "Preberi zgodbo"
     },
     "posts": [
       {
-        "tag": "Tips",
-        "title": "Planning your first battery-aware day ride",
+        "tag": "Nasveti",
+        "title": "Kako načrtovati prvo vožnjo z mislijo na baterijo",
         "excerpt": "Doseg, vzponi in polnilnice: preprost način, kako načrtovati dnevno vožnjo, ki jo boš res končal.",
-        "link": "Read Story"
+        "link": "Preberi zgodbo"
       },
       {
         "tag": "Vodniki",
         "title": "Kaj naredi kraj prijazen kolesarjem?",
         "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
-        "link": "Read Story"
+        "link": "Preberi zgodbo"
       },
       {
-        "tag": "News",
+        "tag": "Novice",
         "title": "Zyflow is live on iOS and Android",
         "excerpt": "Brezplačno v obeh trgovinah in na voljo v 8 državah. Tole preizkusi na naslednji vožnji.",
-        "link": "Read Story"
+        "link": "Preberi zgodbo"
       },
       {
-        "tag": "Guides",
-        "title": "Reading elevation before a cross-border ride",
+        "tag": "Vodniki",
+        "title": "Kako brati višinski profil pred čezmejno vožnjo",
         "excerpt": "Kako prebrati vzpone na poti, kot je Ljubljana do Trsta, in kje načrtovati postanke.",
-        "link": "Read Story"
+        "link": "Preberi zgodbo"
       }
     ]
   },
   "article": {
     "meta": {
-      "tag": "Tips",
+      "tag": "Nasveti",
       "date": "12.05.26"
     },
     "title": "zakaj so polnilnice v gostinskih obratih pomembne za e-kolesa",
@@ -583,8 +610,8 @@
       "p7": "Večji alpski dnevi so druga disciplina. So navdušujoči, a nagradijo načrtovanje. Začni z valovito dnevno vožnjo, spoznaj, kako se obnaša tvoja baterija, potem pojdi dlje. Če imaš kavarno ali gostišče z eno prosto vtičnico, nam piši. Kolesarji te iščejo."
     },
     "more": {
-      "titleHtml": "more from<br />the journal",
-      "cta": "Visit journal"
+      "titleHtml": "več iz<br />dnevnika",
+      "cta": "Na dnevnik"
     }
   },
   "about": {
@@ -597,7 +624,7 @@
       "sign": "Jakob in Tanja"
     },
     "values": {
-      "title": "our values",
+      "title": "naše vrednote",
       "items": [
         {
           "titleHtml": "raziskuj<br>brez skrbi.",
@@ -618,7 +645,7 @@
       ]
     },
     "team": {
-      "title": "our team",
+      "title": "naša ekipa",
       "members": [
         {
           "name": "jakob",
@@ -644,7 +671,7 @@
   },
   "contact": {
     "hero": {
-      "title": "contact us",
+      "title": "kontakt",
       "email": "hello@zyflow.eu",
       "support": "support@zyflow.eu",
       "social": [
@@ -655,14 +682,14 @@
       ]
     },
     "form": {
-      "title": "send a message",
+      "title": "pošlji sporočilo",
       "lede": "Vprašaj o krajih, poteh ali polnilnicah, dodaj svojo kavarno, restavracijo ali nastanitev ali se z nami pogovori o partnerstvih in naložbah. Odgovorimo na vsako sporočilo.",
-      "firstName": "First name",
-      "lastName": "Last name",
-      "email": "Email",
-      "phone": "Phone (optional)",
-      "topic": "Topic (optional)",
-      "topicPlaceholder": "Choose",
+      "firstName": "Ime",
+      "lastName": "Priimek",
+      "email": "E-pošta",
+      "phone": "Telefon (neobvezno)",
+      "topic": "Tema (neobvezno)",
+      "topicPlaceholder": "Izberi",
       "topics": [
         "Kraji in poti",
         "Dodaj moj kraj",
@@ -671,44 +698,44 @@
         "Mediji",
         "Drugo"
       ],
-      "message": "Message",
-      "submit": "Send message"
+      "message": "Sporočilo",
+      "submit": "Pošlji sporočilo"
     }
   },
   "legal": {
     "nav": {
-      "terms": "Terms of Service",
-      "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
+      "terms": "Pogoji uporabe",
+      "privacy": "Politika zasebnosti",
+      "cookies": "Politika piškotkov"
     },
     "hub": {
-      "tag": "Legal",
-      "title": "legal",
+      "tag": "Pravno",
+      "title": "pravno",
       "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
-      "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
+      "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
       "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
-      "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app."
+      "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji."
     },
     "terms": {
-      "tag": "Updated",
+      "tag": "Posodobljeno",
       "date": "15. 5. 2026",
       "dateLabel": "Updated 15. 5. 2026 · v1.0",
-      "title": "terms of service",
+      "title": "pogoji uporabe",
       "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
     },
     "privacy": {
-      "tag": "Updated",
+      "tag": "Posodobljeno",
       "date": "30. 6. 2026",
       "dateLabel": "Updated 30. 6. 2026 · v1.1",
-      "title": "privacy policy",
+      "title": "politika zasebnosti",
       "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
     },
     "cookies": {
-      "tag": "Updated",
+      "tag": "Posodobljeno",
       "date": "15. 5. 2026",
       "dateLabel": "Updated 15. 5. 2026 · v1.0",
-      "title": "cookie policy",
-      "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu. Essential cookies only on the website today."
+      "title": "politika piškotkov",
+      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v mobilni aplikaciji in na spletnem mestu."
     }
   },
   "business": {

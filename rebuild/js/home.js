@@ -144,12 +144,22 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   }
 
   function setOpen(open) {
+    const openLabel =
+      toggle.getAttribute("data-label-open") ||
+      toggle.getAttribute("aria-label") ||
+      "Menu";
+    const closeLabel =
+      toggle.getAttribute("data-label-close") ||
+      (document.documentElement.lang === "sl" ? "Zapri meni" : "Close menu");
+    if (!toggle.getAttribute("data-label-open")) {
+      toggle.setAttribute("data-label-open", openLabel);
+    }
     if (open) {
       lastFocus = document.activeElement;
       nav.classList.add("is-open");
       panel.hidden = false;
       toggle.setAttribute("aria-expanded", "true");
-      toggle.setAttribute("aria-label", "Close menu");
+      toggle.setAttribute("aria-label", closeLabel);
       const items = focusableIn(panel);
       if (items[0]) items[0].focus();
       else toggle.focus();
@@ -157,7 +167,7 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
       nav.classList.remove("is-open");
       panel.hidden = true;
       toggle.setAttribute("aria-expanded", "false");
-      toggle.setAttribute("aria-label", "Menu");
+      toggle.setAttribute("aria-label", openLabel);
       if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
       else toggle.focus();
     }
@@ -542,6 +552,95 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   dialog.addEventListener("cancel", (event) => {
     event.preventDefault();
     closeModal();
+  });
+})();
+
+/**
+ * Horizontal snap slider for why / app-flow steps on tablet & phone.
+ */
+(function initSnapSliders() {
+  const mq = window.matchMedia("(max-width: 1100px)");
+  const isSl = document.documentElement.lang === "sl";
+
+  const configs = [
+    {
+      list: ".why__list",
+      item: ".why__item",
+      dotsClass: "why__dots",
+      dotClass: "why__dot",
+      label: isSl ? "Korak" : "Step",
+    },
+  ];
+
+  configs.forEach((cfg) => {
+    document.querySelectorAll(cfg.list).forEach((list) => {
+      const items = Array.from(list.querySelectorAll(cfg.item));
+      if (items.length < 2) return;
+
+      list.setAttribute("tabindex", "0");
+      list.setAttribute("role", "region");
+      list.setAttribute("aria-roledescription", "carousel");
+
+      const dots = document.createElement("div");
+      dots.className = cfg.dotsClass;
+      dots.setAttribute("role", "tablist");
+      dots.setAttribute("aria-label", cfg.label);
+
+      items.forEach((item, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = cfg.dotClass;
+        btn.setAttribute("role", "tab");
+        btn.setAttribute("aria-label", `${cfg.label} ${i + 1}`);
+        btn.addEventListener("click", () => {
+          item.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        });
+        dots.appendChild(btn);
+      });
+      list.insertAdjacentElement("afterend", dots);
+
+      function sync() {
+        if (!mq.matches) {
+          dots.hidden = true;
+          return;
+        }
+        dots.hidden = false;
+        const mid = list.getBoundingClientRect().left + list.clientWidth / 2;
+        let best = 0;
+        let bestDist = Infinity;
+        items.forEach((item, i) => {
+          const r = item.getBoundingClientRect();
+          const d = Math.abs(r.left + r.width / 2 - mid);
+          if (d < bestDist) {
+            bestDist = d;
+            best = i;
+          }
+        });
+        dots.querySelectorAll(`.${cfg.dotClass}`).forEach((dot, i) => {
+          const on = i === best;
+          dot.classList.toggle("is-active", on);
+          dot.setAttribute("aria-selected", on ? "true" : "false");
+        });
+      }
+
+      let ticking = false;
+      list.addEventListener(
+        "scroll",
+        () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(() => {
+            sync();
+            ticking = false;
+          });
+        },
+        { passive: true }
+      );
+
+      mq.addEventListener("change", sync);
+      window.addEventListener("resize", sync, { passive: true });
+      sync();
+    });
   });
 })();
 

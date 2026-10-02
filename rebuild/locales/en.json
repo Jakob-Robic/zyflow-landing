@@ -4,6 +4,10 @@
     "locale": "en",
     "source": "zyflow",
     "pages": {
+      "404": {
+        "title": "Zyflow: Page not found",
+        "description": "This page does not exist. Head home or explore routes in Zyflow."
+      },
       "home": {
         "title": "Zyflow: Bike-Friendly Places for Cyclists & E-Bike Riders",
         "description": "Find bike-friendly stays, coffee stops, restaurants and chargers across 8 countries. Free app for cyclists and e-bike riders on iOS and Android."
@@ -48,10 +52,6 @@
         "title": "Zyflow — Terms of Service",
         "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
       },
-      "404": {
-        "title": "Zyflow: Page not found",
-        "description": "This page does not exist. Head home or explore routes in Zyflow."
-      },
       "styleguide": {
         "title": "Zyflow — Design System Styleguide",
         "description": "Internal design tokens and components for the Zyflow rebuild."
@@ -70,6 +70,7 @@
     "announcement": {
       "label": "App Update:",
       "text": "Zyflow is live on iOS and Android. Find bike-friendly places across 8 countries.",
+      "textShort": "Live on iOS & Android",
       "cta": "Download"
     },
     "nav": {
@@ -81,7 +82,11 @@
         "journal": "Journal",
         "contact": "Contact",
         "business": "For businesses"
-      }
+      },
+      "menu": "Menu",
+      "menuClose": "Close menu",
+      "themeDark": "Dark mode",
+      "themeLight": "Light mode"
     },
     "footer": {
       "links": {
@@ -102,7 +107,10 @@
       "newsletter": {
         "title": "newsletter",
         "body": "New bike-friendly places, routes and app updates. Once a month, no spam.",
-        "note": "We never share your details."
+        "note": "We never share your details.",
+        "subscribe": "Subscribe",
+        "email": "Email",
+        "emailPlaceholder": "Email address"
       },
       "copyright": "© 2026 Zyflow. All rights reserved."
     },
@@ -124,7 +132,11 @@
       "downloadTitle": "Download Zyflow now",
       "downloadBody": "Visit the App Store, Google Play, or scan the QR code with your phone.",
       "mockStat": "Bike-friendly stops",
-      "mockLine": "Stays, coffee & chargers on route"
+      "mockLine": "Stays, coffee & chargers on route",
+      "close": "Close"
+    },
+    "ui": {
+      "step": "Step"
     }
   },
   "home": {
@@ -140,7 +152,12 @@
       "eyebrow": "The Zyflow app",
       "titleHtml": "Every stop.<br />One map.",
       "body": "Stays, coffee stops, restaurants, chargers, water and bike repair, each showing what makes it bike-friendly. Free on iOS and Android.",
-      "cta": "Download"
+      "cta": "Download",
+      "phoneHero": "ride further.",
+      "chipBattery": "battery",
+      "chipChargers": "chargers",
+      "chipWeather": "weather",
+      "phoneFoot": "Free on iOS & Android"
     },
     "trust": {
       "one": "Regional maps and route data",
@@ -328,6 +345,16 @@
           "title": "Ljubljana to Trieste",
           "place": "Slovenia / Italy",
           "coords": "46.0569° N, 14.5058° E"
+        },
+        {
+          "title": "Alpine Pass Loop",
+          "place": "Julian Alps, Slovenia",
+          "coords": "46.3792° N, 13.8363° E"
+        },
+        {
+          "title": "Coastal Gravel Meander",
+          "place": "Istria, Croatia",
+          "coords": "45.2396° N, 13.9367° E"
         }
       ]
     }

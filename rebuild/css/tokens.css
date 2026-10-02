@@ -45,16 +45,19 @@ html[data-theme="dark"] {
   --font-body: "DM Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-badge: "Courier Prime", "Courier New", Courier, monospace;
 
-  /* —— Typography / Type scale (px) —— */
-  --type-display: 76px;
-  --type-h1: 64px;
-  --type-h2: 45px;
-  --type-h3: 32px;
-  --type-h4: 27px;
-  --type-h5: 23px;
-  --type-lead: 19px;
-  --type-body: 16px;
-  --type-small: 14px;
+  /* —— Typography / Type scale (fluid) ——
+   * Desktop caps match Figma; floors keep mobile readable without overflow.
+   * Preferred: ~viewport-linked so mid-widths interpolate smoothly.
+   */
+  --type-display: clamp(2.5rem, 1.2rem + 5.5vw, 4.75rem); /* 40→76 */
+  --type-h1: clamp(2.25rem, 1.1rem + 4.5vw, 4rem); /* 36→64 */
+  --type-h2: clamp(1.75rem, 1rem + 3vw, 2.8125rem); /* 28→45 */
+  --type-h3: clamp(1.375rem, 0.95rem + 1.8vw, 2rem); /* 22→32 */
+  --type-h4: clamp(1.25rem, 0.95rem + 1.2vw, 1.6875rem); /* 20→27 */
+  --type-h5: clamp(1.125rem, 0.9rem + 0.9vw, 1.4375rem); /* 18→23 */
+  --type-lead: clamp(1rem, 0.9rem + 0.45vw, 1.1875rem); /* 16→19 */
+  --type-body: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem); /* 15→16 */
+  --type-small: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem); /* 13→14 */
 
   /* —— Line heights —— */
   --leading-display: 1;
@@ -81,10 +84,10 @@ html[data-theme="dark"] {
   --space-gap-12: 120px;
   --space-gap-13: 144px;
 
-  /* —— Spacing / Sections —— */
-  --section-pad-sm: 42px;
-  --section-pad-md: 84px;
-  --section-pad-lg: 168px;
+  /* —— Spacing / Sections (fluid) —— */
+  --section-pad-sm: clamp(2rem, 1.5rem + 2vw, 2.625rem); /* ~32→42 */
+  --section-pad-md: clamp(3rem, 2rem + 5vw, 5.25rem); /* ~48→84 */
+  --section-pad-lg: clamp(4.5rem, 3rem + 8vw, 10.5rem); /* ~72→168 */
 
   /* —— Grid —— */
   --artboard-width: 1440px;

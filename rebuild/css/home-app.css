@@ -437,6 +437,19 @@
 }
 
 @media (max-width: 720px) {
+  .app-banner__panel {
+    padding: var(--space-gap-8) var(--space-gap-5) var(--space-gap-10);
+    overflow: hidden;
+  }
+
+  .app-banner__polaroid {
+    display: none;
+  }
+
+  .phone--banner {
+    width: 160px;
+  }
+
   .app-stage__phones {
     height: 320px;
   }
