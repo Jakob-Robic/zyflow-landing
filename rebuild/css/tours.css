@@ -130,8 +130,8 @@
 }
 
 .tours-filter__btn img {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   flex-shrink: 0;
 }
 
@@ -154,6 +154,26 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-gap-6);
+}
+
+.tours-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
+  margin-bottom: var(--space-gap-5);
+}
+
+.tours-filters[hidden] {
+  display: none;
+}
+
+.tours-filters__chip {
+  cursor: pointer;
+  border: 0;
+}
+
+.tours-filters__chip[hidden] {
+  display: none;
 }
 
 .tours-grid__list .tour-card.is-filtered-out {
@@ -216,8 +236,8 @@
   }
 
   .tours-filter__btn img {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
   }
 
   .tours-grid__list {

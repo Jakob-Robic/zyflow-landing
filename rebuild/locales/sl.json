@@ -128,6 +128,7 @@
         "email": "E-pošta",
         "emailPlaceholder": "E-poštni naslov"
       },
+      "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
       "copyright": "© 2026 Zyflow. Vse pravice pridržane."
     },
     "notFound": {
@@ -242,7 +243,9 @@
       "hike": "hrvaška",
       "kayak": "avstrija",
       "fourwd": "italija",
-      "cta": "Poglej poti"
+      "cta": "Poglej poti",
+      "comingSoon": "kmalu",
+      "comingSoonHint": "Poti v pripravi"
     },
     "testimonial": {
       "quote": "Je tvoj kraj prijazen kolesarjem?",

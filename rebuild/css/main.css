@@ -13,7 +13,7 @@
 @import url("./components/divider.css");
 @import url("./components/app-modal.css");
 @import url("./chrome.css");
-@import url("./home.css");
+@import url("./home.css?v=2");
 @import url("./home-app.css"); /* REVERT: remove this line to drop app section styles */
 @import url("./tours.css");
 @import url("./tour.css");

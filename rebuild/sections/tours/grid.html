@@ -1,9 +1,18 @@
 <section class="tours-grid section" data-section="tours.grid">
   <div class="container">
-    <div class="tours-region" data-tours-region hidden>
-      <button type="button" class="badge badge--pill tours-region__chip" data-tours-region-clear>
+    <div class="tours-filters" data-tours-filters hidden>
+      <button type="button" class="badge badge--pill tours-filters__chip" data-tours-type-clear hidden>
+        <span data-tours-type-label></span><span aria-hidden="true"> ×</span>
+      </button>
+      <button type="button" class="badge badge--pill tours-filters__chip" data-tours-region-clear hidden>
         <span data-tours-region-label></span><span aria-hidden="true"> ×</span>
       </button>
+    </div>
+    <div class="visually-hidden" data-tours-type-labels aria-hidden="true">
+      <span data-type-key="tour" data-i18n="tours.filter.tour">tour</span>
+      <span data-type-key="alpine" data-i18n="tours.filter.alpine">alpine</span>
+      <span data-type-key="commute" data-i18n="tours.filter.commute">commute</span>
+      <span data-type-key="gravel" data-i18n="tours.filter.gravel">gravel</span>
     </div>
     <div class="visually-hidden" data-tours-region-labels aria-hidden="true">
       <span data-region-key="slovenia" data-i18n="tours.region.slovenia">Slovenia</span>
@@ -52,9 +61,10 @@
           </div>
         </div>
       </article>
-      <article class="tour-card" data-category="gravel" data-region="croatia">
+      <article class="tour-card tour-card--soon" data-category="gravel" data-region="croatia" aria-disabled="true">
         <div class="tour-card__media">
           <img src="./assets/images/home/tour-kayak.jpg" alt="" />
+          <span class="tour-card__soon" data-i18n="home.categories.comingSoon">coming soon</span>
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
             <div class="tour-card__loc-text"><span data-i18n="tours.cards.2.place"></span><span data-i18n="tours.cards.2.region"></span></div>
@@ -68,13 +78,14 @@
           <p class="tour-card__desc" data-i18n="tours.cards.2.body"></p>
           <div class="tour-card__foot">
             <p class="tour-card__price"><span data-i18n="tours.cards.2.price"></span><span data-i18n="tours.cards.2.unit"></span></p>
-            <a class="tour-card__cta" href="./tour.html"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
+            <span class="tour-card__cta" data-i18n="home.categories.comingSoon">coming soon</span>
           </div>
         </div>
       </article>
-      <article class="tour-card" data-category="commute" data-region="austria">
+      <article class="tour-card tour-card--soon" data-category="commute" data-region="austria" aria-disabled="true">
         <div class="tour-card__media">
           <img src="./assets/images/home/cat-slovenia.jpg" alt="" />
+          <span class="tour-card__soon" data-i18n="home.categories.comingSoon">coming soon</span>
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
             <div class="tour-card__loc-text"><span data-i18n="tours.cards.3.place"></span><span data-i18n="tours.cards.3.region"></span></div>
@@ -88,7 +99,7 @@
           <p class="tour-card__desc" data-i18n="tours.cards.3.body"></p>
           <div class="tour-card__foot">
             <p class="tour-card__price"><span data-i18n="tours.cards.3.price"></span><span data-i18n="tours.cards.3.unit"></span></p>
-            <a class="tour-card__cta" href="./tour.html"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
+            <span class="tour-card__cta" data-i18n="home.categories.comingSoon">coming soon</span>
           </div>
         </div>
       </article>
@@ -112,9 +123,10 @@
           </div>
         </div>
       </article>
-      <article class="tour-card" data-category="alpine" data-region="italy">
+      <article class="tour-card tour-card--soon" data-category="alpine" data-region="italy" aria-disabled="true">
         <div class="tour-card__media">
           <img src="./assets/images/home/feature-1.jpg" alt="" />
+          <span class="tour-card__soon" data-i18n="home.categories.comingSoon">coming soon</span>
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
             <div class="tour-card__loc-text"><span data-i18n="tours.cards.5.place"></span><span data-i18n="tours.cards.5.region"></span></div>
@@ -128,13 +140,14 @@
           <p class="tour-card__desc" data-i18n="tours.cards.5.body"></p>
           <div class="tour-card__foot">
             <p class="tour-card__price"><span data-i18n="tours.cards.5.price"></span><span data-i18n="tours.cards.5.unit"></span></p>
-            <a class="tour-card__cta" href="./tour.html"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
+            <span class="tour-card__cta" data-i18n="home.categories.comingSoon">coming soon</span>
           </div>
         </div>
       </article>
-      <article class="tour-card" data-category="gravel" data-region="austria">
+      <article class="tour-card tour-card--soon" data-category="gravel" data-region="austria" aria-disabled="true">
         <div class="tour-card__media">
           <img src="./assets/images/home/feature-2.jpg" alt="" />
+          <span class="tour-card__soon" data-i18n="home.categories.comingSoon">coming soon</span>
           <div class="tour-card__loc">
             <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
             <div class="tour-card__loc-text"><span data-i18n="tours.cards.6.place"></span><span data-i18n="tours.cards.6.region"></span></div>
@@ -148,7 +161,7 @@
           <p class="tour-card__desc" data-i18n="tours.cards.6.body"></p>
           <div class="tour-card__foot">
             <p class="tour-card__price"><span data-i18n="tours.cards.6.price"></span><span data-i18n="tours.cards.6.unit"></span></p>
-            <a class="tour-card__cta" href="./tour.html"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
+            <span class="tour-card__cta" data-i18n="home.categories.comingSoon">coming soon</span>
           </div>
         </div>
       </article>
