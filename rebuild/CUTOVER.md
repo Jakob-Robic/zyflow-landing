@@ -8,11 +8,11 @@ Production hosting is pointed at the rebuild tree via root [`vercel.json`](../ve
 2. **Indexable build** — done for deploy: `npm run build:rebuild:prod` (or `SITE_INDEX=true npm run build:rebuild`). Styleguide / 404 / Journal (`/blog`) stay `noindex`.
 3. **Point hosting at rebuild dist** — done in root `vercel.json` (`build:rebuild:prod` → `rebuild/dist`).
 4. **Apply vercel settings** — done (clean URLs, security headers, cache for `/assets`, `/css`, `/js`, legacy legal redirects).
-5. **Legacy redirects** (if old URLs must survive):
-   - `/legal-pages/privacy-policy` → `/legal-privacy` (done)
-   - `/legal-pages/cookie-policy` → `/legal-cookies` (done)
-   - `/legal-pages/terms-conditions` → `/legal-terms` (done)
-   - `/faqs`, `/changelog`, `/waitlist` → chosen destinations (still open if needed)
+5. **Legacy redirects** — done in root `vercel.json` (EN + `/sl`):
+   - `/legal-pages/*` and short `/privacy-policy`, `/cookie-policy` → legal pages
+   - `/faqs` → `/#faq` (home FAQ)
+   - `/changelog`, `/waitlist` → `/` (app is live; download CTA on home)
+   - `/blog-article` → first journal article URL
 6. **Verify** after deploy
    - EN `/` and SL `/sl` render
    - Language switcher swaps correctly
