@@ -18,14 +18,24 @@ function gtag() {
   window.dataLayer.push(arguments);
 }
 
+function analyticsGranted() {
+  return CookieConsent.acceptedService(
+    SERVICE_ANALYTICS_STORAGE,
+    CAT_ANALYTICS
+  );
+}
+
+function ensureGa4Config() {
+  const id =
+    window.ZYFLOW_ANALYTICS && window.ZYFLOW_ANALYTICS.ga4MeasurementId;
+  if (!id || !analyticsGranted()) return;
+  if (document.querySelector(`script[src*="gtag/js?id=${id}"]`)) return;
+  gtag("config", id);
+}
+
 function updateGtagConsent() {
   gtag("consent", "update", {
-    [SERVICE_ANALYTICS_STORAGE]: CookieConsent.acceptedService(
-      SERVICE_ANALYTICS_STORAGE,
-      CAT_ANALYTICS
-    )
-      ? "granted"
-      : "denied",
+    [SERVICE_ANALYTICS_STORAGE]: analyticsGranted() ? "granted" : "denied",
     [SERVICE_AD_STORAGE]: CookieConsent.acceptedService(
       SERVICE_AD_STORAGE,
       CAT_ADVERTISEMENT
@@ -45,6 +55,8 @@ function updateGtagConsent() {
       ? "granted"
       : "denied",
   });
+  // If GTM's Google Tag stayed blocked after consent, load GA4 directly.
+  window.setTimeout(ensureGa4Config, 750);
 }
 
 function siteLocale() {

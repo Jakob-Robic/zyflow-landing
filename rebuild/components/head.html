@@ -39,8 +39,25 @@
     functionality_storage: "denied",
     personalization_storage: "denied",
     security_storage: "granted",
-    wait_for_update: 500,
+    wait_for_update: 2000,
   });
+  /* Restore prior CookieConsent choice before GTM Init so GA4 can fire. */
+  (function () {
+    try {
+      var match = document.cookie.match(/(?:^|; )cc_cookie=([^;]*)/);
+      if (!match) return;
+      var cc = JSON.parse(decodeURIComponent(match[1]));
+      var cats = cc.categories || [];
+      var analytics = cats.indexOf("analytics") !== -1;
+      var ads = cats.indexOf("advertisement") !== -1;
+      gtag("consent", "update", {
+        analytics_storage: analytics ? "granted" : "denied",
+        ad_storage: ads ? "granted" : "denied",
+        ad_user_data: ads ? "granted" : "denied",
+        ad_personalization: ads ? "granted" : "denied",
+      });
+    } catch (e) {}
+  })();
 </script>
 <!-- Google Tag Manager -->
 <script>
