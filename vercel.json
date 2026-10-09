@@ -1,38 +1,154 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "public",
+  "buildCommand": "npm run build:rebuild:prod",
+  "outputDirectory": "rebuild/dist",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/legal-pages/(.*)", "destination": "/legal-pages/$1.html" },
-    { "source": "/sl/legal-pages/(.*)", "destination": "/sl/legal-pages/$1.html" }
-  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/fonts/(.*)",
+      "source": "/css/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/images/(.*)",
+      "source": "/js/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/legal-pages/privacy-policy",
+      "destination": "/legal-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/legal-pages/cookie-policy",
+      "destination": "/legal-cookies",
+      "permanent": true
+    },
+    {
+      "source": "/legal-pages/terms-conditions",
+      "destination": "/legal-terms",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-pages/privacy-policy",
+      "destination": "/sl/legal-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-pages/cookie-policy",
+      "destination": "/sl/legal-cookies",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-pages/terms-conditions",
+      "destination": "/sl/legal-terms",
+      "permanent": true
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/legal-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/legal-cookies",
+      "permanent": true
+    },
+    {
+      "source": "/sl/privacy-policy",
+      "destination": "/sl/legal-privacy",
+      "permanent": true
+    },
+    {
+      "source": "/sl/cookie-policy",
+      "destination": "/sl/legal-cookies",
+      "permanent": true
+    },
+    {
+      "source": "/faqs",
+      "destination": "/#faq",
+      "permanent": true
+    },
+    {
+      "source": "/sl/faqs",
+      "destination": "/sl/#faq",
+      "permanent": true
+    },
+    {
+      "source": "/changelog",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sl/changelog",
+      "destination": "/sl",
+      "permanent": true
+    },
+    {
+      "source": "/waitlist",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sl/waitlist",
+      "destination": "/sl",
+      "permanent": true
+    },
+    {
+      "source": "/blog-article",
+      "destination": "/blog/e-bike-charging-at-hospitality-stops",
+      "permanent": true
+    },
+    {
+      "source": "/sl/blog-article",
+      "destination": "/sl/blog/e-bike-charging-at-hospitality-stops",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/sl/blog",
+      "destination": "/sl/blog.html"
     }
   ]
 }

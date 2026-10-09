@@ -1,0 +1,1077 @@
+{
+  "meta": {
+    "brand": "Zyflow",
+    "locale": "sl",
+    "source": "zyflow",
+    "pages": {
+      "404": {
+        "title": "Zyflow: Stran ne obstaja",
+        "description": "Ta stran ne obstaja. Pojdi na domov ali razišči poti v Zyflow."
+      },
+      "home": {
+        "title": "Zyflow: kraji, prijazni kolesarjem in e-kolesarjem",
+        "description": "Najdi kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice v 8 državah. Brezplačna aplikacija za kolesarje in e-kolesarje za iOS in Android."
+      },
+      "about": {
+        "title": "Zyflow: ekipa za kolesarjem prijaznimi kraji",
+        "description": "Spoznaj ekipo za Zyflowom, aplikacijo za iskanje kolesarjem prijaznih nastanitev, kavarn, restavracij in polnilnic. Narejeno v Sloveniji, HERKO d.o.o."
+      },
+      "tours": {
+        "title": "Zyflow: kolesarske poti skozi kolesarjem prijazne kraje",
+        "description": "Kolesarske poti in poti za e-kolesa po Sloveniji, Hrvaški, Avstriji in Italiji, s kolesarjem prijaznimi nastanitvami, kavarnami, restavracijami in polnilnicami ob poti."
+      },
+      "tour": {
+        "title": "Zyflow — Ljubljana to Trieste",
+        "description": "Z Zyflowom od Ljubljane do Trsta: 134 km mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami ob poti."
+      },
+      "blog": {
+        "title": "Zyflow: Dnevnik",
+        "description": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti ekipe Zyflow za kolesarje in e-kolesarje."
+      },
+      "contact": {
+        "title": "Zyflow: Kontakt",
+        "description": "Dodaj svoj kraj, vprašaj o poteh ali se z nami pogovori o partnerstvih in naložbah. Ekipa Zyflow je dosegljiva na support@zyflow.eu."
+      },
+      "legal": {
+        "title": "Zyflow: Pravno",
+        "description": "Privacy Policy, Cookie Policy, and Terms of Service for Zyflow and HERKO d.o.o."
+      },
+      "legal-privacy": {
+        "title": "Zyflow — Privacy Policy",
+        "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+      },
+      "legal-cookies": {
+        "title": "Zyflow — Cookie Policy",
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljaš."
+      },
+      "legal-terms": {
+        "title": "Zyflow — Terms of Service",
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
+      },
+      "styleguide": {
+        "title": "Zyflow — Design System Styleguide",
+        "description": "Internal design tokens and components for the Zyflow rebuild."
+      },
+      "business": {
+        "title": "Zyflow: za podjetja",
+        "description": "Pokaži svojo kavarno, restavracijo, nastanitev ali kolesarsko trgovino kolesarjem in e-kolesarjem. Parkirišče za kolesa, shramba ali polnilnica na zemljevidu Zyflow."
+      },
+      "press": {
+        "title": "Zyflow: mediji in vlagatelji",
+        "description": "Dejstva, ekipa in kontakt za medije in vlagatelje. Zyflow kolesarjem pomaga najti kolesarjem prijazne kraje in tja kolesariti brez skrbi."
+      },
+      "blog-e-bike-charging-at-hospitality-stops": {
+        "title": "Zyflow: Why E-Bike Charging at Hospitality Stops Matters",
+        "description": "A charger at a café or guesthouse can decide how far a ride goes. Here's why, and how to find one."
+      },
+      "blog-planning-your-first-battery-aware-day-ride": {
+        "title": "Zyflow: Planning Your First Battery-Aware Day Ride",
+        "description": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish."
+      },
+      "blog-what-makes-a-place-bike-friendly": {
+        "title": "Zyflow: What Makes a Place Bike-Friendly?",
+        "description": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app."
+      },
+      "blog-zyflow-is-live-on-ios-and-android": {
+        "title": "Zyflow: Zyflow Is Live on iOS and Android",
+        "description": "Free on both stores and live in 8 countries. Here's what to try on your next ride."
+      },
+      "blog-reading-elevation-before-a-cross-border-ride": {
+        "title": "Zyflow: Reading Elevation Before a Cross-Border Ride",
+        "description": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops."
+      }
+    }
+  },
+  "chrome": {
+    "announcement": {
+      "label": "Novost:",
+      "text": "Zyflow je na voljo za iOS in Android. Najdi kolesarjem prijazne kraje v 8 državah.",
+      "textShort": "Na voljo za iOS in Android",
+      "cta": "Prenesi"
+    },
+    "nav": {
+      "cta": "Prenesi",
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "business": "Za podjetja"
+      },
+      "menu": "Meni",
+      "menuClose": "Zapri meni",
+      "themeDark": "Temni način",
+      "themeLight": "Svetli način"
+    },
+    "footer": {
+      "links": {
+        "home": "Domov",
+        "tours": "Poti",
+        "about": "O nas",
+        "journal": "Dnevnik",
+        "contact": "Kontakt",
+        "press": "Mediji in vlagatelji",
+        "legal": "Pravno"
+      },
+      "cats": {
+        "kayak": "Tura",
+        "bike": "Vsakodnevno",
+        "hike": "Alpsko",
+        "fourwd": "Makadam"
+      },
+      "newsletter": {
+        "title": "novice",
+        "body": "Novi kolesarjem prijazni kraji, poti in novosti v aplikaciji. Enkrat na mesec, brez spama.",
+        "note": "Tvojih podatkov ne delimo z nikomer.",
+        "subscribe": "Naroči se",
+        "email": "E-pošta",
+        "emailPlaceholder": "E-poštni naslov"
+      },
+      "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
+      "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
+      "cookiePreferences": "Nastavitve piškotkov"
+    },
+    "notFound": {
+      "title": "Strani ni mogoče najti",
+      "body": "Ta stran je zavila napačno. Vrni se domov ali razišči poti.",
+      "home": "Nazaj domov",
+      "tours": "Razišči poti"
+    },
+    "lang": {
+      "label": "Jezik",
+      "en": "EN",
+      "sl": "SL"
+    },
+    "appModal": {
+      "title": "Prenesi aplikacijo Zyflow",
+      "lede": "Najdi kolesarjem prijazne nastanitve, kavarne in restavracije, s polnilnicami in kolesarskimi storitvami na zemljevidu. Brezplačno za iOS in Android.",
+      "badge": "Brezplačno za iOS in Android",
+      "downloadTitle": "Prenesi Zyflow zdaj",
+      "downloadBody": "Obišči App Store, Google Play ali s telefonom skeniraj QR kodo.",
+      "mockStat": "Kolesarjem prijazni postanki",
+      "mockLine": "Nastanitve, kava in polnilnice ob poti",
+      "close": "Zapri"
+    },
+    "ui": {
+      "step": "Korak"
+    }
+  },
+  "home": {
+    "hero": {
+      "titleHtml": "raziskuj<br>dlje.",
+      "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
+      "cta": "Prenesi aplikacijo",
+      "nextDepartureLabel": "Izpostavljena pot",
+      "nextDepartureTitle": "Ljubljana–Trst",
+      "nextDepartureDate": "134 km · +1.766 m"
+    },
+    "appBanner": {
+      "eyebrow": "Aplikacija Zyflow",
+      "titleHtml": "Vsak postanek.<br>En zemljevid.",
+      "body": "Nastanitve, kavarne, restavracije, polnilnice, pitna voda in servis koles, pri vsakem pa vidiš, zakaj je prijazen kolesarjem. Brezplačno za iOS in Android.",
+      "cta": "Prenesi",
+      "phoneTitle": "Vsak postanek.",
+      "chips": [
+        "Nočitve",
+        "Kava",
+        "Polnilnice"
+      ],
+      "phoneFoot": "Brezplačno za iOS in Android"
+    },
+    "trust": {
+      "one": "Regionalni zemljevidi in podatki o poteh",
+      "two": "Lokalna kolesarska skupnost",
+      "three": "Znanje o polnjenju e-koles",
+      "four": "Odprti podatki o krajih in mobilnosti"
+    },
+    "adventures": {
+      "titleHtml": "izpostavljene<br />poti",
+      "allLink": "Razišči poti",
+      "viewCta": "Poglej pot",
+      "cards": [
+        {
+          "place": "Ljubljana",
+          "region": "Slovenija–Italija",
+          "title": "Ljubljana–Trst",
+          "meta0": "Potovanje",
+          "meta1": "1 dan",
+          "meta2": "134 km",
+          "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
+          "price": "134 km",
+          "unit": " · 1 dan"
+        },
+        {
+          "place": "Julijske Alpe",
+          "region": "Slovenija",
+          "title": "Zanka čez alpske prelaze",
+          "meta0": "Alpsko",
+          "meta1": "1 dan",
+          "meta2": "89 km",
+          "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
+          "price": "+890 m",
+          "unit": " · vzpon"
+        },
+        {
+          "place": "Istra",
+          "region": "Hrvaška",
+          "title": "Obalni gravel",
+          "meta0": "Gravel",
+          "meta1": "2 dni",
+          "meta2": "156 km",
+          "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
+          "price": "156 km",
+          "unit": " · 2 dni"
+        }
+      ]
+    },
+    "intro": {
+      "greeting": "Živjo!",
+      "body": "Sva Jakob in Tanja, mala ekipa za Zyflowom iz Slovenije. Zyflow gradiva zato, da ima vsaka vožnja dobre postanke, polnilnico, ko jo potrebuješ, in dobrodošlico za tvoje kolo. Vprašanja ali ideje? Prebereva vsako sporočilo.",
+      "link": "O Zyflowu"
+    },
+    "featuredTour": {
+      "eyebrow": "Vsaka pot, v celoti na zemljevidu",
+      "title": "ljubljana–trst",
+      "metaDuration": "134 km",
+      "metaSeason": "+1.766 m",
+      "cta": "Poglej, kaj je ob poti",
+      "metaStops": "Nastanitve, kava in polnilnice",
+      "metaChargers": "1 dan"
+    },
+    "categories": {
+      "cycle": "slovenija",
+      "hike": "hrvaška",
+      "kayak": "avstrija",
+      "fourwd": "italija",
+      "cta": "Poglej poti",
+      "comingSoon": "kmalu",
+      "comingSoonHint": "Poti v pripravi"
+    },
+    "testimonial": {
+      "quote": "Je tvoj kraj prijazen kolesarjem?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Vlagatelji in mediji"
+    },
+    "whyUs": {
+      "titleHtml": "Zakaj<br />Zyflow?",
+      "items": [
+        {
+          "title": "kraji, ki jih drugi zemljevidi spregledajo",
+          "body": "Večina zemljevidov ti pokaže ceste. Zyflow ti pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, z označenim parkiriščem, shrambo in polnjenjem."
+        },
+        {
+          "title": "varnost, ki jo vidiš",
+          "body": "Zapore cest, dela na cesti in dogodki na tvoji poti, kraje koles po območjih in polnilnice tam, kjer jih baterija potrebuje."
+        },
+        {
+          "title": "načrt baterije, ki mu lahko zaupaš",
+          "body": "Zyflow načrtuje glede na tvoj doseg, vzpone, veter in temperaturo, da se vožnja ne konča prezgodaj."
+        }
+      ]
+    },
+    "appStage": {
+      "eyebrow": "V aplikaciji",
+      "titleHtml": "Aplikacija<br />na poti.",
+      "body": "Baterija, vzponi, polnilnice in vreme v enem načrtu, da veš, da bo vožnja šla do konca.",
+      "ctaIos": "Prenesi za iOS",
+      "ctaAndroid": "Prenesi za Android"
+    },
+    "appFlow": {
+      "titleHtml": "Od zemljevida<br>do vožnje.",
+      "steps": [
+        {
+          "title": "raziskuj",
+          "body": "Odpri zemljevid in najdi nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ob približevanju pa še polnilnice, vodo in servis."
+        },
+        {
+          "title": "načrtuj",
+          "body": "Poveži kraje v vožnjo. Zyflow načrtuje baterijo glede na vzpone in postavi polnilnice, preden jih potrebuješ."
+        },
+        {
+          "title": "kolesari",
+          "body": "Pred odhodom preveri zapore cest in poglej, kje kradejo kolesa. Potem kolesari in se ustavi, kjer ti je všeč."
+        }
+      ]
+    },
+    "features": {
+      "titleHtml": "Kraji, ki<br><span class=\"accent\">sprejmejo kolesa.</span>",
+      "items": [
+        {
+          "title": "najdi kolesarjem prijazne kraje",
+          "body": "Parkirišče za kolesa, varna shramba, tlačilka ali polnilnica, označeno pri vsakem kraju. Zemljevid lahko filtriraš, da pokaže samo kraje, ki sprejmejo kolesa.",
+          "link": "Prenesi"
+        },
+        {
+          "title": "kolesari brez skrbi",
+          "body": "Pred odhodom poglej zapore cest in dela na cesti, preveri kraje koles po območjih in načrtuj baterijo s polnilnicami ob poti.",
+          "link": "Razišči poti"
+        },
+        {
+          "title": "rastemo po Evropi",
+          "body": "Na voljo v 8 državah, začenši s Slovenijo, Hrvaško in Avstrijo, in rastemo država za državo.",
+          "link": "Preberi dnevnik"
+        }
+      ]
+    },
+    "journal": {
+      "titleHtml": "Zyflow<br />dnevnik",
+      "cta": "Preberi dnevnik",
+      "posts": [
+        {
+          "tag": "Nasveti",
+          "title": "Zakaj je polnjenje e-koles pri gostinskih postankih pomembno",
+          "excerpt": "Če polnilnica ni vidna na spletu, je mnogi kolesarji nikoli ne najdejo. Boljši zemljevidi spremenijo daljše vožnje.",
+          "link": "Preberi zgodbo"
+        },
+        {
+          "tag": "Vodniki",
+          "title": "Kaj naredi kraj prijazen kolesarjem?",
+          "excerpt": "Parkirišče za kolesa, varna shramba, tlačilka, polnilnica. Kaj preverjamo in kako to filtriraš v aplikaciji.",
+          "link": "Preberi zgodbo"
+        }
+      ]
+    },
+    "faq": {
+      "title": "pogosta vprašanja",
+      "footnote": "Vprašanja, povratne informacije ali kraj, ki nam manjka? Piši na support@zyflow.eu. Preberemo vsako sporočilo.",
+      "contactLink": "Piši nam",
+      "items": [
+        {
+          "q": "Kaj je Zyflow?",
+          "a": "Zyflow je brezplačna aplikacija za iskanje kolesarjem prijaznih krajev: nastanitev, kavarn, restavracij, polnilnic in kolesarskih storitev. Vidiš lahko zapore cest in kraje koles po območjih ter med kraji načrtuješ vožnjo z mislijo na baterijo."
+        },
+        {
+          "q": "Je Zyflow brezplačen?",
+          "a": "Da. Zyflow je brezplačen za prenos in uporabo na iOS in Android."
+        },
+        {
+          "q": "Katera kolesa Zyflow podpira?",
+          "a": "Vsa: cestna, gravel, potovalna, gorska in e-kolesa. Z e-kolesom dobiš še načrt baterije in polnilnice ob poti."
+        },
+        {
+          "q": "Kako vem, da je kraj prijazen kolesarjem?",
+          "a": "Kraji s parkiriščem za kolesa, varno shrambo, tlačilko ali polnilnico so označeni, zemljevid pa lahko filtriraš, da pokaže samo kolesarjem prijazne kraje."
+        },
+        {
+          "q": "Imam kavarno, hotel ali kolesarsko trgovino. Sem lahko na Zyflowu?",
+          "a": "Seveda. Piši nam prek kontaktnega obrazca in dodali bomo tvoj kraj, skupaj s parkiriščem za kolesa, shrambo ali polnilnico na zemljevidu."
+        }
+      ]
+    },
+    "social": {
+      "handle": "@zyflow",
+      "cta": "Sledi Zyflowu",
+      "videos": [
+        {
+          "title": "Ljubljana–Trst",
+          "place": "Slovenija / Italija",
+          "coords": "46.0569° N, 14.5058° E"
+        },
+        {
+          "title": "Zanka čez alpske prelaze",
+          "place": "Julijske Alpe, Slovenija",
+          "coords": "46.3792° N, 13.8363° E"
+        },
+        {
+          "title": "Obalni gravel",
+          "place": "Istra, Hrvaška",
+          "coords": "45.2396° N, 13.9367° E"
+        }
+      ]
+    }
+  },
+  "tours": {
+    "hero": {
+      "title": "naše poti",
+      "lede": "Vožnje skozi kolesarjem prijazne kraje, z nastanitvami, kavarnami, restavracijami in polnilnicami ob poti. Izberi pot in jo odpri v aplikaciji.",
+      "quals": [
+        "Kolesarjem prijazni postanki na vsaki poti",
+        "7.400+ polnilnic na zemljevidu",
+        "8 držav",
+        "iOS in Android",
+        "Brezplačen prenos"
+      ]
+    },
+    "filter": {
+      "label": "pregled:",
+      "all": "vse",
+      "tour": "potovanje",
+      "alpine": "alpsko",
+      "commute": "vsakdan",
+      "gravel": "gravel"
+    },
+    "viewCta": "Poglej pot",
+    "empty": "Tukaj še ni poti. Nove dodajamo, ko na zemljevid dodamo več kolesarjem prijaznih krajev.",
+    "region": {
+      "slovenia": "Slovenija",
+      "croatia": "Hrvaška",
+      "austria": "Avstrija",
+      "italy": "Italija"
+    },
+    "cards": [
+      {
+        "place": "Ljubljana",
+        "region": "Slovenija–Italija",
+        "title": "Ljubljana–Trst",
+        "meta0": "Potovanje",
+        "meta1": "1 dan",
+        "meta2": "134 km",
+        "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
+        "price": "134 km",
+        "unit": " · 1 dan"
+      },
+      {
+        "place": "Julijske Alpe",
+        "region": "Slovenija",
+        "title": "Zanka čez alpske prelaze",
+        "meta0": "Alpsko",
+        "meta1": "1 dan",
+        "meta2": "89 km",
+        "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
+        "price": "+890 m",
+        "unit": " · vzpon"
+      },
+      {
+        "place": "Istra",
+        "region": "Hrvaška",
+        "title": "Obalni gravel",
+        "meta0": "Gravel",
+        "meta1": "2 dni",
+        "meta2": "156 km",
+        "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
+        "price": "156 km",
+        "unit": " · 2 dni"
+      },
+      {
+        "place": "Dunaj",
+        "region": "Avstrija",
+        "title": "Donavski koridor",
+        "meta0": "Vsakdan",
+        "meta1": "1 dan",
+        "meta2": "42 km",
+        "body": "Vsakodnevna vožnja s kavo na poti, parkiriščem za kolesa na cilju in polnilnicami, če se obrne veter.",
+        "price": "42 km",
+        "unit": " · 1 dan"
+      },
+      {
+        "place": "Bled",
+        "region": "Slovenija",
+        "title": "Okoli blejskih jezer",
+        "meta0": "Potovanje",
+        "meta1": "1 dan",
+        "meta2": "68 km",
+        "body": "Ceste ob jezeru, kavarne z razgledom in kolesarjem prijazna gostišča, če želiš ostati čez noč.",
+        "price": "68 km",
+        "unit": " · 1 dan"
+      },
+      {
+        "place": "Dolomiti",
+        "region": "Italija",
+        "title": "Greben Dolomitov",
+        "meta0": "Alpsko",
+        "meta1": "2 dni",
+        "meta2": "118 km",
+        "body": "Dva dneva visokih prelazov, planinskih koč in polnilnic pred dolgimi vzponi.",
+        "price": "+1,420 m",
+        "unit": " · vzpon"
+      },
+      {
+        "place": "Koroška",
+        "region": "Avstrija",
+        "title": "Gozdna gravel zanka",
+        "meta0": "Gravel",
+        "meta1": "1 dan",
+        "meta2": "94 km",
+        "body": "Mirne gozdne poti s pitno vodo, servisom koles in toplim obrokom na cilju.",
+        "price": "94 km",
+        "unit": " · 1 dan"
+      },
+      {
+        "place": "Ljubljana",
+        "region": "Slovenija",
+        "title": "Ljubljanski krog",
+        "meta0": "Vsakdan",
+        "meta1": "½ dneva",
+        "meta2": "28 km",
+        "body": "Kratek krog mimo ljubljanskih kavarn, z označenimi parkirišči za kolesa in polnilnicami.",
+        "price": "28 km",
+        "unit": " · ½ dneva"
+      },
+      {
+        "place": "Dolina Soče",
+        "region": "Slovenija",
+        "title": "Prečenje doline Soče",
+        "meta0": "Potovanje",
+        "meta1": "2 dni",
+        "meta2": "162 km",
+        "body": "Dva dneva ob smaragdni reki, s kolesarjem prijaznimi nastanitvami za noč vmes.",
+        "price": "162 km",
+        "unit": " · 2 dni"
+      }
+    ]
+  },
+  "tour": {
+    "hero": {
+      "crumbParent": "Poti",
+      "crumbType": "Potovanje",
+      "titleHtml": "ljubljana<br />– trst",
+      "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
+      "price": "134 km",
+      "unit": " · 1 dan",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Načrtuj to pot"
+    },
+    "meta": {
+      "place": "ljubljana",
+      "coords": "46.0569° N, 14.5058° E",
+      "durationHtml": "1 day<br />134 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednje",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+1,766 m",
+      "climbLabel": "Višina"
+    },
+    "body": {
+      "intro": "Pot od Ljubljane do Trsta v enem dnevu prečka tri pokrajine: zeleni rob prestolnice, kamnite vasi Krasa in jadransko obalo. Zyflow vmes postavi kolesarjem prijazne kraje, zato vožnja ni le to, kako daleč prideš, ampak tudi, kje se ustaviš.",
+      "sections": [
+        {
+          "title": "Odhod iz Ljubljane",
+          "body": "Mimo Vrhnike se odpelješ po mirnih cestah. Prvi postanek za kavo pride hitro in se splača: kmalu zatem se začne vzpon na planoto. Zyflow pokaže pričakovano stanje baterije na celotni poti, zato lahko začetek odpelješ premišljeno in ne na pamet."
+        },
+        {
+          "title": "Kraške vasi in postanki",
+          "body": "Med Postojno in Divačo se cesta dviga in spušča skozi kamnite vasi, z družinskimi restavracijami in gostišči, ki sprejmejo kolesa. Polnilnice in voda so tam, kjer se začnejo najtežji odseki.",
+          "bullets": [
+            "Pred odhodom poglej zapore cest in dela na cesti na poti",
+            "Vedi, kateri kraji imajo parkirišče za kolesa, varno shrambo ali polnilnico"
+          ]
+        },
+        {
+          "title": "Spust do Jadrana",
+          "body": "Za Sežano se planota konča in cesta se spusti proti Tržaškemu zalivu. Končaj s kavo ob morju ali ostani čez noč in se jutri vrni."
+        }
+      ]
+    },
+    "aside": {
+      "title": "kolesari brez skrbi:",
+      "items": [
+        "Zapore cest pred odhodom",
+        "Kraje koles po območjih",
+        "Načrt baterije s polnilnicami",
+        "Kolo je dobrodošlo, kjer spiš",
+        "Načrtovanje tudi brez povezave",
+        "iOS in Android"
+      ],
+      "cta": "Načrtuj to pot",
+      "note": "Brezplačno za iOS in Android."
+    },
+    "quote": {
+      "quote": "Je tvoj kraj ob tej poti?",
+      "body": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svojo kavarno, restavracijo ali nastanitev, prav na poti, ki jo vozijo."
+    },
+    "more": {
+      "title": "več poti",
+      "allLink": "Poglej vse"
+    }
+  },
+  "blog": {
+    "hero": {
+      "titleHtml": "zyflow<br />dnevnik",
+      "lede": "Vodniki po kolesarjem prijaznih krajih, nasveti za varnejše vožnje in novosti v Zyflowu."
+    },
+    "featured": {
+      "tag": "Tips",
+      "title": "Why e-bike charging at hospitality stops matters",
+      "excerpt": "If a charger isn't visible online, many riders never find it. Here's how better maps change longer rides.",
+      "link": "Read Story"
+    },
+    "posts": [
+      {
+        "tag": "Tips",
+        "title": "Planning your first battery-aware day ride",
+        "excerpt": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "Guides",
+        "title": "What makes a place bike-friendly?",
+        "excerpt": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "News",
+        "title": "Zyflow is live on iOS and Android",
+        "excerpt": "Free on both stores and live in 8 countries. Here's what to try on your next ride.",
+        "link": "Read Story"
+      },
+      {
+        "tag": "Guides",
+        "title": "Reading elevation before a cross-border ride",
+        "excerpt": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops.",
+        "link": "Read Story"
+      }
+    ]
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Ustanovljeno 2024",
+      "titleHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
+      "place": "Slovenija · na voljo v 8 državah",
+      "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
+      "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
+      "sign": "Jakob in Tanja"
+    },
+    "values": {
+      "title": "naše vrednote",
+      "items": [
+        {
+          "titleHtml": "raziskuj<br>brez skrbi.",
+          "body": "Zyflow je tu zato, da lahko rečeš da ovinku. Pri vsakem kraju vidiš, ali je tvoje kolo dobrodošlo, zato je naslednji postanek izbira in ne loterija."
+        },
+        {
+          "titleHtml": "varnost, ki<br>jo vidiš.",
+          "body": "Zapore cest, kraje koles po območjih in polnilnice ob poti. Pokažemo, kar vemo, da se lahko odločiš, preden se odpelješ."
+        },
+        {
+          "titleHtml": "iskrenost pred<br>pompom.",
+          "body": "Obljubimo samo to, kar aplikacija zna danes. Ko nekaj še nastaja, to povemo, in prisluhnemo, ko nam kolesarji povedo, kaj naj popravimo."
+        },
+        {
+          "titleHtml": "brezplačno za<br>vsakega kolesarja.",
+          "body": "Zyflow je brezplačen za iOS in Android, za vsakega kolesarja in vsako kolo. Začni z enim postankom, potem pojdi dlje."
+        }
+      ]
+    },
+    "team": {
+      "title": "naša ekipa",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva. Gradi aplikacijo, podatke v ozadju in mrežo partnerjev, s katero zemljevid raste.",
+          "quals": [
+            "Produkt in podatki",
+            "Partnerstva",
+            "iOS in Android"
+          ]
+        },
+        {
+          "name": "tanja",
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, pa tudi marketing, raziskave trga in lokalne partnerje.",
+          "quals": [
+            "Operativa in pravo",
+            "Marketing in raziskave"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "kontakt",
+      "email": "hello@zyflow.eu",
+      "support": "support@zyflow.eu",
+      "social": [
+        "LinkedIn",
+        "Instagram",
+        "Bluesky",
+        "X"
+      ]
+    },
+    "form": {
+      "title": "pošlji sporočilo",
+      "lede": "Vprašaj o krajih, poteh ali polnilnicah, dodaj svojo kavarno, restavracijo ali nastanitev ali se z nami pogovori o partnerstvih in naložbah. Odgovorimo na vsako sporočilo.",
+      "firstName": "Ime",
+      "lastName": "Priimek",
+      "email": "E-pošta",
+      "phone": "Telefon (neobvezno)",
+      "topic": "Tema (neobvezno)",
+      "topicPlaceholder": "Izberi",
+      "topics": [
+        "Kraji in poti",
+        "Dodaj moj kraj",
+        "Partnerstvo",
+        "Vlagatelji",
+        "Mediji",
+        "Drugo"
+      ],
+      "message": "Sporočilo",
+      "submit": "Pošlji sporočilo"
+    }
+  },
+  "legal": {
+    "nav": {
+      "terms": "Pogoji uporabe",
+      "privacy": "Politika zasebnosti",
+      "cookies": "Politika piškotkov"
+    },
+    "hub": {
+      "tag": "Pravno",
+      "title": "pravno",
+      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
+      "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
+      "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
+      "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji."
+    },
+    "terms": {
+      "tag": "Posodobljeno",
+      "date": "15. 5. 2026",
+      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "title": "pogoji uporabe",
+      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+    },
+    "privacy": {
+      "tag": "Posodobljeno",
+      "date": "30. 6. 2026",
+      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "title": "politika zasebnosti",
+      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+    },
+    "cookies": {
+      "tag": "Posodobljeno",
+      "date": "9. 10. 2026",
+      "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
+      "title": "politika piškotkov",
+      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
+    }
+  },
+  "business": {
+    "hero": {
+      "crumb1": "Za podjetja",
+      "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
+      "titleHtml": "postavi svoj kraj<br>na zemljevid",
+      "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "nextLabel": "Na voljo v",
+      "nextValue": "8 državah",
+      "cta": "Dodaj svoj kraj"
+    },
+    "tiles": [
+      {
+        "value": "Na zemljevidu",
+        "label": "Kolesarji te vidijo v Raziskuj"
+      },
+      {
+        "value": "Kolesarska oprema",
+        "label": "Parkirišče, shramba, tlačilka, polnilnica"
+      },
+      {
+        "value": "Na poteh",
+        "label": "Prikazan na poteh, ki vodijo mimo tebe"
+      },
+      {
+        "value": "Vse imaš v rokah",
+        "label": "Urejaj urnik, fotografije in podatke"
+      }
+    ],
+    "who": {
+      "title": "komu je namenjeno",
+      "link": "Vprašaj nas karkoli",
+      "chip": "na zemljevidu",
+      "price": "Brezplačno",
+      "unit": " · v času zagona",
+      "cta": "Dodaj svoj kraj",
+      "cards": [
+        {
+          "tag": "Kava in hrana",
+          "title": "Kavarne in restavracije",
+          "meta0": "Kava",
+          "meta1": "Restavracije",
+          "body": "Bodi postanek, okoli katerega kolesarji načrtujejo odmor. Pokaži, da so kolesa dobrodošla, kje jih parkirati in ali jih lahko napolnijo."
+        },
+        {
+          "tag": "Nastanitve",
+          "title": "Hoteli in gostišča",
+          "meta0": "Nastanitev",
+          "meta1": "Prenočitev",
+          "body": "Kolesarji na večdnevnih poteh najprej iščejo eno stvar: varno mesto za kolo. Pokaži svojo shrambo in polnjenje in bodi izbran za noč."
+        },
+        {
+          "tag": "Storitve",
+          "title": "Kolesarske trgovine in servisi",
+          "meta0": "Servis",
+          "meta1": "Polnjenje",
+          "body": "Servis, izposoja, polnjenje ali tlačilka pred vrati. Pojavi se v sloju storitev, ki ga kolesarji odprejo, ko gre kaj narobe."
+        }
+      ]
+    },
+    "how": {
+      "title": "kako deluje",
+      "stepLabel": "korak",
+      "steps": [
+        {
+          "title": "Zaprosi za dostop",
+          "body": "Ustvari račun in nam povej o svojem podjetju. Vzame dve minuti."
+        },
+        {
+          "title": "Odobrimo tvoj kraj",
+          "body": "Preverimo tvojo prošnjo in tvoj kraj povežemo z zemljevidom."
+        },
+        {
+          "title": "Urejaj ga sam",
+          "body": "Kadarkoli urejaj podatke, odpiralni čas, fotografije in kolesarsko opremo."
+        },
+        {
+          "title": "Kolesarji te najdejo",
+          "body": "Pojaviš se v Raziskuj in na poteh, ki vodijo mimo tebe."
+        }
+      ]
+    },
+    "data": {
+      "title": "turistične organizacije in podatkovni partnerji",
+      "body": "Z odprtimi viri podatkov in lokalnimi partnerji skrbimo, da so kraji, polnilnice in poti točni. Če upravljaš kolesarske podatke, turistične vnose ali mrežo lokalov, jih povežimo.",
+      "cta": "Postani podatkovni partner"
+    },
+    "faq": {
+      "title": "vprašanja podjetij",
+      "items": [
+        {
+          "q": "Ali to kaj stane?",
+          "a": "Dodajanje kraja je v času zagona brezplačno. Kasneje nameravamo dodati plačljive možnosti, na primer večjo vidnost na poteh. O vsaki spremembi te bomo obvestili dovolj zgodaj."
+        },
+        {
+          "q": "Kaj šteje kot prijazno kolesarjem?",
+          "a": "Pomaga karkoli od tega: prostor za parkiranje ali zaklepanje kolesa, varna shramba, tlačilka ali orodje ali vtičnica, kjer lahko kolesarji napolnijo e-kolo."
+        },
+        {
+          "q": "Katere države pokrivate?",
+          "a": "Zyflow je na voljo v 8 državah, začenši s Slovenijo in sosednjimi državami."
+        },
+        {
+          "q": "Kako spremenim svoje podatke?",
+          "a": "Prijavi se v partnerski portal in svoj kraj uredi neposredno. Spremembe lokacije na zemljevidu ali vrste kraja gredo prek naše ekipe."
+        }
+      ],
+      "footnote": "Nisi prepričan, ali spadaš sem?",
+      "footLink": "Vprašaj nas"
+    },
+    "final": {
+      "title": "pripravljeni, ko si ti",
+      "body": "Povej nam o svojem kraju in pokazali ga bomo kolesarjem, ki se že odpravljajo mimo.",
+      "cta": "Dodaj svoj kraj",
+      "ctaSecondary": "Najprej se pogovorimo"
+    },
+    "signin": "Že sodeluješ z nami? Prijava"
+  },
+  "press": {
+    "hero": {
+      "crumb1": "Mediji in vlagatelji",
+      "crumb2": "Dejstva",
+      "titleHtml": "zyflow<br>na kratko",
+      "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
+      "price": "Zgodnja faza",
+      "unit": " · 2026",
+      "nextLabel": "Narejeno v",
+      "nextValue": "Sloveniji",
+      "cta": "Zaprosi za predstavitev"
+    },
+    "tiles": [
+      {
+        "value": "iOS + Android",
+        "label": "Na voljo v obeh trgovinah"
+      },
+      {
+        "value": "8",
+        "label": "Držav"
+      },
+      {
+        "value": "7.400+",
+        "label": "Polnilnic na zemljevidu"
+      },
+      {
+        "value": "Open Data Hub",
+        "label": "Podpisan podatkovni partner"
+      }
+    ],
+    "about": {
+      "title": "na kratko",
+      "p1": "Večina zemljevidov kolesarjem pokaže ceste. Zyflow jim pokaže, kje se ustaviti: nastanitve, kavarne in restavracije, ki sprejmejo kolesa, ter polnilnice, vodo in servis. Na zemljevidu so tudi zapore cest in kraje koles po območjih, da lahko kolesarji raziskujejo brez skrbi.",
+      "p2": "Zyflow razvija HERKO d.o.o. v Sloveniji, javno je bil zagnan za iOS in Android leta 2026."
+    },
+    "next": {
+      "title": "kaj sledi",
+      "items": [
+        "Več držav in krajev",
+        "Več varnostnih funkcij",
+        "Boljše načrtovanje poti",
+        "Kolesarski potni list",
+        "Skupnost kolesarjev"
+      ]
+    },
+    "team": {
+      "title": "ekipa",
+      "link": "O nas",
+      "members": [
+        {
+          "name": "jakob",
+          "role": "Soustanovitelj in direktor",
+          "bio": "Vodi produkt in partnerstva: aplikacijo, podatke v ozadju in mrežo partnerjev."
+        },
+        {
+          "name": "tanja",
+          "role": "Soustanoviteljica in operativna direktorica",
+          "bio": "Vodi podjetje: administracijo, pogodbe, pravna in davčna vprašanja, marketing in lokalne partnerje."
+        }
+      ]
+    },
+    "kit": {
+      "title": "medijski paket",
+      "body": "V medijih še nismo bili, zato bi bilo to prvič. Če pišeš o kolesarjenju, e-kolesih ali potovanjih v regiji, se z veseljem pogovorimo in pošljemo vse, kar potrebuješ.",
+      "items": [
+        {
+          "name": "Logotipi",
+          "note": "SVG + PNG"
+        },
+        {
+          "name": "Posnetki zaslona",
+          "note": "iOS + Android"
+        },
+        {
+          "name": "Fotografije ustanoviteljev",
+          "note": "Na zahtevo"
+        },
+        {
+          "name": "Dejstva",
+          "note": "Ta stran"
+        }
+      ]
+    },
+    "final": {
+      "title": "te zanima zyflow?",
+      "body": "Predstavitev in številke delimo neposredno. Povej nam nekaj o sebi in oglasili se bomo.",
+      "cta": "Zaprosi za predstavitev",
+      "ctaSecondary": "Vprašanja medijev"
+    }
+  },
+  "articles": {
+    "more": {
+      "titleHtml": "more from<br />the journal",
+      "cta": "Visit journal"
+    },
+    "e-bike-charging-at-hospitality-stops": {
+      "meta": {
+        "tag": "Tips",
+        "date": "29.09.26"
+      },
+      "title": "why e-bike charging at hospitality stops matters",
+      "lede": "A charger at a café or guesthouse can decide how far a ride goes. Here's why, and how to find one.",
+      "body": {
+        "p1": "There's a particular kind of calm you only get when you know where the next charger is. You stop checking the battery every five minutes. You take the detour to the viewpoint. You order the second coffee. When a stop isn't visible online, that calm disappears, and longer rides shrink to whatever feels safe to guess.",
+        "h1": "visibility is everything",
+        "p2": "Plenty of cafés, restaurants and guesthouses already let riders plug in an e-bike. Very few of them say so anywhere a rider would look. The socket is there, the owner is happy to help, but for anyone planning a ride it might as well not exist.",
+        "p3": "That's the gap Zyflow is built to close. In the app, charging sits in the Utility layer on the Explore map, next to water, bike shops, repair and bike parking. Turn it on and you see where you can top up before you leave home, not after the battery warning starts blinking.",
+        "h2": "a charger changes the shape of the day",
+        "p4": "A known charging stop does more than add range. It turns a ride into a plan. Lunch becomes the moment the battery fills back up. A guesthouse with a socket becomes the reason a two-day loop works. The places worth stopping at and the places that keep you rolling are often the same places.",
+        "li1": "<strong>Find it before you go.</strong> Open Explore, switch on Utility and look at the stretch where your battery will be lowest",
+        "li2": "<strong>Pair it with a stop you'd enjoy anyway.</strong> A charger at a café beats a charger in a car park",
+        "li3": "<strong>Have a plan B.</strong> Note a second option nearby, in case the first one is closed or busy",
+        "h3": "plan for the climb, not the café",
+        "p5": "Battery drain is not even. A flat valley road costs little, while a long climb, a headwind or a cold morning can cost a lot. When you plan a route in Zyflow, the battery plan takes the climbs and the weather into account and shows the chargers along the way, so you know where the tight sections are before you reach them.",
+        "quote": "\"If a charger isn't visible online, many riders never find it. And longer rides shrink to whatever feels safe to guess.\"",
+        "h4": "if you run a place with a spare socket",
+        "p6": "Riders are looking for you. Listing a café, restaurant, guesthouse or charger on Zyflow is free while we launch, and you can manage your own details, photos and opening hours through the partner portal. A socket and a friendly \"yes, of course\" is often all it takes to become the stop a ride is planned around."
+      }
+    },
+    "planning-your-first-battery-aware-day-ride": {
+      "meta": {
+        "tag": "Tips",
+        "date": "22.09.26"
+      },
+      "title": "planning your first battery-aware day ride",
+      "lede": "Range, climbs and chargers: a simple way to plan a day ride you'll actually finish.",
+      "body": {
+        "p1": "The best first long ride on an e-bike isn't the most ambitious one. It's the one where you come home with battery to spare, a few good stops behind you and the feeling that next time you could go further. Here's a simple way to plan it.",
+        "h1": "start with an honest range",
+        "p2": "The number on the box is a best case. Real range depends on the assist level you actually use, your weight and luggage, the tyres and the weather. Set your range in Zyflow the way you really ride, not the way the brochure rides. If you're not sure, be a little conservative. Finishing with 20% left feels a lot better than finishing with 2%.",
+        "h2": "pick a rolling route first",
+        "p3": "A rolling countryside day is where almost every rider should begin. The rhythm is predictable, the climbs are short and you get a feel for how your battery behaves without the mountains making the decisions for you. Browse the routes by region and ride type, and choose one that matches the day you want, not the day you think you should manage.",
+        "h3": "read the battery plan before you leave",
+        "p4": "When you plan a ride, Zyflow builds a battery plan from the route's elevation, your range settings and the wind and weather forecast. It shows where the effort will be and where the chargers sit along the way.",
+        "li1": "<strong>Look for the tight section.</strong> The part of the ride with the hardest climb and the furthest charger is the one to plan around",
+        "li2": "<strong>Check the wind.</strong> A headwind on the way home can cost more than the climb on the way out",
+        "li3": "<strong>Mark a charging stop.</strong> Even if you don't need it, knowing it's there changes how you ride",
+        "quote": "\"Finishing with 20% left feels a lot better than finishing with 2%.\"",
+        "h4": "plan the stops, not just the line",
+        "p5": "A good day ride is more than distance. Turn on Coffee and Restaurants in Explore and pick a place to stop around the halfway point. If it has a charger or bike parking, even better. Stops are where the ride becomes a day out, and they're easy to plan once you can see them.",
+        "h5": "then go a little further",
+        "p6": "After a ride or two you'll know how your bike behaves on climbs, in the cold and with a full bag. That's when longer days and bigger mountains start to make sense. Build up slowly, keep a charger in the plan, and let each ride teach you something for the next one."
+      }
+    },
+    "what-makes-a-place-bike-friendly": {
+      "meta": {
+        "tag": "Guides",
+        "date": "15.09.26"
+      },
+      "title": "what makes a place bike-friendly?",
+      "lede": "Bike parking, secure storage, a pump, a charger. What we look for, and how to filter for it in the app.",
+      "body": {
+        "p1": "\"Bike-friendly\" gets used a lot. A sticker on a door, a line on a booking site, a rack that fits two bikes on a good day. For riders, it should mean something more useful: you can arrive by bike, leave it somewhere you trust, and enjoy the place without worrying about what's happening outside.",
+        "h1": "what we look for",
+        "p2": "In Zyflow, a place counts as bike-friendly when it offers real facilities for riders, not just goodwill. The ones that matter most:",
+        "li1": "<strong>Bike parking.</strong> Somewhere proper to lock up, close to the entrance",
+        "li2": "<strong>Secure storage.</strong> A locked room, garage or shed, especially important for stays and expensive e-bikes",
+        "li3": "<strong>A pump and basic tools.</strong> Small things that save a ride",
+        "li4": "<strong>Charging.</strong> A socket for an e-bike, ideally somewhere you can sit and wait",
+        "h2": "where the information comes from",
+        "p3": "We combine open map data, regional tourism data from partners like Open Data Hub, and details that businesses add themselves. When a hotel, café or restaurant manages its own listing, the information tends to be more accurate and more current. That's why we're making it free for places to list and update themselves while we launch.",
+        "quote": "\"You can arrive by bike, leave it somewhere you trust, and enjoy the place without worrying about what's happening outside.\"",
+        "h3": "how to find these places in the app",
+        "p4": "Open Explore and switch on the layers you care about: Stay, Coffee or Restaurants. Then turn on Bike-friendly only. The map now shows just the places with real facilities for riders, so you can plan a lunch stop or a night's stay knowing the bike is taken care of too.",
+        "p5": "For peace of mind, you can also turn on the Safety layer to see bike theft by area. It's a simple way to decide where secure storage really matters.",
+        "h4": "run a place riders love?",
+        "p6": "If you have a rack, a storage room or a spare socket, riders want to know. Request access to the partner portal, add your facilities and photos, and your place shows up for riders who filter for exactly that."
+      }
+    },
+    "zyflow-is-live-on-ios-and-android": {
+      "meta": {
+        "tag": "News",
+        "date": "08.09.26"
+      },
+      "title": "zyflow is live on ios and android",
+      "lede": "Free on both stores and live in 8 countries. Here's what to try on your next ride.",
+      "body": {
+        "p1": "Zyflow is now free on the App Store and Google Play, and live in 8 countries. We're just getting started, and we built it around one simple idea: explore bike-friendly places, and ride there feeling safe. Here's what to try first.",
+        "h1": "explore the places around you",
+        "p2": "Open Explore and you'll see the map in layers. Stay, Coffee and Restaurants show you where to stop, sleep and eat. Utility brings in the practical things: charging, water, bike shops, repair and bike parking. Turn on only what you need, and the map stays clean.",
+        "h2": "filter for bike-friendly",
+        "p3": "Switch on Bike-friendly only and the map narrows to places with real facilities for riders, like bike parking, secure storage, a pump or a charger. It's the quickest way to find a café you can actually ride to and a stay that has room for your bike.",
+        "h3": "know what's on the road",
+        "p4": "Before you head out, check Road conditions nearby on Home. Zyflow shows closures, construction and events around you and along a planned route, so you're not surprised halfway through. The Safety layer on the map shows bike theft by area, which helps when you're deciding where to leave the bike.",
+        "quote": "\"Explore bike-friendly places. Ride there feeling safe.\"",
+        "h4": "plan a ride when you want one",
+        "p5": "Found a place you want to reach? Plan a route there. On an e-bike, the battery plan takes the climbs, your range and the weather into account and shows chargers along the way. Planning works offline-ready too, so a patchy signal in the hills doesn't leave you guessing.",
+        "h5": "help us grow",
+        "p6": "This is the first version, and the map gets better with every place added. If you run a café, restaurant, stay or charger, listing it is free while we launch. If you spot something missing or wrong, tell us. We read everything."
+      }
+    },
+    "reading-elevation-before-a-cross-border-ride": {
+      "meta": {
+        "tag": "Guides",
+        "date": "01.09.26"
+      },
+      "title": "reading elevation before a cross-border ride",
+      "lede": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops.",
+      "body": {
+        "p1": "A ride from Ljubljana to Trieste sounds like it should be downhill all the way. You start inland and finish at the sea. But the Karst plateau sits in between, and the shape of the climb before the coast decides how the whole day feels. Reading the elevation before you leave is what turns a hard day into a good one.",
+        "h1": "look at the shape, not just the total",
+        "p2": "Total climbing tells you how hard a ride is. The elevation profile tells you when it's hard. A long steady rise in the first half feels very different from a steep ramp late in the day, even if the numbers are the same. In Zyflow, the elevation profile is colour-coded by gradient and the main climbs are marked, so you can see at a glance where the work is.",
+        "h2": "find the long climb",
+        "li1": "<strong>The steady rise.</strong> On a route like this, most of the effort comes as you climb gradually onto the Karst. It's rarely steep, but it's long, and it's where the battery works hardest",
+        "li2": "<strong>The high ground.</strong> Once you're up, the plateau rolls. This is the place to stop, eat and recharge before the coast",
+        "li3": "<strong>The drop to the sea.</strong> The descent towards Trieste is the reward. Take it easy, the roads get busier near the city",
+        "quote": "\"Total climbing tells you how hard a ride is. The elevation profile tells you when it's hard.\"",
+        "h3": "plan your stops around the climbs",
+        "p3": "The best place for a break is usually just before or just after the biggest effort. Turn on Coffee, Restaurants and Utility in Explore and look at what sits along the route near the top of the climb. A lunch stop with a charger there means you start the descent with a full battery and a full stomach.",
+        "h4": "crossing a border",
+        "p4": "Zyflow is live in 8 countries, so places and routes don't stop at the border. Before you go, check Road conditions along your planned route for closures or construction on either side, and remember that opening hours and holidays can differ from one country to the next.",
+        "h5": "ride it once, read it better next time",
+        "p5": "After your first cross-border ride, the elevation profile will start to look different. You'll know what a long rise feels like on your bike, and you'll plan the next one faster. Start with a route like Ljubljana to Trieste, plan the stops around the climb, and enjoy the sea at the end."
+      }
+    }
+  }
+}

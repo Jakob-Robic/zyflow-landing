@@ -13,6 +13,7 @@ const EXCLUDE = new Set([
   "scripts",
   "locales",
   "public",
+  "rebuild",
   ".vercel",
   ".git",
   "package.json",

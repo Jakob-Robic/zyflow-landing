@@ -1,0 +1,83 @@
+/**
+ * Torn-paper section dividers (Figma 4029:6006).
+ * Layered silhouettes use CSS masks + currentColor so fills track theme
+ * surface variations (olive ↔ cream), never hardcoded black.
+ *
+ * Mask URLs must live in this file (resolved relative to components/).
+ * Do not redefine --divider-layer-* from other stylesheets — relative
+ * urls inside var() resolve against the using stylesheet in practice.
+ */
+
+.section-divider,
+.announcement__divider {
+  --divider-layer-1: url("../../assets/images/home/divider-layer-1.svg");
+  --divider-layer-2: url("../../assets/images/home/divider-layer-2.svg");
+  --divider-layer-3: url("../../assets/images/home/divider-layer-3.svg");
+}
+
+.section-divider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 72px;
+  line-height: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.section-divider__layer {
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-position: bottom center;
+  mask-position: bottom center;
+  /* White SVG fills + luminance ⇒ opaque silhouette (black fills hide under luminance) */
+  -webkit-mask-source-type: luminance;
+  mask-mode: luminance;
+}
+
+.section-divider__layer--1 {
+  opacity: 0.2;
+  -webkit-mask-image: var(--divider-layer-1);
+  mask-image: var(--divider-layer-1);
+}
+
+.section-divider__layer--2 {
+  opacity: 0.6;
+  -webkit-mask-image: var(--divider-layer-2);
+  mask-image: var(--divider-layer-2);
+}
+
+.section-divider__layer--3 {
+  opacity: 1;
+  -webkit-mask-image: var(--divider-layer-3);
+  mask-image: var(--divider-layer-3);
+}
+
+/* surface-1 → surface-offset (e.g. testimonial → why) */
+.section-divider--into-offset {
+  background: var(--color-surface-1);
+  color: var(--color-surface-offset);
+}
+
+/* surface-offset → surface-1 (e.g. why → features) */
+.section-divider--into-base {
+  background: var(--color-surface-offset);
+  color: var(--color-surface-1);
+}
+
+/* Page → footer: mountains match footer fill, sit on the seam */
+.section-divider--into-footer {
+  background: transparent;
+  color: var(--color-surface-2);
+}
+
+.section-divider--flip {
+  transform: scaleY(-1);
+}

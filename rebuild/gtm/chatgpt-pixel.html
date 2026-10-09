@@ -1,0 +1,39 @@
+<!--
+  GTM Custom HTML tag — ChatGPT Ads Measurement Pixel
+  Consent settings: require ad_storage = Granted (Advertising)
+  Trigger: Consent Initialization + All Pages (or once advertisement granted)
+  Also add a tag on Custom Event = contact_submit that calls:
+    oaiq("measure","lead_created",{},{event_id: {{dlv - event_id}}});
+
+  Replace YOUR_CHATGPT_PIXEL_ID before publishing.
+  Docs: https://developers.openai.com/ads/measurement-pixel
+-->
+<script>
+  (function () {
+    var PIXEL_ID = "YOUR_CHATGPT_PIXEL_ID";
+    if (!PIXEL_ID || PIXEL_ID.indexOf("YOUR_") === 0) return;
+
+    var w = window,
+      d = document;
+    w.oaiq =
+      w.oaiq ||
+      function () {
+        (w.oaiq.q = w.oaiq.q || []).push(arguments);
+      };
+    w.oaiq.l = 1 * new Date();
+    var js = d.createElement("script");
+    js.async = true;
+    js.src = "https://bzrcdn.openai.com/sdk/oaiq.min.js";
+    var s = d.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(js, s);
+
+    w.oaiq("init", { pixelId: PIXEL_ID });
+
+    // Capture oppref from URL or session (site also stores zyflow_oppref)
+    try {
+      var params = new URLSearchParams(w.location.search);
+      var oppref = params.get("oppref") || sessionStorage.getItem("zyflow_oppref");
+      if (oppref) sessionStorage.setItem("zyflow_oppref", oppref);
+    } catch (e) {}
+  })();
+</script>

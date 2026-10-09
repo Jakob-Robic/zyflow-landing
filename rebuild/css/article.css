@@ -1,0 +1,214 @@
+/**
+ * Blog article detail (Figma 4111:6690).
+ */
+
+.article {
+  padding-block: var(--section-pad-md);
+}
+
+.article__layout {
+  display: grid;
+  grid-template-columns: 519px 1fr;
+  gap: var(--space-gap-6);
+  align-items: start;
+}
+
+.article__gallery {
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-gap-6));
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.article__gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article__content {
+  max-width: 628px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.article__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-6);
+  margin-bottom: var(--space-gap-7);
+}
+
+.article__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-gap-5);
+  margin: 0;
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+}
+
+.article__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-3);
+}
+
+.article__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  line-height: var(--leading-h2);
+  margin: 0;
+}
+
+.article__lede {
+  margin: 0;
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+  color: var(--color-text-body-muted);
+}
+
+.article__rule {
+  border: 0;
+  border-top: 1px solid var(--color-border-default);
+  margin: 0 0 var(--space-gap-7);
+}
+
+.article__body p {
+  margin: 0 0 var(--space-gap-6);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.article__body h2 {
+  font-family: var(--font-heading);
+  font-size: var(--type-h4);
+  line-height: var(--leading-h4);
+  margin: var(--space-gap-6) 0 var(--space-gap-5);
+  padding-top: var(--space-gap-6);
+}
+
+.article__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-gap-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-5);
+}
+
+.article__list li {
+  position: relative;
+  padding-left: var(--space-gap-6);
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+.article__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--color-brand-primary);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.article__quote {
+  margin: var(--space-gap-6) 0;
+  padding: var(--space-gap-6);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+}
+
+/* —— More from journal —— */
+.article-more {
+  position: relative;
+  padding-block: var(--section-pad-md);
+  overflow: hidden;
+}
+
+.article-more__glow {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: min(652px, 50vw);
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to right, #000 40%, transparent 100%);
+  mask-image: linear-gradient(to right, #000 40%, transparent 100%);
+}
+
+.article-more__glow img {
+  width: 180%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: var(--contour-blend);
+  opacity: var(--contour-opacity);
+}
+
+.article-more__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--grid-gutter);
+  align-items: center;
+}
+
+.article-more__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-gap-6);
+  text-align: center;
+}
+
+.article-more__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-display);
+  line-height: 1;
+  margin: 0;
+}
+
+.article-more__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-7);
+}
+
+.article-more__divider {
+  height: 1px;
+  background: var(--color-border-default);
+  opacity: 0.7;
+}
+
+@media (max-width: 1100px) {
+  .article__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article__gallery {
+    position: static;
+    max-width: 520px;
+  }
+
+  .article-more__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-gap-9);
+  }
+}
+
+@media (max-width: 720px) {
+  .article__title {
+    font-size: var(--type-h3);
+  }
+
+  .article-more__title {
+    font-size: var(--type-h1);
+  }
+}

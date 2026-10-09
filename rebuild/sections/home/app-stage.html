@@ -1,0 +1,57 @@
+<!--
+  APP STAGE - phone product showcase.
+  REVERT: remove include from pages/home.html + drop css/home-app.css import in main.css
+  + optional: delete this file, sections/home/app-flow.html, and home.appStage / home.appFlow in locales.
+-->
+<section class="app-stage section" data-section="home.appStage">
+  <div class="container">
+    <div class="app-stage__panel">
+      <div class="app-stage__bg" aria-hidden="true">
+        <img src="./assets/images/home/map-contours-featured.svg" alt="" />
+      </div>
+
+      <div class="app-stage__copy">
+        <p class="app-stage__eyebrow" data-i18n="home.appStage.eyebrow">Inside the ride</p>
+        <h2 class="app-stage__title" data-i18n-html="home.appStage.titleHtml">The app<br />on the trail.</h2>
+        <p class="app-stage__body" data-i18n="home.appStage.body">
+          Battery, elevation, chargers, and weather in one plan - so you leave knowing the ride will finish.
+        </p>
+        <div class="app-stage__ctas">
+          <a class="btn btn--primary" href="https://apps.apple.com/app/zyflow/id6763228086" data-i18n="home.appStage.ctaIos">Download for iOS</a>
+          <a class="btn btn--secondary app-stage__cta-android" href="https://play.google.com/store/apps/details?id=com.jakob_robic.zyflowmobileapp" data-i18n="home.appStage.ctaAndroid">Get it on Android</a>
+        </div>
+      </div>
+
+      <div class="app-stage__phones" aria-hidden="true">
+        <div class="phone phone--back">
+          <div class="phone__bezel">
+            <div class="phone__notch"></div>
+            <div class="phone__screen phone-ui phone-ui--charge">
+              <p class="phone-ui__label">Next charge</p>
+              <p class="phone-ui__hero">18 km</p>
+              <p class="phone-ui__meta">Type 2 · 22 kW</p>
+              <div class="phone-ui__bar"><span style="--w: 62%"></span></div>
+              <p class="phone-ui__foot">Battery after stop · 84%</p>
+            </div>
+          </div>
+        </div>
+        <div class="phone phone--front">
+          <div class="phone__bezel">
+            <div class="phone__notch"></div>
+            <div class="phone__screen phone-ui phone-ui--route">
+              <p class="phone-ui__label">Ljubljana to Trieste</p>
+              <p class="phone-ui__hero">134 km</p>
+              <div class="phone-ui__chips">
+                <span>+1,766 m</span>
+                <span>72% batt</span>
+                <span>clear</span>
+              </div>
+              <div class="phone-ui__map"></div>
+              <p class="phone-ui__foot">3 charge stops · planned</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

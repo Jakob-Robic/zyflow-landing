@@ -1,0 +1,502 @@
+/**
+ * App marketing sections (home only).
+ * REVERT: remove @import from main.css and the app-* includes in pages/home.html.
+ */
+
+/* —— App banner (under hero) — mirrors featured-tour DNA —— */
+.app-banner {
+  padding-block: var(--section-pad-sm) var(--section-pad-md);
+  overflow: visible;
+  background: var(--color-surface-1);
+}
+
+.app-banner .container {
+  overflow: visible;
+}
+
+.app-banner__panel {
+  position: relative;
+  background: var(--color-surface-map);
+  color: var(--color-text-on-map);
+  border-radius: var(--radius-md);
+  min-height: 480px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(200px, 260px);
+  gap: var(--space-gap-8);
+  align-items: center;
+  padding: var(--space-gap-10) var(--space-gap-9);
+  overflow: visible;
+}
+
+.app-banner__bg {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.app-banner__bg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160%;
+  height: 160%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  display: block;
+}
+
+.app-banner__copy,
+.app-banner__phone {
+  position: relative;
+  z-index: 1;
+}
+
+.app-banner__eyebrow {
+  font-family: var(--font-badge);
+  font-size: var(--type-body);
+  margin: 0 0 var(--space-gap-4);
+  opacity: 0.85;
+}
+
+.app-banner__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h1);
+  line-height: 1;
+  margin: 0 0 var(--space-gap-5);
+}
+
+.app-banner__body {
+  max-width: 36ch;
+  margin: 0 0 var(--space-gap-7);
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+  color: color-mix(in srgb, var(--color-text-on-map) 82%, transparent);
+}
+
+.app-banner__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-4);
+  align-items: center;
+}
+
+.app-banner__cta-outline {
+  background: transparent;
+  color: var(--color-text-on-map);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--color-text-on-map) 55%, transparent);
+}
+
+.app-banner__cta-outline:hover,
+.app-banner__cta-outline:focus-visible {
+  background: color-mix(in srgb, var(--color-text-on-map) 12%, transparent);
+}
+
+.app-banner__phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone--banner {
+  position: relative;
+  width: 220px;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+.phone--banner .phone__screen {
+  min-height: 360px;
+}
+
+.phone--shot .phone__notch {
+  display: none;
+}
+
+.phone--shot .phone__screen,
+.phone--banner.phone--shot .phone__screen {
+  min-height: 0;
+  aspect-ratio: 9 / 19.5;
+  padding: 0;
+  background: #0d0d0d;
+}
+
+.phone-ui--shot {
+  display: block;
+  padding: 0;
+  gap: 0;
+}
+
+.phone-ui__shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.app-banner__polaroid {
+  position: absolute;
+  z-index: 3;
+}
+
+.app-banner__polaroid--1 {
+  left: auto;
+  right: 200px;
+  top: -28px;
+  transform: rotate(-7deg);
+}
+
+.app-banner__polaroid--1 img {
+  width: 148px;
+  height: 148px;
+}
+
+.app-banner__polaroid--2 {
+  right: -8px;
+  bottom: -40px;
+  transform: rotate(5deg);
+}
+
+.app-banner__polaroid--2 img {
+  width: 132px;
+  height: 132px;
+}
+
+/* —— App stage (phone showcase) —— */
+.app-stage {
+  padding-block: var(--section-pad-md);
+}
+
+.app-stage__panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: var(--space-gap-10);
+  align-items: center;
+  background: var(--color-surface-map);
+  color: var(--color-text-on-map);
+  border-radius: var(--radius-md);
+  min-height: 560px;
+  padding: var(--space-gap-10) var(--space-gap-8);
+  overflow: hidden;
+}
+
+.app-stage__bg {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: overlay;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.app-stage__bg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160%;
+  height: 160%;
+  max-width: none;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.app-stage__copy,
+.app-stage__phones {
+  position: relative;
+  z-index: 1;
+}
+
+.app-stage__eyebrow {
+  font-family: var(--font-badge);
+  font-size: var(--type-body);
+  margin: 0 0 var(--space-gap-4);
+  opacity: 0.85;
+}
+
+.app-stage__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-h1);
+  line-height: 1;
+  margin: 0 0 var(--space-gap-5);
+}
+
+.app-stage__body {
+  max-width: 34ch;
+  margin: 0 0 var(--space-gap-7);
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+  color: color-mix(in srgb, var(--color-text-on-map) 82%, transparent);
+}
+
+.app-stage__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-4);
+  align-items: center;
+}
+
+.app-stage__cta-android {
+  /* On olive map panel: outline reads as light stroke */
+  background: transparent;
+  color: var(--color-text-on-map);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--color-text-on-map) 55%, transparent);
+}
+
+.app-stage__cta-android:hover,
+.app-stage__cta-android:focus-visible {
+  background: color-mix(in srgb, var(--color-text-on-map) 12%, transparent);
+}
+
+.app-stage__phones {
+  position: relative;
+  height: 440px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.phone {
+  position: absolute;
+  width: 220px;
+}
+
+.phone--back {
+  left: 8%;
+  bottom: 24px;
+  transform: rotate(-8deg);
+  z-index: 1;
+}
+
+.phone--front {
+  right: 6%;
+  bottom: 0;
+  transform: rotate(4deg);
+  z-index: 2;
+  width: 240px;
+}
+
+.phone__bezel {
+  background: #1a1a1a;
+  border-radius: 28px;
+  padding: 10px;
+  box-shadow:
+    0 24px 48px color-mix(in srgb, var(--color-scrim) 45%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, #fff 12%, transparent);
+}
+
+.phone__notch {
+  width: 72px;
+  height: 8px;
+  margin: 0 auto 8px;
+  border-radius: 100px;
+  background: #0d0d0d;
+}
+
+.phone__screen {
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 380px;
+  background: #2a2e1e;
+}
+
+.phone--back .phone__screen {
+  min-height: 340px;
+}
+
+.phone-ui {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-gap-3);
+  padding: var(--space-gap-5);
+  color: #fff;
+}
+
+.phone-ui__label {
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  opacity: 0.75;
+  margin: 0;
+}
+
+.phone-ui__hero {
+  font-family: var(--font-heading);
+  font-size: var(--type-h2);
+  line-height: 1;
+  margin: 0;
+}
+
+.phone-ui__meta,
+.phone-ui__foot {
+  margin: 0;
+  font-size: var(--type-small);
+  opacity: 0.8;
+}
+
+.phone-ui__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.phone-ui__chips span {
+  font-family: var(--font-badge);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 100px;
+  background: color-mix(in srgb, #fff 14%, transparent);
+}
+
+.phone-ui__map {
+  flex: 1;
+  min-height: 140px;
+  margin-top: var(--space-gap-2);
+  border-radius: var(--radius-sm);
+  background:
+    radial-gradient(circle at 30% 40%, color-mix(in srgb, var(--color-brand-primary) 55%, transparent), transparent 42%),
+    radial-gradient(circle at 70% 65%, color-mix(in srgb, #fff 18%, transparent), transparent 35%),
+    linear-gradient(160deg, #373b2a, #2a2e1e 55%, #434738);
+  position: relative;
+}
+
+.phone-ui__map::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  top: 28%;
+  width: 64%;
+  height: 44%;
+  border: 2px solid color-mix(in srgb, var(--color-brand-primary) 80%, #fff);
+  border-radius: 40% 60% 55% 45%;
+  opacity: 0.85;
+  transform: rotate(-12deg);
+}
+
+.phone-ui__bar {
+  height: 8px;
+  border-radius: 100px;
+  background: color-mix(in srgb, #fff 14%, transparent);
+  overflow: hidden;
+}
+
+.phone-ui__bar span {
+  display: block;
+  height: 100%;
+  width: var(--w, 50%);
+  border-radius: inherit;
+  background: var(--color-brand-primary);
+}
+
+.phone-ui--charge {
+  background: linear-gradient(180deg, #373b2a, #2a2e1e);
+}
+
+.phone-ui--route {
+  background: linear-gradient(180deg, #2a2e1e, #373b2a 70%);
+}
+
+@media (max-width: 1100px) {
+  .app-banner__panel {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: var(--space-gap-9) var(--space-gap-6) var(--space-gap-11);
+    text-align: center;
+  }
+
+  .app-banner__body {
+    margin-inline: auto;
+  }
+
+  .app-banner__ctas {
+    justify-content: center;
+  }
+
+  .app-banner__phone {
+    order: -1;
+    margin-bottom: var(--space-gap-4);
+  }
+
+  .phone--banner {
+    width: 180px;
+    transform: rotate(2deg);
+  }
+
+  .phone--banner .phone__screen {
+    min-height: 300px;
+  }
+
+  .phone--banner.phone--shot .phone__screen {
+    min-height: 0;
+  }
+
+  .app-banner__polaroid--1 {
+    left: auto;
+    right: 120px;
+    top: -20px;
+  }
+
+  .app-banner__polaroid--2 {
+    right: 12px;
+    bottom: -28px;
+  }
+
+  .app-stage__panel {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: var(--space-gap-8) var(--space-gap-6);
+  }
+
+  .app-stage__phones {
+    height: 380px;
+    order: -1;
+  }
+
+  .phone--back {
+    left: 12%;
+  }
+
+  .phone--front {
+    right: 10%;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-banner__panel {
+    padding: var(--space-gap-8) var(--space-gap-5) var(--space-gap-10);
+    overflow: hidden;
+  }
+
+  .app-banner__polaroid {
+    display: none;
+  }
+
+  .phone--banner {
+    width: 160px;
+  }
+
+  .app-stage__phones {
+    height: 320px;
+  }
+
+  .phone {
+    width: 170px;
+  }
+
+  .phone--front {
+    width: 190px;
+  }
+
+  .phone__screen {
+    min-height: 280px;
+  }
+
+  .phone--back .phone__screen {
+    min-height: 250px;
+  }
+}

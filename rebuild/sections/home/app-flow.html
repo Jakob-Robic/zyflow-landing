@@ -1,0 +1,43 @@
+<!--
+  APP FLOW: why-section clone with plan / charge / ride copy.
+  REVERT: remove include from pages/home.html (with other app-* / home-app.css).
+  Transition into this band lives on features (into-offset), same as testimonial → why.
+-->
+<section class="why section" data-section="home.appFlow">
+  <div class="container">
+    <div class="why__inner">
+      <div class="why__left">
+        <h2 class="why__title" data-i18n-html="home.appFlow.titleHtml">From plan<br />to ride.</h2>
+        <div class="why__polaroid polaroid"><img src="./assets/images/home/mountain-overlook.jpg" alt="Mountain biker overlooking a valley at sunset" /></div>
+      </div>
+      <div class="why__list">
+        <div class="why__item">
+          <img src="./assets/images/icons/map-trifold.svg" alt="" />
+          <div>
+            <h3 data-i18n="home.appFlow.steps.0.title">plan</h3>
+            <p data-i18n="home.appFlow.steps.0.body">Set your bike and range. Zyflow builds a route around elevation and how hard the climbs hit.</p>
+          </div>
+        </div>
+        <div class="why__item">
+          <img src="./assets/images/icons/path.svg" alt="" />
+          <div>
+            <h3 data-i18n="home.appFlow.steps.1.title">charge</h3>
+            <p data-i18n="home.appFlow.steps.1.body">Stops land where you need them, with detour time and plug details before you roll out.</p>
+          </div>
+        </div>
+        <div class="why__item">
+          <img src="./assets/images/icons/bicycle.svg" alt="" />
+          <div>
+            <h3 data-i18n="home.appFlow.steps.2.title">ride</h3>
+            <p data-i18n="home.appFlow.steps.2.body">Weather along the path, not just at the start. Ride further without guessing the finish.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-divider section-divider--into-base" aria-hidden="true">
+    <span class="section-divider__layer section-divider__layer--1"></span>
+    <span class="section-divider__layer section-divider__layer--2"></span>
+    <span class="section-divider__layer section-divider__layer--3"></span>
+  </div>
+</section>

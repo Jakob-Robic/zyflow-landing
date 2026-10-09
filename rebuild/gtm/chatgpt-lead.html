@@ -1,0 +1,18 @@
+<!--
+  GTM Custom HTML — ChatGPT Ads lead on contact_submit
+  Trigger: Custom Event = contact_submit
+  Consent: ad_storage Granted
+  Requires base chatgpt-pixel.html tag already on the page.
+-->
+<script>
+  (function () {
+    if (typeof oaiq !== "function") return;
+    var id = {{Event ID}};
+    oaiq(
+      "measure",
+      "lead_created",
+      { type: "lead" },
+      { event_id: id || undefined }
+    );
+  })();
+</script>

@@ -1,0 +1,54 @@
+<section class="contact-form section" id="message" data-section="contact.form">
+  <div class="contact-form__wrap">
+    <div class="contact-form__intro">
+      <h2 class="contact-form__title" data-i18n="contact.form.title">send a message</h2>
+      <p class="contact-form__lede" data-i18n="contact.form.lede">Whether you want to ask about routing, chargers, partnerships, or just say hi — we’re all ears.</p>
+    </div>
+
+    <form class="contact-form__form" action="#" method="post">
+      <div class="form-row">
+        <div class="field">
+          <label class="field__label" for="contact-first" data-i18n="contact.form.firstName">First name</label>
+          <input class="input" id="contact-first" name="firstName" type="text" autocomplete="given-name" required />
+        </div>
+        <div class="field">
+          <label class="field__label" for="contact-last" data-i18n="contact.form.lastName">Last name</label>
+          <input class="input" id="contact-last" name="lastName" type="text" autocomplete="family-name" required />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label class="field__label" for="contact-email" data-i18n="contact.form.email">Email</label>
+          <input class="input" id="contact-email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label class="field__label" for="contact-phone" data-i18n="contact.form.phone">Phone (optional)</label>
+          <input class="input" id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="contact-topic" data-i18n="contact.form.topic">Topic (optional)</label>
+        <div class="select-wrap">
+          <select class="select" id="contact-topic" name="topic">
+            <option value="" data-i18n="contact.form.topicPlaceholder">Choose</option>
+            <option value="routing" data-i18n="contact.form.topics.0">Places &amp; routes</option>
+            <option value="chargers" data-i18n="contact.form.topics.1">List my place</option>
+            <option value="partnership" data-i18n="contact.form.topics.2">Partnership</option>
+            <option value="investors" data-i18n="contact.form.topics.3">Investors</option>
+            <option value="press" data-i18n="contact.form.topics.4">Press</option>
+            <option value="other" data-i18n="contact.form.topics.5">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field__label" for="contact-message" data-i18n="contact.form.message">Message</label>
+        <textarea class="textarea" id="contact-message" name="message" rows="8" required></textarea>
+      </div>
+
+      <button class="btn btn--primary" type="submit" data-i18n="contact.form.submit">Send message</button>
+    </form>
+  </div>
+</section>

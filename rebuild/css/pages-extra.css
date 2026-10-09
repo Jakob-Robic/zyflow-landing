@@ -1,0 +1,62 @@
+/**
+ * Extra layout helpers for business / press pages (and small readability fixes).
+ */
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-gap-6);
+  align-items: start;
+}
+
+.two-up {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
+.step-label {
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  color: var(--color-brand-primary);
+  margin: 0;
+}
+
+.tour-quote__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.tour-aside__list--kit li span:last-child {
+  margin-left: auto;
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  opacity: 0.7;
+}
+
+.tour-meta__box--accent,
+.tour-meta__box--accent .tour-meta__value,
+.tour-meta__box--accent .tour-meta__label,
+.tour-meta__box--accent .step-label {
+  color: var(--color-text-on-accent);
+}
+
+html[data-theme="light"] .tour-aside__title {
+  color: var(--color-text-body-muted);
+}
+
+html[data-theme="light"] .tour-aside__list li {
+  border-bottom-color: var(--color-border-default);
+}
+
+@media (max-width: 1100px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .two-up {
+    grid-template-columns: 1fr !important;
+  }
+}

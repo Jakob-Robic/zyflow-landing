@@ -1,0 +1,37 @@
+/**
+ * Badge motif — small square accent used before labels.
+ */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-3);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  color: var(--color-text-body);
+}
+
+.badge__motif {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background-color: var(--color-brand-primary);
+  border-radius: 1px;
+}
+
+.badge--pill {
+  padding: var(--space-gap-1) var(--space-gap-3);
+  background-color: var(--color-brand-primary);
+  border-radius: var(--button-radius-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--type-small);
+  color: var(--color-text-on-accent);
+}
+
+.badge--pill .badge__motif {
+  display: none;
+}

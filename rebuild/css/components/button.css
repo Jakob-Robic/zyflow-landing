@@ -1,0 +1,61 @@
+/**
+ * Buttons — Figma Base/Button (pill primary).
+ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-gap-2);
+  height: var(--button-height-md);
+  padding-inline: var(--button-padding-md);
+  border-radius: var(--button-radius-md);
+  border: var(--button-stroke-width) solid transparent;
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  font-weight: 600;
+  line-height: var(--leading-body);
+  text-align: center;
+  white-space: nowrap;
+  transition: background-color 160ms ease, color 160ms ease,
+    border-color 160ms ease, opacity 160ms ease;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-neutral-0);
+  outline-offset: 3px;
+}
+
+.btn--primary {
+  background-color: var(--button-bg-primary);
+  color: var(--button-text-primary);
+  border-color: var(--button-stroke-color);
+}
+
+.btn--primary:hover {
+  opacity: 0.92;
+}
+
+.btn--primary:active {
+  opacity: 0.85;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--color-text-body);
+  border: 1.5px solid var(--color-neutral-0);
+}
+
+.btn--secondary:hover {
+  background-color: var(--color-motif-glass-dark);
+}
+
+.btn--sm {
+  height: var(--button-height-sm);
+  padding-inline: var(--button-padding-sm);
+  font-size: var(--type-small);
+}
+
+.btn--block {
+  width: 100%;
+}

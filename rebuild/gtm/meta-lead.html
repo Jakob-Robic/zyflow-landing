@@ -1,0 +1,14 @@
+<!--
+  GTM Custom HTML — Meta Lead on contact_submit
+  Trigger: Custom Event = contact_submit
+  Consent: ad_storage Granted
+  Create a Data Layer Variable "Event ID" → event_id
+  Requires base meta-pixel.html tag already initialized.
+-->
+<script>
+  (function () {
+    if (typeof fbq !== "function") return;
+    var id = {{Event ID}};
+    fbq("track", "Lead", {}, id ? { eventID: id } : {});
+  })();
+</script>

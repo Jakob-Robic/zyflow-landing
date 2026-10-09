@@ -1,0 +1,250 @@
+/**
+ * Tours / Routes page (Figma 4111:3456).
+ */
+
+.tours-hero {
+  position: relative;
+  padding-block: var(--section-pad-md) var(--space-gap-9);
+  overflow: hidden;
+}
+
+.tours-hero__glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(760px, 55vw);
+  height: 708px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to left, #000 40%, transparent 100%),
+    linear-gradient(to bottom, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to left, #000 40%, transparent 100%),
+    linear-gradient(to bottom, #000 55%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.tours-hero__glow img {
+  width: 160%;
+  height: auto;
+  max-width: none;
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  mix-blend-mode: var(--contour-blend);
+  opacity: var(--contour-opacity);
+}
+
+.tours-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.tours-hero__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-gap-8);
+  align-items: center;
+  margin-bottom: var(--space-gap-11);
+}
+
+.tours-hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--type-display);
+  line-height: var(--leading-display);
+  margin: 0 0 var(--space-gap-6);
+}
+
+.tours-hero__lede {
+  max-width: 36rem;
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+  color: var(--color-text-body-muted);
+  margin: 0;
+}
+
+.tours-hero__quals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-2);
+  justify-content: center;
+  align-content: center;
+}
+
+.tours-qual {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-gap-3);
+  background: var(--color-surface-2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-gap-2) var(--space-gap-4) var(--space-gap-2) var(--space-gap-3);
+  font-size: var(--type-body);
+  color: var(--color-text-body-muted);
+  white-space: nowrap;
+}
+
+.tours-qual img {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.tours-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-gap-8);
+}
+
+.tours-filter__label {
+  font-family: var(--font-heading);
+  font-size: var(--type-h4);
+  line-height: var(--leading-h4);
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.tours-filter__links {
+  display: flex;
+  flex: 1;
+  gap: var(--space-gap-4);
+  min-width: 0;
+}
+
+.tours-filter__btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-gap-5);
+  min-height: 72px;
+  padding: var(--space-gap-5);
+  background: var(--color-surface-1);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-heading);
+  font-family: var(--font-heading);
+  font-size: var(--type-h4);
+  line-height: var(--leading-h4);
+  cursor: pointer;
+  transition: background-color 180ms ease, border-color 180ms ease;
+}
+
+.tours-filter__btn img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.tours-filter__btn:hover,
+.tours-filter__btn:focus-visible {
+  background: var(--color-surface-2);
+  border-color: var(--color-surface-2);
+}
+
+.tours-filter__btn.is-active {
+  background: var(--color-surface-2);
+  border-color: var(--color-surface-2);
+}
+
+.tours-grid {
+  padding-block: 0 var(--section-pad-md);
+}
+
+.tours-grid__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-gap-6);
+}
+
+.tours-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-gap-3);
+  margin-bottom: var(--space-gap-5);
+}
+
+.tours-filters[hidden] {
+  display: none;
+}
+
+.tours-filters__chip {
+  cursor: pointer;
+  border: 0;
+}
+
+.tours-filters__chip[hidden] {
+  display: none;
+}
+
+.tours-grid__list .tour-card.is-filtered-out {
+  display: none;
+}
+
+.tours-grid__empty {
+  text-align: center;
+  margin-top: var(--space-gap-9);
+  color: var(--color-text-body-muted);
+  font-size: var(--type-body);
+}
+
+.tours-grid__empty[hidden] {
+  display: none;
+}
+
+.page-tours .section-divider {
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .tours-hero__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-gap-7);
+  }
+
+  .tours-hero__quals {
+    justify-content: flex-start;
+  }
+
+  .tours-filter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-gap-4);
+  }
+
+  .tours-filter__links {
+    flex-wrap: wrap;
+  }
+
+  .tours-filter__btn {
+    flex: 1 1 calc(50% - var(--space-gap-4));
+    min-height: 56px;
+    font-size: var(--type-h5);
+  }
+
+  .tours-grid__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .tours-hero__title {
+    font-size: var(--type-h1);
+  }
+
+  .tours-filter__btn {
+    flex: 1 1 100%;
+  }
+
+  .tours-filter__btn img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tours-grid__list {
+    grid-template-columns: 1fr;
+  }
+
+  .tours-qual {
+    white-space: normal;
+  }
+}
