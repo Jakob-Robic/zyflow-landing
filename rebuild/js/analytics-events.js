@@ -65,6 +65,81 @@
     });
   }
 
+  function linkLabel(el) {
+    if (!el) return "";
+    var aria = el.getAttribute("aria-label");
+    if (aria) return aria.trim();
+    return (el.textContent || "").replace(/\s+/g, " ").trim().slice(0, 80);
+  }
+
+  function ctaLocation(el) {
+    if (!el) return "unknown";
+    if (el.closest("#app-modal")) return "app_modal";
+    if (el.closest(".nav")) return "nav";
+    if (el.closest(".footer")) return "footer";
+    if (el.closest(".announcement")) return "announcement";
+    if (el.closest(".app-banner")) return "app_banner";
+    if (el.closest(".app-stage")) return "app_stage";
+    if (el.closest(".hero")) return "hero";
+    if (el.closest(".features")) return "features";
+    if (el.closest(".tour-hero") || el.closest(".tour-aside")) return "tour";
+    return "page";
+  }
+
+  function storePlatform(href) {
+    if (!href) return "";
+    if (href.indexOf("apps.apple.com") !== -1) return "ios";
+    if (href.indexOf("play.google.com") !== -1) return "android";
+    return "other";
+  }
+
+  /** Download / Get the app CTAs that open the modal (or similar intent). */
+  function pushAppCtaClick(el) {
+    dataLayerPush({
+      event: "app_cta_click",
+      event_id: eventId(),
+      cta_location: ctaLocation(el),
+      cta_label: linkLabel(el),
+      link_url: el.getAttribute("href") || "",
+      oppref: getOppref(),
+    });
+  }
+
+  /** Real App Store / Google Play outbound clicks. */
+  function pushAppStoreClick(el) {
+    var href = el.getAttribute("href") || "";
+    dataLayerPush({
+      event: "app_store_click",
+      event_id: eventId(),
+      store: storePlatform(href),
+      cta_location: ctaLocation(el),
+      cta_label: linkLabel(el),
+      link_url: href,
+      oppref: getOppref(),
+    });
+  }
+
+  function initAppDownloadTracking() {
+    document.addEventListener(
+      "click",
+      function (e) {
+        var open = e.target.closest("[data-app-modal-open]");
+        if (open) {
+          pushAppCtaClick(open);
+          return;
+        }
+
+        var store = e.target.closest(
+          'a[href*="apps.apple.com"], a[href*="play.google.com"]'
+        );
+        if (store) {
+          pushAppStoreClick(store);
+        }
+      },
+      true
+    );
+  }
+
   function isLocalHost() {
     var h = location.hostname;
     return h === "localhost" || h === "127.0.0.1";
@@ -192,6 +267,7 @@
   }
 
   captureOppref();
+  initAppDownloadTracking();
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
       initContactForm();
@@ -205,6 +281,8 @@
   window.ZyflowAnalytics = {
     pushContactSubmit: pushContactSubmit,
     pushNewsletterSubscribe: pushNewsletterSubscribe,
+    pushAppCtaClick: pushAppCtaClick,
+    pushAppStoreClick: pushAppStoreClick,
     getOppref: getOppref,
   };
 })();

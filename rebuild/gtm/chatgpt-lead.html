@@ -1,18 +1,18 @@
 <!--
-  GTM Custom HTML — ChatGPT Ads lead on contact_submit
-  Trigger: Custom Event = contact_submit
-  Consent: ad_storage Granted
-  Requires base chatgpt-pixel.html tag already on the page.
+  GTM → Tags → New → Custom HTML
+  Name: ChatGPT Ads - lead_created
+  Consent settings: Require additional consent → ad_storage
+  Trigger: CE - contact_submit (same Custom Event as GA4)
+  Advanced → Tag Sequencing: Fire ChatGPT Ads - Pixel before this tag
 -->
 <script>
   (function () {
     if (typeof oaiq !== "function") return;
-    var id = {{Event ID}};
     oaiq(
       "measure",
       "lead_created",
-      { type: "lead" },
-      { event_id: id || undefined }
+      { type: "customer_action" },
+      { event_id: "{{dlv - event_id}}" }
     );
   })();
 </script>
