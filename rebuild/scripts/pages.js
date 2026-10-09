@@ -45,7 +45,8 @@ const PAGES = [
     file: "blog.html",
     out: "blog.html",
     path: "/blog",
-    indexable: true,
+    // HIDDEN FOR DEPLOY: Journal — set true when Journal is public again
+    indexable: false,
   },
   ...ARTICLE_PAGES,
   {

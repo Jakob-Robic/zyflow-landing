@@ -129,7 +129,8 @@
         "emailPlaceholder": "E-poštni naslov"
       },
       "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
-      "copyright": "© 2026 Zyflow. Vse pravice pridržane."
+      "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
+      "cookiePreferences": "Nastavitve piškotkov"
     },
     "notFound": {
       "title": "Strani ni mogoče najti",
@@ -732,10 +733,10 @@
     },
     "cookies": {
       "tag": "Posodobljeno",
-      "date": "15. 5. 2026",
-      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "date": "9. 10. 2026",
+      "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
       "title": "politika piškotkov",
-      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v mobilni aplikaciji in na spletnem mestu."
+      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
     }
   },
   "business": {

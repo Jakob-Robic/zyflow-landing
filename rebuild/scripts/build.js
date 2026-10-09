@@ -442,6 +442,8 @@ ${urls.join("\n")}
 Allow: /
 Disallow: /styleguide
 Disallow: /sl/styleguide
+Disallow: /blog
+Disallow: /sl/blog
 
 Sitemap: ${SITE_ORIGIN}/sitemap.xml
 `;
@@ -450,6 +452,42 @@ Sitemap: ${SITE_ORIGIN}/sitemap.xml
   fs.writeFileSync(path.join(DIST, "robots.txt"), robots, "utf8");
   console.log("built sitemap.xml");
   console.log("built robots.txt");
+}
+
+function injectAnalyticsBoot(html) {
+  const noscript = resolveIncludes(
+    "<!-- include:components/gtm-noscript.html -->"
+  );
+  const boot = resolveIncludes(
+    "<!-- include:components/analytics-boot.html -->"
+  );
+
+  if (!html.includes("googletagmanager.com/ns.html")) {
+    html = html.replace(/<body([^>]*)>/i, `<body$1>\n${noscript}`);
+  }
+  if (!html.includes("cookieconsent-config.js")) {
+    html = html.replace(/<\/body>/i, `${boot}\n  </body>`);
+  }
+  return html;
+}
+
+function copyCookieConsentAssets() {
+  const pkgDist = path.join(
+    ROOT,
+    "..",
+    "node_modules",
+    "vanilla-cookieconsent",
+    "dist"
+  );
+  const cssSrc = path.join(pkgDist, "cookieconsent.css");
+  const esmSrc = path.join(pkgDist, "cookieconsent.esm.js");
+  if (!fs.existsSync(cssSrc) || !fs.existsSync(esmSrc)) {
+    throw new Error(
+      "vanilla-cookieconsent not found — run npm install in the repo root"
+    );
+  }
+  fs.copyFileSync(cssSrc, path.join(DIST, "css", "cookieconsent.css"));
+  fs.copyFileSync(esmSrc, path.join(DIST, "js", "cookieconsent.esm.js"));
 }
 
 function buildPage(page, locale, messages) {
@@ -467,6 +505,7 @@ function buildPage(page, locale, messages) {
   html = rewriteInternalLinks(html, locale);
   html = injectLangSwitcher(html, page, locale);
   html = injectDocumentHead(html, page, locale, messages);
+  html = injectAnalyticsBoot(html);
 
   // Ensure body knows locale for CSS/JS if needed
   if (!/\sdata-locale=/.test(html)) {
@@ -505,6 +544,7 @@ function build() {
   copyDir(path.join(ROOT, "assets"), path.join(DIST, "assets"));
   copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
   copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
+  copyCookieConsentAssets();
 
   for (const locale of LOCALES) {
     const messages = messagesByLocale[locale];

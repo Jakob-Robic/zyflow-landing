@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm run build:rebuild",
+  "buildCommand": "npm run build:rebuild:prod",
   "outputDirectory": "rebuild/dist",
   "cleanUrls": true,
   "trailingSlash": false,

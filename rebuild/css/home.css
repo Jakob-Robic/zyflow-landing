@@ -550,9 +550,47 @@ main > section:last-child {
 }
 
 .footer__copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 1rem;
   text-align: center;
   font-size: var(--type-small);
   opacity: 0.7;
+}
+
+.footer__cookie-btn {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.footer__cookie-btn:hover,
+.footer__cookie-btn:focus-visible {
+  opacity: 1;
+  color: var(--color-fg, inherit);
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: var(--type-small);
+}
+
+.form-status[data-state="ok"] {
+  color: var(--color-success, #2d5a3d);
+}
+
+.form-status[data-state="error"] {
+  color: var(--color-danger, #8b2e2e);
 }
 
 .footer__brand {

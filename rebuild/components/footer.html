@@ -10,7 +10,9 @@
         <a href="./index.html" data-i18n="chrome.footer.links.home">Home</a>
         <a href="./tours.html" data-i18n="chrome.footer.links.tours">Tours</a>
         <a href="./about.html" data-i18n="chrome.footer.links.about">about</a>
+        <!-- HIDDEN FOR DEPLOY: Journal — restore when ready
         <a href="./blog.html" data-i18n="chrome.footer.links.journal">journal</a>
+        -->
         <a href="./contact.html" data-i18n="chrome.footer.links.contact">Contact</a>
         <a href="./business.html" data-i18n="chrome.nav.links.business">For businesses</a>
         <a href="./press.html" data-i18n="chrome.footer.links.press">Press &amp; investors</a>
@@ -69,7 +71,17 @@
         </a>
       </div>
     </div>
-    <p class="footer__copy" data-i18n="chrome.footer.copyright">© Copyright Zyflow</p>
+    <p class="footer__copy">
+      <span data-i18n="chrome.footer.copyright">© Copyright Zyflow</span>
+      <button
+        type="button"
+        class="footer__cookie-btn"
+        data-cc="show-preferencesModal"
+        data-i18n="chrome.footer.cookiePreferences"
+      >
+        Cookie preferences
+      </button>
+    </p>
     <div class="footer__brand">
       <img class="footer__brand-logo footer__brand-logo--dark" src="./assets/images/zyflow-logo-nav.svg" alt="Zyflow" />
       <img class="footer__brand-logo footer__brand-logo--light" src="./assets/images/zyflow-logo-nav-dark.svg" alt="Zyflow" />

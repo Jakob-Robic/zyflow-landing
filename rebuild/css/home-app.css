@@ -114,6 +114,32 @@
   min-height: 360px;
 }
 
+.phone--shot .phone__notch {
+  display: none;
+}
+
+.phone--shot .phone__screen,
+.phone--banner.phone--shot .phone__screen {
+  min-height: 0;
+  aspect-ratio: 9 / 19.5;
+  padding: 0;
+  background: #0d0d0d;
+}
+
+.phone-ui--shot {
+  display: block;
+  padding: 0;
+  gap: 0;
+}
+
+.phone-ui__shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
 .app-banner__polaroid {
   position: absolute;
   z-index: 3;
@@ -403,6 +429,10 @@
 
   .phone--banner .phone__screen {
     min-height: 300px;
+  }
+
+  .phone--banner.phone--shot .phone__screen {
+    min-height: 0;
   }
 
   .app-banner__polaroid--1 {

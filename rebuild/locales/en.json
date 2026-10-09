@@ -129,7 +129,8 @@
         "emailPlaceholder": "Email address"
       },
       "company": "Zyflow is made by HERKO d.o.o., Slovenia",
-      "copyright": "© 2026 Zyflow. All rights reserved."
+      "copyright": "© 2026 Zyflow. All rights reserved.",
+      "cookiePreferences": "Cookie preferences"
     },
     "notFound": {
       "title": "Page not found",
@@ -732,10 +733,10 @@
     },
     "cookies": {
       "tag": "Updated",
-      "date": "15. 5. 2026",
-      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "date": "9. 10. 2026",
+      "dateLabel": "Updated 9. 10. 2026 · v1.1",
       "title": "cookie policy",
-      "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu. Essential cookies only on the website today."
+      "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu — including optional analytics and advertising cookies you can control."
     }
   },
   "business": {
