@@ -1,6 +1,6 @@
 # Splošni pogoji uporabe Zyflow
 
-**Različica:** [2.0.0] · **Datum začetka veljavnosti:** [DD. MM. 2026] · Nadomešča različico 1.1.0 z dne 24. 4. 2026
+**Različica:** 2.0.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · Nadomešča različico 1.1.0 z dne 24. 4. 2026
 
 ## 1. Kdo smo in kaj urejajo ti pogoji
 
@@ -22,7 +22,7 @@ Funkcije storitve lahko razvijamo, spreminjamo ali ukinemo. Če bi sprememba na 
 
 ## 3. Kdo lahko uporablja Zyflow: starost 16+ in uporabniški račun
 
-3.1 Za ustvarjanje računa in uporabo storitve morate biti stari **najmanj 16 let**. Z registracijo potrjujete, da izpolnjujete ta pogoj. Če ugotovimo, da račun pripada osebi, mlajši od 16 let, ga bomo izbrisali. [ODVETNIK: potrditi, ali lahko uporabniki, stari 16–17 let, to pogodbo po slovenskem pravu sklenejo sami ali je potrebno soglasje staršev.]
+3.1 Za ustvarjanje računa in uporabo storitve morate biti stari **najmanj 16 let**. Z ustvarjanjem računa potrjujete, da ste stari vsaj 16 let. Če ugotovimo, da račun pripada osebi, mlajši od 16 let, ga bomo izbrisali.
 
 3.2 Registrirate se lahko z e-naslovom ali s prijavo z Apple ali Google. Navedite točne podatke in jih sproti posodabljajte.
 
@@ -69,7 +69,7 @@ Poti lahko izvozite kot datoteke GPX in jih uporabljate za lastno navigacijo na 
 
 6.3 **Licenca, ki nam jo podelite.** Vse pravice na poteh, opisih, fotografijah in drugih vsebinah, ki jih delite (v nadaljevanju: »**vaša vsebina**«), ostanejo vaše. Z deljenjem nam podelite neizključno, brezplačno in prostorsko neomejeno licenco, za čas, ko je vaša vsebina deljena, da jo gostimo, shranjujemo, reproduciramo, tehnično prilagajamo (na primer spremenimo velikost fotografij, ustvarimo slike zemljevidov in statistiko poti), prikazujemo in jo dajemo na voljo uporabnikom v okviru storitve in prek povezav iz nje, kolikor je to potrebno za delovanje, prikaz in promocijo funkcij skupnosti. Drugim uporabnikom dovolite tudi, da si vašo deljeno pot ogledajo, shranijo njeno kopijo in jo uporabljajo za lastno **osebno, nekomercialno** kolesarjenje.
 
-6.4 **Odstranitev.** Deljeno pot ali fotografijo lahko kadar koli odstranite. S tem naša licenca preneha, razen da (a) **kopije, ki so jih drugi uporabniki že shranili, ostanejo v njihovih računih**, (b) lahko preostale kopije ostanejo v varnostnih kopijah do 7 dni in (c) lahko vsebino hranimo, kadar to zahteva zakon ali je potrebno za uveljavljanje oziroma obrambo pravnih zahtevkov. [PREVERITI: kopije, ki so jih shranili drugi uporabniki – aplikacija trenutno navaja »Uporabniki, ki so jo shranili, obdržijo svojo kopijo«.]
+6.4 **Odstranitev.** Deljeno pot ali fotografijo lahko kadar koli odstranite. S tem naša licenca preneha, razen da (a) **kopije, ki so jih drugi uporabniki že shranili, ostanejo v njihovih računih**, (b) lahko preostale kopije ostanejo v varnostnih kopijah do 7 dni in (c) lahko vsebino hranimo, kadar to zahteva zakon ali je potrebno za uveljavljanje oziroma obrambo pravnih zahtevkov.
 
 6.5 **Vaša odgovornost.** Za svojo vsebino odgovarjate sami. Potrjujete, da imate nanjo potrebne pravice (na primer na fotografijah in uvoženih sledeh GPX), da so osebe, prepoznavne na fotografijah, s tem soglašale in da vsebina ne krši zakona ali teh pogojev (točka 9).
 
@@ -79,7 +79,7 @@ Poti lahko izvozite kot datoteke GPX in jih uporabljate za lastno navigacijo na 
 
 7.2 Prijave krajev so drugim uporabnikom prikazane kot signali skupnosti brez vašega imena. Predloge novih ali popravljenih krajev pregleda naša ekipa; o tem, ali in kako jih uporabimo, odločimo sami.
 
-7.3 S prijavo ali predlogom nam podelite neizključno, brezplačno, prostorsko neomejeno, **trajno in nepreklicno** licenco za uporabo, prilagajanje, združevanje in objavo dejstvenih podatkov (lokacija, lastnosti, stanje) v naši bazi krajev, tudi po izbrisu vašega računa (takrat brez povezave z vami). Za opombe in fotografije, ki jih dodate, velja licenca iz točke 6.3; izbrišejo se skupaj z vašim računom. [ODVETNIK: potrditi, ali je trajna licenca za dejstvene podatke o krajih do potrošnikov sprejemljiva; pri podatkih, izpeljanih iz OpenStreetMap, je treba spoštovati licenco ODbL.]
+7.3 S prijavo ali predlogom nam podelite neizključno, brezplačno, prostorsko neomejeno, **trajno in nepreklicno** licenco za uporabo, prilagajanje, združevanje in objavo dejstvenih podatkov (lokacija, lastnosti, stanje) v naši bazi krajev, tudi po izbrisu vašega računa (takrat brez povezave z vami). Za opombe in fotografije, ki jih dodate, velja licenca iz točke 6.3; izbrišejo se skupaj z vašim računom.
 
 ## 8. Kolesarski potni list
 
@@ -100,9 +100,9 @@ Ne smete:
 
 ## 10. Prijava vsebin in moderiranje
 
-10.1 Fotografije lahko prijavite v aplikaciji (»Prijavi fotografijo«) ali nam pišete na [legal@zyflow.eu](mailto:legal@zyflow.eu), če menite, da je vsebina nezakonita ali krši te pogoje. Pojasnite razlog, navedite, kje je vsebina, ter svoje ime in e-naslov (razen pri prijavah gradiva o spolni zlorabi otrok). Ta e-naslov je tudi naša enotna kontaktna točka za uporabnike in organe po Aktu o digitalnih storitvah EU.
+10.1 Fotografije lahko prijavite v aplikaciji (»Prijavi fotografijo«). Za prijavo česar koli drugega, na primer deljene poti, opisa ali kraja, ali če nas želite opozoriti na vsebino, za katero menite, da je nezakonita ali krši te pogoje, nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu). Pojasnite razlog, navedite, kje je vsebina, ter svoje ime in e-naslov (razen pri prijavah gradiva o spolni zlorabi otrok). Ta e-naslov je tudi naša enotna kontaktna točka za uporabnike in organe po Aktu o digitalnih storitvah EU.
 
-10.2 Prijave skrbno pregledamo in lahko vsebino skrijemo ali odstranimo, omejimo funkcije ali začasno onemogočimo račun. Fotografije z več prijavami se lahko do pregleda samodejno skrijejo. [PREVERITI: prag in ali je moderiranje samodejno.]
+10.2 Prijave skrbno pregledamo in lahko vsebino skrijemo ali odstranimo, omejimo funkcije ali začasno onemogočimo račun. Fotografije, ki jih je prijavilo več uporabnikov, se lahko do pregleda samodejno skrijejo.
 
 10.3 Če odstranimo ali omejimo vašo vsebino ali račun, vas obvestimo o razlogih, razen če nam to prepoveduje zakon ali gre za neželeno pošto. Odločitev lahko izpodbijate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu); ponovno jo bomo pregledali in vam odgovorili. Uporabite lahko tudi organe za izvensodno reševanje sporov ali sodišča.
 
@@ -112,7 +112,7 @@ Ne smete:
 
 11.1 Storitev uporablja podatke in storitve tretjih oseb, med drugim OpenStreetMap (© sodelavci OpenStreetMap, licenca Open Database License), MapTiler, Photon (komoot), Nominatim, GraphHopper, Open-Meteo, DeepL, javne ponudnike prometnih informacij in partnerje. Nekatere izpostavljene poti zagotavljajo tretje osebe in so ustrezno označene. Navedbe virov so prikazane v aplikaciji.
 
-11.2 **Povezave za nastanitve (Stay22).** Pri nekaterih krajih aplikacija prikazuje povezavo za rezervacijo našega partnerja Stay22. **Gre za provizijske (affiliate) povezave: če prek njih rezervirate, lahko prejmemo provizijo**, za vas pa to ne pomeni dodatnih stroškov. Pogodba o rezervaciji se sklene izključno med vami in ponudnikom nastanitve ali rezervacijske storitve po njegovih pogojih. Nismo stranka te pogodbe in ne odgovarjamo za cene, razpoložljivost ali izpolnitev. [PREVERITI: ali mora biti povezava ali gumb vidno označen tudi kot »Oglas« / »Provizijska povezava«.]
+11.2 **Povezave za nastanitve (Stay22).** Pri nekaterih krajih aplikacija prikazuje povezavo za rezervacijo našega partnerja Stay22. **Povezave do storitve Stay22 so lahko provizijske (affiliate) povezave: če prek njih rezervirate, lahko prejmemo provizijo**, za vas pa to ne pomeni dodatnih stroškov. Pogodba o rezervaciji se sklene izključno med vami in ponudnikom nastanitve ali rezervacijske storitve po njegovih pogojih. Nismo stranka te pogodbe in ne odgovarjamo za cene, razpoložljivost ali izpolnitev.
 
 11.3 Za povezave do tretjih oseb in njihove storitve (vključno s prijavo z Apple ali Google in trgovinami z aplikacijami) veljajo njihovi pogoji in pravilniki o zasebnosti. Omemba kraja, podjetja ali ponudnika ne pomeni priporočila.
 
@@ -122,15 +122,15 @@ Ne smete:
 
 12.2 **Neomejeno odgovarjamo** za škodo, povzročeno namenoma ali iz hude malomarnosti, za škodo zaradi poškodbe življenja, telesa ali zdravja, ki jo povzročimo po svoji krivdi, ter kadar odgovornosti po prisilnih predpisih ni mogoče izključiti ali omejiti (vključno s pravili o odgovornosti za proizvode).
 
-12.3 V primeru **navadne (lahke) malomarnosti** odgovarjamo samo za kršitev bistvenih pogodbenih obveznosti in samo za škodo, ki je bila tipična in predvidljiva ob začetku uporabe storitve. [ODVETNIK: potrditi, ali je ta omejitev do potrošnikov veljavna po Obligacijskem zakoniku (OZ, 242. člen) in ZVPot-1, sicer jo odstraniti.]
+12.3 V primerih, ki niso navedeni v točki 12.2, odgovarjamo po splošnih pravilih prava. Nobeno določilo teh pogojev ne omejuje ali izključuje obveznih pravic potrošnikov. Omejitev odgovornosti za navadno malomarnost velja samo za poslovne uporabnike (točka 15.4).
 
-12.4 Ne odgovarjamo za škodo, ki nastane, ker niste ravnali v skladu s točko 5.2, zaradi ravnanj drugih uporabnikov ali zaradi podatkov, storitev ali ponudnikov rezervacij tretjih oseb, razen če odgovarjamo po točki 12.2.
+12.4 Ne odgovarjamo za škodo, kolikor je nastala zato, ker niste ravnali v skladu s točko 5.2, zaradi ravnanj drugih uporabnikov ali zaradi podatkov, storitev ali ponudnikov rezervacij tretjih oseb, za katere po zakonu ne odgovarjamo. To ne velja, kadar odgovarjamo po točki 12.2 ali po obveznih predpisih.
 
 12.5 Če ste potrošnik, nam odgovarjate samo za škodo, ki jo krivdno povzročite s kršitvijo teh pogojev, po splošnih pravilih.
 
 ## 13. Prenehanje pogodbe: začasna onemogočitev in izbris
 
-13.1 **Z vaše strani.** Pogodbo lahko kadar koli prekinete z izbrisom računa v aplikaciji (Nastavitve → [NATANČNA POT V MENIJU, NPR. »RAČUN« → »IZBRIŠI RAČUN«]), na spletu na [URL SPLETNE STRANI ZA IZBRIS RAČUNA] ali po e-pošti na [legal@zyflow.eu](mailto:legal@zyflow.eu). Kaj se zgodi z vašimi podatki, pojasnjuje Politika zasebnosti.
+13.1 **Z vaše strani.** Pogodbo lahko kadar koli prekinete z izbrisom računa v aplikaciji (zavihek Profil → ikona zobnika (Nastavitve) → Izbriši račun), na spletu na [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna) ali po e-pošti na [legal@zyflow.eu](mailto:legal@zyflow.eu). Kaj se zgodi z vašimi podatki, pojasnjuje Politika zasebnosti.
 
 13.2 **Z naše strani.** Pogodbo lahko iz kateregakoli razloga odpovemo z vsaj **30-dnevnim** odpovednim rokom po e-pošti ali v aplikaciji, na primer če storitev ukinemo.
 
@@ -144,13 +144,13 @@ Aplikacija, programska oprema, oblikovanje, ime in logotip Zyflow, naša besedil
 
 ## 15. Partnerski portal (poslovni uporabniki)
 
-15.1 Podjetja (na primer nastanitve, restavracije, kavarne, upravljavci polnilnic) lahko zaprosijo za dostop do partnerskega portala Zyflow, da prevzamejo svoj kraj in urejajo njegove podatke. Partnerski dostop odobrimo po lastni presoji po pregledu in je trenutno brezplačen. [PREVERITI: URL portala, brezplačnost in funkcije.]
+15.1 Podjetja (na primer nastanitve, restavracije, kavarne, upravljavci polnilnic) lahko zaprosijo za dostop do partnerskega portala Zyflow, da prevzamejo svoj kraj in urejajo njegove podatke. Partnerski dostop odobrimo po lastni presoji po pregledu. Če za partnerje uvedemo plačilo, vas bomo o tem vnaprej obvestili in bo veljalo samo, če se z njim strinjate.
 
 15.2 Oseba, ki zaprosi za dostop, potrjuje, da je pooblaščena za zastopanje podjetja. Partnerji morajo skrbeti, da so njihovi podatki točni in zakoniti, urejajo lahko le kraje, ki jih smejo zastopati, ter odgovarjajo za vsebine, ki jih objavijo (vključno s cenami, delovnim časom in ponudbami), in za spoštovanje predpisov o varstvu potrošnikov in oglaševanju.
 
 15.3 Partnerji nam za vsebine, ki jih objavijo prek portala, podelijo licenco iz točke 6.3, dokler je kraj vključen v storitev. Partnerske vsebine, ki so netočne ali kršijo te pogoje, lahko uredimo, zavrnemo ali odstranimo, partnerski dostop pa lahko z obrazložitvijo odvzamemo.
 
-15.4 Za poslovne uporabnike pravila o varstvu potrošnikov ne veljajo. V obsegu, ki ga dopušča zakon, je naša odgovornost do poslovnih uporabnikov za navadno malomarnost izključena in v vsakem primeru omejena na [ZNESEK] EUR; točka 12.2 se še vedno uporablja. [ODVETNIK: preveriti obveznosti po Uredbi (EU) 2019/1150 (P2B), če vnosi ali povezave za rezervacije pomenijo spletno posredniško storitev; razmisliti o ločenih partnerskih pogojih.]
+15.4 Za poslovne uporabnike pravila o varstvu potrošnikov ne veljajo. V obsegu, ki ga dopušča zakon, je naša odgovornost do poslovnih uporabnikov za navadno malomarnost izključena in v vsakem primeru omejena na 500 EUR ali znesek, ki ga je poslovni uporabnik plačal nam v 12 mesecih pred škodnim dogodkom, odvisno od tega, kateri je višji; točka 12.2 se še vedno uporablja.
 
 ## 16. Spremembe pogojev
 
@@ -162,9 +162,9 @@ Pogoje lahko spremenimo, kadar za to obstaja utemeljen razlog, na primer nove fu
 
 17.2 Če ste potrošnik, lahko postopek sprožite pred sodišči v Sloveniji ali v državi EU, v kateri prebivate; mi lahko proti vam postopek sprožimo le pred sodišči države vašega prebivališča. Za poslovne uporabnike je pristojno sodišče v Kranju.
 
-17.3 Pritožbe si prizadevamo rešiti sporazumno: pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu); odgovorili bomo v [8] dneh in si prizadevali pritožbo rešiti v 30 dneh.
+17.3 Pritožbe si prizadevamo rešiti sporazumno: pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu); odgovorili bomo v 8 dneh in si prizadevali pritožbo rešiti v 30 dneh.
 
-17.4 **Izvensodno reševanje sporov.** [MOŽNOST A: Nobenega izvajalca izvensodnega reševanja potrošniških sporov ne priznavamo kot pristojnega za reševanje sporov z nami.] [MOŽNOST B: Spore lahko predložite [IME IZVAJALCA IRPS].] Informacije o izvajalcih izvensodnega reševanja potrošniških sporov v Sloveniji so na voljo na spletni strani ministrstva, pristojnega za varstvo potrošnikov [URL]. [ODVETNIK: potrditi zahtevane informacije po ZIsRPS. Platforma EU za spletno reševanje sporov (SRS), navedena v različici 1.1.0, je od 20. 7. 2025 ukinjena in povezave nanjo ne smemo več navajati.]
+17.4 **Izvensodno reševanje sporov.** Nobenega izvajalca izvensodnega reševanja potrošniških sporov ne priznavamo kot pristojnega. Vsak spor z nami je mogoče predložiti pristojnemu sodišču v Kranju, pri čemer ostaja nedotaknjena obvezna pravica potrošnikov, da postopek sprožijo pri sodišču v kraju svojega prebivališča (točka 17.2).
 
 ## 18. Končne določbe
 
@@ -172,7 +172,7 @@ Pogoje lahko spremenimo, kadar za to obstaja utemeljen razlog, na primer nove fu
 
 18.2 To pogodbo lahko prenesemo na družbo, ki prevzame storitev, če se vaše pravice s tem ne zmanjšajo; o tem vas bomo vnaprej obvestili, račun pa lahko izbrišete. Svojih pravic brez našega soglasja ne smete prenesti.
 
-18.3 Ti pogoji so na voljo v angleščini in slovenščini. Obe različici sta enakovredni; za potrošnike v Sloveniji ima v primeru razhajanj prednost slovenska različica. [ODVETNIK: potrditi.]
+18.3 Ti pogoji so na voljo v angleščini in slovenščini. Obe različici sta enakovredni; za potrošnike v Sloveniji ima v primeru razhajanj prednost slovenska različica.
 
 18.4 V obsegu, ki ga dopušča zakon, ne odgovarjamo za zamude ali neizpolnitev zaradi dogodkov zunaj našega razumnega nadzora (na primer naravnih nesreč, izpadov omrežij ali ponudnikov tretjih oseb).
 
