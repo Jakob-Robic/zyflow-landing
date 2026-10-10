@@ -48,6 +48,30 @@
         "title": "Zyflow — Terms of Service",
         "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
       },
+      "legal-pages-privacy-policy": {
+        "title": "Zyflow — Politika zasebnosti",
+        "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
+      },
+      "legal-pages-terms": {
+        "title": "Zyflow — Pogoji uporabe",
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
+      },
+      "legal-pages-cookie-policy": {
+        "title": "Zyflow — Politika piškotkov",
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljate."
+      },
+      "legal-pages-impressum": {
+        "title": "Zyflow — Impressum",
+        "description": "Pravno obvestilo in podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+      },
+      "legal-pages-delete-account": {
+        "title": "Zyflow — Delete your account",
+        "description": "How to request deletion of your Zyflow account and what happens to your data."
+      },
+      "legal-pages-izbris-racuna": {
+        "title": "Zyflow — Izbris računa",
+        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
+      },
       "styleguide": {
         "title": "Zyflow — Design System Styleguide",
         "description": "Internal design tokens and components for the Zyflow rebuild."
@@ -112,7 +136,11 @@
         "journal": "Dnevnik",
         "contact": "Kontakt",
         "press": "Mediji in vlagatelji",
-        "legal": "Pravno"
+        "legal": "Pravno",
+        "privacy": "Zasebnost",
+        "terms": "Pogoji",
+        "cookies": "Piškotki",
+        "impressum": "Impressum"
       },
       "cats": {
         "kayak": "Tura",
@@ -707,29 +735,41 @@
     "nav": {
       "terms": "Pogoji uporabe",
       "privacy": "Politika zasebnosti",
-      "cookies": "Politika piškotkov"
+      "cookies": "Politika piškotkov",
+      "impressum": "Impressum",
+      "deletion": "Izbris računa"
     },
     "hub": {
       "tag": "Pravno",
       "title": "pravno",
-      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
+      "lede": "Politike za aplikacijo in spletno mesto Zyflow. Upravlja HERKO d.o.o.",
       "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
-      "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
-      "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji."
+      "privacyLede": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke.",
+      "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji.",
+      "impressumLede": "Podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+    },
+    "doc": {
+      "tag": "Posodobljeno"
+    },
+    "redirect": {
+      "body": "Ta stran se je prestavila. Nadaljujte na trenutno različico."
+    },
+    "impressum": {
+      "dateLabel": "Osnutek — označbe [PLACEHOLDER] so še odprte"
     },
     "terms": {
       "tag": "Posodobljeno",
       "date": "15. 5. 2026",
-      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "dateLabel": "Posodobljeno 15. 5. 2026 · v1.0",
       "title": "pogoji uporabe",
-      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+      "lede": "Ti Pogoji uporabe predstavljajo pravno zavezujoč sporazum med vami in HERKO d.o.o. Pred uporabo Zyflow jih pozorno preberite."
     },
     "privacy": {
       "tag": "Posodobljeno",
       "date": "30. 6. 2026",
       "dateLabel": "Updated 30. 6. 2026 · v1.1",
       "title": "politika zasebnosti",
-      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+      "lede": "Ta Politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira, ko uporabljate Zyflow, zakaj jih zbira, kako jih uporablja in katere pravice imate po GDPR."
     },
     "cookies": {
       "tag": "Posodobljeno",

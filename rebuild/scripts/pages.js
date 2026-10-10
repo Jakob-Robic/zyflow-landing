@@ -78,25 +78,95 @@ const PAGES = [
     indexable: true,
   },
   {
+    id: "legal-pages-privacy-policy",
+    file: "legal-doc.html",
+    out: "legal-pages/privacy-policy.html",
+    path: "/legal-pages/privacy-policy",
+    indexable: true,
+    legalDoc: "privacy-policy",
+    legalKey: "privacy",
+  },
+  {
+    id: "legal-pages-terms",
+    file: "legal-doc.html",
+    out: "legal-pages/terms.html",
+    path: "/legal-pages/terms",
+    indexable: false,
+    legalDoc: "terms",
+    legalKey: "terms",
+  },
+  {
+    id: "legal-pages-cookie-policy",
+    file: "legal-doc.html",
+    out: "legal-pages/cookie-policy.html",
+    path: "/legal-pages/cookie-policy",
+    indexable: false,
+    legalDoc: "cookie-policy",
+    legalKey: "cookies",
+  },
+  {
+    id: "legal-pages-impressum",
+    file: "legal-doc.html",
+    out: "legal-pages/impressum.html",
+    path: "/legal-pages/impressum",
+    indexable: false,
+    legalDoc: "impressum",
+    legalKey: "impressum",
+  },
+  {
+    id: "legal-pages-delete-account",
+    file: "legal-doc.html",
+    out: "legal-pages/delete-account.html",
+    path: "/legal-pages/delete-account",
+    indexable: false,
+    locales: ["en"],
+    legalDoc: "account-deletion",
+    legalKey: "deletion",
+    dropUnpublishedDeletion: true,
+    langSwitch: {
+      en: "/legal-pages/delete-account",
+      sl: "/legal-pages/izbris-racuna",
+    },
+  },
+  {
+    id: "legal-pages-izbris-racuna",
+    file: "legal-doc.html",
+    out: "legal-pages/izbris-racuna.html",
+    path: "/legal-pages/izbris-racuna",
+    indexable: false,
+    locales: ["sl"],
+    localePrefix: false,
+    legalDoc: "account-deletion",
+    legalKey: "deletion",
+    dropUnpublishedDeletion: true,
+    langSwitch: {
+      en: "/legal-pages/delete-account",
+      sl: "/legal-pages/izbris-racuna",
+    },
+  },
+  {
     id: "legal-privacy",
-    file: "legal-privacy.html",
+    file: "legal-redirect.html",
     out: "legal-privacy.html",
     path: "/legal-privacy",
-    indexable: true,
+    indexable: false,
+    redirectTo: "/legal-pages/privacy-policy",
   },
   {
     id: "legal-cookies",
-    file: "legal-cookies.html",
+    file: "legal-redirect.html",
     out: "legal-cookies.html",
     path: "/legal-cookies",
-    indexable: true,
+    indexable: false,
+    redirectTo: "/legal-pages/cookie-policy",
   },
   {
     id: "legal-terms",
-    file: "legal-terms.html",
+    file: "legal-redirect.html",
     out: "legal-terms.html",
     path: "/legal-terms",
-    indexable: true,
+    indexable: false,
+    redirectTo: "/legal-pages/terms",
   },
   {
     id: "404",
@@ -119,20 +189,27 @@ function pageLocales(page) {
   return page.locales || LOCALES;
 }
 
-function localizedPath(pagePath, locale) {
+function localizedPath(pagePath, locale, page) {
+  if (page && page.localePrefix === false) return pagePath;
   if (locale === DEFAULT_LOCALE) return pagePath;
   if (pagePath === "/") return `/${locale}`;
   return `/${locale}${pagePath}`;
 }
 
+function pageForPath(pagePath) {
+  return PAGES.find((p) => p.path === pagePath);
+}
+
 function absoluteUrl(pagePath, locale) {
-  const p = localizedPath(pagePath, locale);
+  const page = pageForPath(pagePath);
+  const p = localizedPath(pagePath, locale, page);
   return p === "/" ? `${SITE_ORIGIN}/` : `${SITE_ORIGIN}${p}`;
 }
 
 function hrefForPage(pagePath, locale) {
   // Clean URLs for production / serve.py; keep trailing-slash-free.
-  return localizedPath(pagePath, locale);
+  const page = pageForPath(pagePath);
+  return localizedPath(pagePath, locale, page);
 }
 
 module.exports = {

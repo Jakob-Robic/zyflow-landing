@@ -48,6 +48,30 @@
         "title": "Zyflow — Terms of Service",
         "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
       },
+      "legal-pages-privacy-policy": {
+        "title": "Zyflow — Privacy Policy",
+        "description": "How HERKO d.o.o. collects, uses, stores, and protects your personal data when you use Zyflow."
+      },
+      "legal-pages-terms": {
+        "title": "Zyflow — Terms of Service",
+        "description": "Terms of Service for Zyflow: usage rules, subscriptions, liability, and legal information."
+      },
+      "legal-pages-cookie-policy": {
+        "title": "Zyflow — Cookie Policy",
+        "description": "How Zyflow uses cookies and similar technologies on zyflow.eu, and how you can control your preferences."
+      },
+      "legal-pages-impressum": {
+        "title": "Zyflow — Impressum",
+        "description": "Legal notice and company details for HERKO d.o.o., the operator of Zyflow."
+      },
+      "legal-pages-delete-account": {
+        "title": "Zyflow — Delete your account",
+        "description": "How to request deletion of your Zyflow account and what happens to your data."
+      },
+      "legal-pages-izbris-racuna": {
+        "title": "Zyflow — Izbris računa",
+        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
+      },
       "styleguide": {
         "title": "Zyflow — Design System Styleguide",
         "description": "Internal design tokens and components for the Zyflow rebuild."
@@ -112,7 +136,11 @@
         "journal": "Journal",
         "contact": "Contact",
         "press": "Press & investors",
-        "legal": "Legal"
+        "legal": "Legal",
+        "privacy": "Privacy",
+        "terms": "Terms",
+        "cookies": "Cookies",
+        "impressum": "Impressum"
       },
       "cats": {
         "kayak": "Tour",
@@ -707,7 +735,9 @@
     "nav": {
       "terms": "Terms of Service",
       "privacy": "Privacy Policy",
-      "cookies": "Cookie Policy"
+      "cookies": "Cookie Policy",
+      "impressum": "Impressum",
+      "deletion": "Delete account"
     },
     "hub": {
       "tag": "Legal",
@@ -715,7 +745,17 @@
       "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
       "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
       "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
-      "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app."
+      "cookiesLede": "How Zyflow uses cookies and similar technologies on zyflow.eu and in the app.",
+      "impressumLede": "Company details for HERKO d.o.o., the operator of Zyflow."
+    },
+    "doc": {
+      "tag": "Updated"
+    },
+    "redirect": {
+      "body": "This page has moved. Continue to the current version."
+    },
+    "impressum": {
+      "dateLabel": "Draft — placeholders remain"
     },
     "terms": {
       "tag": "Updated",

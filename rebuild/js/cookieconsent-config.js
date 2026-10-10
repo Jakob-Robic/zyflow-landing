@@ -66,8 +66,8 @@ function siteLocale() {
   return "en";
 }
 
-const cookiePolicyPath = siteLocale() === "sl" ? "/sl/legal-cookies" : "/legal-cookies";
-const privacyPolicyPath = siteLocale() === "sl" ? "/sl/legal-privacy" : "/legal-privacy";
+const cookiePolicyPath = siteLocale() === "sl" ? "/sl/legal-pages/cookie-policy" : "/legal-pages/cookie-policy";
+const privacyPolicyPath = siteLocale() === "sl" ? "/sl/legal-pages/privacy-policy" : "/legal-pages/privacy-policy";
 
 CookieConsent.run({
   mode: "opt-in",

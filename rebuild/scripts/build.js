@@ -24,6 +24,7 @@ const {
   localizedPath,
 } = require("./pages");
 const { articleBySlug, blogCardI18n } = require("./articles");
+const { renderLegalMarkdown, wrapPlaceholders } = require("./legal-markdown");
 
 const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -286,11 +287,23 @@ function injectArticleContent(html, articleSlug) {
     .replace("<!-- ARTICLE_MORE -->", more);
 }
 
+function pageLangHrefs(page) {
+  if (page.langSwitch) {
+    return {
+      en: page.langSwitch.en,
+      sl: page.langSwitch.sl,
+    };
+  }
+  return {
+    en: hrefForPage(page.path, "en"),
+    sl: pageLocales(page).includes("sl")
+      ? hrefForPage(page.path, "sl")
+      : hrefForPage("/", "sl"),
+  };
+}
+
 function injectLangSwitcher(html, page, locale) {
-  const enHref = hrefForPage(page.path, "en");
-  const slHref = pageLocales(page).includes("sl")
-    ? hrefForPage(page.path, "sl")
-    : hrefForPage("/", "sl");
+  const { en: enHref, sl: slHref } = pageLangHrefs(page);
 
   const switcher = `
       <div class="lang-switch" role="group" aria-label="Language">
@@ -324,21 +337,19 @@ function buildHead(page, locale, messages) {
   const ogLocale = OG_LOCALES[locale] || "en_US";
 
   const localesForPage = pageLocales(page);
-  const hreflang = localesForPage
-    .map(
-      (lang) =>
-        `<link rel="alternate" hreflang="${lang}" href="${absoluteUrl(page.path, lang)}" />`
-    )
-    .concat(
-      localesForPage.includes(DEFAULT_LOCALE)
-        ? [
-            `<link rel="alternate" hreflang="x-default" href="${absoluteUrl(
-              page.path,
-              DEFAULT_LOCALE
-            )}" />`,
-          ]
-        : []
-    )
+  const hrefs = page.langSwitch
+    ? {
+        en: `${SITE_ORIGIN}${page.langSwitch.en}`,
+        sl: `${SITE_ORIGIN}${page.langSwitch.sl}`,
+      }
+    : Object.fromEntries(
+        localesForPage.map((lang) => [lang, absoluteUrl(page.path, lang)])
+      );
+  const hreflangLangs = page.langSwitch ? LOCALES : localesForPage;
+  const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[hreflangLangs[0]];
+  const hreflang = hreflangLangs
+    .map((lang) => `<link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`)
+    .concat([`<link rel="alternate" hreflang="x-default" href="${defaultHref}" />`])
     .join("\n");
 
   const ogLocaleAlts = localesForPage
@@ -490,6 +501,46 @@ function copyCookieConsentAssets() {
   fs.copyFileSync(esmSrc, path.join(DIST, "js", "cookieconsent.esm.js"));
 }
 
+function injectLegalDocument(html, page, locale) {
+  if (!page.legalDoc) return html;
+  const sourcePath = path.join(ROOT, "legal-src", `${page.legalDoc}.${locale}.md`);
+  if (!fs.existsSync(sourcePath)) {
+    throw new Error(`Missing legal source: legal-src/${page.legalDoc}.${locale}.md`);
+  }
+  const rendered = renderLegalMarkdown(read(sourcePath), {
+    locale,
+    dropUnpublishedDeletion: Boolean(page.dropUnpublishedDeletion),
+  });
+  const title = rendered.meta.title || "";
+  const lede = rendered.meta.lede || "";
+  const date = rendered.meta.date || "";
+
+  html = html.replace(/\sdata-legal=""/g, ` data-legal="${page.legalKey || page.legalDoc}"`);
+  html = html.replace(
+    /<span data-legal-date><\/span>/,
+    date ? `<span>${wrapPlaceholders(escapeHtml(date))}</span>` : ""
+  );
+  html = html.replace(
+    /<h1 class="legal-doc__title" data-legal-title><\/h1>/,
+    title ? `<h1 class="legal-doc__title">${wrapPlaceholders(escapeHtml(title))}</h1>` : ""
+  );
+  html = html.replace(
+    /<p class="legal-doc__lede" data-legal-lede hidden><\/p>/,
+    lede ? `<p class="legal-doc__lede">${wrapPlaceholders(escapeHtml(lede))}</p>` : ""
+  );
+  html = html.replace("<!-- LEGAL_TOC -->", rendered.toc);
+  html = html.replace("<!-- LEGAL_BODY -->", rendered.html);
+  return html;
+}
+
+function injectRedirectTarget(html, page, locale) {
+  if (!page.redirectTo) return html;
+  const dest = page.redirectTo.startsWith("/")
+    ? hrefForPage(page.redirectTo, locale)
+    : page.redirectTo;
+  return html.replaceAll("{{redirectTo}}", dest);
+}
+
 function buildPage(page, locale, messages) {
   const sourcePath = path.join(PAGES_DIR, page.file);
   if (!fs.existsSync(sourcePath)) {
@@ -500,6 +551,8 @@ function buildPage(page, locale, messages) {
     html = injectArticleContent(html, page.articleSlug);
   }
   html = resolveIncludes(html);
+  html = injectLegalDocument(html, page, locale);
+  html = injectRedirectTarget(html, page, locale);
   html = applyI18n(html, messages);
   html = rewriteAssetPaths(html);
   html = rewriteInternalLinks(html, locale);
@@ -515,13 +568,14 @@ function buildPage(page, locale, messages) {
   }
 
   const outDir =
-    locale === DEFAULT_LOCALE ? DIST : path.join(DIST, locale);
+    locale === DEFAULT_LOCALE || page.localePrefix === false
+      ? DIST
+      : path.join(DIST, locale);
   ensureDir(outDir);
   const outFile = path.join(outDir, page.out);
   ensureDir(path.dirname(outFile));
   fs.writeFileSync(outFile, html, "utf8");
-  const label =
-    locale === DEFAULT_LOCALE ? page.out : path.join(locale, page.out);
+  const label = path.relative(DIST, outFile);
   console.log(`built ${label}`);
 }
 
