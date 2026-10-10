@@ -1,6 +1,6 @@
 # Zyflow Terms of Service
 
-**Version:** [2.0.0] · **Effective date:** [DD. MM. 2026] · Replaces version 1.1.0 of 24 April 2026
+**Version:** 2.0.0 · **Effective date:** 10 October 2026 · Replaces version 1.1.0 of 24 April 2026
 
 ## 1. Who we are and what these Terms cover
 
@@ -22,7 +22,7 @@ We may develop, change or discontinue features. If a change significantly affect
 
 ## 3. Who may use Zyflow: age 16+ and your account
 
-3.1 You must be **at least 16 years old** to create an account and use the Service. By registering you confirm that you meet this requirement. If we learn that an account belongs to someone under 16, we will delete it. [LAWYER: confirm whether users aged 16–17 can conclude this contract alone under Slovenian law, or whether a parent's consent is needed.]
+3.1 You must be **at least 16 years old** to create an account and use the Service. By creating an account you confirm that you are at least 16 years old. If we learn that an account belongs to someone under 16, we will delete it.
 
 3.2 You can register with your email address or with Sign in with Apple or Google. Please provide accurate information and keep it up to date.
 
@@ -69,7 +69,7 @@ You may export routes as GPX files and use them for your own navigation on any d
 
 6.3 **Licence you grant us.** You keep all rights to the routes, descriptions, photos and other content you share ("**your content**"). By sharing, you grant us a non-exclusive, royalty-free, worldwide licence, for as long as your content is shared, to host, store, reproduce, adapt technically (for example resize photos, generate map images and route statistics), display and make your content available to users within the Service and in links shared from it, as far as needed to operate, show and promote the community features of the Service. You also allow other users to view your shared route, save a copy and use it for their own **personal, non-commercial** riding.
 
-6.4 **Removal.** You can remove a shared route or photo at any time. Our licence then ends, except that (a) **copies that other users have already saved remain in their accounts**, (b) residual copies may remain in backups for up to 7 days, and (c) we may keep content as required by law or to defend legal claims. [VERIFY: copies saved by other users – the app currently says "Users who saved it will keep their copy".]
+6.4 **Removal.** You can remove a shared route or photo at any time. Our licence then ends, except that (a) **copies that other users have already saved remain in their accounts**, (b) residual copies may remain in backups for up to 7 days, and (c) we may keep content as required by law or to defend legal claims.
 
 6.5 **Your responsibility.** You are responsible for your content. You confirm that you have the necessary rights to it (for example to photos and to imported GPX tracks), that people recognisable in photos have agreed, and that it does not break the law or these Terms (section 9).
 
@@ -79,7 +79,7 @@ You may export routes as GPX files and use them for your own navigation on any d
 
 7.2 Place reports are shown to other users as community signals without your name. Suggestions for new or corrected places are reviewed by our team; we decide whether and how to use them.
 
-7.3 By submitting a report or suggestion you grant us a non-exclusive, royalty-free, worldwide, **perpetual and irrevocable** licence to use, adapt, combine and publish the factual information (location, attributes, status) in our places database, including after you delete your account (then without any link to you). Notes and photos you add are covered by the licence in section 6.3 and are deleted with your account. [LAWYER: confirm a perpetual licence for factual POI data is acceptable for consumers; facts may not be protected anyway, but data contributed to OpenStreetMap-derived data must respect the ODbL.]
+7.3 By submitting a report or suggestion you grant us a non-exclusive, royalty-free, worldwide, **perpetual and irrevocable** licence to use, adapt, combine and publish the factual information (location, attributes, status) in our places database, including after you delete your account (then without any link to you). Notes and photos you add are covered by the licence in section 6.3 and are deleted with your account.
 
 ## 8. Bike passport
 
@@ -100,9 +100,9 @@ You must not:
 
 ## 10. Reporting content and moderation
 
-10.1 You can report photos in the app ("Report photo") or write to [legal@zyflow.eu](mailto:legal@zyflow.eu) to tell us about content you believe is illegal or breaks these Terms. Please explain why, where the content is, and give your name and email (except for reports of child sexual abuse material). This email address is also our single point of contact for users and authorities under the EU Digital Services Act.
+10.1 You can report photos in the app ("Report photo"). To report anything else, for example a shared route, a description or a place, or to tell us about content you believe is illegal or breaks these Terms, write to [legal@zyflow.eu](mailto:legal@zyflow.eu). Please explain why, where the content is, and give your name and email (except for reports of child sexual abuse material). This email address is also our single point of contact for users and authorities under the EU Digital Services Act.
 
-10.2 We review reports diligently and may hide or remove content, limit features or suspend accounts. Photos with several reports may be hidden automatically until we review them. [VERIFY: threshold and whether moderation is automatic.]
+10.2 We review reports diligently and may hide or remove content, limit features or suspend accounts. Photos that have been reported by several users may be hidden automatically until we review them.
 
 10.3 When we remove or restrict your content or account, we will inform you of the reasons, unless the law prevents this or the content is spam. You can contest our decision by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu); we will review it again and reply. You may also use out-of-court dispute settlement bodies or the courts.
 
@@ -112,7 +112,7 @@ You must not:
 
 11.1 The Service uses data and services from third parties, including OpenStreetMap (© OpenStreetMap contributors, Open Database License), MapTiler, Photon (komoot), Nominatim, GraphHopper, Open-Meteo, DeepL, public traffic-information providers and partners. Some featured routes are provided by third parties and are marked as such. Attributions are shown in the app.
 
-11.2 **Accommodation links (Stay22).** For some places the app shows a booking link from our affiliate partner Stay22. **These are affiliate links: if you book through them, we may receive a commission**, at no extra cost to you. The booking contract is concluded only between you and the accommodation or booking provider, under their terms. We are not a party to it and are not responsible for prices, availability or performance. [VERIFY: whether the link or button should also carry a visible "Ad" / "Affiliate" label.]
+11.2 **Accommodation links (Stay22).** For some places the app shows a booking link from our affiliate partner Stay22. **Links to Stay22 may be affiliate links: if you book through them, we may receive a commission**, at no extra cost to you. The booking contract is concluded only between you and the accommodation or booking provider, under their terms. We are not a party to it and are not responsible for prices, availability or performance.
 
 11.3 Links to and services of third parties (including Sign in with Apple or Google and app stores) are subject to their own terms and privacy policies. Mentioning a place, business or provider is not an endorsement.
 
@@ -122,15 +122,15 @@ You must not:
 
 12.2 We are **liable without limitation** for damage caused intentionally or through gross negligence, for injury to life, body or health caused by our fault, and where liability cannot be excluded or limited under mandatory law (including product liability rules).
 
-12.3 In cases of **slight negligence**, we are liable only for breach of essential contractual obligations and only for damage that was typical and foreseeable when you started using the Service. [LAWYER: confirm this limitation is valid towards consumers under the Slovenian Obligations Code (OZ, Art. 242) and ZVPot-1, or remove it.]
+12.3 Outside the cases in section 12.2, we are liable according to the general rules of law. Nothing in these Terms limits or excludes the mandatory rights of consumers. A limitation of liability for slight negligence applies only to business users (section 15.4).
 
-12.4 We are not responsible for damage that results from your failure to follow section 5.2, from the actions of other users, or from third-party data, services or booking providers, except where we are liable under 12.2.
+12.4 We are not responsible for damage to the extent it is caused by your failure to follow section 5.2, by the actions of other users, or by third-party data, services or booking providers for which we are not responsible under the law. This does not apply where we are liable under section 12.2 or under mandatory law.
 
 12.5 If you are a consumer, you are liable to us only for damage you cause culpably by breaching these Terms, according to the general rules of law.
 
 ## 13. Ending the contract: suspension and deletion
 
-13.1 **By you.** You can end the contract at any time by deleting your account in the app (Settings → [EXACT MENU PATH, E.G. "ACCOUNT" → "DELETE ACCOUNT"]), on the web at [WEB ACCOUNT DELETION PAGE URL] or by email to [legal@zyflow.eu](mailto:legal@zyflow.eu). What happens to your data is explained in the Privacy Policy.
+13.1 **By you.** You can end the contract at any time by deleting your account in the app (Profile tab → gear icon (Settings) → Delete account), on the web at [https://www.zyflow.eu/legal-pages/delete-account](https://www.zyflow.eu/legal-pages/delete-account) or by email to [legal@zyflow.eu](mailto:legal@zyflow.eu). What happens to your data is explained in the Privacy Policy.
 
 13.2 **By us.** We may end the contract for any reason with at least **30 days'** notice by email or in the app, for example if we discontinue the Service.
 
@@ -144,13 +144,13 @@ The app, software, design, the Zyflow name and logo, our own texts, curated cont
 
 ## 15. Partner portal (business users)
 
-15.1 Businesses (for example accommodation, restaurants, cafés, charger operators) can request access to the Zyflow partner portal to claim their place and manage its details. Partner access is granted at our discretion after review and is currently free of charge. [VERIFY: portal URL, free of charge, and features.]
+15.1 Businesses (for example accommodation, restaurants, cafés, charger operators) can request access to the Zyflow partner portal to claim their place and manage its details. Partner access is granted at our discretion after review. If we introduce fees for partners, we will inform you in advance and they will apply only if you agree.
 
 15.2 The person requesting access confirms that they are authorised to act for the business. Partners must keep their information accurate and lawful, may only edit places they are entitled to represent, and are responsible for the content they publish (including prices, opening hours and offers) and for complying with consumer and advertising law.
 
 15.3 Partners grant us the licence in section 6.3 for content they publish through the portal, for as long as the place is listed. We may edit, reject or remove partner content that is inaccurate or breaks these Terms, and may revoke partner access with reasons.
 
-15.4 For business users, consumer protection rules do not apply. To the extent permitted by law, our liability towards business users for slight negligence is excluded and in any case limited to EUR [AMOUNT]; section 12.2 still applies. [LAWYER: check P2B Regulation (EU) 2019/1150 obligations if listings or booking links create an online intermediation service; consider separate partner terms.]
+15.4 For business users, consumer protection rules do not apply. To the extent permitted by law, our liability towards business users for slight negligence is excluded and in any case limited to EUR 500 or the amount the business user paid us in the 12 months before the event giving rise to the claim, whichever is higher; section 12.2 still applies.
 
 ## 16. Changes to these Terms
 
@@ -162,9 +162,9 @@ We may change these Terms if there is a valid reason, for example new features, 
 
 17.2 If you are a consumer, you may bring proceedings in the courts of Slovenia or of the EU country where you live; we may sue you only in the courts of your country of residence. For business users, the courts in Kranj, Slovenia have jurisdiction.
 
-17.3 We will try to resolve complaints amicably: please write to [legal@zyflow.eu](mailto:legal@zyflow.eu); we will reply within [8] days and aim to resolve your complaint within 30 days.
+17.3 We will try to resolve complaints amicably: please write to [legal@zyflow.eu](mailto:legal@zyflow.eu); we will reply within 8 days and aim to resolve your complaint within 30 days.
 
-17.4 **Out-of-court dispute resolution.** [OPTION A: We do not recognise any provider of out-of-court consumer dispute resolution as competent for disputes with us.] [OPTION B: Disputes can be referred to [NAME OF ADR PROVIDER].] Consumers can find information on out-of-court dispute resolution providers in Slovenia on the website of the ministry responsible for consumer protection [URL]. [LAWYER: confirm the required ADR information under ZIsRPS. The EU ODR platform referred to in v1.1.0 was discontinued on 20 July 2025 and must no longer be linked.]
+17.4 **Out-of-court dispute resolution.** We do not recognise any provider of out-of-court consumer dispute resolution as competent. Any dispute with us may be brought before the competent court in Kranj, without limiting the mandatory right of consumers to bring proceedings at their place of residence (section 17.2).
 
 ## 18. Final provisions
 
@@ -172,7 +172,7 @@ We may change these Terms if there is a valid reason, for example new features, 
 
 18.2 We may transfer this contract to a company that takes over the Service, provided your rights are not reduced; we will inform you in advance and you may delete your account. You may not transfer your rights without our consent.
 
-18.3 These Terms are available in English and Slovenian. Both versions are equally valid; for consumers in Slovenia the Slovenian version prevails in case of discrepancy. [LAWYER: confirm.]
+18.3 These Terms are available in English and Slovenian. Both versions are equally valid; for consumers in Slovenia the Slovenian version prevails in case of discrepancy.
 
 18.4 We are not responsible for delays or failures caused by events outside our reasonable control (for example natural disasters, outages of networks or third-party providers), as far as permitted by law.
 
