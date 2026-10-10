@@ -1,355 +1,181 @@
----
-title: "Terms of Service"
-date: "15. 5. 2026"
-lede: "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
----
+# Zyflow Terms of Service
 
-**Zyflow Application**
+**Version:** [2.0.0] · **Effective date:** [DD. MM. 2026] · Replaces version 1.1.0 of 24 April 2026
 
-**Effective Date:** 15. 5. 2026
-**Version:** 1.0
+## 1. Who we are and what these Terms cover
 
-> Legal Notice: These Terms of Service ("Terms") constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow. If you do not agree to these Terms, do not download or use the application.
+Zyflow is operated by **HERKO d.o.o.**, Pševska cesta 10, 4000 Kranj, Slovenia, registration number 8830045000, VAT ID SI56613555 ("**we**", "**us**"). Contact: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 1. PARTIES AND ACCEPTANCE
+These Terms of Service ("**Terms**") are the agreement between you and us for the use of the Zyflow mobile app for iOS and Android, the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu), and related services (together the "**Service**"). Section 15 contains additional terms for business users of the partner portal.
 
-### 1.1 Operator
+By creating an account or using the Service you accept these Terms. If you do not agree, please do not use the Service.
 
-The Zyflow mobile application ("App", "Service") is operated by:
+How we process personal data is explained in our **Privacy Policy**: [https://www.zyflow.eu/legal-pages/privacy-policy](https://www.zyflow.eu/legal-pages/privacy-policy). The Privacy Policy is an information notice, not part of this contract.
 
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republic of Slovenia
+## 2. The Service
 
-Tax number (Davčna številka): SI56613555
-Registration number (Matična številka): 8830045000
-VAT registered: Yes (SI56613555)
+Zyflow is a cycling app. It lets you plan, navigate, save, import and export cycling routes (including GPX files); estimate distance, time, elevation and, for e-bikes, battery range; discover places along the way (for example e-bike chargers, repair stations, water points, bike parking, shops, cafés and accommodation); see weather and traffic or road-condition alerts; keep a bike passport; and share selected routes, photos and place reports with the community.
 
-Legal enquiries: **legal@zyflow.eu** General contact: **support@zyflow.eu**
+The Service is currently **free of charge**. It is offered for users in the **European Union and the European Economic Area**.
 
-(hereinafter referred to as "Zyflow", "we", "us", or "our")
+We may develop, change or discontinue features. If a change significantly affects you negatively, we will inform you in advance and you may end the contract at any time by deleting your account (see section 13). Your statutory rights for digital services remain unaffected.
 
-### 1.2 User
+## 3. Who may use Zyflow: age 16+ and your account
 
-By downloading, installing, registering for, or using the Zyflow application, you ("User", "you") confirm that:
+3.1 You must be **at least 16 years old** to create an account and use the Service. By registering you confirm that you meet this requirement. If we learn that an account belongs to someone under 16, we will delete it. [LAWYER: confirm whether users aged 16–17 can conclude this contract alone under Slovenian law, or whether a parent's consent is needed.]
 
-(a) You have read and understood these Terms; (b) You are at least **16 years of age**; (c) You agree to be legally bound by these Terms; (d) You have the legal capacity to enter into a binding agreement under applicable law.
+3.2 You can register with your email address or with Sign in with Apple or Google. Please provide accurate information and keep it up to date.
 
-**The Service is not intended for persons under the age of 16. If you are under 16, you may not use Zyflow.**
+3.3 Keep your login details confidential and tell us at [legal@zyflow.eu](mailto:legal@zyflow.eu) if you suspect misuse of your account. You are responsible for activity in your account unless it was caused without your fault (for example by a security failure on our side).
 
-### 1.3 Acceptance
+3.4 One person, one account. Accounts are personal and may not be sold or transferred.
 
-These Terms apply from the moment you first use the App, including before completing registration. Use of the Service constitutes acceptance of the most current version of these Terms.
+## 4. Licence to use the app
 
-## 2. DESCRIPTION OF THE SERVICE
+We grant you a personal, non-exclusive, non-transferable licence, revocable in accordance with these Terms, to install and use the app on devices you own or control and to use the Service for your own **personal, non-commercial purposes**. App store terms (Apple App Store, Google Play) also apply to the download.
 
-### 2.1 What Zyflow Is
+You may export routes as GPX files and use them for your own navigation on any device or app. You may not sell or commercially distribute exported files or data from the Service without our written consent.
 
-Zyflow is a free mobile application for electric vehicle and e-bike navigation, route planning, and discovery. The core features include:
+## 5. Routing, navigation and safety
 
-- Route planning with estimated battery consumption
-- Discovery and display of Points of Interest, including charging stations and other relevant locations
-- Information about charging station locations (availability data is sourced from third-party providers and may not reflect real-time status)
-- Saving and managing personal routes, including import and export of route files
-- Community-contributed data about Points of Interest (presence and operational status)
-- Weather and elevation information integrated into route planning
+> **Please read this carefully.** Zyflow helps you plan rides, but **you are always responsible for your own safety on the road**.
 
-### 2.2 Free Service
+5.1 **Routes are suggestions.** Routes, distances, times, elevation, surface and way-type information, difficulty ratings, e-bike battery range estimates, weather and traffic alerts are calculated automatically from map data, third-party sources and community input. They can be incomplete, outdated or wrong. A suggested route may include roads with heavy traffic, closed or private roads, steep or unpaved sections, or sections unsuitable for your bike, your skills or the weather.
 
-The App is provided free of charge. HERKO d.o.o. reserves the right to introduce optional paid features or subscriptions in the future, with separate and clearly disclosed terms and pricing. Any such change will not retroactively alter these Terms with respect to existing free features.
+5.2 **Your responsibilities.** You must always:
 
-### 2.3 Platform
+- follow traffic rules and road signs, which take precedence over any route instruction in the app;
+- check whether a route is safe, legal and suitable for you, your bike and the conditions, and change or stop your ride if it is not;
+- pay attention to traffic, road conditions, weather and other road users;
+- not operate your phone in a way that distracts you while riding; mount it securely or stop before using it;
+- use suitable equipment (lights, brakes, helmet where required or recommended) and keep your bike roadworthy;
+- plan enough reserve for your battery, water, food and daylight, and do not rely on the app as your only means of navigation or communication.
 
-The App is available on:
+5.3 **No guarantee of road conditions.** We do not inspect roads or paths and cannot guarantee their condition, safety, accessibility or legal status, or that traffic and road-condition alerts are complete or current.
 
-- **iOS** (Apple App Store)
-- **Android** (Google Play Store)
+5.4 **Places and chargers.** Information about places (for example whether a charger, water point, repair station, shelter or shop exists, is open, works or is free to use, its opening hours or capacity) comes from OpenStreetMap, partners and other users. **We do not guarantee its accuracy, availability or timeliness.** Check important information yourself, especially before relying on a charger or water point.
 
-Additional platforms may be introduced in the future.
+5.5 **Emergencies.** Emergency numbers shown in the app are provided for convenience. In an emergency call **112**. The app is not an emergency service.
 
-### 2.4 Third-Party Data and Services
+5.6 Our liability for damage is governed by section 12; nothing in this section excludes liability that cannot be excluded by law.
 
-The Service relies on data and services provided by third parties, including map and routing providers, weather data services, and charging network data aggregators. We do not guarantee the accuracy, completeness, or availability of third-party data. A list of key third-party service providers is maintained in our Privacy Policy.
+## 6. Community routes (optional)
 
-## 3. ELIGIBILITY AND ACCOUNT REGISTRATION
+6.1 **Sharing is opt-in.** Your saved routes are private. You can choose to share an individual route with the community. Nothing is shared automatically.
 
-### 3.1 Age Requirement
+6.2 **What becomes visible.** A shared route shows the full GPS track including the **start and end points**, its name, your description, region, difficulty, distance, duration, elevation and surface details, an automatically generated map image and any photos and captions you add. All signed-in users can see shared routes, save copies of them to their own account and share links to them. Photos and map images are stored in publicly accessible storage and can be opened by anyone who has the link.
 
-You must be at least **16 years of age** to use Zyflow. By using the Service, you represent and warrant that you meet this requirement. If we discover or have reason to believe that a user is under 16, we reserve the right to immediately suspend or terminate their account and delete associated data.
+> **Protect your home address.** The start and end points of a route can reveal where you live, work or keep your bike. Before sharing, consider starting and ending the route away from your home, and do not upload photos showing people without their permission, house numbers, licence plates or other personal details.
 
-### 3.2 Account Creation
+6.3 **Licence you grant us.** You keep all rights to the routes, descriptions, photos and other content you share ("**your content**"). By sharing, you grant us a non-exclusive, royalty-free, worldwide licence, for as long as your content is shared, to host, store, reproduce, adapt technically (for example resize photos, generate map images and route statistics), display and make your content available to users within the Service and in links shared from it, as far as needed to operate, show and promote the community features of the Service. You also allow other users to view your shared route, save a copy and use it for their own **personal, non-commercial** riding.
 
-To access certain features of the Service, you must register an account. You agree to:
+6.4 **Removal.** You can remove a shared route or photo at any time. Our licence then ends, except that (a) **copies that other users have already saved remain in their accounts**, (b) residual copies may remain in backups for up to 7 days, and (c) we may keep content as required by law or to defend legal claims. [VERIFY: copies saved by other users – the app currently says "Users who saved it will keep their copy".]
 
-(a) Provide accurate, complete, and current information during registration; (b) Maintain and promptly update your account information; (c) Keep your login credentials confidential and not share them with any third party; (d) Notify us immediately at **support@zyflow.eu** if you suspect unauthorized access to your account; (e) Accept responsibility for all activities that occur under your account.
+6.5 **Your responsibility.** You are responsible for your content. You confirm that you have the necessary rights to it (for example to photos and to imported GPX tracks), that people recognisable in photos have agreed, and that it does not break the law or these Terms (section 9).
 
-### 3.3 One Account Per Person
+## 7. Place reports and submissions
 
-Each user may maintain only one account. Creating multiple accounts to circumvent restrictions or bans is prohibited.
+7.1 You can report whether a place exists or works, add notes and photos, and suggest missing or incorrect places. Please report honestly and from your own experience, and do not include personal data in notes.
 
-### 3.4 Account Security
+7.2 Place reports are shown to other users as community signals without your name. Suggestions for new or corrected places are reviewed by our team; we decide whether and how to use them.
 
-You are solely responsible for maintaining the confidentiality of your password. HERKO d.o.o. will not be liable for any loss or damage arising from your failure to protect your account credentials.
+7.3 By submitting a report or suggestion you grant us a non-exclusive, royalty-free, worldwide, **perpetual and irrevocable** licence to use, adapt, combine and publish the factual information (location, attributes, status) in our places database, including after you delete your account (then without any link to you). Notes and photos you add are covered by the licence in section 6.3 and are deleted with your account. [LAWYER: confirm a perpetual licence for factual POI data is acceptable for consumers; facts may not be protected anyway, but data contributed to OpenStreetMap-derived data must respect the ODbL.]
 
-## 4. NAVIGATION, ROUTING, AND DATA ACCURACY
+## 8. Bike passport
 
-### 4.1 Informational Purpose Only
+The bike passport lets you store information about your bikes (for example make, model, frame number, purchase date and value, photos) and create a bike passport document on your device. It is private to you. It is a personal record only: it is **not an official register, proof of ownership or insurance document**, and we do not guarantee that it will be accepted by police, insurers or others. Keep your own copies of important documents.
 
-**IMPORTANT — PLEASE READ CAREFULLY.**
+## 9. Acceptable use and content rules
 
-The routing, navigation, and range information provided by Zyflow is intended **for informational and planning purposes only**. It must not be treated as a guarantee, commitment, or authoritative instruction.
+You must not:
 
-In particular:
+- upload or share content that is illegal, infringes the rights of others (copyright, privacy, personality rights), is defamatory, hateful, violent, sexually explicit, harassing or discriminatory;
+- share personal data of other people, including photos of identifiable people without their consent;
+- share routes that lead through private property without permission, prohibited or protected areas, or that encourage dangerous or illegal riding;
+- submit false, misleading or manipulative reports or reviews, including reviews of your own business or a competitor;
+- use the Service for advertising or spam, or impersonate other people or organisations;
+- scrape, harvest or bulk-download data, access our APIs other than through our apps, or circumvent rate limits or security measures;
+- reverse engineer the app, except where the law allows this;
+- interfere with, overload or attack the Service, or upload malware.
 
-- **Range estimates** are calculated based on vehicle parameters, elevation, weather, and routing data. Actual range will vary based on riding style, vehicle condition, battery age, temperature, speed, and other factors outside our control.
-- **Charging station availability** is sourced from third-party data providers and may not reflect real-time status. A location shown as available may be occupied, out of service, or incompatible with your vehicle when you arrive.
-- **Route conditions** such as road or path closures may not be reflected in all cases.
+## 10. Reporting content and moderation
 
-### 4.2 Rider Responsibility
+10.1 You can report photos in the app ("Report photo") or write to [legal@zyflow.eu](mailto:legal@zyflow.eu) to tell us about content you believe is illegal or breaks these Terms. Please explain why, where the content is, and give your name and email (except for reports of child sexual abuse material). This email address is also our single point of contact for users and authorities under the EU Digital Services Act.
 
-**You, as the rider or vehicle operator, are solely responsible for:**
+10.2 We review reports diligently and may hide or remove content, limit features or suspend accounts. Photos with several reports may be hidden automatically until we review them. [VERIFY: threshold and whether moderation is automatic.]
 
-(a) All decisions made while operating your vehicle; (b) Verifying the availability and compatibility of charging infrastructure before relying on it; (c) Maintaining adequate charge reserves and not relying solely on Zyflow's estimates; (d) Complying with all applicable traffic laws and regulations; (e) Exercising your own judgment and not following navigation suggestions that would be unsafe, illegal, or impractical.
+10.3 When we remove or restrict your content or account, we will inform you of the reasons, unless the law prevents this or the content is spam. You can contest our decision by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu); we will review it again and reply. You may also use out-of-court dispute settlement bodies or the courts.
 
-### 4.3 No Liability for Navigation Decisions
+10.4 We do not check content before it is published and are not obliged to monitor it in general.
 
-Subject to Section 12 (Limitation of Liability) and applicable mandatory consumer protection law, HERKO d.o.o. accepts no liability for damage, loss, injury, or other consequences arising from your reliance on routing, range, or charging availability data provided by the App.
+## 11. Third-party services, data and affiliate links
 
-## 5. USER-GENERATED CONTENT
+11.1 The Service uses data and services from third parties, including OpenStreetMap (© OpenStreetMap contributors, Open Database License), MapTiler, Photon (komoot), Nominatim, GraphHopper, Open-Meteo, DeepL, public traffic-information providers and partners. Some featured routes are provided by third parties and are marked as such. Attributions are shown in the app.
 
-### 5.1 Types of User Content
+11.2 **Accommodation links (Stay22).** For some places the app shows a booking link from our affiliate partner Stay22. **These are affiliate links: if you book through them, we may receive a commission**, at no extra cost to you. The booking contract is concluded only between you and the accommodation or booking provider, under their terms. We are not a party to it and are not responsible for prices, availability or performance. [VERIFY: whether the link or button should also carry a visible "Ad" / "Affiliate" label.]
 
-The App allows you to create and submit the following types of content ("User Content"):
+11.3 Links to and services of third parties (including Sign in with Apple or Google and app stores) are subject to their own terms and privacy policies. Mentioning a place, business or provider is not an endorsement.
 
-- **Saved routes:** Personal route plans you create or import within the App
-- **POI contributions:** Community reports on whether a Point of Interest is present and operational, along with optional notes
-- **Missing location submissions:** Reports of charging stations or other relevant locations not yet in our database
+## 12. Liability
 
-### 5.2 Your Ownership
+12.1 The Service is free and provided with reasonable care, but we cannot guarantee that it is always available, error-free or that the data in it is complete and accurate (see sections 5 and 11). Your **statutory rights** as a consumer, including rights in case a digital service is not in conformity with the contract, remain unaffected.
 
-You retain ownership of all original intellectual property rights in the User Content you create and submit.
+12.2 We are **liable without limitation** for damage caused intentionally or through gross negligence, for injury to life, body or health caused by our fault, and where liability cannot be excluded or limited under mandatory law (including product liability rules).
 
-### 5.3 License Grant to Zyflow
+12.3 In cases of **slight negligence**, we are liable only for breach of essential contractual obligations and only for damage that was typical and foreseeable when you started using the Service. [LAWYER: confirm this limitation is valid towards consumers under the Slovenian Obligations Code (OZ, Art. 242) and ZVPot-1, or remove it.]
 
-By submitting User Content to the Service, you grant HERKO d.o.o. a **worldwide, non-exclusive, royalty-free, sublicensable, and transferable license** to use, reproduce, distribute, prepare derivative works of, display, and perform the User Content in connection with the Service and HERKO d.o.o.'s operations, including for the purpose of improving the Service.
+12.4 We are not responsible for damage that results from your failure to follow section 5.2, from the actions of other users, or from third-party data, services or booking providers, except where we are liable under 12.2.
 
-**Saved routes** are private by default and visible only to you. **POI contributions** (presence and operational status reports) are visible to other authenticated users of the Service as community signals.
+12.5 If you are a consumer, you are liable to us only for damage you cause culpably by breaching these Terms, according to the general rules of law.
 
-### 5.4 Content Standards
+## 13. Ending the contract: suspension and deletion
 
-You agree that all User Content you submit will:
+13.1 **By you.** You can end the contract at any time by deleting your account in the app (Settings → [EXACT MENU PATH, E.G. "ACCOUNT" → "DELETE ACCOUNT"]), on the web at [WEB ACCOUNT DELETION PAGE URL] or by email to [legal@zyflow.eu](mailto:legal@zyflow.eu). What happens to your data is explained in the Privacy Policy.
 
-(a) Be accurate and, where relevant, based on genuine personal experience; (b) Not infringe the intellectual property, privacy, or other legal rights of any third party; (c) Not be defamatory, false, misleading, offensive, or hateful; (d) Not contain personal data of third parties without their consent; (e) Not contain spam or unsolicited commercial content; (f) Not contain malicious code or links to harmful content.
+13.2 **By us.** We may end the contract for any reason with at least **30 days'** notice by email or in the app, for example if we discontinue the Service.
 
-### 5.5 Our Right to Remove Content
+13.3 **Suspension or termination for cause.** We may suspend features, remove content or suspend or close an account, where appropriate after a warning, if you seriously or repeatedly break these Terms or the law, provide false information, endanger other users or the Service, or if we are legally required to. We will act proportionately, give reasons (section 10.3) and you may contest the decision. Accounts of users under 16 are deleted.
 
-We reserve the right to remove, edit, or refuse to publish any User Content that violates these Terms or applicable law. We will endeavor to notify you of significant removals where reasonably practicable.
+13.4 After termination, sections 6.4, 7.3, 12 and 16 continue to apply.
 
-### 5.6 No Obligation to Store
+## 14. Intellectual property
 
-We do not guarantee indefinite storage of your User Content. We recommend you keep your own copies of any route files important to you.
+The app, software, design, the Zyflow name and logo, our own texts, curated content and our places database are protected and belong to us or our licensors. Apart from the licence in section 4, these Terms give you no rights to them. Map data from OpenStreetMap is subject to the Open Database License. If you send us feedback or ideas, we may use them freely without payment; this does not transfer any personal data rights.
 
-## 6. ACCEPTABLE USE
+## 15. Partner portal (business users)
 
-### 6.1 Permitted Use
+15.1 Businesses (for example accommodation, restaurants, cafés, charger operators) can request access to the Zyflow partner portal to claim their place and manage its details. Partner access is granted at our discretion after review and is currently free of charge. [VERIFY: portal URL, free of charge, and features.]
 
-You may use Zyflow only for lawful, personal, non-commercial purposes in accordance with these Terms.
+15.2 The person requesting access confirms that they are authorised to act for the business. Partners must keep their information accurate and lawful, may only edit places they are entitled to represent, and are responsible for the content they publish (including prices, opening hours and offers) and for complying with consumer and advertising law.
 
-### 6.2 Prohibited Conduct
+15.3 Partners grant us the licence in section 6.3 for content they publish through the portal, for as long as the place is listed. We may edit, reject or remove partner content that is inaccurate or breaks these Terms, and may revoke partner access with reasons.
 
-You agree not to:
+15.4 For business users, consumer protection rules do not apply. To the extent permitted by law, our liability towards business users for slight negligence is excluded and in any case limited to EUR [AMOUNT]; section 12.2 still applies. [LAWYER: check P2B Regulation (EU) 2019/1150 obligations if listings or booking links create an online intermediation service; consider separate partner terms.]
 
-(a) Use the Service for any illegal purpose or in violation of applicable laws or regulations; (b) Attempt to gain unauthorized access to the Service or any related systems; (c) Reverse engineer, decompile, or attempt to extract the source code of the App; (d) Use automated means to scrape or collect data from the Service; (e) Interfere with or disrupt the integrity or performance of the Service; (f) Impersonate any person or entity, or misrepresent your affiliation; (g) Submit false, inaccurate, or misleading content or reports; (h) Use the Service to transmit unsolicited communications; (i) Use the Service in a manner that is unsafe or contrary to applicable traffic regulations.
+## 16. Changes to these Terms
 
-### 6.3 Consequences of Violation
+We may change these Terms if there is a valid reason, for example new features, changes in law or court decisions, or security needs. We will inform you of material changes by email and/or in the app **at least 30 days** before they take effect and explain what changes. If you do not agree, you may delete your account before the changes take effect. If you continue to use the Service after that date, the new Terms apply. Changes that are solely to your benefit, or required by law with a shorter deadline, may apply sooner.
 
-Violation of this Section may result in suspension or termination of your account and removal of your User Content.
+## 17. Governing law, disputes and consumer rights
 
-## 7. INTELLECTUAL PROPERTY
+17.1 These Terms are governed by the law of the **Republic of Slovenia**, excluding the UN Convention on Contracts for the International Sale of Goods. If you are a consumer living in another EU/EEA country, you also keep the protection of the mandatory consumer law of your country of residence.
 
-### 7.1 Zyflow's IP
+17.2 If you are a consumer, you may bring proceedings in the courts of Slovenia or of the EU country where you live; we may sue you only in the courts of your country of residence. For business users, the courts in Kranj, Slovenia have jurisdiction.
 
-The Zyflow name, logo, application, design, user interface, graphics, code, and all content provided by HERKO d.o.o. (excluding User Content and third-party data) are the intellectual property of HERKO d.o.o. or its licensors, protected by applicable intellectual property laws. Nothing in these Terms transfers any ownership of Zyflow's intellectual property to you.
+17.3 We will try to resolve complaints amicably: please write to [legal@zyflow.eu](mailto:legal@zyflow.eu); we will reply within [8] days and aim to resolve your complaint within 30 days.
 
-### 7.2 Limited License to Use
+17.4 **Out-of-court dispute resolution.** [OPTION A: We do not recognise any provider of out-of-court consumer dispute resolution as competent for disputes with us.] [OPTION B: Disputes can be referred to [NAME OF ADR PROVIDER].] Consumers can find information on out-of-court dispute resolution providers in Slovenia on the website of the ministry responsible for consumer protection [URL]. [LAWYER: confirm the required ADR information under ZIsRPS. The EU ODR platform referred to in v1.1.0 was discontinued on 20 July 2025 and must no longer be linked.]
 
-Subject to these Terms, HERKO d.o.o. grants you a limited, non-exclusive, non-transferable, revocable, personal license to install and use the App on your device solely for your personal, non-commercial purposes.
+## 18. Final provisions
 
-### 7.3 Feedback
+18.1 If a provision of these Terms is invalid, the rest remains valid; the invalid provision is replaced by the statutory rules.
 
-If you provide suggestions, ideas, or feedback about the Service, you grant HERKO d.o.o. an unrestricted, royalty-free right to use such feedback for any purpose.
+18.2 We may transfer this contract to a company that takes over the Service, provided your rights are not reduced; we will inform you in advance and you may delete your account. You may not transfer your rights without our consent.
 
-### 7.4 Third-Party Content
+18.3 These Terms are available in English and Slovenian. Both versions are equally valid; for consumers in Slovenia the Slovenian version prevails in case of discrepancy. [LAWYER: confirm.]
 
-The Service incorporates data and content from third parties (map data, POI data, etc.) which remains the property of their respective owners.
+18.4 We are not responsible for delays or failures caused by events outside our reasonable control (for example natural disasters, outages of networks or third-party providers), as far as permitted by law.
 
-## 8. PRIVACY AND DATA PROTECTION
+## 19. Contact
 
-### 8.1 Privacy Policy
-
-The collection, processing, and storage of your personal data is governed by our **Privacy Policy**, which forms an integral part of these Terms. By accepting these Terms, you also acknowledge the Privacy Policy.
-
-### 8.2 GDPR Compliance
-
-HERKO d.o.o. is committed to compliance with Regulation (EU) 2016/679 (GDPR) and applicable Slovenian data protection law.
-
-### 8.3 Location Data
-
-The App uses your device's location to provide navigation and routing features. You can withdraw location access through your device's operating system settings at any time, which will affect core app functionality.
-
-## 9. THIRD-PARTY SERVICES
-
-### 9.1 Third-Party Integrations
-
-The Service relies on third-party data providers and services. Your use of certain features may involve data being processed by those third parties under their own terms and privacy policies. We are not responsible for third-party practices.
-
-### 9.2 App Store Terms
-
-Your use of the App is also subject to the terms of the Apple App Store or Google Play Store through which you downloaded it.
-
-### 9.3 No Endorsement
-
-Reference to any charging network, establishment, or Point of Interest within Zyflow does not constitute endorsement by HERKO d.o.o.
-
-## 10. SERVICE AVAILABILITY AND MODIFICATIONS
-
-### 10.1 No Uptime Guarantee
-
-The Service is provided on an "as available" basis. We do not guarantee that the Service will be available at all times or free of errors.
-
-### 10.2 Modifications to the Service
-
-We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time. We will endeavor to provide reasonable advance notice of significant changes.
-
-### 10.3 Updates
-
-We may release updates to the App from time to time. You may be required to install updates to continue using the Service.
-
-## 11. ACCOUNT SUSPENSION AND TERMINATION
-
-### 11.1 Termination by You
-
-You may request deletion of your account at any time by contacting us at **support@zyflow.eu**. Upon account deletion:
-
-- Your profile and personal data will be handled in accordance with our Privacy Policy
-- Your saved routes will be deleted
-- Your community contributions (POI reports) may be retained in anonymized form as they form part of the shared community dataset
-- Certain data may be retained for a limited period where required by applicable law, as described in the Privacy Policy
-
-You have the right under GDPR to request confirmation of erasure of your personal data at any time.
-
-### 11.2 Termination by Us
-
-We reserve the right to suspend or permanently terminate your account, with or without prior notice, if:
-
-(a) You breach any provision of these Terms; (b) We are required to do so by applicable law or a competent authority; (c) Your account has been inactive for an extended period (we will endeavor to notify you in advance); (d) We discontinue the Service in whole or in part.
-
-### 11.3 Effect of Termination
-
-Upon termination, your license to use the App terminates immediately. Provisions that by their nature should survive termination will survive, including Sections 5.3, 7, 12, 13, and 15.
-
-## 12. DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY
-
-### 12.1 "As Is" Service
-
-The Service is provided "as is" and "as available" without warranties of any kind, to the fullest extent permitted by applicable law.
-
-### 12.2 Mandatory Consumer Protections
-
-**Nothing in these Terms limits or excludes liability that cannot be limited or excluded under applicable mandatory law, including Slovenian consumer protection law (ZVPot-1) and EU consumer law, in particular:**
-
-(a) Liability for death or personal injury caused by our negligence; (b) Liability for fraud or fraudulent misrepresentation; (c) Any other liability that cannot be limited or excluded by law.
-
-### 12.3 Limitation of Liability
-
-Subject to Section 12.2, to the maximum extent permitted by applicable law:
-
-(a) HERKO d.o.o. shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the Service;
-
-(b) HERKO d.o.o.'s total aggregate liability for any claims arising from these Terms or the Service shall not exceed **EUR 100** or the amount you paid us in the 12 months preceding the claim, whichever is greater.
-
-### 12.4 Navigation Disclaimer
-
-As stated in Section 4, HERKO d.o.o. is not liable for consequences arising from reliance on routing, range estimation, or charging station data provided by the App.
-
-## 13. INDEMNIFICATION
-
-To the extent permitted by applicable law, you agree to indemnify and hold harmless HERKO d.o.o., its directors, officers, employees, and agents from and against any claims, damages, liabilities, costs, and expenses arising from:
-
-(a) Your use of the Service in violation of these Terms; (b) User Content you submit, including any infringement of third-party rights; (c) Your violation of any applicable law or regulation.
-
-## 14. CHANGES TO THESE TERMS
-
-### 14.1 Our Right to Amend
-
-We reserve the right to modify these Terms at any time. We will notify you of material changes by displaying a notice in the App and/or sending a notification to your registered email address.
-
-### 14.2 Notice Period
-
-For changes that materially affect your rights or obligations, we will provide at least **30 days' notice** before the new Terms take effect.
-
-### 14.3 Acceptance of Changes
-
-Continued use of the Service after the effective date of updated Terms constitutes your acceptance. If you do not agree, you must stop using the Service and delete your account.
-
-## 15. GOVERNING LAW AND DISPUTE RESOLUTION
-
-### 15.1 Governing Law
-
-These Terms are governed by the laws of the **Republic of Slovenia**.
-
-### 15.2 Jurisdiction
-
-Any dispute that cannot be resolved amicably shall be submitted to the exclusive jurisdiction of the **competent courts in Ljubljana, Slovenia**.
-
-### 15.3 EU Online Dispute Resolution
-
-As required by EU Regulation No 524/2013, the European Commission provides an Online Dispute Resolution platform:
-
-[**https://ec.europa.eu/consumers/odr**](https://ec.europa.eu/consumers/odr)
-
-Our contact for ODR purposes: **legal@zyflow.eu**
-
-We encourage you to contact us directly first to resolve any issues informally.
-
-### 15.4 Informal Resolution First
-
-Before initiating formal proceedings, please contact us at **support@zyflow.eu**. We commit to responding within **15 business days**.
-
-## 16. MISCELLANEOUS
-
-### 16.1 Entire Agreement
-
-These Terms, together with the Privacy Policy and Cookie Policy, constitute the entire agreement between you and HERKO d.o.o. with respect to the Service.
-
-### 16.2 Severability
-
-If any provision is found invalid or unenforceable, it shall be modified to the minimum extent necessary or severed. Remaining provisions continue in full force.
-
-### 16.3 No Waiver
-
-Our failure to enforce any right or provision shall not constitute a waiver.
-
-### 16.4 Assignment
-
-You may not assign your rights under these Terms without our prior written consent. We may assign our rights without restriction.
-
-### 16.5 Force Majeure
-
-HERKO d.o.o. shall not be liable for failure or delay due to circumstances beyond our reasonable control.
-
-### 16.6 Language
-
-These Terms are available in **English** and **[Slovenian](/sl/legal-pages/terms)**. In the event of a conflict, the **Slovenian version shall prevail** for Slovenian residents.
-
-## 17. CONTACT INFORMATION
-
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republic of Slovenia
-
-Legal enquiries: **legal@zyflow.eu**
-General support: **support@zyflow.eu**
-Website: **https://www.zyflow.eu**
+HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia · [legal@zyflow.eu](mailto:legal@zyflow.eu)

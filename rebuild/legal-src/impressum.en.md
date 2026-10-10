@@ -1,42 +1,33 @@
----
-title: "Impressum"
-date: "[PLACEHOLDER: last updated date]"
-lede: "Legal notice for Zyflow, operated by HERKO d.o.o."
----
+# Legal notice (Impressum)
 
-Information about the operator of the Zyflow website and mobile application.
+**Service provider:** HERKO d.o.o. (brand: Zyflow)
 
-## Operator
+**Legal form:** limited liability company (družba z omejeno odgovornostjo, d.o.o.)
 
-**HERKO d.o.o.**  
-Pševska cesta 10  
-4000 Kranj  
-Republic of Slovenia
+**Registered address:** Pševska cesta 10, 4000 Kranj, Slovenia
 
-| Field | Value |
-| --- | --- |
-| Legal form | [PLACEHOLDER: limited liability company / d.o.o.] |
-| Registration number (Matična številka) | 8830045000 |
-| Tax number (Davčna številka) | SI56613555 |
-| VAT ID | SI56613555 |
-| Register court | [PLACEHOLDER: register court] |
-| Share capital | [PLACEHOLDER: share capital] |
-| Managing director | [PLACEHOLDER: managing director] |
+**Registration number (matična številka):** 8830045000
 
-## Contact
+**Tax number (davčna številka):** 56613555
 
-- General support: [support@zyflow.eu](mailto:support@zyflow.eu)
-- Privacy and legal: [legal@zyflow.eu](mailto:legal@zyflow.eu)
-- Website: [https://www.zyflow.eu](https://www.zyflow.eu)
+**VAT ID:** SI56613555
 
-[PLACEHOLDER: additional statutory contact if required]
+**Company register:** [REGISTER COURT / AJPES ENTRY NUMBER], registered on 12 March 2021
 
-## Editorial responsibility
+**Share capital:** [SHARE CAPITAL IN EUR]
 
-[PLACEHOLDER: person responsible for website content]
+**Director:** Jakob Robič
 
-## Related documents
+**Email:** [legal@zyflow.eu](mailto:legal@zyflow.eu)
 
-- [Privacy Policy](/legal-pages/privacy-policy)
-- [Terms of Service](/legal-pages/terms)
-- [Cookie Policy](/legal-pages/cookie-policy)
+**Phone:** [PHONE NUMBER]
+
+**Responsible for content:** Jakob Robič, address as above
+
+**Websites:** [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu), [navigate.zyflow.eu](http://navigate.zyflow.eu)
+
+**Contact point for authorities and users (EU Digital Services Act, Art. 11 and 12):** [legal@zyflow.eu](mailto:legal@zyflow.eu); languages: English, Slovenian
+
+**Consumer disputes:** we try to resolve every complaint directly; please write to [legal@zyflow.eu](mailto:legal@zyflow.eu). [CHOOSE ONE: WE DO NOT RECOGNISE ANY PROVIDER OF OUT-OF-COURT CONSUMER DISPUTE RESOLUTION (IRPS) AS COMPETENT / THE COMPETENT IRPS PROVIDER IS: NAME, ADDRESS, WEBSITE]
+
+**Privacy:** see our Privacy Policy: [PRIVACY POLICY URL]

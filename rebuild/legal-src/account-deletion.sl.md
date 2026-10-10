@@ -1,48 +1,57 @@
----
-title: "Izbris računa Zyflow"
-date: "[PLACEHOLDER: last updated date]"
-lede: "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
----
+# Izbris uporabniškega računa Zyflow
 
-HERKO d.o.o. lahko kadar koli zaprosite, da izbriše vaš račun Zyflow in osebne podatke, ki jih hranimo o vas. Ta stran opisuje trenutni postopek zahteve.
+Na tej strani je opisano, kako izbrišete svoj račun v aplikaciji Zyflow (razvijalec: HERKO d.o.o., Kranj, Slovenija) in kaj se zgodi z vašimi podatki.
 
-<!-- Omiljeno besedilo: ne trdite, da v aplikaciji že obstaja gumb za izbris, dokler ta pot ni na voljo. -->
+## 1. možnost – v aplikaciji (najhitreje)
 
-## Kako zahtevate izbris
+1. Odprite Zyflow in se prijavite.
+2. Tapnite zavihek **Profil**, nato **ikono zobnika** (Nastavitve) desno zgoraj.
+3. Pomaknite se na dno in tapnite **Izbriši račun** (pod gumbom Odjava).
+4. Potrdite z **Da, izbriši moj račun**.
 
-1. Pošljite e-pošto z naslova, ki je vezan na vaš račun Zyflow, na [support@zyflow.eu](mailto:support@zyflow.eu) ali [legal@zyflow.eu](mailto:legal@zyflow.eu).
-2. Uporabite jasen zadevo, na primer **Zahteva za izbris računa**.
-3. Navedite e-poštni naslov računa, ki ga želite izbrisati. Morda vas bomo prosili, da potrdite, da ta naslov obvladujete.
+Račun se izbriše takoj, vi pa ste odjavljeni.
 
-[PLACEHOLDER: number of days to acknowledge the request]  
-[PLACEHOLDER: number of days to complete deletion]
+## 2. možnost – po e-pošti (če aplikacije ne morete uporabiti)
 
-Potrdili bomo, ko bo zahteva zaključena. Po GDPR imate tudi pravico zahtevati potrdilo, da so bili vaši osebni podatki izbrisani.
+Pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z zadevo »Izbris računa« z e-naslova, povezanega z vašim računom Zyflow. Zaradi zaščite računa ga izbrišemo šele, ko preverimo, da zahteva prihaja od imetnika računa: če pišete s tega naslova, vas bomo prosili, da zahtevo potrdite z odgovorom; če s tega naslova ne morete pisati (na primer ker ste uporabili prijavo z Apple s skritim e-naslovom), bomo potrditev poslali na e-naslov, povezan z računom, in račun izbrisali po vaši potrditvi. Gesla vas ne bomo nikoli prosili. Izbris vam potrdimo po e-pošti.
 
 ## Kaj izbrišemo
 
-Ob izbrisu računa odstranimo ali anonimiziramo osebne podatke, povezane s tem računom, vključno z:
+Z izbrisom računa izbrišemo vaš profil (ime, e-naslov, telefonsko številko, identifikator uporabnika, podatke za prijavo) in podatke, shranjene z vašim računom v naši podatkovni bazi: shranjene in uvožene poti, shranjene kraje, poti, ki ste jih delili s skupnostjo, kolesarski potni list ter prijave in predloge krajev.
 
-- podatki o računu in identiteti (e-poštni naslov in morebitni podatki profila)
-- shranjenimi potmi in zaznamki
-- žetoni za potisna obvestila
-- žetoni povezave s Stravo, če ste Stravo povezali
-- drugimi osebnimi podatki, opisanimi v [Politiki zasebnosti](/sl/legal-pages/privacy-policy), razen kjer velja zakonska dolžnost hrambe
+Nekaterih kopij pri naših ponudnikih storitev še ne izbrišemo samodejno: fotografij in slik zemljevidov v naši hrambi datotek, vašega kontakta pri ponudniku e-pošte (Brevo) ter analitičnih zapisov in zapisov o napakah, povezanih z vašim identifikatorjem uporabnika (PostHog, Sentry). Analitični zapisi potečejo po 12 mesecih, poročila o napakah po 90 dneh. **Če želite, da te kopije izbrišemo takoj, nam po izbrisu računa pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) in jih bomo izbrisali v 30 dneh.**
 
-## Kaj lahko obdržimo
+## Kaj obdržimo in kako dolgo
 
-Nekaterih informacij ne izbrišemo v prepoznavni obliki oziroma jih za omejen čas hranimo, kjer to zahteva zakon:
+- Kraji, ki ste jih predlagali in smo jih odobrili, ostanejo v bazi krajev Zyflow brez povezave z vami.
+- Kopije deljene poti, ki so jih drugi uporabniki pred izbrisom vašega računa shranili v svoje račune, lahko ostanejo v njihovih računih [PREVERITI].
+- Varnostne kopije podatkovne baze hranimo do 7 dni, nato se prepišejo; izbrisani podatki v tem ciklu izginejo tudi iz njih.
+- Tehnične dnevnike strežnikov in gostovanja (lahko vsebujejo naslove IP) hranimo do 30 dni.
+- Zapisi za omejevanje iskalnih zahtev (naslov IP in števci) se izbrišejo po 24 urah.
+- Dnevnike pošiljanja e-pošte pri ponudniku Brevo hranimo do [12 MESECEV – POTRDITI].
+- Če ste nam pisali, korespondenco hranimo [2 LETI] po zaključku zahteve, računovodske listine pa toliko časa, kot zahteva zakon.
+- Podatki na vašem telefonu (prijavna seja, zadnja lokacija, nedavna iskanja) se izbrišejo, ko odstranite aplikacijo.
 
-- prispevki skupnosti (na primer prijave točk interesa) se lahko **anonimizirajo** in ohranijo kot del skupnega nabora podatkov
-- prijave manjkajočih lokacij se lahko hranijo do rešitve, nato se anonimizirajo
-- pravne in računovodske evidence se lahko hranijo **10 let**, kjer to zahteva slovenska zakonodaja
+## Koliko časa traja
 
-[VERIFY: retention periods still match the Privacy Policy]
+Izbris kopij pri naših ponudnikih storitev in zahteve, poslane po e-pošti, izvedemo **v 30 dneh**. Več o obdelavi podatkov: [URL POLITIKE ZASEBNOSTI]. Vprašanja: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## Po izbrisu
+---
 
-Ko je izbris končan, se v ta račun ne boste mogli več prijaviti. Če želite Zyflow znova uporabljati, boste morali ustvariti nov račun.
+<!-- NE OBJAVLJAJTE TEGA DELA ŠE. Postane resničen šele po popravku »Popoln izbris računa« (delete-user mora izbrisati tudi datoteke v Storage, kontakt v Brevo, osebo v PostHog in podatke uporabnika v Sentry). Takrat zgornja razdelka »Kaj izbrišemo« in »Koliko časa traja« zamenjajte z razdelkoma spodaj ter odstranite ta naslov in komentar. -->
 
-## English version
+## Use after code fix ships
 
-This page is also available in English: [Delete your account](/legal-pages/delete-account).
+### Kaj izbrišemo
+
+- Vaš profil: ime, e-naslov, telefonsko številko, identifikator uporabnika in podatke za prijavo
+- Vaše shranjene in uvožene poti ter shranjene kraje
+- Poti, ki ste jih delili s skupnostjo, njihove fotografije in slike zemljevidov
+- Vaš kolesarski potni list (podatki o kolesu, številka okvirja, vrednost, teža kolesarja, opombe) in fotografije kolesa
+- Vaše prijave krajev in predloge manjkajočih krajev
+- Vaš kontakt pri našem ponudniku e-pošte (Brevo)
+- Vaš analitični profil (PostHog) in podatke o napakah, povezane z vašim identifikatorjem uporabnika (Sentry)
+
+### Koliko časa traja
+
+Izbris v aplikaciji začne veljati takoj. Izbris kopij pri naših ponudnikih storitev in zahteve, poslane po e-pošti, izvedemo **v 30 dneh**. Več o obdelavi podatkov: [URL POLITIKE ZASEBNOSTI]. Vprašanja: [legal@zyflow.eu](mailto:legal@zyflow.eu).

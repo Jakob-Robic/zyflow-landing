@@ -1,13 +1,15 @@
 /**
  * Render legal markdown → HTML for rebuild pages.
  * Strips HTML comments, drops the unpublished account-deletion section,
- * and wraps leftover [PLACEHOLDER] / [VERIFY] spans without changing their text.
+ * and wraps leftover bracketed placeholder spans without changing their text.
+ * Markdown links [label](url) are not placeholders.
  */
 
 const { marked } = require("marked");
 
-const PLACEHOLDER_RE = /\[(?:PLACEHOLDER|VERIFY)[^\]]*\]/g;
 const HTML_COMMENT_RE = /<!--[\s\S]*?-->/g;
+const MARKDOWN_LINK_RE = /\[[^\]]*\]\([^)]*\)/g;
+const BRACKET_SPAN_RE = /\[[^\[\]]+\]/g;
 const UNPUBLISHED_DELETION_RE =
   /^#{1,3}[ \t]+Use after code fix ships\b[\s\S]*$/im;
 
@@ -39,7 +41,20 @@ function stripHtmlComments(markdown) {
 }
 
 function stripUnpublishedDeletionDraft(markdown) {
-  return markdown.replace(UNPUBLISHED_DELETION_RE, "").replace(/\n{3,}/g, "\n\n");
+  return markdown
+    .replace(UNPUBLISHED_DELETION_RE, "")
+    .replace(/\n+---\s*$/g, "\n")
+    .replace(/\n{3,}/g, "\n\n");
+}
+
+function extractLeadingTitle(markdown, meta) {
+  if (meta.title) return { meta, markdown };
+  const match = markdown.match(/^#\s+(.+?)\s*(?:\r?\n)+/);
+  if (!match) return { meta, markdown };
+  return {
+    meta: { ...meta, title: match[1].trim() },
+    markdown: markdown.slice(match[0].length),
+  };
 }
 
 function slugify(text) {
@@ -55,14 +70,47 @@ function slugify(text) {
 }
 
 function wrapPlaceholders(html) {
-  return html.replace(PLACEHOLDER_RE, (span) => {
+  return String(html).replace(
+    /(<mark class="placeholder">[\s\S]*?<\/mark>)|(<[^>]+>)|(\[[^\[\]]+\])/g,
+    (full, mark, tag, span) => {
+      if (mark) return mark;
+      if (tag) return tag;
+      return `<mark class="placeholder">${span}</mark>`;
+    }
+  );
+}
+
+function protectPlaceholders(markdown) {
+  const links = [];
+  const stored = [];
+  let text = String(markdown).replace(MARKDOWN_LINK_RE, (match) => {
+    const token = `%%LEGALLINK${links.length}%%`;
+    links.push(match);
+    return token;
+  });
+  text = text.replace(BRACKET_SPAN_RE, (match) => {
+    const token = `%%LEGALPH${stored.length}%%`;
+    stored.push(match);
+    return token;
+  });
+  text = text.replace(/%%LEGALLINK(\d+)%%/g, (_, index) => links[Number(index)]);
+  return { text, stored };
+}
+
+function restorePlaceholders(html, stored) {
+  return String(html).replace(/%%LEGALPH(\d+)%%/g, (_, index) => {
+    const span = stored[Number(index)];
     return `<mark class="placeholder">${span}</mark>`;
   });
 }
 
-function countPlaceholders(text) {
-  const matches = String(text).match(PLACEHOLDER_RE);
-  return matches ? matches.length : 0;
+function listPlaceholders(markdown) {
+  const withoutLinks = String(markdown).replace(MARKDOWN_LINK_RE, "");
+  return withoutLinks.match(BRACKET_SPAN_RE) || [];
+}
+
+function countPlaceholders(markdown) {
+  return listPlaceholders(markdown).length;
 }
 
 function collectHeadings(html) {
@@ -103,8 +151,9 @@ function renderToc(headings, locale) {
 }
 
 function prepareMarkdown(raw, { dropUnpublishedDeletion = false } = {}) {
-  const { meta, body } = parseFrontmatter(raw);
-  let markdown = stripHtmlComments(body);
+  const parsed = parseFrontmatter(raw);
+  let { meta, markdown } = extractLeadingTitle(parsed.body, parsed.meta);
+  markdown = stripHtmlComments(markdown);
   if (dropUnpublishedDeletion) {
     markdown = stripUnpublishedDeletionDraft(markdown);
   }
@@ -113,8 +162,10 @@ function prepareMarkdown(raw, { dropUnpublishedDeletion = false } = {}) {
 
 function renderLegalMarkdown(raw, { locale = "en", dropUnpublishedDeletion = false } = {}) {
   const { meta, markdown } = prepareMarkdown(raw, { dropUnpublishedDeletion });
+  const { text, stored } = protectPlaceholders(markdown);
   marked.setOptions({ gfm: true, breaks: false });
-  let html = marked.parse(markdown);
+  let html = marked.parse(text);
+  html = restorePlaceholders(html, stored);
   html = ensureHeadingIds(html);
   html = wrapPlaceholders(html);
   const headings = collectHeadings(html);
@@ -132,5 +183,6 @@ module.exports = {
   prepareMarkdown,
   renderLegalMarkdown,
   countPlaceholders,
+  listPlaceholders,
   wrapPlaceholders,
 };

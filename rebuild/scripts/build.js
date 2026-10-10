@@ -530,6 +530,9 @@ function injectLegalDocument(html, page, locale) {
   );
   html = html.replace("<!-- LEGAL_TOC -->", rendered.toc);
   html = html.replace("<!-- LEGAL_BODY -->", rendered.html);
+  console.log(
+    `legal ${page.legalDoc}.${locale} placeholders=${rendered.placeholderCount}`
+  );
   return html;
 }
 

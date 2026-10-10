@@ -1,283 +1,285 @@
----
-title: "Privacy Policy"
-date: "30. 6. 2026"
-lede: "This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
----
+# Zyflow Privacy Policy
 
-**Zyflow Application**
+**Version:** [2.0] · **Effective date:** [DD. MM. 2026] · Replaces version 1.1 of 30 June 2026
 
-**Effective Date:** 30. 6. 2026
-**Version:** 1.1
+This Privacy Policy explains how HERKO d.o.o. processes personal data when you use the Zyflow mobile app (iOS and Android) and the Zyflow websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). It is written to meet the requirements of the EU General Data Protection Regulation (GDPR), the Slovenian Personal Data Protection Act (ZVOP-2) and the Slovenian Electronic Communications Act (ZEKom-2).
 
-> Your privacy matters. This Privacy Policy explains what personal data HERKO d.o.o. collects when you use Zyflow, why we collect it, how we use it, and what rights you have under the General Data Protection Regulation (GDPR) and applicable Slovenian data protection law (ZVOP-2).
+## 1. Who is responsible (controller)
 
-## 1. WHO WE ARE — DATA CONTROLLER
+HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia
 
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj
-Republic of Slovenia
+Registration number (matična številka): 8830045000 · Tax number: 56613555 · VAT ID: SI56613555
 
-Tax number (Davčna številka): SI56613555
-Registration number (Matična številka): 8830045000
+Director: Jakob Robič
 
-**Privacy contact:** **legal@zyflow.eu**
-**General support:** **support@zyflow.eu**
+Privacy contact: [legal@zyflow.eu](mailto:legal@zyflow.eu)
 
-For questions about your data or to exercise your rights, contact us at the address above.
+We have not appointed a data protection officer because we are not required to under Article 37 GDPR [VERIFY]. For any privacy question or request, write to [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 2. SCOPE OF THIS POLICY
+## 2. Summary
 
-This Privacy Policy applies to the **Zyflow mobile application** (iOS and Android) and the backend services that power it.
+- We collect only what we need to run Zyflow: your account, the routes and content you create, and technical data to keep the app working.
+- Your routes are private unless **you decide to share a specific route** with the community.
+- We do not sell your data and we do not show ads in the app.
+- Product analytics use a pseudonymous user ID, not your email address.
+- Location is used only while the app is in use. There is no background location tracking.
+- You can delete your account in the app at any time.
 
-It does not apply to third-party websites or services linked from within the App.
+## 3. What data we process, why, and on what legal basis
 
-## 3. WHAT PERSONAL DATA WE COLLECT AND WHY
+### 3.1 Account data
 
-We collect personal data only where we have a lawful basis to do so under GDPR Article 6. Below we describe each category, why we need it, and the legal basis that applies.
+**Data:** email address, full name, optional phone number, user ID, sign-in method, account creation date. If you sign in with Apple or Google, we receive your email address and, if you allow it, your name from that provider (with Apple you can hide your real email address).
 
-### 3.1 Account and Identity Data
+**Purpose:** to create and manage your account, sign you in and provide the service.
 
-**What we collect:** Email address; optional full name; optional phone number if you choose to add it to your profile.
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**How:** When you create an account — via email, or through Sign in with Apple or Sign in with Google.
+### 3.2 Location data
 
-**Why:** To create and manage your account and provide you with the Service.
+**Data:** precise location of your device, **only while the app is in use** and only if you grant the location permission. We do not collect location in the background.
 
-**Lawful basis:** Performance of contract (Article 6(1)(b)).
+**Purpose:** show your position on the map, plan and navigate routes, find nearby places and show weather and traffic alerts.
 
-### 3.2 Location Data
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR). Access to location on your device is controlled by your operating system permission, which you can withdraw at any time in your device settings. Without it, some features will not work.
 
-**What we collect:** Geographic coordinates associated with:
+Your live position is not stored on our servers. It is stored only if it becomes part of something you save, share or submit (see 3.3 to 3.5). Some location data is sent to map, search and routing services to answer your request (see 3.10).
 
-- Routes you plan and save
-- Route files you import
-- Locations you bookmark
-- Reports of missing or incorrect Points of Interest you submit
+### 3.3 Routes (saved, planned and imported)
 
-Location data from active navigation is processed on your device and is not stored on our servers unless you explicitly save a route.
+**Data:** routes you plan and save, routes you import from GPX files, route names, notes, distance, duration, elevation and other route details, and saved places.
 
-**Why:** To provide core navigation, routing, and discovery features.
+**Purpose:** to let you plan, save, export and reuse routes.
 
-**Lawful basis:** Performance of contract (Article 6(1)(b)).
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**Important:** Saved routes represent a record of movement history. We treat this as sensitive data — your routes are private and accessible only to you. Location access requires your permission through your device's operating system, which you can revoke at any time. Revoking it will disable core app features.
+**Visibility:** saved routes are **private** and visible only to you, unless you share a route with the community (3.4).
 
-### 3.3 Community Contributions (POI Reports)
+Please note that a saved route is a record of where you have been or plan to go.
 
-**What we collect:** When you report whether a Point of Interest is present and working, we store your contribution linked to your account, along with any optional notes and a timestamp.
+### 3.4 Community route sharing (optional, per route)
 
-**Visibility:** These contributions are visible to other users of the Service as community signals. Please do not include personal information in your notes.
+You can choose to share an individual saved route with the Zyflow community. Nothing is shared automatically; you decide for each route.
 
-**Why:** To maintain the accuracy of our Points of Interest database for all users.
+**What becomes visible when you share a route:** the full route GPS track (all points, including the start and end point), route name, your optional description, region, difficulty, distance, duration, elevation and surface details, an automatically generated map image, and any photos you add.
 
-**Lawful basis:** Legitimate interest (Article 6(1)(f)). Our legitimate interest is providing reliable, community-verified location data.
+**Who can see it:** all signed-in Zyflow users. Route photos and map images are stored in publicly accessible storage, which means **anyone who has the link to a photo or image can open it**, also without a Zyflow account. Your name and email address are not shown with the shared route, but the route is linked to your user ID in our database.
 
-**On account deletion:** Your identity is removed from your contributions (anonymized), but the location data itself may be retained as part of the community dataset.
+> **Important:** the start and end points of a route can reveal where you live, work or regularly park your bike. Before sharing, consider starting and ending the route a little away from your home, and do not include personal details or photos that identify people, house numbers or licence plates.
 
-### 3.4 Missing Location Submissions
+**Removing a shared route:** you can remove a shared route at any time. This deletes the shared copy, its photos and the generated map image. Routes already saved by other users as their own copies may remain in their accounts [VERIFY: confirm how copies saved by other users behave].
 
-**What we collect:** If you report a charging station or other location that is missing from our database, we collect the location you reported, details you provided, your account identifier, your email address, and a timestamp.
+**Purpose:** to let riders discover and reuse routes shared by others.
 
-**Why:** To investigate and potentially add the reported location to our database.
+**Legal basis:** performance of a contract at your request (Art. 6(1)(b) GDPR) – sharing is a feature you actively choose to use for each route.
 
-**Lawful basis:** Legitimate interest (Article 6(1)(f)).
+### 3.5 Place reports and missing-place submissions
 
-**Visibility:** Visible to HERKO d.o.o. staff only during review. Approved submissions become part of our shared database; your identity is not displayed publicly.
+**Data:** when you confirm or report whether a point of interest (for example a charger, repair station or water tap) exists or works, we store your report, any notes, the time and your user ID. When you report a missing or wrong place, we store the location, the details you enter, your user ID, your email address and the time.
 
-### 3.5 Device and Notification Data
+**Visibility:** place reports are shown to other users as community signals without your name. Missing-place submissions are seen only by our team during review. Approved places become part of the Zyflow places database without any link to you.
 
-**What we collect:** If you enable push notifications, we store a device-level push token that allows us to deliver notifications to your device.
+**Purpose:** to keep place information accurate for all riders, and to inform you about the status of your submission by email.
 
-**Why:** To send you relevant in-app notifications (e.g. route alerts).
+**Legal basis:** legitimate interest in an accurate, community-verified places database (Art. 6(1)(f) GDPR). Please do not include personal data in notes.
 
-**Lawful basis:** Consent (Article 6(1)(a)). You grant permission through your device's operating system notification prompt. You may withdraw this at any time in your device settings.
+### 3.6 Bike passport (optional)
 
-### 3.6 Analytics Data
+**Data:** bike make, model, colour, frame number, purchase date, purchase value, notes and bike photos, and optionally your rider weight.
 
-**What we collect:** We use a third-party analytics service to understand how users interact with Zyflow. This involves collecting a pseudonymous identifier, your email address (to associate usage with your account), screens and features you interact with, and general device and app version information.
+**Purpose:** to let you keep a record of your bike (for example to help in case of theft or for insurance) and to generate a bike passport document on your device. **Rider weight is optional and is used only for route calculations** (for example effort and time estimates). It is not used for any other purpose and is never shared.
 
-Detailed behavioral tracking and automatic event capture are disabled. Only key interaction events are recorded manually.
+**Visibility:** private to you. Bike photos are stored in private storage.
 
-**Why:** To understand usage patterns and improve the Service.
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR). All fields are voluntary and you can delete them at any time.
 
-**Lawful basis:** Legitimate interest (Article 6(1)(f)).
+### 3.7 Camera and photo library
 
-**Your right to object:** You may object to analytics processing at any time by contacting us at **legal@zyflow.eu**.
+If you allow it, the app uses the camera and photo library only when you choose to add a photo (bike photos, route photos, place reports) or save an image. We do not access your photos in the background. You can withdraw the permission in your device settings.
 
-### 3.7 Crash and Error Data
+### 3.8 Emails
 
-**What we collect:** We use a crash monitoring service that collects error reports when the App crashes or encounters a significant error. These reports may include your account identifier, technical information about the error, and device/OS details. This service is active in production only and processes a sample of sessions.
+We use Brevo to store your contact details (email address, full name and user ID) and to send emails from Zyflow.
 
-**Why:** To detect, diagnose, and fix bugs.
+**Service emails:** for example the welcome email after signup, account and security emails, and updates about places you submitted. **Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**Lawful basis:** Legitimate interest (Article 6(1)(f)).
+**Marketing emails (newsletters, product news):** we send these **only if you have given separate, explicit consent** (opt-in). You can withdraw consent at any time via the unsubscribe link in each email or by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu). **Legal basis:** consent (Art. 6(1)(a) GDPR and ZEKom-2). We currently do not send marketing emails.
 
-### 3.8 Email Communications
+### 3.9 Product analytics
 
-We use an email service provider for two categories of communications:
+We use PostHog (EU cloud) to understand how the app is used and to improve it. We send a pseudonymous **user ID (not your email address or name)**, selected in-app events (for example "route planned" or "GPX exported"), app version and basic device information. Automatic capture of all interactions and session recording are not used in the app. PostHog is set to **discard your IP address**.
 
-**Transactional emails:** Notifications necessary for the operation of the Service (e.g. updates on reports you have submitted). Lawful basis: legitimate interest / performance of contract.
+**Legal basis:** legitimate interest in improving the app (Art. 6(1)(f) GDPR). You can object at any time by writing to [legal@zyflow.eu](mailto:legal@zyflow.eu) [OR: IN-APP SETTING, IF ADDED].
 
-**Marketing communications:** News about features and updates. We will only send marketing emails with your prior explicit consent. You may opt out at any time via the unsubscribe link in any email or by contacting **support@zyflow.eu**.
+### 3.10 Crash and performance monitoring
 
-### 3.9 Routing and Map Data Sent to Third Parties
+We use Sentry (EU data region) to detect and fix errors. Error and performance reports contain your user ID, technical details of the error, device model, operating system and app version, and your **IP address**, which is stored with error reports. Sentry's data scrubbing is enabled to remove sensitive values such as email addresses.
 
-When you plan a route or search for a location, certain data is transmitted to third-party services to fulfil your request:
+**Legal basis:** legitimate interest in a stable and secure app (Art. 6(1)(f) GDPR).
 
-- **Route calculation services** receive the coordinates of your planned route (not your identity)
-- **Location search services** receive the text of your search query and a geographic region
-- **Map tile services** receive tile requests based on the area of the map you are viewing
-- **Weather services** receive an approximate location to return relevant weather data
+### 3.11 Maps, search, routing and weather
 
-All third parties receive your device's IP address as part of standard network communication. Where technically feasible, we proxy requests through our own servers to limit direct exposure of your IP to these services.
+To answer your requests, some data is sent to the following services. Each of them also sees an IP address as part of normal internet traffic.
 
-**Lawful basis:** Performance of contract (Article 6(1)(b)).
+- **Map tiles (MapTiler):** your device requests map tiles directly, so MapTiler sees your IP address and the map area you view.
+- **Place search (Photon by komoot):** your search text is sent through our own server, so Photon does not see your IP address.
+- **Reverse geocoding (Nominatim, OpenStreetMap Foundation):** your device sends coordinates directly to turn them into an address, so Nominatim sees your IP address and those coordinates.
+- **Routing (our own OSRM server at **[**osrm.zyflow.eu**](http://osrm.zyflow.eu)** and GraphHopper):** route coordinates are sent to our self-hosted routing server (hosted on Contabo servers in Germany, EU) and, through our backend, to GraphHopper.
+- **Weather (Open-Meteo):** an approximate location is sent through our backend.
+- **Translation (DeepL):** we translate public traffic-alert texts. No personal data about you is sent.
 
-### 3.10 Strava Integration (Optional)
+**Legal basis:** performance of a contract (Art. 6(1)(b) GDPR).
 
-**What we collect:** If you choose to connect your Strava account, we collect and store — in encrypted form — the access and refresh tokens Strava issues so we can retrieve your data on your behalf, together with your Strava athlete identifier. When you choose to import a specific cycling activity, we import that activity's route data — geographic coordinates, elevation, distance, and the activity's name and date — and store it as a saved route in your account.
+### 3.12 Accommodation links (Stay22)
 
-**How:** Through Strava's official OAuth authorization flow, which you start by tapping "Connect with Strava." We request the activity:read_all permission scope solely to read your cycling activities for import. All communication with Strava happens through our backend servers; your Strava tokens are never exposed to the app on your device.
+Some places show accommodation links from our affiliate partner Stay22. **Only if you tap such a link**, the link opens Stay22's service and passes the coordinates and name of that place (not your account data). We may receive a commission. After you open the link, Stay22 and the booking sites it uses are independent controllers and their own privacy policies apply.
 
-**Why:** To let you import your existing Strava rides into Zyflow as saved routes.
+**Legal basis:** legitimate interest in financing the free app (Art. 6(1)(f) GDPR); the transfer happens only on your action.
 
-**Lawful basis:** Consent (Article 6(1)(a)). Connecting Strava is entirely optional and initiated by you. You may withdraw consent at any time (see "Disconnecting").
+### 3.13 Security and abuse prevention
 
-**Visibility and use:** Data imported from Strava is private to you and shown only to you. We do not make your Strava data visible to other users, and we never use Strava data to train, develop, or improve any artificial intelligence or machine-learning models.
+Our search function stores the IP address of the requesting device together with request counters for a short time to prevent abuse (rate limiting). These records are deleted automatically after 24 hours. Search texts are cached for up to 24 hours without any link to you or your IP address. Our hosting providers keep technical server logs (including IP addresses) for security.
 
-**Disconnecting and deletion:** You can disconnect Strava at any time from the Strava screen in the App. Disconnecting revokes our access and deletes your stored Strava tokens. You can also revoke Zyflow's access directly in your Strava account settings at https://www.strava.com/settings/apps. Routes you already imported remain as saved routes until you delete them. Deleting your Zyflow account also removes your Strava connection and tokens.
+**Legal basis:** legitimate interest in the security of our service (Art. 6(1)(f) GDPR).
 
-**Strava's own processing:** Strava, Inc. is an independent controller of the data in your Strava account. Your use of Strava is governed by Strava's Privacy Policy (https://www.strava.com/legal/privacy) and Terms of Service.
+### 3.14 Data stored on your device
 
-## 4. DATA WE DO NOT COLLECT
+The app stores your login session, your last known location and your recent searches locally on your device so that the app works quickly and you stay signed in. This storage is strictly necessary for the service you request. It is deleted when you sign out [VERIFY] or uninstall the app.
 
-To be transparent about what Zyflow does **not** do:
+### 3.15 Planned features (not live yet)
 
-- We do not process **payment information** (the App is free)
-- We do not use **advertising networks** or sell your data to advertisers
-- We do not track your location **continuously in the background**
-- We do not collect **health or biometric data**
+**Push notifications** and **Strava import** are not available yet. Before we launch either feature, we will update this Privacy Policy and describe what data is processed. Push notifications will only be sent if you allow them in your device settings; connecting Strava will always be optional.
 
-## 5. HOW WE SHARE YOUR DATA
+### 3.16 Support and privacy requests
 
-We do not sell your personal data. We share data only as follows:
+If you contact us, we process your email address, the content of your message and our reply to handle your request. **Legal basis:** legitimate interest (Art. 6(1)(f) GDPR) or, for privacy requests, our legal obligation (Art. 6(1)(c) GDPR).
 
-**Service providers:** We share data with third-party companies that process it on our behalf under written data processing agreements. These are listed in Section 6.
+### 3.17 What we do not do
 
-**Community features:** POI contribution data (presence/working status and notes) is visible to other authenticated users of the Service, as described in Section 3.3.
+- We do not sell your personal data.
+- We do not show advertising in the app and do not use advertising IDs.
+- We do not track your location in the background.
+- We do not make decisions about you based solely on automated processing that have legal or similarly significant effects (Art. 22 GDPR).
+- We do not process payment data (the app is free).
 
-**Legal requirements:** We may disclose personal data if required by law, court order, or a competent authority. We will notify you where legally permitted.
+## 4. Legal bases at a glance
 
-**Business transfers:** In the event of a merger, acquisition, or sale of assets, your data may transfer as part of that transaction. We will notify you before your data becomes subject to a different privacy policy.
+| Purpose | Legal basis (GDPR) |
+|---|---|
+| Account, routes, location features, bike passport, community sharing, maps/search/routing/weather, service emails | Contract, Art. 6(1)(b) |
+| Place reports and submissions, product analytics, crash monitoring, security and rate limiting, Stay22 links, support | Legitimate interest, Art. 6(1)(f) |
+| Marketing emails, website cookies and pixels (when introduced), future push notifications | Consent, Art. 6(1)(a) (and ZEKom-2 for cookies and marketing emails) |
+| Answering rights requests, accounting and legal obligations | Legal obligation, Art. 6(1)(c) |
 
-## 6. THIRD-PARTY DATA PROCESSORS
+Where we rely on legitimate interest, you have the right to object (see section 8).
 
-The following companies process personal data on our behalf. Each is bound by a data processing agreement and may only use your data for the purposes we specify.
+## 5. Who receives your data
 
-| Processor | Role | Location |
-| --- | --- | --- |
-| Cloud infrastructure provider | Secure hosting, database, authentication, file storage | European Union |
-| Analytics provider | Product analytics (EU-hosted) | European Union |
-| Error monitoring provider | Crash and error reporting | United States (SCCs) |
-| Email service provider | Transactional and marketing emails | European Union / varies |
-| Push notification service | Delivery of in-app notifications | United States |
-| Route calculation provider | Navigation routing (proxied) | European Union |
-| Geocoding provider | Location search and reverse geocoding | European Union |
-| Weather data provider | Weather information for route planning | European Union |
-| Map tile provider | Map display | Switzerland / EU |
-| Apple Inc. | Sign in with Apple | United States |
-| Google LLC | Sign in with Google | United States |
-| Strava, Inc. | Fitness activity import (user-initiated, optional) | United States (SCCs / Data Privacy Framework) |
+We use the following service providers. Processors act only on our instructions under a data processing agreement (Art. 28 GDPR).
 
-For transfers to processors located outside the EU/EEA, see Section 8.
+| Recipient | Purpose | Data | Location / safeguard |
+|---|---|---|---|
+| Supabase, Inc. (processor) | Database, authentication, file storage, backend functions | All app data described above | EU (Ireland, eu-west-1); US parent company: SCCs / EU-US Data Privacy Framework [VERIFY] |
+| Brevo (Sendinblue SAS, France) (processor) | Contact store and email delivery | Email, full name, user ID, email content | EU [VERIFY HOSTING REGION] |
+| PostHog (EU cloud) (processor) | Product analytics | User ID, app events, device/app info; IP discarded | EU |
+| Sentry (Functional Software, Inc.), EU data region (processor) | Crash and performance monitoring | User ID, IP address, device and error data | EU storage; US company: SCCs / Data Privacy Framework [VERIFY] |
+| Vercel, Inc. (processor) | Hosting of our websites | IP address, technical request data | Global network incl. USA: SCCs / Data Privacy Framework [VERIFY] |
+| Apple / Google (separate controllers) | Sign in with Apple / Google (if you choose it) | Sign-in data, email, name | EU entities and USA: Data Privacy Framework [VERIFY] |
+| MapTiler AG | Map tiles | IP address, map area | Switzerland (EU adequacy decision) [VERIFY] |
+| komoot GmbH (Photon) | Place search (via our server) | Search text, search area | Germany (EU) |
+| OpenStreetMap Foundation (Nominatim) | Reverse geocoding | IP address, coordinates | United Kingdom (EU adequacy decision) [VERIFY] |
+| GraphHopper GmbH | Route calculation (via our backend) | Route coordinates | Germany (EU) [VERIFY] |
+| Open-Meteo | Weather (via our backend) | Approximate coordinates | [VERIFY: EU / SWITZERLAND] |
+| Own OSRM server ([osrm.zyflow.eu](http://osrm.zyflow.eu)) | Route calculation | IP address, route coordinates | Operated by us; hosted by Contabo GmbH (processor), Germany (EU) |
+| DeepL SE | Translation of traffic-alert texts | No personal data | Germany (EU) |
+| Stay22 (independent controller after you tap a link) | Accommodation affiliate links | Coordinates and name of the place; IP address once you open the link | [VERIFY: CANADA (EU ADEQUACY DECISION) / USA] |
 
-## 7. DATA RETENTION
+**Other users:** see community sharing (3.4) and place reports (3.5).
 
-We keep your personal data for as long as necessary for the purposes described in this Policy, or as required by law.
+**Authorities:** we disclose data only where we are legally required to, for example on a court order.
+
+**Business transfers:** if HERKO d.o.o. or Zyflow is merged or sold, data may pass to the new owner, who must respect this policy; we will inform you in advance.
+
+## 6. Transfers outside the EU/EEA
+
+Your app data is stored in the EU (Ireland). Some recipients are based in, or may access data from, countries outside the EU/EEA, in particular the USA (for example Apple, Google, Vercel and the US parent companies of Supabase and Sentry) [VERIFY LIST]. We transfer data only where an adequate level of protection is ensured: an adequacy decision of the European Commission (for example for Switzerland, the United Kingdom, Canada, or for US companies certified under the EU-US Data Privacy Framework) or the European Commission's Standard Contractual Clauses (Art. 46 GDPR) [VERIFY PER VENDOR]. You can ask us for a copy of the safeguards at [legal@zyflow.eu](mailto:legal@zyflow.eu).
+
+## 7. How long we keep data
 
 | Data | Retention |
-| --- | --- |
-| Account data | Duration of your account, deleted within a reasonable period after deletion |
-| Saved routes | Until you delete them, or upon account deletion |
-| Bookmarked locations | Until you remove them, or upon account deletion |
-| Community contributions | Anonymized upon account deletion; location data retained as community dataset |
-| Location submission reports | Retained until resolved, then anonymized |
-| Push notification tokens | Deleted upon account deletion or permission revocation |
-| Strava connection tokens | Stored encrypted until you disconnect Strava or delete your account |
-| Analytics data | Retained per our analytics provider's configuration |
-| Crash reports | Retained per our error monitoring provider's configuration |
-| Legal and accounting records | 10 years (required by Slovenian law) |
+|---|---|
+| Account data (email, name, phone, user ID) | While your account exists; deleted within 30 days after you delete your account |
+| Saved and imported routes, saved places | Until you delete them or your account |
+| Shared community routes, their photos and map images | Until you remove the shared route or delete your account |
+| Bike passport and bike photos | Until you delete them or your account |
+| Place reports and missing-place submissions | Until you delete your account; approved places remain in the places database without any link to you |
+| Brevo contact (email, name, user ID) | While your account exists; deleted within 30 days after account deletion |
+| Email sending logs at Brevo | [SUGGESTION: UP TO 12 MONTHS – CONFIRM BREVO SETTING] |
+| Product analytics (PostHog) | 12 months; your analytics profile is deleted when you delete your account |
+| Crash and performance reports (Sentry) | 90 days |
+| Search rate-limit data (IP address and counters) | 24 hours |
+| Search cache (search text, no link to you) | 24 hours |
+| Server and hosting logs (Supabase, Vercel) | Up to 30 days |
+| Database backups | Up to 7 days, rolling; deleted data disappears from backups when they are overwritten |
+| Support and privacy-request correspondence | [SUGGESTION: 2 YEARS after the request is closed] |
+| Data on your device (session, last location, recent searches) | Until you sign out or uninstall the app |
+| Accounting records (if any) | As required by law (for example 10 years for invoices under ZDDV-1) |
 
-## 8. INTERNATIONAL DATA TRANSFERS
+## 8. Your rights
 
-Your personal data is primarily stored within the **European Union**. Some processors listed in Section 6 are located outside the EU/EEA (notably in the United States). For all such transfers, we ensure appropriate safeguards are in place:
+Under the GDPR you have the right to:
 
-- **Standard Contractual Clauses (SCCs)** as approved by the European Commission
-- The **EU–US Data Privacy Framework**, where the processor is certified
+- **access** your personal data and receive a copy (Art. 15);
+- **rectification** of inaccurate or incomplete data (Art. 16) – most data you can correct yourself in the app;
+- **erasure** ("right to be forgotten", Art. 17);
+- **restriction** of processing (Art. 18);
+- **data portability** – receive data you provided in a structured, machine-readable format, or have it sent to another controller (Art. 20); routes can also be exported as GPX in the app;
+- **object** to processing based on legitimate interest, for example analytics or crash monitoring (Art. 21), and to object at any time to direct marketing;
+- **withdraw consent** at any time, without affecting the lawfulness of processing before the withdrawal (Art. 7(3));
+- **lodge a complaint** with a supervisory authority (section 10).
 
-You may request details of the safeguards applicable to any specific transfer by contacting us at **legal@zyflow.eu**.
+To exercise your rights, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account. We may ask you to confirm your identity. We respond **within 30 days** (one month). In complex cases we may extend this by up to two further months; we will tell you within the first month. Exercising your rights is free of charge.
 
-## 9. YOUR RIGHTS UNDER GDPR
+## 9. How to delete your account
 
-You have the following rights regarding your personal data. Contact us at **legal@zyflow.eu** to exercise any of them.
+- **In the app:** Settings → [EXACT MENU PATH, E.G. "ACCOUNT" → "DELETE ACCOUNT"].
+- **On the web:** [WEB ACCOUNT DELETION PAGE URL].
+- **By email:** write to [legal@zyflow.eu](mailto:legal@zyflow.eu) from the email address linked to your account.
 
-**Right of access (Art. 15):** Obtain a copy of the personal data we hold about you.
+When you delete your account, we delete your profile, saved routes, shared community routes and their photos, bike passport and bike photos, place reports and submissions, and your saved places. We also delete your contact at Brevo and your analytics and error-monitoring profiles at PostHog and Sentry. Deletion is completed within 30 days; residual copies in backups are overwritten in the normal backup cycle. Approved places you suggested remain in the places database without any link to you. Data on your device is removed when you uninstall the app.
 
-**Right to rectification (Art. 16):** Have inaccurate or incomplete data corrected.
+## 10. Complaints
 
-**Right to erasure (Art. 17):** Request deletion of your personal data where no longer necessary, where you withdraw consent, or where processing was unlawful.
+If you believe that we process your data unlawfully, you can lodge a complaint with the supervisory authority in your EU country of residence or work, or with the Slovenian authority:
 
-**Right to restriction (Art. 18):** Ask us to restrict processing in certain circumstances.
+**Informacijski pooblaščenec Republike Slovenije** (Information Commissioner), Dunajska cesta 22, 1000 Ljubljana, Slovenia · [gp.ip@ip-rs.si](mailto:gp.ip@ip-rs.si) · +386 1 230 97 30 · [www.ip-rs.si](http://www.ip-rs.si)
 
-**Right to data portability (Art. 20):** Receive your data in a structured, machine-readable format where processing is based on consent or contract.
+We would appreciate the chance to resolve your concern first – please contact us at [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-**Right to object (Art. 21):** Object to processing based on legitimate interest, including analytics, crash monitoring, and community data processing.
+## 11. Children
 
-**Right to withdraw consent:** Where we rely on consent (e.g. push notifications), you may withdraw it at any time without affecting previous processing.
+Zyflow is intended for people aged **16 and over** and is offered in the EU only. We do not knowingly process data of children under 16. If you believe a child under 16 has created an account, please contact [legal@zyflow.eu](mailto:legal@zyflow.eu) and we will delete the account.
 
-**Right not to be subject to automated decision-making (Art. 22):** We do not make automated decisions with legal or significant effects about you.
+## 12. Website and cookies
 
-We will respond to your request within **30 days**. In complex cases we may extend this by 60 days and will notify you within the first 30 days. There is no charge for exercising your rights unless requests are manifestly unfounded or excessive.
+> **Website and cookies** ([zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu), [navigate.zyflow.eu](http://navigate.zyflow.eu))
+>
+> Our websites are hosted by Vercel. When you visit them, Vercel processes your IP address and technical request data to deliver the site and keep it secure (legitimate interest, Art. 6(1)(f) GDPR).
+>
+> We currently do not use analytics or marketing cookies on our websites. We plan to introduce Google Tag Manager, Google Analytics 4 and the Meta (Facebook) Pixel. **These tools will only load after you give consent in our cookie banner** (Art. 6(1)(a) GDPR and ZEKom-2). You can change or withdraw your consent at any time via [COOKIE SETTINGS LINK IN THE FOOTER]. Before they are introduced, we will update this policy with details of Google and Meta as recipients and of any transfers to the USA.
+>
+> Details of all cookies are in our separate Cookie Policy: [COOKIE POLICY URL].
+>
+> The mobile app does not use browser cookies; see section 3.14 for data stored on your device.
 
-## 10. RIGHT TO LODGE A COMPLAINT
+## 13. Security
 
-If you believe we have not handled your personal data correctly, you have the right to lodge a complaint with the supervisory authority in your country of residence or with the Slovenian authority:
+We use appropriate technical and organisational measures, including encryption in transit, encryption at rest provided by our hosting provider, access controls and row-level security in our database, and restricted access to production data. If a personal data breach is likely to result in a high risk to you, we will inform you and the Information Commissioner as required by Articles 33 and 34 GDPR.
 
-**Informacijski pooblaščenec (Information Commissioner of Slovenia)** Zaloška cesta 59, 1000 Ljubljana, Slovenia Website: [www.ip-rs.si](https://www.ip-rs.si/) Email: gp.ip@ip-rs.si Phone: +386 1 230 97 30
+## 14. Changes to this policy
 
-We would appreciate the opportunity to address your concern directly first — please contact us at **legal@zyflow.eu** before escalating.
+We may update this policy when our service or the law changes. We will publish the new version with a new version number and effective date. For material changes, we will inform you in the app and/or by email before the changes take effect.
 
-## 11. SECURITY
+## 15. Contact
 
-We take appropriate technical and organisational measures to protect your personal data against unauthorized access, loss, or misuse. These include encryption of data in transit and at rest, access controls to limit who can access production data, and careful vetting of our third-party processors.
-
-No method of transmission or storage is 100% secure. In the event of a data breach likely to result in high risk to your rights and freedoms, we will notify you and the Information Commissioner as required by GDPR Articles 33 and 34.
-
-## 12. CHILDREN'S PRIVACY
-
-Zyflow is not intended for persons under the age of 16. This minimum age is aligned with the digital consent age under GDPR Article 8 as implemented in Slovenia. We do not knowingly collect personal data from persons under 16. If you believe a person under 16 has provided us with their data, please contact us at **legal@zyflow.eu** and we will promptly delete it.
-
-## 13. COOKIES AND SIMILAR TECHNOLOGIES
-
-The Zyflow mobile application does not use browser cookies. It uses your device's local storage to maintain your login session. This is a standard mobile application practice and is not accessible to other applications or websites.
-
-Third-party services integrated in the App may use device-level identifiers for analytics or crash monitoring purposes. Please refer to the privacy policies of those services.
-
-The Zyflow website (zyflow.eu) uses Google Tag Manager together with Google Analytics 4 and, where you consent, advertising measurement pixels (for example Meta and ChatGPT Ads). Optional analytics and advertising cookies are loaded only after you opt in via our cookie banner (Google Consent Mode). Details, cookie lists, and how to change your choices are in our **[Cookie Policy](/legal-pages/cookie-policy)**.
-
-## 14. CHANGES TO THIS POLICY
-
-We may update this Privacy Policy from time to time. When we make material changes, we will notify you via the App and/or by email. Material changes take effect no sooner than **30 days** after notification. We recommend reviewing this Policy periodically.
-
-## 15. CONTACT
-
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republic of Slovenia
-
-Privacy enquiries: **legal@zyflow.eu**
-General support: **support@zyflow.eu**
-
-We acknowledge privacy enquiries within **5 business days** and respond substantively within **30 days**.
+HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia · [legal@zyflow.eu](mailto:legal@zyflow.eu)

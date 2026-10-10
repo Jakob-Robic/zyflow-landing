@@ -1,139 +1,58 @@
----
-title: "Cookie Policy"
-date: "9. 10. 2026"
-lede: "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu — including optional analytics and advertising cookies you can control."
----
+# Zyflow Cookie Policy
 
-**Zyflow Application and Website**
+**Version:** [1.0] · **Effective date:** [DD. MM. 2026] · **URL:** [COOKIE POLICY URL, E.G. https://www.zyflow.eu/legal-pages/cookie-policy]
 
-**Effective Date:** 9. 10. 2026
-**Version:** 1.1
+This Cookie Policy explains how HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenia ("we"), uses cookies and similar technologies on the websites [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) and [navigate.zyflow.eu](http://navigate.zyflow.eu). More about how we process personal data is in our [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Contact: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 1. WHO WE ARE
+## 1. What are cookies?
 
-This Cookie Policy is issued by:
+Cookies are small text files that a website stores in your browser. Similar technologies include the browser's local storage and tracking pixels (small pieces of code that send information to a provider when a page loads). In this policy, "cookies" covers all of them.
 
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republic of Slovenia
+## 2. Our current use of cookies
 
-Tax number (Davčna številka): SI56613555
+**At the moment our websites use no analytics, advertising or other non-essential cookies.** Only technically necessary storage may be used, for example to keep you signed in on [app.zyflow.eu](http://app.zyflow.eu) [VERIFY]. Our hosting provider Vercel delivers the websites; it does not set cookies for normal visitors [VERIFY].
 
-Contact: legal@zyflow.eu Website: https://www.zyflow.eu
+## 3. Planned cookies – only with your consent
 
-(hereinafter "Zyflow", "we", "us", "our")
+We plan to use **Google Tag Manager**, **Google Analytics 4** (to understand how our websites are used) and the **Meta (Facebook) Pixel** (to measure and improve our advertising on Facebook and Instagram). **These tools are blocked and do not load until you actively agree in our cookie banner.** If you do not agree, they are never loaded. Necessary cookies do not need consent (Article 157 of the Slovenian Electronic Communications Act, ZEKom-2, implementing Art. 5(3) of the ePrivacy Directive). For all other cookies we ask for your consent (Art. 6(1)(a) GDPR).
 
-## 2. WHAT THIS POLICY COVERS
+## 4. Cookie categories
 
-This policy explains how Zyflow uses cookies and similar tracking technologies across:
+- **Necessary** – required for the website to work and to remember your cookie choice. Always active.
+- **Analytics** – Google Analytics 4 via Google Tag Manager: statistics about visits, pages viewed, device and approximate location (country/city). Off until you consent.
+- **Marketing** – Meta Pixel (and Google advertising tags, if we add them): measuring the success of our ads and showing relevant ads on other platforms. Off until you consent.
 
-- The **Zyflow mobile application** (iOS and Android)
-- The **Zyflow website** at https://www.zyflow.eu
+## 5. Cookie table
 
-The short answer: **our mobile app does not use browser cookies**. Our website uses strictly necessary cookies plus optional analytics and advertising cookies that load only after you consent via our cookie banner.
+| Name | Provider | Purpose | Category | Duration | Status |
+|---|---|---|---|---|---|
+| `cc_cookie` | Zyflow (CookieConsent, first party) | Stores your cookie choices so we do not ask again on every page | Necessary | 182 days (library default, to verify in our configuration) | When the banner goes live |
+| `sb-<PROJECT-REF>-auth-token` (local storage) [VERIFY] | Zyflow (Supabase authentication) | Keeps you signed in on the web app | Necessary | Until you sign out (to verify) | [VERIFY: only if sign-in exists on the website] |
+| `_ga` | Google Ireland Ltd. (Google Analytics 4) | Distinguishes visitors with a random ID for statistics | Analytics | 2 years (typical, to verify) | Planned, only after consent |
+| `_ga_<CONTAINER-ID>` [MEASUREMENT ID] | Google Ireland Ltd. (Google Analytics 4) | Keeps the session state for statistics | Analytics | 2 years (typical, to verify) | Planned, only after consent |
+| `_gcl_au` [ONLY IF GOOGLE ADS TAGS ARE ADDED] | Google Ireland Ltd. (Conversion Linker) | Links ad clicks to actions on our site | Marketing | 90 days (typical, to verify) | Only if configured, only after consent |
+| `_fbp` | Meta Platforms Ireland Ltd. (Meta Pixel) | Identifies your browser to measure and deliver ads | Marketing | 90 days (typical, to verify) | Planned, only after consent |
+| `_fbc` | Meta Platforms Ireland Ltd. (Meta Pixel) | Stores the ad click ID when you arrive from a Meta ad | Marketing | 90 days (typical, to verify) | Planned, only after consent |
+| Meta cookies on [facebook.com](http://facebook.com) (e.g. `fr`) [VERIFY] | Meta Platforms Ireland Ltd. (third party) | Ad delivery and measurement by Meta, if you use Facebook/Instagram in the same browser | Marketing | 90 days (typical, to verify) | Planned, only after consent |
 
-## 3. WHAT ARE COOKIES?
+Google Tag Manager itself only loads the tags above and does not normally set its own cookies [VERIFY]. We will update this table before any new cookie is used.
 
-Cookies are small text files that a website places on your browser when you visit. They are widely used to make websites work, remember your preferences, and — in some cases — to track your behavior across sites for analytics or advertising purposes.
+## 6. Recipients and transfers
 
-"Similar technologies" include local storage, session storage, and device-level identifiers used by mobile applications to achieve similar purposes.
+**Google** (Google Ireland Ltd.; parent company Google LLC, USA) processes analytics data on our behalf. **Meta** (Meta Platforms Ireland Ltd.; parent company Meta Platforms, Inc., USA) receives data from the Meta Pixel; for the collection and transmission of this data we are joint controllers with Meta (Art. 26 GDPR) [VERIFY: Meta Business Tools Terms and Controller Addendum]. Data may be transferred to the USA; both companies are certified under the EU-US Data Privacy Framework [VERIFY]. Google's and Meta's own privacy policies apply to their further processing.
 
-## 4. THE ZYFLOW MOBILE APP — NO COOKIES
+## 7. Consent, withdrawal and changing your settings
 
-The Zyflow mobile application **does not use browser cookies**.
+- When you first visit, the banner offers **"Accept all"**, **"Reject all"** and **"Manage preferences"**. Rejecting is as easy as accepting. If you close the banner or do nothing, only necessary cookies are used.
+- You can **change or withdraw your consent at any time** via the **"Cookie settings"** link in the footer of every page. Withdrawal does not affect the lawfulness of processing before it. When you withdraw consent, we stop loading the tools and delete our own analytics and marketing cookies where technically possible.
+- We store your choice for [182 DAYS] and ask again when it expires or when we add new cookies or purposes.
+- We keep a record of your consent (a random consent ID, date and time, your choices and the policy version) to be able to prove it [RETENTION, E.G. 3 YEARS – LAWYER].
+- You can also block or delete cookies in your browser settings; some parts of the site may then not work properly.
 
-Instead, the app uses your device's built-in local storage to store the information it needs to function — specifically your login session, so you do not have to sign in every time you open the app. This is standard practice for mobile applications and is not shared with other apps or accessible via a web browser.
+## 8. Zyflow mobile app
 
-### Third-Party SDKs in the App
+The Zyflow mobile app does **not use browser cookies**. It stores some data in your device's local storage so that it works: your login session (in the device's secure storage), your settings, your last known location and recent searches. Our analytics and crash-reporting tools (PostHog, Sentry) store a pseudonymous identifier on the device. Details are in the Privacy Policy, section 3.14.
 
-The mobile app includes third-party components for analytics and error monitoring. These services may use device-level identifiers (not browser cookies) as part of their operation:
+## 9. Changes
 
-| Service | Purpose | What it stores |
-| --- | --- | --- |
-| Analytics service | Understanding how the app is used | Pseudonymous identifier linked to your account |
-| Error monitoring service | Detecting and diagnosing crashes | Session and device context at time of error |
-
-These services operate under data processing agreements with HERKO d.o.o. and are described in detail in our [Privacy Policy](/legal-pages/privacy-policy).
-
-You may object to analytics processing at any time by contacting us at legal@zyflow.eu.
-
-## 5. THE ZYFLOW WEBSITE — COOKIES WE USE
-
-The Zyflow website uses **Google Tag Manager (GTM)** to load tags. Optional tags (analytics and advertising) respect your choices through Google Consent Mode and our [CookieConsent](https://cookieconsent.orestbida.com/) banner.
-
-### Strictly Necessary Cookies
-
-| Cookie | Purpose | Duration |
-| --- | --- | --- |
-| Session / hosting cookies | Maintains browsing session and serves the page correctly | Session |
-| cc_cookie | Stores your cookie consent preferences | Up to 182 days |
-
-Strictly necessary cookies do not require consent under EU ePrivacy rules. You cannot opt out of them without disabling the website entirely.
-
-### Analytics Cookies (optional)
-
-If you accept analytics, we load **Google Analytics 4** (measurement ID managed via GTM) to understand traffic, page views, and key actions such as contact form submissions.
-
-| Cookie | Purpose | Duration |
-| --- | --- | --- |
-| _ga, _ga_* | Distinguishes users for analytics | Up to 2 years |
-| _gid | Distinguishes users | 24 hours |
-
-### Advertising Cookies (optional)
-
-If you accept advertising, GTM may load measurement pixels for platforms such as **Meta (Facebook)** and **ChatGPT Ads** so we can measure campaign performance. These cookies and related storage are set only after you opt in to the Advertising category.
-
-## 6. YOUR CHOICES AND HOW TO MANAGE COOKIES
-
-### Website Cookies
-
-On your first visit you will see a consent banner. You can Accept all, Reject optional cookies, or Manage preferences. You can reopen preferences anytime via **Cookie preferences** in the website footer.
-
-You can also control cookies through your browser settings. Most browsers allow you to:
-
-- See what cookies are stored and delete them individually
-- Block third-party cookies
-- Block all cookies (note: this may affect some website functionality)
-
-Guides for common browsers:
-
-- [Google Chrome](https://support.google.com/chrome/answer/95647)
-- [Mozilla Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
-- [Safari](https://support.apple.com/guide/safari/manage-cookies-sfri11471)
-- [Microsoft Edge](https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406)
-
-### Mobile App Local Storage
-
-The session data stored by the mobile app can be cleared by:
-
-- Signing out of your account within the app
-- Uninstalling the app from your device
-
-### Analytics Opt-Out
-
-To opt out of analytics data collection within the mobile app, contact us at legal@zyflow.eu and we will action your request. On the website, use Cookie preferences or reject the Analytics category.
-
-## 7. CHANGES TO THIS POLICY
-
-If we introduce additional non-essential cookies or tracking technologies, we will update this policy and, where required by law, ask for your consent before setting those technologies.
-
-We will notify users of material changes via the app and/or by email. The updated policy will show a new "Last Updated" date at the top of this document.
-
-## 8. LEGAL BASIS
-
-The use of strictly necessary cookies and local storage for authentication in the mobile app is based on our **legitimate interest** and the necessity to perform the contract with you (GDPR Article 6(1)(b) and (f)).
-
-Analytics and advertising cookies on the website are based on your **consent** (GDPR Article 6(1)(a) and the EU ePrivacy Directive). You may withdraw consent at any time without affecting the lawfulness of processing before withdrawal.
-
-## 9. CONTACT
-
-For any questions about this Cookie Policy or our use of tracking technologies:
-
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republic of Slovenia
-
-Email: legal@zyflow.eu
-Website: https://www.zyflow.eu
+We update this Cookie Policy when we change the cookies we use. The current version and date are shown at the top.

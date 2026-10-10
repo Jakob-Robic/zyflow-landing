@@ -1,283 +1,285 @@
----
-title: "Politika zasebnosti"
-date: "30. 6. 2026"
-lede: "Ta Politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira, ko uporabljate Zyflow, zakaj jih zbira, kako jih uporablja in katere pravice imate po GDPR."
----
+# Politika zasebnosti Zyflow
 
-**Aplikacija Zyflow**
+**Različica:** [2.0] · **Datum začetka veljavnosti:** [DD. MM. 2026] · Nadomešča različico 1.1 z dne 30. 6. 2026
 
-**Datum veljavnosti:** 30. 6. 2026
-**Različica:** 1.1
+Ta politika zasebnosti pojasnjuje, kako družba HERKO d.o.o. obdeluje osebne podatke, ko uporabljate mobilno aplikacijo Zyflow (iOS in Android) ter spletna mesta [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Pripravljena je v skladu s Splošno uredbo o varstvu podatkov (GDPR, v nadaljevanju: Splošna uredba), Zakonom o varstvu osebnih podatkov (ZVOP-2) in Zakonom o elektronskih komunikacijah (ZEKom-2).
 
-> Vaša zasebnost je pomembna. Ta Politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira, ko uporabljate Zyflow, zakaj jih zbira, kako jih uporablja in katere pravice imate po Splošni uredbi o varstvu podatkov (GDPR) in veljavni slovenski zakonodaji o varstvu podatkov (ZVOP-2).
+## 1. Upravljavec osebnih podatkov
 
-## 1. KDO SMO — UPRAVLJAVEC PODATKOV
+HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenija
 
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj
-Republika Slovenija
+Matična številka: 8830045000 · Davčna številka: 56613555 · Identifikacijska številka za DDV: SI56613555
 
-Davčna številka: SI56613555
-Matična številka: 8830045000
+Direktor: Jakob Robič
 
-**Stik za zasebnost:** **legal@zyflow.eu**
-**Splošna podpora:** **support@zyflow.eu**
+Kontakt za varstvo osebnih podatkov: [legal@zyflow.eu](mailto:legal@zyflow.eu)
 
-Za vprašanja o vaših podatkih ali uveljavljanje pravic nas kontaktirajte na zgornjem naslovu.
+Pooblaščene osebe za varstvo podatkov nismo imenovali, ker nam tega po 37. členu Splošne uredbe ni treba [PREVERITI]. Za vsa vprašanja in zahteve v zvezi z varstvom osebnih podatkov nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 2. OBSEG TE POLITIKE
+## 2. Povzetek
 
-Ta Politika zasebnosti velja za **mobilno aplikacijo Zyflow** (iOS in Android) in zaledne storitve, ki jo poganjajo.
+- Zbiramo le podatke, ki jih potrebujemo za delovanje storitve Zyflow: vaš uporabniški račun, poti in vsebine, ki jih ustvarite, ter tehnične podatke za delovanje aplikacije.
+- Vaše poti so zasebne, razen če se **sami odločite, da posamezno pot delite** s skupnostjo.
+- Vaših podatkov ne prodajamo in v aplikaciji ne prikazujemo oglasov.
+- Analitika uporabe deluje s psevdonimnim identifikatorjem uporabnika, ne z vašim e-naslovom.
+- Lokacijo uporabljamo le med uporabo aplikacije. Lokacije v ozadju ne spremljamo.
+- Uporabniški račun lahko kadar koli izbrišete v aplikaciji.
 
-Ne velja za spletna mesta ali storitve tretjih oseb, povezane iz aplikacije.
+## 3. Katere podatke obdelujemo, za kakšen namen in na kateri pravni podlagi
 
-## 3. KATERE OSEBNE PODATKE ZBIRAMO IN ZAKAJ
+### 3.1 Podatki o uporabniškem računu
 
-Osebne podatke zbiramo le, kadar imamo za to zakonito podlago po členu 6 GDPR. Spodaj opišemo vsako kategorijo, zakaj jo potrebujemo in katera pravna podlaga velja.
+**Podatki:** e-naslov, ime in priimek, neobvezno telefonska številka, identifikator uporabnika, način prijave, datum ustvarjanja računa. Če se prijavite z Apple ali Google, od tega ponudnika prejmemo vaš e-naslov in, če to dovolite, vaše ime (pri Apple lahko svoj pravi e-naslov skrijete).
 
-### 3.1 Podatki o računu in identiteti
+**Namen:** ustvarjanje in upravljanje računa, prijava in zagotavljanje storitve.
 
-**Kaj zbiramo:** e-poštni naslov; neobvezno polno ime; neobvezna telefonska številka, če jo dodate v profil.
-
-**Kako:** ko ustvarite račun — z e-pošto ali prek Sign in with Apple oziroma Sign in with Google.
-
-**Zakaj:** da ustvarimo in upravljamo vaš račun ter vam zagotovimo storitev.
-
-**Pravna podlaga:** izpolnjevanje pogodbe (člen 6(1)(b)).
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
 ### 3.2 Lokacijski podatki
 
-**Kaj zbiramo:** geografske koordinate, povezane z:
+**Podatki:** natančna lokacija naprave, **samo med uporabo aplikacije** in samo, če dovolite dostop do lokacije. Lokacije v ozadju ne zbiramo.
 
-- potmi, ki jih načrtujete in shranite
-- datotekami poti, ki jih uvozite
-- lokacijami, ki jih zaznamujete
-- prijavami manjkajočih ali napačnih točk interesa
+**Namen:** prikaz vašega položaja na zemljevidu, načrtovanje poti in navigacija, iskanje bližnjih krajev ter prikaz vremena in prometnih obvestil.
 
-Lokacijski podatki iz aktivne navigacije se obdelujejo na vaši napravi in se na naših strežnikih ne shranjujejo, razen če pot izrecno shranite.
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe). Dostop do lokacije na napravi nadzirate z dovoljenjem operacijskega sistema, ki ga lahko kadar koli prekličete v nastavitvah naprave. Brez njega nekatere funkcije ne bodo delovale.
 
-**Zakaj:** da omogočimo osnovne funkcije navigacije, usmerjanja in odkrivanja.
+Vašega trenutnega položaja ne shranjujemo na naših strežnikih. Shrani se le, če postane del vsebine, ki jo shranite, delite ali posredujete (glej točke 3.3 do 3.5). Nekateri lokacijski podatki se za izvedbo vaše zahteve pošljejo storitvam za zemljevide, iskanje in izračun poti (glej točko 3.11).
 
-**Pravna podlaga:** izpolnjevanje pogodbe (člen 6(1)(b)).
+### 3.3 Poti (shranjene, načrtovane in uvožene)
 
-**Pomembno:** shranjene poti predstavljajo zapis gibanja. Obravnavamo jih kot občutljive podatke — vaše poti so zasebne in dostopne samo vam. Dostop do lokacije zahteva vaše dovoljenje v operacijskem sistemu naprave, ki ga lahko kadar koli prekličete. Preklic onemogoči osnovne funkcije aplikacije.
+**Podatki:** poti, ki jih načrtujete in shranite, poti, uvožene iz datotek GPX, imena poti, opombe, razdalja, trajanje, višinska razlika in drugi podatki o poti ter shranjeni kraji.
 
-### 3.3 Prispevki skupnosti (prijave točk interesa)
+**Namen:** omogočanje načrtovanja, shranjevanja, izvoza in ponovne uporabe poti.
 
-**Kaj zbiramo:** ko prijavite, ali je točka interesa prisotna in deluje, shranimo vaš prispevek, povezan z računom, skupaj z morebitnimi opombami in časovnim žigom.
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-**Vidnost:** ti prispevki so kot signali skupnosti vidni drugim uporabnikom storitve. V opombe ne vpisujte osebnih podatkov.
+**Vidnost:** shranjene poti so **zasebne** in vidne samo vam, razen če pot delite s skupnostjo (točka 3.4).
 
-**Zakaj:** da ohranjamo točnost zbirke točk interesa za vse uporabnike.
+Upoštevajte, da je shranjena pot zapis o tem, kje ste bili ali kam nameravate iti.
 
-**Pravna podlaga:** zakoniti interes (člen 6(1)(f)). Naš zakoniti interes je zanesljiva, s skupnostjo preverjena lokacijska zbirka.
+### 3.4 Deljenje poti s skupnostjo (neobvezno, za vsako pot posebej)
 
-**Ob izbrisu računa:** vaša identiteta se iz prispevkov odstrani (anonimizacija), lokacijski podatki pa se lahko ohranijo kot del nabora skupnosti.
+Posamezno shranjeno pot lahko delite s skupnostjo Zyflow. Nič se ne deli samodejno; odločitev sprejmete sami za vsako pot.
 
-### 3.4 Prijave manjkajočih lokacij
+**Kaj postane vidno, ko pot delite:** celotna sled GPS (vse točke, vključno z začetno in končno točko), ime poti, vaš neobvezni opis, regija, zahtevnost, razdalja, trajanje, podatki o višini in podlagi, samodejno ustvarjena slika zemljevida ter fotografije, ki jih dodate.
 
-**Kaj zbiramo:** če prijavite polnilnico ali drugo lokacijo, ki je ni v zbirki, zberemo prijavljeno lokacijo, podatke, ki ste jih navedli, identifikator računa, e-poštni naslov in časovni žig.
+**Kdo jo lahko vidi:** vsi prijavljeni uporabniki aplikacije Zyflow. Fotografije poti in slike zemljevidov so shranjene v javno dostopni hrambi, zato jih **lahko odpre vsakdo, ki ima povezavo do fotografije ali slike**, tudi brez računa Zyflow. Vaše ime in e-naslov ob deljeni poti nista prikazana, v naši podatkovni bazi pa je pot povezana z vašim identifikatorjem uporabnika.
 
-**Zakaj:** da prijavo pregledamo in lokacijo morebiti dodamo v zbirko.
+> **Pomembno:** začetna in končna točka poti lahko razkrijeta, kje stanujete, delate ali redno puščate kolo. Preden pot delite, razmislite, ali bi jo začeli in končali nekoliko stran od doma, in vanjo ne vključujte osebnih podatkov ali fotografij, na katerih so prepoznavne osebe, hišne številke ali registrske tablice.
 
-**Pravna podlaga:** zakoniti interes (člen 6(1)(f)).
+**Odstranitev deljene poti:** deljeno pot lahko kadar koli odstranite. S tem izbrišete deljeno kopijo, njene fotografije in ustvarjeno sliko zemljevida. Poti, ki so jih drugi uporabniki že shranili kot svoje kopije, lahko ostanejo v njihovih računih [PREVERITI: kako se obnašajo kopije, ki so jih shranili drugi uporabniki].
 
-**Vidnost:** med pregledom vidno samo osebju HERKO d.o.o. Odobrene prijave postanejo del skupne zbirke; vaša identiteta se javno ne prikaže.
+**Namen:** kolesarjem omogočiti odkrivanje in uporabo poti, ki so jih delili drugi.
 
-### 3.5 Podatki o napravi in obvestilih
+**Pravna podlaga:** izvajanje pogodbe na vašo zahtevo (točka (b) prvega odstavka 6. člena Splošne uredbe) – deljenje je funkcija, ki jo za vsako pot dejavno izberete sami.
 
-**Kaj zbiramo:** če omogočite potisna obvestila, shranimo žeton naprave, s katerim lahko dostavimo obvestila.
+### 3.5 Prijave o krajih in predlogi manjkajočih krajev
 
-**Zakaj:** da vam pošiljamo relevantna obvestila v aplikaciji (npr. opozorila o poti).
+**Podatki:** ko potrdite ali sporočite, ali točka zanimanja (na primer polnilnica, servisna postaja ali pitnik) obstaja oziroma deluje, shranimo vašo prijavo, morebitne opombe, čas in vaš identifikator uporabnika. Ko prijavite manjkajoč ali napačen kraj, shranimo lokacijo, podatke, ki jih vnesete, vaš identifikator uporabnika, e-naslov in čas.
 
-**Pravna podlaga:** soglasje (člen 6(1)(a)). Dovoljenje podate prek sistemskega poziva za obvestila. Kadar koli ga lahko umaknete v nastavitvah naprave.
+**Vidnost:** prijave o krajih so drugim uporabnikom prikazane kot signali skupnosti brez vašega imena. Predloge manjkajočih krajev med pregledom vidi le naša ekipa. Odobreni kraji postanejo del baze krajev Zyflow brez povezave z vami.
 
-### 3.6 Analitični podatki
+**Namen:** zagotavljanje točnih podatkov o krajih za vse kolesarje in obveščanje o stanju vašega predloga po e-pošti.
 
-**Kaj zbiramo:** uporabljamo analitično storitev tretje osebe, da razumemo, kako uporabniki uporabljajo Zyflow. Zbiramo psevdonimni identifikator, vaš e-poštni naslov (da uporabo povežemo z računom), zaslone in funkcije, s katerimi sodelujete, ter splošne podatke o napravi in različici aplikacije.
+**Pravna podlaga:** zakoniti interes za točno, s strani skupnosti preverjeno bazo krajev (točka (f) prvega odstavka 6. člena Splošne uredbe). V opombe prosimo ne vpisujte osebnih podatkov.
 
-Podrobno vedenjsko sledenje in samodejno zajemanje dogodkov sta izklopljena. Ročno se beležijo le ključni dogodki interakcije.
+### 3.6 Kolesarski potni list (neobvezno)
 
-**Zakaj:** da razumemo vzorce uporabe in izboljšamo storitev.
+**Podatki:** znamka, model in barva kolesa, številka okvirja, datum nakupa, nakupna vrednost, opombe in fotografije kolesa ter neobvezno vaša teža.
 
-**Pravna podlaga:** zakoniti interes (člen 6(1)(f)).
+**Namen:** omogočanje evidence o vašem kolesu (na primer za pomoč v primeru kraje ali za zavarovanje) in izdelava kolesarskega potnega lista na vaši napravi. **Podatek o teži kolesarja je neobvezen in se uporablja samo za izračune poti** (na primer oceno napora in časa). Za druge namene se ne uporablja in se nikomur ne posreduje.
 
-**Pravica do ugovora:** analitični obdelavi lahko kadar koli ugovarjate na **legal@zyflow.eu**.
+**Vidnost:** vidno samo vam. Fotografije kolesa so shranjene v zasebni hrambi.
 
-### 3.7 Podatki o zrušitvah in napakah
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe). Vsa polja so prostovoljna in jih lahko kadar koli izbrišete.
 
-**Kaj zbiramo:** uporabljamo storitev spremljanja zrušitev, ki zbira poročila, ko se aplikacija zruši ali pride do večje napake. Poročila lahko vključujejo identifikator računa, tehnične podatke o napaki in podatke o napravi/OS. Storitev je aktivna samo v produkciji in obdeluje vzorec sej.
+### 3.7 Kamera in galerija fotografij
 
-**Zakaj:** da zaznamo, diagnosticiramo in odpravimo napake.
-
-**Pravna podlaga:** zakoniti interes (člen 6(1)(f)).
+Če to dovolite, aplikacija uporablja kamero in galerijo fotografij samo, ko se odločite dodati fotografijo (fotografije kolesa, poti, prijave krajev) ali shraniti sliko. Do vaših fotografij ne dostopamo v ozadju. Dovoljenje lahko prekličete v nastavitvah naprave.
 
 ### 3.8 E-poštna sporočila
 
-Za e-pošto uporabljamo ponudnika za dve kategoriji sporočil:
+Za hrambo kontaktnih podatkov (e-naslov, ime in priimek ter identifikator uporabnika) in pošiljanje e-pošte iz storitve Zyflow uporabljamo storitev Brevo.
 
-**Transakcijska e-pošta:** obvestila, potrebna za delovanje storitve (npr. posodobitve o prijavah, ki ste jih oddali). Pravna podlaga: zakoniti interes / izpolnjevanje pogodbe.
+**Obvestila v zvezi s storitvijo:** na primer pozdravno sporočilo po registraciji, sporočila v zvezi z računom in varnostjo ter obvestila o krajih, ki ste jih predlagali. **Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-**Trženjska sporočila:** novice o funkcijah in posodobitvah. Trženjsko e-pošto pošiljamo le z vašim predhodnim izrecnim soglasjem. Odjavite se lahko kadar koli prek povezave v sporočilu ali na **support@zyflow.eu**.
+**Trženjska sporočila (novice, obvestila o novostih):** pošiljamo jih **samo, če ste za to dali ločeno, izrecno privolitev**. Privolitev lahko kadar koli prekličete prek povezave za odjavo v vsakem sporočilu ali s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu). **Pravna podlaga:** privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Trženjskih sporočil trenutno ne pošiljamo.
 
-### 3.9 Podatki o usmerjanju in zemljevidih, poslani tretjim osebam
+### 3.9 Analitika uporabe
 
-Ko načrtujete pot ali iščete lokacijo, se za izpolnitev zahteve določeni podatki pošljejo storitvam tretjih oseb:
+Za razumevanje uporabe aplikacije in njeno izboljševanje uporabljamo PostHog (oblak v EU). Pošiljamo psevdonimni **identifikator uporabnika (ne vašega e-naslova ali imena)**, izbrane dogodke v aplikaciji (na primer »pot načrtovana« ali »izvoz GPX«), različico aplikacije in osnovne podatke o napravi. Samodejnega zajema vseh interakcij in snemanja sej v aplikaciji ne uporabljamo. PostHog je nastavljen tako, da **vašega naslova IP ne shrani**.
 
-- **storitve izračuna poti** prejmejo koordinate načrtovane poti (ne vaše identitete)
-- **storitve iskanja lokacij** prejmejo besedilo poizvedbe in geografsko območje
-- **storitve ploščic zemljevida** prejmejo zahteve glede na prikazano območje
-- **vremenske storitve** prejmejo približno lokacijo za relevantno vreme
+**Pravna podlaga:** zakoniti interes za izboljševanje aplikacije (točka (f) prvega odstavka 6. člena Splošne uredbe). Obdelavi lahko kadar koli ugovarjate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) [ALI: NASTAVITEV V APLIKACIJI, ČE BO DODANA].
 
-Vse tretje osebe v okviru standardne omrežne komunikacije prejmejo IP-naslov vaše naprave. Kjer je tehnično mogoče, zahteve posredujemo prek lastnih strežnikov, da omejimo neposredno izpostavljenost vašega IP-ja.
+### 3.10 Spremljanje napak in delovanja
 
-**Pravna podlaga:** izpolnjevanje pogodbe (člen 6(1)(b)).
+Za odkrivanje in odpravljanje napak uporabljamo Sentry (hramba podatkov v EU). Poročila o napakah in delovanju vsebujejo vaš identifikator uporabnika, tehnične podrobnosti napake, model naprave, operacijski sistem, različico aplikacije in vaš **naslov IP**, ki se shrani skupaj s poročilom o napaki. Vklopljeno je samodejno odstranjevanje občutljivih vrednosti, kot so e-naslovi.
 
-### 3.10 Integracija s Stravo (neobvezno)
+**Pravna podlaga:** zakoniti interes za stabilno in varno aplikacijo (točka (f) prvega odstavka 6. člena Splošne uredbe).
 
-**Kaj zbiramo:** če povežete račun Strava, v šifrirani obliki shranimo dostopni in osvežitveni žeton, ki ju izda Strava, ter identifikator športnika. Ko uvozite določeno kolesarsko aktivnost, uvozimo podatke poti — geografske koordinate, višino, razdaljo ter ime in datum aktivnosti — in jih shranimo kot shranjeno pot v vašem računu.
+### 3.11 Zemljevidi, iskanje, izračun poti in vreme
 
-**Kako:** prek uradnega toka OAuth Strave, ki ga začnete s »Connect with Strava«. Zahtevamo obseg activity:read_all zgolj za branje kolesarskih aktivnosti za uvoz. Vsa komunikacija s Stravo poteka prek naših zalednih strežnikov; žetoni Strave niso izpostavljeni aplikaciji na napravi.
+Za izvedbo vaših zahtev se nekateri podatki pošljejo naslednjim storitvam. Vsaka od njih v okviru običajnega internetnega prometa vidi tudi naslov IP.
 
-**Zakaj:** da lahko obstoječe vožnje iz Strave uvozite v Zyflow kot shranjene poti.
+- **Zemljevidne ploščice (MapTiler):** naprava ploščice zahteva neposredno, zato MapTiler vidi vaš naslov IP in območje zemljevida, ki si ga ogledujete.
+- **Iskanje krajev (Photon, komoot):** iskalni niz se pošlje prek našega strežnika, zato Photon vašega naslova IP ne vidi.
+- **Obratno geokodiranje (Nominatim, OpenStreetMap Foundation):** naprava neposredno pošlje koordinate, da jih pretvori v naslov, zato Nominatim vidi vaš naslov IP in te koordinate.
+- **Izračun poti (naš lastni strežnik OSRM na **[**osrm.zyflow.eu**](http://osrm.zyflow.eu)** in GraphHopper):** koordinate poti se pošljejo našemu strežniku za izračun poti (gostuje na strežnikih ponudnika Contabo v Nemčiji, EU) in prek našega zaledja storitvi GraphHopper.
+- **Vreme (Open-Meteo):** približna lokacija se pošlje prek našega zaledja.
+- **Prevajanje (DeepL):** prevajamo javna besedila prometnih obvestil. Osebni podatki o vas se ne pošiljajo.
 
-**Pravna podlaga:** soglasje (člen 6(1)(a)). Povezava s Stravo je povsem neobvezna in jo začnete vi. Soglasje lahko kadar koli umaknete (glejte »Prekinitev povezave«).
+**Pravna podlaga:** izvajanje pogodbe (točka (b) prvega odstavka 6. člena Splošne uredbe).
 
-**Vidnost in uporaba:** podatki, uvoženi iz Strave, so zasebni in prikazani samo vam. Drugim uporabnikom jih ne prikazujemo in jih nikoli ne uporabljamo za učenje, razvoj ali izboljšavo modelov umetne inteligence.
+### 3.12 Povezave za nastanitve (Stay22)
 
-**Prekinitev povezave in izbris:** Stravo lahko kadar koli prekinete na zaslonu Strava v aplikaciji. S tem prekličemo dostop in izbrišemo shranjene žetone. Dostop lahko prekličete tudi v nastavitvah računa Strava na https://www.strava.com/settings/apps. Že uvožene poti ostanejo, dokler jih ne izbrišete. Izbris računa Zyflow odstrani tudi povezavo in žetone Strave.
+Pri nekaterih krajih so prikazane povezave za nastanitve našega partnerja za provizijsko trženje Stay22. **Samo če se dotaknete takšne povezave**, se odpre storitev Stay22, ki ji povezava posreduje koordinate in ime tega kraja (ne podatkov o vašem računu). Za to lahko prejmemo provizijo. Ko odprete povezavo, sta Stay22 in spletna mesta za rezervacije, ki jih uporablja, samostojna upravljavca, zanju pa veljajo njuni pravilniki o zasebnosti.
 
-**Lastna obdelava Strave:** Strava, Inc. je samostojni upravljavec podatkov v vašem računu Strava. Uporabo Strave urejata Politika zasebnosti (https://www.strava.com/legal/privacy) in pogoji storitve Strave.
+**Pravna podlaga:** zakoniti interes za financiranje brezplačne aplikacije (točka (f) prvega odstavka 6. člena Splošne uredbe); prenos se izvede samo na vašo pobudo.
 
-## 4. PODATKI, KI JIH NE ZBIRAMO
+### 3.13 Varnost in preprečevanje zlorab
 
-Zaradi preglednosti: Zyflow **ne**:
+Naša iskalna funkcija za kratek čas shrani naslov IP naprave, ki pošlje zahtevo, skupaj s števci zahtev, da prepreči zlorabe (omejevanje števila zahtev). Ti zapisi se samodejno izbrišejo po 24 urah. Iskalni nizi se do 24 ur hranijo v predpomnilniku brez povezave z vami ali vašim naslovom IP. Naši ponudniki gostovanja zaradi varnosti vodijo tehnične dnevnike strežnikov (vključno z naslovi IP).
 
-- ne obdeluje **plačilnih podatkov** (aplikacija je brezplačna)
-- ne uporablja **oglaševalskih omrežij** in ne prodaja vaših podatkov oglaševalcem
-- ne spremlja vaše lokacije **neprekinjeno v ozadju**
-- ne zbira **zdravstvenih ali biometričnih podatkov**
+**Pravna podlaga:** zakoniti interes za varnost naše storitve (točka (f) prvega odstavka 6. člena Splošne uredbe).
 
-## 5. KAKO DELIMO VAŠE PODATKE
+### 3.14 Podatki, shranjeni na vaši napravi
 
-Vaših osebnih podatkov ne prodajamo. Delimo jih le, kot sledi:
+Aplikacija lokalno na vaši napravi shrani vašo prijavno sejo, zadnjo znano lokacijo in nedavna iskanja, da deluje hitro in da ostanete prijavljeni. Ta hramba je nujno potrebna za storitev, ki jo zahtevate. Podatki se izbrišejo, ko se odjavite [PREVERITI] ali odstranite aplikacijo.
 
-**Ponudniki storitev:** podatke delimo s tretjimi podjetji, ki jih obdelujejo v našem imenu na podlagi pisnih pogodb o obdelavi. Navedeni so v razdelku 6.
+### 3.15 Načrtovane funkcije (še niso na voljo)
 
-**Funkcije skupnosti:** podatki o prispevkih točk interesa (prisotnost/delovanje in opombe) so vidni drugim prijavljenim uporabnikom, kot je opisano v razdelku 3.3.
+**Potisna obvestila** in **uvoz iz storitve Strava** še nista na voljo. Pred uvedbo katere koli od teh funkcij bomo posodobili to politiko zasebnosti in opisali, kateri podatki se obdelujejo. Potisna obvestila bomo pošiljali le, če jih boste dovolili v nastavitvah naprave; povezava s storitvijo Strava bo vedno neobvezna.
 
-**Zakonske zahteve:** osebne podatke lahko razkrijemo, če to zahteva zakon, sodni nalog ali pristojni organ. Obvestili vas bomo, kjer je to zakonito dovoljeno.
+### 3.16 Podpora in zahteve v zvezi z varstvom podatkov
 
-**Prenosi poslovanja:** ob združitvi, prevzemu ali prodaji sredstev se lahko podatki prenesejo kot del transakcije. Pred tem, da za vaše podatke začne veljati drugačna politika zasebnosti, vas bomo obvestili.
+Če nam pišete, obdelujemo vaš e-naslov, vsebino sporočila in naš odgovor, da obravnavamo vašo zahtevo. **Pravna podlaga:** zakoniti interes (točka (f) prvega odstavka 6. člena Splošne uredbe), pri zahtevah za uveljavljanje pravic pa izpolnjevanje naše zakonske obveznosti (točka (c) prvega odstavka 6. člena Splošne uredbe).
 
-## 6. OBDELSOVALCI TRETJIH OSEB
+### 3.17 Česa ne počnemo
 
-Naslednja podjetja v našem imenu obdelujejo osebne podatke. Vsako zavezuje pogodba o obdelavi in podatke sme uporabljati le za namene, ki jih določimo.
+- Vaših osebnih podatkov ne prodajamo.
+- V aplikaciji ne prikazujemo oglasov in ne uporabljamo oglasnih identifikatorjev.
+- Vaše lokacije ne spremljamo v ozadju.
+- Ne sprejemamo odločitev, ki bi temeljile izključno na avtomatizirani obdelavi in bi imele za vas pravne ali podobno pomembne učinke (22. člen Splošne uredbe).
+- Ne obdelujemo plačilnih podatkov (aplikacija je brezplačna).
 
-| Obdelovalec | Vloga | Lokacija |
-| --- | --- | --- |
-| Ponudnik oblačne infrastrukture | Varno gostovanje, podatkovna zbirka, avtentikacija, shranjevanje datotek | Evropska unija |
-| Ponudnik analitike | Produktna analitika (gostovanje v EU) | Evropska unija |
-| Ponudnik spremljanja napak | Poročila o zrušitvah in napakah | Združene države (SCC) |
-| Ponudnik e-pošte | Transakcijska in trženjska e-pošta | Evropska unija / različno |
-| Storitve potisnih obvestil | Dostava obvestil v aplikaciji | Združene države |
-| Ponudnik izračuna poti | Navigacijsko usmerjanje (posredovano) | Evropska unija |
-| Ponudnik geokodiranja | Iskanje lokacij in obratno geokodiranje | Evropska unija |
-| Ponudnik vremenskih podatkov | Vreme za načrtovanje poti | Evropska unija |
-| Ponudnik ploščic zemljevida | Prikaz zemljevida | Švica / EU |
-| Apple Inc. | Sign in with Apple | Združene države |
-| Google LLC | Sign in with Google | Združene države |
-| Strava, Inc. | Uvoz fitnes aktivnosti (na vašo pobudo, neobvezno) | Združene države (SCC / Data Privacy Framework) |
+## 4. Pregled pravnih podlag
 
-Za prenose obdelovalcem zunaj EU/EGP glejte razdelek 8.
+| Namen | Pravna podlaga (Splošna uredba) |
+|---|---|
+| Uporabniški račun, poti, lokacijske funkcije, kolesarski potni list, deljenje s skupnostjo, zemljevidi/iskanje/izračun poti/vreme, obvestila v zvezi s storitvijo | Pogodba, točka (b) 6(1) |
+| Prijave in predlogi krajev, analitika uporabe, spremljanje napak, varnost in omejevanje zahtev, povezave Stay22, podpora | Zakoniti interes, točka (f) 6(1) |
+| Trženjska e-pošta, piškotki in sledilne kode na spletnem mestu (ko bodo uvedeni), prihodnja potisna obvestila | Privolitev, točka (a) 6(1) (za piškotke in trženjsko e-pošto tudi ZEKom-2) |
+| Odgovarjanje na zahteve za uveljavljanje pravic, računovodske in druge zakonske obveznosti | Zakonska obveznost, točka (c) 6(1) |
 
-## 7. HRAMBA PODATKOV
+Kadar se opiramo na zakoniti interes, imate pravico do ugovora (glej točko 8).
 
-Osebne podatke hranimo, dokler je to potrebno za namene, opisane v tej Politiki, ali kolikor zahteva zakon.
+## 5. Uporabniki vaših podatkov
 
-| Podatki | Hramba |
-| --- | --- |
-| Podatki o računu | Trajanje računa, izbris v razumnem roku po izbrisu |
-| Shranjene poti | Dokler jih ne izbrišete ali ob izbrisu računa |
-| Zaznamki | Dokler jih ne odstranite ali ob izbrisu računa |
-| Prispevki skupnosti | Anonimizirani ob izbrisu računa; lokacijski podatki ostanejo v naboru skupnosti |
-| Prijave lokacij | Do rešitve, nato anonimizacija |
-| Žetoni potisnih obvestil | Izbris ob izbrisu računa ali preklicu dovoljenja |
-| Žetoni povezave s Stravo | Šifrirano do prekinitve Strave ali izbrisa računa |
-| Analitični podatki | Po nastavitvah ponudnika analitike |
-| Poročila o zrušitvah | Po nastavitvah ponudnika spremljanja napak |
-| Pravne in računovodske evidence | 10 let (zahteva slovenska zakonodaja) |
+Uporabljamo naslednje ponudnike storitev. Obdelovalci podatke obdelujejo samo po naših navodilih na podlagi pogodbe o obdelavi osebnih podatkov (28. člen Splošne uredbe).
 
-## 8. MEDNARODNI PRENOSI PODATKOV
+| Uporabnik | Namen | Podatki | Lokacija / zaščita |
+|---|---|---|---|
+| Supabase, Inc. (obdelovalec) | Podatkovna baza, avtentikacija, hramba datotek, zaledne funkcije | Vsi zgoraj opisani podatki aplikacije | EU (Irska, eu-west-1); matična družba v ZDA: standardne pogodbene klavzule / okvir EU-ZDA za zasebnost podatkov [PREVERITI] |
+| Brevo (Sendinblue SAS, Francija) (obdelovalec) | Hramba kontaktov in pošiljanje e-pošte | E-naslov, ime in priimek, identifikator uporabnika, vsebina sporočil | EU [PREVERITI REGIJO GOSTOVANJA] |
+| PostHog (oblak v EU) (obdelovalec) | Analitika uporabe | Identifikator uporabnika, dogodki v aplikaciji, podatki o napravi/aplikaciji; naslov IP se ne shrani | EU |
+| Sentry (Functional Software, Inc.), hramba v EU (obdelovalec) | Spremljanje napak in delovanja | Identifikator uporabnika, naslov IP, podatki o napravi in napaki | Hramba v EU; družba iz ZDA: standardne pogodbene klavzule / okvir za zasebnost podatkov [PREVERITI] |
+| Vercel, Inc. (obdelovalec) | Gostovanje naših spletnih mest | Naslov IP, tehnični podatki o zahtevi | Globalno omrežje, vključno z ZDA: standardne pogodbene klavzule / okvir za zasebnost podatkov [PREVERITI] |
+| Apple / Google (samostojna upravljavca) | Prijava z Apple / Google (če jo izberete) | Podatki za prijavo, e-naslov, ime | Subjekti v EU in ZDA: okvir za zasebnost podatkov [PREVERITI] |
+| MapTiler AG | Zemljevidne ploščice | Naslov IP, območje zemljevida | Švica (sklep o ustreznosti) [PREVERITI] |
+| komoot GmbH (Photon) | Iskanje krajev (prek našega strežnika) | Iskalni niz, območje iskanja | Nemčija (EU) |
+| OpenStreetMap Foundation (Nominatim) | Obratno geokodiranje | Naslov IP, koordinate | Združeno kraljestvo (sklep o ustreznosti) [PREVERITI] |
+| GraphHopper GmbH | Izračun poti (prek našega zaledja) | Koordinate poti | Nemčija (EU) [PREVERITI] |
+| Open-Meteo | Vreme (prek našega zaledja) | Približne koordinate | [PREVERITI: EU / ŠVICA] |
+| Lastni strežnik OSRM ([osrm.zyflow.eu](http://osrm.zyflow.eu)) | Izračun poti | Naslov IP, koordinate poti | Upravljamo ga sami; gostuje pri Contabo GmbH (obdelovalec), Nemčija (EU) |
+| DeepL SE | Prevajanje besedil prometnih obvestil | Brez osebnih podatkov | Nemčija (EU) |
+| Stay22 (samostojni upravljavec, ko se dotaknete povezave) | Provizijske povezave za nastanitve | Koordinate in ime kraja; naslov IP, ko odprete povezavo | [PREVERITI: KANADA (SKLEP O USTREZNOSTI) / ZDA] |
 
-Vaši osebni podatki so primarno shranjeni v **Evropski uniji**. Nekateri obdelovalci iz razdelka 6 so zunaj EU/EGP (zlasti v Združenih državah). Za take prenose zagotavljamo ustrezna jamstva:
+**Drugi uporabniki:** glej deljenje poti s skupnostjo (točka 3.4) in prijave krajev (točka 3.5).
 
-- **standardne pogodbene klavzule (SCC)**, ki jih je odobrila Evropska komisija
-- **okvir EU–ZDA o varstvu zasebnosti**, kjer je obdelovalec certificiran
+**Organi:** podatke razkrijemo le, kadar nam to nalaga zakon, na primer na podlagi sodne odredbe.
 
-Podrobnosti jamstev za konkreten prenos lahko zahtevate na **legal@zyflow.eu**.
+**Prenos dejavnosti:** če se družba HERKO d.o.o. ali storitev Zyflow združi ali proda, lahko podatki preidejo na novega lastnika, ki mora spoštovati to politiko; o tem vas bomo vnaprej obvestili.
 
-## 9. VAŠE PRAVICE PO GDPR
+## 6. Prenosi zunaj EU/EGP
 
-Glede osebnih podatkov imate naslednje pravice. Za uveljavljanje nam pišite na **legal@zyflow.eu**.
+Podatki aplikacije so shranjeni v EU (Irska). Nekateri uporabniki imajo sedež v tretjih državah zunaj EU/EGP ali lahko do podatkov dostopajo iz njih, zlasti iz ZDA (na primer Apple, Google, Vercel ter matični družbi Supabase in Sentry v ZDA) [PREVERITI SEZNAM]. Podatke prenašamo le, če je zagotovljena ustrezna raven varstva: na podlagi sklepa Evropske komisije o ustreznosti (na primer za Švico, Združeno kraljestvo, Kanado ali za družbe iz ZDA, vključene v okvir EU-ZDA za zasebnost podatkov) ali standardnih pogodbenih klavzul Evropske komisije (46. člen Splošne uredbe) [PREVERITI ZA VSAKEGA PONUDNIKA]. Kopijo ustreznih zaščitnih ukrepov lahko zahtevate na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-**Pravica do dostopa (čl. 15):** pridobite kopijo osebnih podatkov, ki jih hranimo o vas.
+## 7. Rok hrambe
 
-**Pravica do popravka (čl. 16):** netočne ali nepopolne podatke lahko popravimo.
+| Podatki | Rok hrambe |
+|---|---|
+| Podatki o računu (e-naslov, ime, telefon, identifikator uporabnika) | Dokler račun obstaja; izbrisani v 30 dneh po izbrisu računa |
+| Shranjene in uvožene poti, shranjeni kraji | Dokler jih ne izbrišete ali ne izbrišete računa |
+| Poti, deljene s skupnostjo, njihove fotografije in slike zemljevidov | Dokler deljene poti ne odstranite ali ne izbrišete računa |
+| Kolesarski potni list in fotografije kolesa | Dokler jih ne izbrišete ali ne izbrišete računa |
+| Prijave krajev in predlogi manjkajočih krajev | Do izbrisa računa; odobreni kraji ostanejo v bazi krajev brez povezave z vami |
+| Kontakt v storitvi Brevo (e-naslov, ime, identifikator uporabnika) | Dokler račun obstaja; izbrisan v 30 dneh po izbrisu računa |
+| Dnevniki pošiljanja e-pošte v storitvi Brevo | [PREDLOG: DO 12 MESECEV – PREVERITI NASTAVITEV BREVO] |
+| Analitika uporabe (PostHog) | 12 mesecev; analitični profil se izbriše ob izbrisu računa |
+| Poročila o napakah in delovanju (Sentry) | 90 dni |
+| Podatki za omejevanje iskalnih zahtev (naslov IP in števci) | 24 ur |
+| Predpomnilnik iskanja (iskalni niz brez povezave z vami) | 24 ur |
+| Dnevniki strežnikov in gostovanja (Supabase, Vercel) | Do 30 dni |
+| Varnostne kopije podatkovne baze | Do 7 dni, sprotno; izbrisani podatki izginejo iz varnostnih kopij, ko se te prepišejo |
+| Korespondenca s podporo in v zvezi z zahtevami za uveljavljanje pravic | [PREDLOG: 2 LETI po zaključku zahteve] |
+| Podatki na vaši napravi (seja, zadnja lokacija, nedavna iskanja) | Dokler se ne odjavite ali ne odstranite aplikacije |
+| Računovodske listine (če obstajajo) | Kot določa zakon (na primer 10 let za račune po ZDDV-1) |
 
-**Pravica do izbrisa (čl. 17):** zahtevate lahko izbris, kadar podatki niso več potrebni, ko umaknete soglasje ali kadar je bila obdelava nezakonita.
+## 8. Vaše pravice
 
-**Pravica do omejitve (čl. 18):** v določenih okoliščinah lahko zahtevate omejitev obdelave.
+Po Splošni uredbi imate pravico do:
 
-**Pravica do prenosljivosti (čl. 20):** prejmete lahko podatke v strukturirani, strojno berljivi obliki, kadar obdelava temelji na soglasju ali pogodbi.
+- **dostopa** do svojih osebnih podatkov in kopije podatkov (15. člen);
+- **popravka** netočnih ali nepopolnih podatkov (16. člen) – večino podatkov lahko popravite sami v aplikaciji;
+- **izbrisa** (»pravica do pozabe«, 17. člen);
+- **omejitve** obdelave (18. člen);
+- **prenosljivosti** podatkov – da podatke, ki ste nam jih posredovali, prejmete v strukturirani, strojno berljivi obliki ali da jih posredujemo drugemu upravljavcu (20. člen); poti lahko v aplikaciji izvozite tudi v obliki GPX;
+- **ugovora** obdelavi na podlagi zakonitega interesa, na primer analitiki ali spremljanju napak (21. člen), in kadar koli ugovora obdelavi za namene neposrednega trženja;
+- **preklica privolitve** kadar koli, ne da bi to vplivalo na zakonitost obdelave pred preklicem (tretji odstavek 7. člena);
+- **vložitve pritožbe** pri nadzornem organu (točka 10).
 
-**Pravica do ugovora (čl. 21):** ugovarjate lahko obdelavi na podlagi zakonitega interesa, vključno z analitiko, spremljanjem zrušitev in podatki skupnosti.
+Pravice uveljavljate s sporočilom na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom. Morda vas bomo prosili za potrditev istovetnosti. Odgovorimo **v 30 dneh** (enem mesecu). V zapletenih primerih lahko rok podaljšamo za največ dva meseca, o čemer vas obvestimo v prvem mesecu. Uveljavljanje pravic je brezplačno.
 
-**Pravica do umika soglasja:** kjer se opiramo na soglasje (npr. potisna obvestila), ga lahko kadar koli umaknete, ne da bi to vplivalo na prejšnjo obdelavo.
+## 9. Kako izbrišete uporabniški račun
 
-**Pravica, da niste predmet avtomatiziranega odločanja (čl. 22):** o vas ne sprejemamo avtomatiziranih odločitev s pravnimi ali pomembnimi učinki.
+- **V aplikaciji:** Nastavitve → [NATANČNA POT V MENIJU, NPR. »RAČUN« → »IZBRIŠI RAČUN«].
+- **Na spletu:** [URL SPLETNE STRANI ZA IZBRIS RAČUNA].
+- **Po e-pošti:** pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) z e-naslova, povezanega z vašim računom.
 
-Na zahtevo odgovorimo v **30 dneh**. V zapletenih primerih lahko rok podaljšamo za 60 dni in vas o tem obvestimo v prvih 30 dneh. Uveljavljanje pravic je brezplačno, razen če so zahteve očitno neutemeljene ali pretirane.
+Ob izbrisu računa izbrišemo vaš profil, shranjene poti, poti, deljene s skupnostjo, in njihove fotografije, kolesarski potni list in fotografije kolesa, prijave in predloge krajev ter shranjene kraje. Izbrišemo tudi vaš kontakt v storitvi Brevo ter vaš profil v storitvah za analitiko in spremljanje napak PostHog in Sentry. Izbris je zaključen v 30 dneh; preostale kopije v varnostnih kopijah se prepišejo v rednem ciklu varnostnega kopiranja. Odobreni kraji, ki ste jih predlagali, ostanejo v bazi krajev brez povezave z vami. Podatki na vaši napravi se izbrišejo, ko odstranite aplikacijo.
 
-## 10. PRAVICA DO PRITOŽBE
+## 10. Pritožbe
 
-Če menite, da osebnih podatkov nismo obdelali pravilno, se lahko pritožite nadzornemu organu v državi prebivališča ali slovenskemu organu:
+Če menite, da vaše podatke obdelujemo nezakonito, lahko vložite pritožbo pri nadzornem organu v državi članici EU, v kateri prebivate ali delate, ali pri slovenskem nadzornem organu:
 
-**Informacijski pooblaščenec** Zaloška cesta 59, 1000 Ljubljana, Slovenija Spletna stran: [www.ip-rs.si](https://www.ip-rs.si/) E-pošta: gp.ip@ip-rs.si Telefon: +386 1 230 97 30
+**Informacijski pooblaščenec Republike Slovenije**, Dunajska cesta 22, 1000 Ljubljana · [gp.ip@ip-rs.si](mailto:gp.ip@ip-rs.si) · 01 230 97 30 · [www.ip-rs.si](http://www.ip-rs.si)
 
-Najprej nam prosimo pišite na **legal@zyflow.eu**, da zadevo poskusimo rešiti neposredno.
+Veseli bomo, če nam boste najprej omogočili, da težavo rešimo sami – pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 11. VARNOST
+## 11. Otroci
 
-Sprejemamo ustrezne tehnične in organizacijske ukrepe za zaščito osebnih podatkov pred nepooblaščenim dostopom, izgubo ali zlorabo. To vključuje šifriranje podatkov v prenosu in v mirovanju, nadzor dostopa do produkcijskih podatkov in skrbno izbiro obdelovalcev.
+Zyflow je namenjen osebam, starim **16 let ali več**, in je na voljo samo v EU. Podatkov otrok, mlajših od 16 let, zavestno ne obdelujemo. Če menite, da je račun ustvaril otrok, mlajši od 16 let, nam pišite na [legal@zyflow.eu](mailto:legal@zyflow.eu) in račun bomo izbrisali.
 
-Nobena metoda prenosa ali hrambe ni 100-odstotno varna. Ob kršitvi varnosti podatkov, ki bi verjetno povzročila visoko tveganje za vaše pravice in svoboščine, vas in Informacijskega pooblaščenca obvestimo, kot zahtevata člena 33 in 34 GDPR.
+## 12. Spletno mesto in piškotki
 
-## 12. ZASEBNOST OTROK
+> **Spletno mesto in piškotki** ([zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu), [navigate.zyflow.eu](http://navigate.zyflow.eu))
+>
+> Naša spletna mesta gostuje Vercel. Ob obisku Vercel obdeluje vaš naslov IP in tehnične podatke o zahtevi, da prikaže spletno mesto in zagotovi njegovo varnost (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe).
+>
+> Na spletnih mestih trenutno ne uporabljamo analitičnih ali trženjskih piškotkov. Načrtujemo uvedbo orodij Google Tag Manager, Google Analytics 4 in Meta (Facebook) Pixel. **Ta orodja se bodo naložila šele, ko boste v pasici za piškotke dali privolitev** (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Privolitev lahko kadar koli spremenite ali prekličete prek [POVEZAVA NASTAVITVE PIŠKOTKOV V NOGI STRANI]. Pred njihovo uvedbo bomo to politiko dopolnili s podatki o družbah Google in Meta kot uporabnikih podatkov ter o morebitnih prenosih v ZDA.
+>
+> Podrobnosti o vseh piškotkih so v ločeni Politiki piškotkov: [URL POLITIKE PIŠKOTKOV].
+>
+> Mobilna aplikacija ne uporablja brskalniških piškotkov; o podatkih, shranjenih na napravi, glej točko 3.14.
 
-Zyflow ni namenjen osebam, mlajšim od 16 let. Ta starost je usklajena s starostjo digitalnega soglasja po členu 8 GDPR, kot je uveden v Sloveniji. Oseb, mlajših od 16 let, zavestno ne zbiramo. Če menite, da nam je takšna oseba posredovala podatke, nam pišite na **legal@zyflow.eu** in jih bomo nemudoma izbrisali.
+## 13. Varnost
 
-## 13. PIŠKOTKI IN PODOBNE TEHNOLOGIJE
+Uporabljamo ustrezne tehnične in organizacijske ukrepe, med drugim šifriranje med prenosom, šifriranje shranjenih podatkov pri ponudniku gostovanja, nadzor dostopa in varnost na ravni vrstic v podatkovni bazi ter omejen dostop do produkcijskih podatkov. Če bi kršitev varnosti osebnih podatkov verjetno povzročila veliko tveganje za vas, bomo vas in Informacijskega pooblaščenca obvestili v skladu s 33. in 34. členom Splošne uredbe.
 
-Mobilna aplikacija Zyflow ne uporablja brskalniških piškotkov. Za vzdrževanje seje prijave uporablja lokalno shrambo naprave. To je običajna praksa mobilnih aplikacij in ni dostopna drugim aplikacijam ali spletnim mestom.
+## 14. Spremembe politike zasebnosti
 
-Storitve tretjih oseb v aplikaciji lahko za analitiko ali spremljanje zrušitev uporabljajo identifikatorje na ravni naprave. Glejte njihove politike zasebnosti.
+To politiko lahko posodobimo, ko se spremeni naša storitev ali zakonodaja. Novo različico bomo objavili z novo številko različice in datumom začetka veljavnosti. O bistvenih spremembah vas bomo pred začetkom njihove veljavnosti obvestili v aplikaciji in/ali po e-pošti.
 
-Spletno mesto Zyflow (zyflow.eu) uporablja Google Tag Manager skupaj z Google Analytics 4 in, če soglašate, oglaševalske merilne piksle (na primer Meta in ChatGPT Ads). Neobvezni analitični in oglaševalski piškotki se naložijo šele po privolitvi prek pasice (Google Consent Mode). Podrobnosti, seznam piškotkov in spremembo izbir najdete v **[Politiki piškotkov](/sl/legal-pages/cookie-policy)**.
+## 15. Kontakt
 
-## 14. SPREMEMBE TE POLITIKE
-
-To Politiko zasebnosti lahko občasno posodobimo. Ob bistvenih spremembah vas obvestimo prek aplikacije in/ali e-pošte. Bistvene spremembe začnejo veljati najpozneje **30 dni** po obvestilu. Politiko priporočamo, da jo občasno pregledate.
-
-## 15. STIK
-
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republika Slovenija
-
-Vprašanja o zasebnosti: **legal@zyflow.eu**
-Splošna podpora: **support@zyflow.eu**
-
-Vprašanja o zasebnosti potrdimo v **5 delovnih dneh** in vsebinsko odgovorimo v **30 dneh**.
+HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenija · [legal@zyflow.eu](mailto:legal@zyflow.eu)

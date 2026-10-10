@@ -1,139 +1,58 @@
----
-title: "Politika piškotkov"
-date: "9. 10. 2026"
-lede: "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
----
+# Politika piškotkov Zyflow
 
-**Aplikacija in spletno mesto Zyflow**
+**Različica:** [1.0] · **Datum začetka veljavnosti:** [DD. MM. 2026] · **URL:** [URL POLITIKE PIŠKOTKOV, NPR. https://www.zyflow.eu/legal-pages/cookie-policy]
 
-**Datum veljavnosti:** 9. 10. 2026
-**Različica:** 1.1
+Ta politika piškotkov pojasnjuje, kako družba HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenija (v nadaljevanju: »mi«), uporablja piškotke in podobne tehnologije na spletnih mestih [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Več o obdelavi osebnih podatkov je v naši [Politiki zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy). Kontakt: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
-## 1. KDO SMO
+## 1. Kaj so piškotki?
 
-To Politiko piškotkov izdaja:
+Piškotki so majhne besedilne datoteke, ki jih spletno mesto shrani v vaš brskalnik. Podobne tehnologije so lokalna hramba brskalnika in sledilne kode (pixel – kratka koda, ki ob nalaganju strani pošlje podatke ponudniku). V tej politiki izraz »piškotki« zajema vse te tehnologije.
 
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republika Slovenija
+## 2. Trenutna uporaba piškotkov
 
-Davčna številka: SI56613555
+**Naša spletna mesta trenutno ne uporabljajo analitičnih, oglaševalskih ali drugih nenujnih piškotkov.** Uporablja se lahko le tehnično nujna hramba, na primer za ohranjanje prijave na [app.zyflow.eu](http://app.zyflow.eu) [PREVERITI]. Spletna mesta gostuje Vercel, ki običajnim obiskovalcem ne nastavlja piškotkov [PREVERITI].
 
-Stik: legal@zyflow.eu Spletna stran: https://www.zyflow.eu
+## 3. Načrtovani piškotki – samo z vašo privolitvijo
 
-(v nadaljevanju »Zyflow«, »mi«, »nas«, »naš«)
+Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** (za razumevanje uporabe spletnih mest) in **Meta (Facebook) Pixel** (za merjenje in izboljševanje naših oglasov na Facebooku in Instagramu). **Ta orodja so blokirana in se ne naložijo, dokler v pasici za piškotke dejavno ne privolite.** Če ne privolite, se nikoli ne naložijo. Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
 
-## 2. KAJ POKRIVA TA POLITIKA
+## 4. Kategorije piškotkov
 
-Ta politika pojasnjuje, kako Zyflow uporablja piškotke in podobne sledilne tehnologije na:
+- **Nujni** – potrebni za delovanje spletnega mesta in za shranjevanje vaše izbire glede piškotkov. Vedno aktivni.
+- **Analitični** – Google Analytics 4 prek Google Tag Managerja: statistika obiskov, ogledanih strani, naprave in približne lokacije (država/mesto). Izklopljeni, dokler ne privolite.
+- **Trženjski** – Meta Pixel (in Googlove oglaševalske oznake, če jih dodamo): merjenje uspešnosti naših oglasov in prikaz ustreznih oglasov na drugih platformah. Izklopljeni, dokler ne privolite.
 
-- **mobilni aplikaciji Zyflow** (iOS in Android)
-- **spletnem mestu Zyflow** na https://www.zyflow.eu
+## 5. Preglednica piškotkov
 
-Kratek odgovor: **naša mobilna aplikacija ne uporablja brskalniških piškotkov**. Naše spletno mesto uporablja nujno potrebne piškotke ter neobvezne analitične in oglaševalske piškotke, ki se naložijo šele, ko podate soglasje prek pasice za piškotke.
+| Ime | Ponudnik | Namen | Kategorija | Trajanje | Stanje |
+|---|---|---|---|---|---|
+| `cc_cookie` | Zyflow (CookieConsent, lastni piškotek) | Shrani vašo izbiro glede piškotkov, da vas ne sprašujemo na vsaki strani | Nujni | 182 dni (privzeta vrednost knjižnice, preveriti v naši nastavitvi) | Ko bo pasica aktivna |
+| `sb-<PROJECT-REF>-auth-token` (lokalna hramba) [PREVERITI] | Zyflow (avtentikacija Supabase) | Ohranja vašo prijavo v spletni aplikaciji | Nujni | Do odjave (preveriti) | [PREVERITI: samo če je na spletnem mestu prijava] |
+| `_ga` | Google Ireland Ltd. (Google Analytics 4) | Z naključnim identifikatorjem razlikuje obiskovalce za statistiko | Analitični | 2 leti (običajno, preveriti) | Načrtovano, samo po privolitvi |
+| `_ga_<CONTAINER-ID>` [ID MERITVE] | Google Ireland Ltd. (Google Analytics 4) | Ohranja stanje seje za statistiko | Analitični | 2 leti (običajno, preveriti) | Načrtovano, samo po privolitvi |
+| `_gcl_au` [SAMO ČE DODAMO OZNAKE GOOGLE ADS] | Google Ireland Ltd. (Conversion Linker) | Povezuje klike na oglase z dejanji na našem spletnem mestu | Trženjski | 90 dni (običajno, preveriti) | Samo če je nastavljeno, samo po privolitvi |
+| `_fbp` | Meta Platforms Ireland Ltd. (Meta Pixel) | Prepozna vaš brskalnik za merjenje in prikazovanje oglasov | Trženjski | 90 dni (običajno, preveriti) | Načrtovano, samo po privolitvi |
+| `_fbc` | Meta Platforms Ireland Ltd. (Meta Pixel) | Shrani identifikator klika, ko pridete z oglasa Meta | Trženjski | 90 dni (običajno, preveriti) | Načrtovano, samo po privolitvi |
+| Piškotki Meta na [facebook.com](http://facebook.com) (npr. `fr`) [PREVERITI] | Meta Platforms Ireland Ltd. (tretja oseba) | Prikazovanje in merjenje oglasov Meta, če v istem brskalniku uporabljate Facebook/Instagram | Trženjski | 90 dni (običajno, preveriti) | Načrtovano, samo po privolitvi |
 
-## 3. KAJ SO PIŠKOTKI?
+Google Tag Manager le nalaga zgoraj navedene oznake in običajno ne nastavlja lastnih piškotkov [PREVERITI]. Preglednico bomo posodobili, preden bomo uporabili kateri koli nov piškotek.
 
-Piškotki so majhne besedilne datoteke, ki jih spletno mesto ob obisku shrani v vaš brskalnik. Široko se uporabljajo, da spletna mesta delujejo, si zapomnijo nastavitve in — v nekaterih primerih — spremljajo vaše vedenje med spletnimi mesti za analitiko ali oglaševanje.
+## 6. Uporabniki podatkov in prenosi
 
-»Podobne tehnologije« vključujejo lokalno shranjevanje, sejne shrambe in identifikatorje na ravni naprave, ki jih mobilne aplikacije uporabljajo za podobne namene.
+Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) analitične podatke obdeluje v našem imenu. Družba **Meta** (Meta Platforms Ireland Ltd.; matična družba Meta Platforms, Inc., ZDA) prejema podatke iz Meta Pixla; za zbiranje in posredovanje teh podatkov sva z družbo Meta skupna upravljavca (26. člen Splošne uredbe) [PREVERITI: pogoji Meta Business Tools in dodatek za upravljavce]. Podatki se lahko prenesejo v ZDA; obe družbi sta vključeni v okvir EU-ZDA za zasebnost podatkov [PREVERITI]. Za njuno nadaljnjo obdelavo veljata njuni politiki zasebnosti.
 
-## 4. MOBILNA APLIKACIJA ZYFLOW — BREZ PIŠKOTKOV
+## 7. Privolitev, preklic in sprememba nastavitev
 
-Mobilna aplikacija Zyflow **ne uporablja brskalniških piškotkov**.
+- Ob prvem obisku pasica ponuja možnosti **»Sprejmi vse«**, **»Zavrni vse«** in **»Uredi nastavitve«**. Zavrnitev je enako preprosta kot sprejem. Če pasico zaprete ali ne izberete ničesar, se uporabljajo samo nujni piškotki.
+- Privolitev lahko **kadar koli spremenite ali prekličete** prek povezave **»Nastavitve piškotkov«** v nogi vsake strani. Preklic ne vpliva na zakonitost obdelave pred preklicem. Ko privolitev prekličete, orodij ne nalagamo več in, kjer je tehnično mogoče, izbrišemo svoje analitične in trženjske piškotke.
+- Vašo izbiro hranimo [182 DNI] in vas ponovno vprašamo, ko poteče ali ko dodamo nove piškotke ali namene.
+- Za dokazovanje privolitve hranimo zapis o njej (naključni identifikator privolitve, datum in čas, vaše izbire in različico politike) [ROK HRAMBE, NPR. 3 LETA – ODVETNIK].
+- Piškotke lahko blokirate ali izbrišete tudi v nastavitvah brskalnika; nekateri deli spletnega mesta takrat morda ne bodo delovali pravilno.
 
-Namesto tega aplikacija uporablja vgrajeno lokalno shrambo naprave za podatke, ki jih potrebuje za delovanje — predvsem sejo prijave, da se vam ni treba prijaviti ob vsakem odprtju aplikacije. To je običajna praksa mobilnih aplikacij in se ne deli z drugimi aplikacijami ter ni dostopna prek spletnega brskalnika.
+## 8. Mobilna aplikacija Zyflow
 
-### SDK-ji tretjih oseb v aplikaciji
+Mobilna aplikacija Zyflow **ne uporablja brskalniških piškotkov**. Nekatere podatke za delovanje shrani v lokalno hrambo naprave: vašo prijavno sejo (v varni hrambi naprave), nastavitve, zadnjo znano lokacijo in nedavna iskanja. Naša orodja za analitiko in spremljanje napak (PostHog, Sentry) na napravi shranijo psevdonimni identifikator. Podrobnosti so v Politiki zasebnosti, točka 3.14.
 
-Mobilna aplikacija vključuje komponente tretjih oseb za analitiko in spremljanje napak. Te storitve lahko kot del delovanja uporabljajo identifikatorje na ravni naprave (ne brskalniških piškotkov):
+## 9. Spremembe
 
-| Storitve | Namen | Kaj hrani |
-| --- | --- | --- |
-| Analitična storitev | Razumevanje uporabe aplikacije | Psevdonimni identifikator, povezan z vašim računom |
-| Storitve spremljanja napak | Zaznavanje in diagnosticiranje zrušitev | Kontekst seje in naprave ob napaki |
-
-Te storitve delujejo na podlagi pogodb o obdelavi podatkov s HERKO d.o.o. in so podrobneje opisane v naši [Politiki zasebnosti](/sl/legal-pages/privacy-policy).
-
-Analitični obdelavi lahko kadar koli ugovarjate tako, da nam pišete na legal@zyflow.eu.
-
-## 5. SPLETNO MESTO ZYFLOW — PIŠKOTKI, KI JIH UPORABLJAMO
-
-Spletno mesto Zyflow za nalaganje oznak uporablja **Google Tag Manager (GTM)**. Neobvezne oznake (analitika in oglaševanje) upoštevajo vaše izbire prek Google Consent Mode in naše pasice [CookieConsent](https://cookieconsent.orestbida.com/).
-
-### Nujno potrebni piškotki
-
-| Piškotek | Namen | Trajanje |
-| --- | --- | --- |
-| Sejni / gostiteljski piškotki | Ohranjajo brskalniško sejo in pravilno prikažejo stran | Seja |
-| cc_cookie | Hrani vaše nastavitve soglasja za piškotke | Do 182 dni |
-
-Nujno potrebni piškotki po pravilih ePrivacy EU ne zahtevajo soglasja. Brez njih spletnega mesta v celoti ne morete uporabljati.
-
-### Analitični piškotki (neobvezni)
-
-Če sprejmete analitiko, naložimo **Google Analytics 4** (merilni ID se upravlja prek GTM), da razumemo promet, oglede strani in ključna dejanja, na primer oddajo kontaktnega obrazca.
-
-| Piškotek | Namen | Trajanje |
-| --- | --- | --- |
-| _ga, _ga_* | Ločuje uporabnike za analitiko | Do 2 leti |
-| _gid | Ločuje uporabnike | 24 ur |
-
-### Oglaševalski piškotki (neobvezni)
-
-Če sprejmete oglaševanje, lahko GTM naloži merilne piksle za platforme, kot sta **Meta (Facebook)** in **ChatGPT Ads**, da merimo uspešnost kampanj. Ti piškotki in povezana shramba se nastavijo šele, ko se odločite za kategorijo Oglaševanje.
-
-## 6. VAŠE IZBIRE IN UPRAVLJANJE PIŠKOTKOV
-
-### Piškotki na spletnem mestu
-
-Ob prvem obisku se prikaže pasica za soglasje. Lahko sprejmete vse, zavrnete neobvezne piškotke ali upravljate nastavitve. Nastavitve lahko kadar koli znova odprete prek **Nastavitev piškotkov** v nogi spletnega mesta.
-
-Piškotke lahko nadzirate tudi v nastavitvah brskalnika. Večina brskalnikov omogoča:
-
-- pregled shranjenih piškotkov in njihov posamičen izbris
-- blokado piškotkov tretjih oseb
-- blokado vseh piškotkov (to lahko vpliva na delovanje spletnega mesta)
-
-Vodniki za pogoste brskalnike:
-
-- [Google Chrome](https://support.google.com/chrome/answer/95647)
-- [Mozilla Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
-- [Safari](https://support.apple.com/guide/safari/manage-cookies-sfri11471)
-- [Microsoft Edge](https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406)
-
-### Lokalna shramba v mobilni aplikaciji
-
-Sejne podatke, ki jih hrani mobilna aplikacija, lahko počistite tako, da:
-
-- se v aplikaciji odjavite iz računa
-- aplikacijo odstranite z naprave
-
-### Odjava od analitike
-
-Če želite zavrniti zbiranje analitičnih podatkov v mobilni aplikaciji, nam pišite na legal@zyflow.eu in zahtevo bomo uredili. Na spletnem mestu uporabite Nastavitve piškotkov ali zavrnite kategorijo Analitika.
-
-## 7. SPREMEMBE TE POLITIKE
-
-Če uvedemo dodatne nenujne piškotke ali sledilne tehnologije, bomo to politiko posodobili in, kjer to zahteva zakon, pred nastavitvijo teh tehnologij zahtevali vaše soglasje.
-
-Uporabnike bomo o bistvenih spremembah obvestili prek aplikacije in/ali e-pošte. Posodobljena politika bo na vrhu dokumenta prikazala nov datum »Nazadnje posodobljeno«.
-
-## 8. PRAVNA PODLAGA
-
-Uporaba nujno potrebnih piškotkov in lokalne shrambe za avtentikacijo v mobilni aplikaciji temelji na našem **zakonitem interesu** in nujnosti izpolnitve pogodbe z vami (člen 6(1)(b) in (f) GDPR).
-
-Analitični in oglaševalski piškotki na spletnem mestu temeljijo na vašem **soglasju** (člen 6(1)(a) GDPR in direktiva ePrivacy). Soglasje lahko kadar koli prekličete, ne da bi to vplivalo na zakonitost obdelave pred preklicem.
-
-## 9. STIK
-
-Za vprašanja o tej Politiki piškotkov ali naši uporabi sledilnih tehnologij:
-
-**HERKO d.o.o.**
-Pševska cesta 10,
-4000 Kranj,
-Republika Slovenija
-
-E-pošta: legal@zyflow.eu
-Spletna stran: https://www.zyflow.eu
+Politiko piškotkov posodobimo, ko spremenimo piškotke, ki jih uporabljamo. Trenutna različica in datum sta navedena na vrhu.

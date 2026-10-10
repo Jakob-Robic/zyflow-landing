@@ -1,42 +1,33 @@
----
-title: "Impressum"
-date: "[PLACEHOLDER: last updated date]"
-lede: "Pravno obvestilo za Zyflow, ki ga upravlja HERKO d.o.o."
----
+# Pravno obvestilo (Impressum)
 
-Podatki o upravljavcu spletnega mesta in mobilne aplikacije Zyflow.
+**Ponudnik storitve:** HERKO d.o.o. (blagovna znamka: Zyflow)
 
-## Upravljavec
+**Pravnoorganizacijska oblika:** družba z omejeno odgovornostjo (d.o.o.)
 
-**HERKO d.o.o.**  
-Pševska cesta 10  
-4000 Kranj  
-Republika Slovenija
+**Sedež:** Pševska cesta 10, 4000 Kranj, Slovenija
 
-| Polje | Vrednost |
-| --- | --- |
-| Pravna oblika | [PLACEHOLDER: limited liability company / d.o.o.] |
-| Matična številka | 8830045000 |
-| Davčna številka | SI56613555 |
-| Identifikacijska številka za DDV | SI56613555 |
-| Registrsko sodišče | [PLACEHOLDER: register court] |
-| Osnovni kapital | [PLACEHOLDER: share capital] |
-| Poslovodja | [PLACEHOLDER: managing director] |
+**Matična številka:** 8830045000
 
-## Stik
+**Davčna številka:** 56613555
 
-- Splošna podpora: [support@zyflow.eu](mailto:support@zyflow.eu)
-- Zasebnost in pravo: [legal@zyflow.eu](mailto:legal@zyflow.eu)
-- Spletna stran: [https://www.zyflow.eu](https://www.zyflow.eu)
+**Identifikacijska številka za DDV:** SI56613555
 
-[PLACEHOLDER: additional statutory contact if required]
+**Vpis v sodni register:** [REGISTRSKO SODIŠČE / ŠTEVILKA VPISA AJPES], vpisano 12. 3. 2021
 
-## Odgovornost za vsebino
+**Osnovni kapital:** [OSNOVNI KAPITAL V EUR]
 
-[PLACEHOLDER: person responsible for website content]
+**Direktor:** Jakob Robič
 
-## Povezani dokumenti
+**E-naslov:** [legal@zyflow.eu](mailto:legal@zyflow.eu)
 
-- [Politika zasebnosti](/sl/legal-pages/privacy-policy)
-- [Pogoji uporabe](/sl/legal-pages/terms)
-- [Politika piškotkov](/sl/legal-pages/cookie-policy)
+**Telefon:** [TELEFONSKA ŠTEVILKA]
+
+**Odgovorna oseba za vsebino:** Jakob Robič, naslov kot zgoraj
+
+**Spletna mesta:** [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu), [navigate.zyflow.eu](http://navigate.zyflow.eu)
+
+**Kontaktna točka za organe in uporabnike (Akt o digitalnih storitvah, 11. in 12. člen):** [legal@zyflow.eu](mailto:legal@zyflow.eu); jezika: slovenščina, angleščina
+
+**Potrošniški spori:** vsako pritožbo si prizadevamo rešiti neposredno; pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu). [IZBERITE: NOBENEGA IZVAJALCA IZVENSODNEGA REŠEVANJA POTROŠNIŠKIH SPOROV (IRPS) NE PRIZNAVAMO KOT PRISTOJNEGA / PRISTOJNI IZVAJALEC IRPS JE: NAZIV, NASLOV, SPLETNA STRAN]
+
+**Varstvo osebnih podatkov:** glejte našo Politiko zasebnosti: [URL POLITIKE ZASEBNOSTI]
