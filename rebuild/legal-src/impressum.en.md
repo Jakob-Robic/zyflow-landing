@@ -12,15 +12,13 @@
 
 **VAT ID:** SI56613555
 
-**Company register:** [REGISTER COURT / AJPES ENTRY NUMBER], registered on 12 March 2021
+**Company register:** Registered with the Slovenian court register (AJPES/ePRS), Matična številka 8830045000, registered on 12 March 2021
 
-**Share capital:** [SHARE CAPITAL IN EUR]
+**Share capital:** EUR 7,500
 
 **Director:** Jakob Robič
 
 **Email:** [legal@zyflow.eu](mailto:legal@zyflow.eu)
-
-**Phone:** [PHONE NUMBER]
 
 **Responsible for content:** Jakob Robič, address as above
 
@@ -28,6 +26,6 @@
 
 **Contact point for authorities and users (EU Digital Services Act, Art. 11 and 12):** [legal@zyflow.eu](mailto:legal@zyflow.eu); languages: English, Slovenian
 
-**Consumer disputes:** we try to resolve every complaint directly; please write to [legal@zyflow.eu](mailto:legal@zyflow.eu). [CHOOSE ONE: WE DO NOT RECOGNISE ANY PROVIDER OF OUT-OF-COURT CONSUMER DISPUTE RESOLUTION (IRPS) AS COMPETENT / THE COMPETENT IRPS PROVIDER IS: NAME, ADDRESS, WEBSITE]
+**Consumer disputes:** we try to resolve every complaint directly; please write to [legal@zyflow.eu](mailto:legal@zyflow.eu). We do not recognise any provider of out-of-court consumer dispute resolution as competent. Any dispute with us may be brought before the competent court in Kranj, without limiting the mandatory right of consumers to bring proceedings at their place of residence.
 
-**Privacy:** see our Privacy Policy: [PRIVACY POLICY URL]
+**Privacy:** see our Privacy Policy: [https://www.zyflow.eu/legal-pages/privacy-policy](https://www.zyflow.eu/legal-pages/privacy-policy)
