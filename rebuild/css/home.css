@@ -2191,8 +2191,14 @@ html[data-theme="light"] .testimonial__bg img {
   .nav__inner {
     grid-template-columns: minmax(0, 1fr) auto;
     height: var(--navbar-height);
-    padding-inline: var(--space-gap-4);
+    padding-inline: var(--page-pad-sm);
     column-gap: var(--space-gap-3);
+  }
+
+  .announcement__inner,
+  .page-home .container,
+  .hero {
+    padding-inline: var(--page-pad-sm);
   }
 
   .nav__brand {
@@ -2284,11 +2290,15 @@ html[data-theme="light"] .testimonial__bg img {
   }
   .why__inner,
   .journal__inner,
-  .social__inner,
-  .intro__inner {
+  .social__inner {
     grid-template-columns: 1fr;
     flex-direction: column;
     min-width: 0;
+    max-width: 100%;
+  }
+
+  .intro__inner {
+    gap: var(--space-gap-6);
     max-width: 100%;
   }
   .why__polaroid {
@@ -2384,6 +2394,12 @@ html[data-theme="light"] .testimonial__bg img {
 }
 
 @media (max-width: 720px) {
+  .intro__inner {
+    flex-direction: column;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .adventures__grid,
   .features__grid,
   .social__videos,
@@ -2421,7 +2437,7 @@ html[data-theme="light"] .testimonial__bg img {
     font-size: var(--type-h4);
   }
   .nav__inner {
-    padding-inline: var(--space-gap-5);
+    padding-inline: var(--page-pad-sm);
   }
   .nav__right {
     gap: var(--space-gap-3);
@@ -2436,7 +2452,7 @@ html[data-theme="light"] .testimonial__bg img {
     flex-wrap: nowrap;
     justify-content: center;
     gap: var(--space-gap-3);
-    padding-inline: var(--space-gap-4);
+    padding-inline: var(--page-pad-sm);
     min-height: 0;
   }
   .announcement__label,
@@ -2461,10 +2477,10 @@ html[data-theme="light"] .testimonial__bg img {
     margin-top: var(--space-gap-1);
   }
   .page-home .container {
-    padding-inline: var(--space-gap-5);
+    padding-inline: var(--page-pad-sm);
   }
   .hero {
-    padding-inline: var(--space-gap-5);
+    padding-inline: var(--page-pad-sm);
   }
   .hero__frame {
     min-height: 520px;

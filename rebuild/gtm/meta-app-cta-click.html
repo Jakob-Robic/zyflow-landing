@@ -1,0 +1,22 @@
+<!--
+  GTM → Tags → New → Custom HTML
+  Name: Meta - app_cta_click
+  Consent: Require additional consent → ad_storage
+  Trigger: CE - app_cta_click
+  Tag sequencing: Fire Meta - Pixel before this tag (optional)
+-->
+<script>
+  (function () {
+    if (typeof fbq !== "function") return;
+    fbq(
+      "trackCustom",
+      "app_cta_click",
+      {
+        cta_location: "{{dlv - cta_location}}",
+        cta_label: "{{dlv - cta_label}}",
+        link_url: "{{dlv - link_url}}",
+      },
+      { eventID: "{{dlv - event_id}}" }
+    );
+  })();
+</script>

@@ -1,0 +1,21 @@
+<!--
+  GTM → Tags → New → Custom HTML
+  Name: ChatGPT Ads - app_store_click
+  Consent: Require additional consent → ad_storage
+  Trigger: CE - app_store_click
+  Tag sequencing: Fire ChatGPT Ads - Pixel before this tag
+-->
+<script>
+  (function () {
+    if (typeof oaiq !== "function") return;
+    oaiq(
+      "measure",
+      "custom",
+      { type: "custom" },
+      {
+        custom_event_name: "app_store_click",
+        event_id: "{{dlv - event_id}}",
+      }
+    );
+  })();
+</script>

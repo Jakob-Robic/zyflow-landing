@@ -1,0 +1,23 @@
+<!--
+  GTM → Tags → New → Custom HTML
+  Name: Meta - app_store_click
+  Consent: Require additional consent → ad_storage
+  Trigger: CE - app_store_click
+  Tag sequencing: Fire Meta - Pixel before this tag (optional)
+-->
+<script>
+  (function () {
+    if (typeof fbq !== "function") return;
+    fbq(
+      "trackCustom",
+      "app_store_click",
+      {
+        store: "{{dlv - store}}",
+        cta_location: "{{dlv - cta_location}}",
+        cta_label: "{{dlv - cta_label}}",
+        link_url: "{{dlv - link_url}}",
+      },
+      { eventID: "{{dlv - event_id}}" }
+    );
+  })();
+</script>

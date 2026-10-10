@@ -11,7 +11,13 @@
 }
 
 .app-banner .container {
+  position: relative;
   overflow: visible;
+}
+
+/* Desktop: wrapper doesn't affect layout. Mobile: full-bleed page-color mask. */
+.app-banner__below {
+  display: contents;
 }
 
 .app-banner__panel {
@@ -20,11 +26,10 @@
   color: var(--color-text-on-map);
   border-radius: var(--radius-md);
   min-height: 480px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(200px, 260px);
-  gap: var(--space-gap-8);
+  display: flex;
   align-items: center;
-  padding: var(--space-gap-10) var(--space-gap-9);
+  padding: var(--space-gap-10) clamp(220px, 28vw, 320px) var(--space-gap-10)
+    var(--space-gap-9);
   overflow: visible;
 }
 
@@ -51,8 +56,7 @@
   display: block;
 }
 
-.app-banner__copy,
-.app-banner__phone {
+.app-banner__copy {
   position: relative;
   z-index: 1;
 }
@@ -98,6 +102,11 @@
 }
 
 .app-banner__phone {
+  position: absolute;
+  right: var(--space-gap-8);
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,11 +152,12 @@
 .app-banner__polaroid {
   position: absolute;
   z-index: 3;
+  width: max-content;
 }
 
 .app-banner__polaroid--1 {
   left: auto;
-  right: 200px;
+  right: calc(100% + 12px);
   top: -28px;
   transform: rotate(-7deg);
 }
@@ -155,17 +165,21 @@
 .app-banner__polaroid--1 img {
   width: 148px;
   height: 148px;
+  max-width: none;
 }
 
 .app-banner__polaroid--2 {
-  right: -8px;
-  bottom: -40px;
+  left: auto;
+  right: -28px;
+  top: 48px;
+  bottom: auto;
   transform: rotate(5deg);
 }
 
 .app-banner__polaroid--2 img {
   width: 132px;
   height: 132px;
+  max-width: none;
 }
 
 /* —— App stage (phone showcase) —— */
@@ -265,6 +279,13 @@
 .phone {
   position: absolute;
   width: 220px;
+}
+
+/* Banner phone stays in flow (stage phones stay absolute) */
+.app-banner__phone .phone--banner {
+  position: relative;
+  left: auto;
+  top: auto;
 }
 
 .phone--back {
@@ -403,9 +424,9 @@
 
 @media (max-width: 1100px) {
   .app-banner__panel {
-    grid-template-columns: 1fr;
     min-height: 0;
     padding: var(--space-gap-9) var(--space-gap-6) var(--space-gap-11);
+    padding-right: clamp(180px, 32vw, 240px);
     text-align: center;
   }
 
@@ -418,8 +439,13 @@
   }
 
   .app-banner__phone {
-    order: -1;
-    margin-bottom: var(--space-gap-4);
+    right: var(--space-gap-5);
+    left: auto;
+    top: 50%;
+    translate: 0 -50%;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 0;
   }
 
   .phone--banner {
@@ -435,15 +461,28 @@
     min-height: 0;
   }
 
+  /* Mid widths / split view: keep polaroids, but smaller so they don’t crowd */
   .app-banner__polaroid--1 {
     left: auto;
-    right: 120px;
-    top: -20px;
+    right: calc(100% + 4px);
+    top: 4px;
   }
 
   .app-banner__polaroid--2 {
-    right: 12px;
-    bottom: -28px;
+    left: auto;
+    right: -10px;
+    top: 36px;
+    bottom: auto;
+  }
+
+  .app-banner__polaroid--1 img {
+    width: 104px;
+    height: 104px;
+  }
+
+  .app-banner__polaroid--2 img {
+    width: 92px;
+    height: 92px;
   }
 
   .app-stage__panel {
@@ -467,17 +506,115 @@
 }
 
 @media (max-width: 720px) {
+  .app-banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Phone + photos sit above the green text banner */
+  .app-banner__phone {
+    position: sticky;
+    top: calc(var(--navbar-height) + var(--space-gap-3));
+    right: auto;
+    left: auto;
+    translate: none;
+    z-index: 0;
+    order: -1;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 300px;
+    margin: 0 0 calc(-1 * var(--space-gap-8));
+    padding-block: var(--space-gap-3);
+    pointer-events: none;
+    background: transparent;
+  }
+
+  /* Full-width page color behind the green banner — hides sticky phone when covered */
+  .app-banner__below {
+    display: block;
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding-inline: var(--page-pad-sm);
+    /* Extra apron so sticky phone can't peek under the green card */
+    padding-bottom: 360px;
+    margin-bottom: -360px;
+    background-color: var(--color-surface-1);
+  }
+
   .app-banner__panel {
-    padding: var(--space-gap-8) var(--space-gap-5) var(--space-gap-10);
+    position: relative;
+    z-index: 1;
+    padding: var(--space-gap-8) var(--space-gap-5) var(--space-gap-9);
     overflow: hidden;
+    background: var(--color-surface-map);
+    color: var(--color-text-on-map);
+    min-height: 0;
+    text-align: center;
+  }
+
+  .app-banner__bg {
+    display: block;
   }
 
   .app-banner__polaroid {
-    display: none;
+    display: block;
+  }
+
+  .app-banner__polaroid--1 {
+    left: -4px;
+    right: auto;
+    top: 28px;
+    transform: rotate(-8deg);
+  }
+
+  .app-banner__polaroid--2 {
+    left: auto;
+    right: -4px;
+    top: 96px;
+    transform: rotate(6deg);
+  }
+
+  .app-banner__polaroid--1 img {
+    width: 92px;
+    height: 92px;
+  }
+
+  .app-banner__polaroid--2 img {
+    width: 84px;
+    height: 84px;
   }
 
   .phone--banner {
-    width: 160px;
+    width: 148px;
+    transform: rotate(2deg);
+  }
+
+  .app-banner__copy {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .app-banner__eyebrow,
+  .app-banner__title {
+    color: var(--color-text-on-map);
+  }
+
+  .app-banner__body {
+    color: color-mix(in srgb, var(--color-text-on-map) 82%, transparent);
+    margin-inline: auto;
+  }
+
+  .app-banner__ctas {
+    justify-content: center;
+  }
+
+  .app-banner__title {
+    font-size: var(--type-h2);
   }
 
   .app-stage__phones {

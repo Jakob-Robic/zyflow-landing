@@ -8,6 +8,6 @@ window.ZYFLOW_ANALYTICS = {
   ga4MeasurementId: "G-6YK1EKLMGS",
   /** ChatGPT Ads Measurement Pixel — configured in GTM Custom HTML tags. */
   chatgptPixelId: "3mKjmHDKXRuimF1RUa4VWm",
-  /** Set when Meta Pixel exists; paste into GTM Meta / Custom HTML tag. */
-  metaPixelId: "",
+  /** Meta (Facebook) Pixel — configured in GTM Custom HTML tags. */
+  metaPixelId: "1112893301493263",
 };

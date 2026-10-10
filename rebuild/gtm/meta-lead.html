@@ -1,14 +1,13 @@
 <!--
-  GTM Custom HTML — Meta Lead on contact_submit
-  Trigger: Custom Event = contact_submit
-  Consent: ad_storage Granted
-  Create a Data Layer Variable "Event ID" → event_id
-  Requires base meta-pixel.html tag already initialized.
+  GTM → Tags → New → Custom HTML
+  Name: Meta - Lead
+  Consent settings: Require additional consent → ad_storage
+  Trigger: CE - contact_submit (same Custom Event as GA4 / ChatGPT)
+  Advanced → Tag Sequencing: Fire Meta - Pixel before this tag
 -->
 <script>
   (function () {
     if (typeof fbq !== "function") return;
-    var id = {{Event ID}};
-    fbq("track", "Lead", {}, id ? { eventID: id } : {});
+    fbq("track", "Lead", {}, { eventID: "{{dlv - event_id}}" });
   })();
 </script>
