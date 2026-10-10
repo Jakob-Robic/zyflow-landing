@@ -755,26 +755,26 @@
       "body": "This page has moved. Continue to the current version."
     },
     "impressum": {
-      "dateLabel": "Draft — placeholders remain"
+      "dateLabel": "Legal notice"
     },
     "terms": {
       "tag": "Updated",
-      "date": "15. 5. 2026",
-      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "date": "10. 10. 2026",
+      "dateLabel": "Updated 10 October 2026 · v2.0.0",
       "title": "terms of service",
       "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
     },
     "privacy": {
       "tag": "Updated",
-      "date": "30. 6. 2026",
-      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "date": "10. 10. 2026",
+      "dateLabel": "Updated 10 October 2026 · v2.0",
       "title": "privacy policy",
       "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
     },
     "cookies": {
       "tag": "Updated",
-      "date": "9. 10. 2026",
-      "dateLabel": "Updated 9. 10. 2026 · v1.1",
+      "date": "10. 10. 2026",
+      "dateLabel": "Updated 10 October 2026 · v1.0",
       "title": "cookie policy",
       "lede": "How Zyflow uses cookies and similar tracking technologies across the mobile app and zyflow.eu — including optional analytics and advertising cookies you can control."
     }

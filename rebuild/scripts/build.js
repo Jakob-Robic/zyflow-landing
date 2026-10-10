@@ -24,7 +24,7 @@ const {
   localizedPath,
 } = require("./pages");
 const { articleBySlug, blogCardI18n } = require("./articles");
-const { renderLegalMarkdown, wrapPlaceholders } = require("./legal-markdown");
+const { renderLegalMarkdown } = require("./legal-markdown");
 
 const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -411,6 +411,18 @@ function injectDocumentHead(html, page, locale, messages) {
   return html.replace(/<head[^>]*>[\s\S]*?<\/head>/i, `<head>\n${headInner}\n  </head>`);
 }
 
+function pageAlternateHrefs(page) {
+  if (page.langSwitch) {
+    return {
+      en: `${SITE_ORIGIN}${page.langSwitch.en}`,
+      sl: `${SITE_ORIGIN}${page.langSwitch.sl}`,
+    };
+  }
+  return Object.fromEntries(
+    pageLocales(page).map((lang) => [lang, absoluteUrl(page.path, lang)])
+  );
+}
+
 function writeSeoFiles() {
   const indexable = PAGES.filter((p) => p.indexable);
   const today = new Date().toISOString().slice(0, 10);
@@ -419,19 +431,16 @@ function writeSeoFiles() {
   for (const page of indexable) {
     for (const locale of pageLocales(page)) {
       const loc = absoluteUrl(page.path, locale);
-      const alternates = pageLocales(page)
+      const hrefs = pageAlternateHrefs(page);
+      const langs = Object.keys(hrefs);
+      const defaultHref = hrefs[DEFAULT_LOCALE] || hrefs[langs[0]];
+      const alternates = langs
         .map(
           (lang) =>
-            `    <xhtml:link rel="alternate" hreflang="${lang}" href="${absoluteUrl(
-              page.path,
-              lang
-            )}" />`
+            `    <xhtml:link rel="alternate" hreflang="${lang}" href="${hrefs[lang]}" />`
         )
         .concat([
-          `    <xhtml:link rel="alternate" hreflang="x-default" href="${absoluteUrl(
-            page.path,
-            DEFAULT_LOCALE
-          )}" />`,
+          `    <xhtml:link rel="alternate" hreflang="x-default" href="${defaultHref}" />`,
         ])
         .join("\n");
       urls.push(`  <url>
@@ -518,21 +527,18 @@ function injectLegalDocument(html, page, locale) {
   html = html.replace(/\sdata-legal=""/g, ` data-legal="${page.legalKey || page.legalDoc}"`);
   html = html.replace(
     /<span data-legal-date><\/span>/,
-    date ? `<span>${wrapPlaceholders(escapeHtml(date))}</span>` : ""
+    date ? `<span>${escapeHtml(date)}</span>` : ""
   );
   html = html.replace(
     /<h1 class="legal-doc__title" data-legal-title><\/h1>/,
-    title ? `<h1 class="legal-doc__title">${wrapPlaceholders(escapeHtml(title))}</h1>` : ""
+    title ? `<h1 class="legal-doc__title">${escapeHtml(title)}</h1>` : ""
   );
   html = html.replace(
     /<p class="legal-doc__lede" data-legal-lede hidden><\/p>/,
-    lede ? `<p class="legal-doc__lede">${wrapPlaceholders(escapeHtml(lede))}</p>` : ""
+    lede ? `<p class="legal-doc__lede">${escapeHtml(lede)}</p>` : ""
   );
   html = html.replace("<!-- LEGAL_TOC -->", rendered.toc);
   html = html.replace("<!-- LEGAL_BODY -->", rendered.html);
-  console.log(
-    `legal ${page.legalDoc}.${locale} placeholders=${rendered.placeholderCount}`
-  );
   return html;
 }
 

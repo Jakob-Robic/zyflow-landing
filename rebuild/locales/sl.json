@@ -755,26 +755,26 @@
       "body": "Ta stran se je prestavila. Nadaljujte na trenutno različico."
     },
     "impressum": {
-      "dateLabel": "Osnutek — označbe [PLACEHOLDER] so še odprte"
+      "dateLabel": "Pravno obvestilo"
     },
     "terms": {
       "tag": "Posodobljeno",
-      "date": "15. 5. 2026",
-      "dateLabel": "Posodobljeno 15. 5. 2026 · v1.0",
+      "date": "10. 10. 2026",
+      "dateLabel": "Posodobljeno 10. 10. 2026 · v2.0.0",
       "title": "pogoji uporabe",
       "lede": "Ti Pogoji uporabe predstavljajo pravno zavezujoč sporazum med vami in HERKO d.o.o. Pred uporabo Zyflow jih pozorno preberite."
     },
     "privacy": {
       "tag": "Posodobljeno",
-      "date": "30. 6. 2026",
-      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "date": "10. 10. 2026",
+      "dateLabel": "Posodobljeno 10. 10. 2026 · v2.0",
       "title": "politika zasebnosti",
       "lede": "Ta Politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira, ko uporabljate Zyflow, zakaj jih zbira, kako jih uporablja in katere pravice imate po GDPR."
     },
     "cookies": {
       "tag": "Posodobljeno",
-      "date": "9. 10. 2026",
-      "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
+      "date": "10. 10. 2026",
+      "dateLabel": "Posodobljeno 10. 10. 2026 · v1.0",
       "title": "politika piškotkov",
       "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
     }
