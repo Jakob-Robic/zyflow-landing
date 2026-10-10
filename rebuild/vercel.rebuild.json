@@ -35,53 +35,73 @@
   ],
   "redirects": [
     {
-      "source": "/legal-pages/privacy-policy",
-      "destination": "/legal-privacy",
+      "source": "/legal-privacy",
+      "destination": "/legal-pages/privacy-policy",
       "permanent": true
     },
     {
-      "source": "/legal-pages/cookie-policy",
-      "destination": "/legal-cookies",
+      "source": "/legal-cookies",
+      "destination": "/legal-pages/cookie-policy",
+      "permanent": true
+    },
+    {
+      "source": "/legal-terms",
+      "destination": "/legal-pages/terms",
       "permanent": true
     },
     {
       "source": "/legal-pages/terms-conditions",
-      "destination": "/legal-terms",
+      "destination": "/legal-pages/terms",
       "permanent": true
     },
     {
-      "source": "/sl/legal-pages/privacy-policy",
-      "destination": "/sl/legal-privacy",
+      "source": "/sl/legal-privacy",
+      "destination": "/sl/legal-pages/privacy-policy",
       "permanent": true
     },
     {
-      "source": "/sl/legal-pages/cookie-policy",
-      "destination": "/sl/legal-cookies",
+      "source": "/sl/legal-cookies",
+      "destination": "/sl/legal-pages/cookie-policy",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-terms",
+      "destination": "/sl/legal-pages/terms",
       "permanent": true
     },
     {
       "source": "/sl/legal-pages/terms-conditions",
-      "destination": "/sl/legal-terms",
+      "destination": "/sl/legal-pages/terms",
       "permanent": true
     },
     {
       "source": "/privacy-policy",
-      "destination": "/legal-privacy",
+      "destination": "/legal-pages/privacy-policy",
       "permanent": true
     },
     {
       "source": "/cookie-policy",
-      "destination": "/legal-cookies",
+      "destination": "/legal-pages/cookie-policy",
       "permanent": true
     },
     {
       "source": "/sl/privacy-policy",
-      "destination": "/sl/legal-privacy",
+      "destination": "/sl/legal-pages/privacy-policy",
       "permanent": true
     },
     {
       "source": "/sl/cookie-policy",
-      "destination": "/sl/legal-cookies",
+      "destination": "/sl/legal-pages/cookie-policy",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-pages/delete-account",
+      "destination": "/legal-pages/izbris-racuna",
+      "permanent": true
+    },
+    {
+      "source": "/sl/legal-pages/izbris-racuna",
+      "destination": "/legal-pages/izbris-racuna",
       "permanent": true
     },
     {
