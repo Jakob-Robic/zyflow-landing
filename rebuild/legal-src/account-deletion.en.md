@@ -1,5 +1,7 @@
 # Delete your Zyflow account
 
+Slovenščina: [https://www.zyflow.eu/legal-pages/izbris-racuna](https://www.zyflow.eu/legal-pages/izbris-racuna)
+
 This page explains how to delete your account in the Zyflow app (developer: HERKO d.o.o., Kranj, Slovenia) and what happens to your data.
 
 ## Option 1 – in the app (fastest)
@@ -9,7 +11,7 @@ This page explains how to delete your account in the Zyflow app (developer: HERK
 3. Scroll to the bottom and tap **Delete account** (below Log Out).
 4. Confirm with **Yes, delete my account**.
 
-Your account is deleted immediately and you are signed out.
+Your account and profile data are deleted immediately and you are signed out.
 
 ## Option 2 – by email (if you cannot use the app)
 
@@ -19,39 +21,19 @@ Write to [legal@zyflow.eu](mailto:legal@zyflow.eu) with the subject "Delete my a
 
 Deleting your account removes your profile (name, email address, phone number, user ID, sign-in details) and the data stored with your account in our database: saved and imported routes, saved places, routes you shared with the community, your bike passport, and your place reports and submissions.
 
-Some copies held by our service providers are not yet removed automatically: photos and map images in our file storage, your contact at our email provider (Brevo), and analytics and error-monitoring records linked to your user ID (PostHog, Sentry). Analytics records expire after 12 months and error reports after 90 days. **If you want these copies removed now, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days.**
+Some copies held by our service providers are not removed automatically: photos and map images in our file storage, your contact at our email provider (Brevo), and analytics and error-monitoring records linked to your user ID (PostHog, Sentry). Analytics records expire after 12 months and error reports after 90 days. **If you want these copies removed now, write to [legal@zyflow.eu](mailto:legal@zyflow.eu) after deleting your account and we will remove them within 30 days.**
 
 ## What we keep, and for how long
 
 - Places you suggested that we approved stay in the Zyflow places database, without any link to you.
-- Copies of a shared route that other users saved to their own accounts before you deleted yours may remain in their accounts [VERIFY].
+- Copies of a shared route that other users saved to their own accounts before you deleted yours may remain in their accounts.
 - Database backups are kept for up to 7 days and are then overwritten; deleted data disappears from them in this cycle.
 - Technical server and hosting logs (which can contain IP addresses) are kept for up to 30 days.
-- Search rate-limit records (IP address and counters) are deleted after 24 hours.
-- Email sending logs at Brevo are kept for up to [12 MONTHS – CONFIRM].
-- If you wrote to us, our correspondence is kept for [2 YEARS] after your request is closed, and accounting records as required by law.
+- Search rate-limit records (IP address and counters) are kept only as long as needed to prevent abuse and are regularly deleted.
+- Email sending logs at Brevo are kept only as long as needed to deliver emails and resolve delivery problems, in line with the provider's retention settings.
+- If you wrote to us, we keep our correspondence as long as needed to handle your request and, afterwards, for a limited period to document it and to defend legal claims; accounting records are kept as required by law.
 - Data stored on your phone (login session, last location, recent searches) is removed when you uninstall the app.
 
 ## How long it takes
 
-Copies at our service providers and email requests are completed **within 30 days**. More about how we handle your data: [PRIVACY POLICY URL]. Questions: [legal@zyflow.eu](mailto:legal@zyflow.eu).
-
----
-
-<!-- DO NOT PUBLISH THIS SECTION YET. It becomes true only after the "Complete account deletion" code fix ships (delete-user must also remove Storage files, the Brevo contact, the PostHog person and Sentry user data). Then replace the two sections "What we delete" and "How long it takes" above with the two sections below, and remove this heading and comment. -->
-
-## Use after code fix ships
-
-### What we delete
-
-- Your profile: name, email address, phone number, user ID and sign-in details
-- Your saved and imported routes and saved places
-- Routes you shared with the community, their photos and map images
-- Your bike passport (bike details, frame number, value, rider weight, notes) and bike photos
-- Your place reports and missing-place submissions
-- Your contact at our email provider (Brevo)
-- Your analytics profile (PostHog) and the error-monitoring data linked to your user ID (Sentry)
-
-### How long it takes
-
-In-app deletion takes effect immediately. Copies at our service providers and email requests are completed **within 30 days**. More about how we handle your data: [PRIVACY POLICY URL]. Questions: [legal@zyflow.eu](mailto:legal@zyflow.eu).
+Your account and profile data are deleted immediately when you delete your account in the app. Copies at our service providers, and requests sent by email, are completed **within 30 days** of your request. More about how we handle your data: [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy). Questions: [legal@zyflow.eu](mailto:legal@zyflow.eu).
