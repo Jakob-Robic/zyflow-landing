@@ -12,15 +12,13 @@
 
 **Identifikacijska številka za DDV:** SI56613555
 
-**Vpis v sodni register:** [REGISTRSKO SODIŠČE / ŠTEVILKA VPISA AJPES], vpisano 12. 3. 2021
+**Vpis v sodni register:** vpisano v slovenski sodni register (AJPES/ePRS), matična številka 8830045000, vpisano 12. 3. 2021
 
-**Osnovni kapital:** [OSNOVNI KAPITAL V EUR]
+**Osnovni kapital:** 7.500 EUR
 
 **Direktor:** Jakob Robič
 
 **E-naslov:** [legal@zyflow.eu](mailto:legal@zyflow.eu)
-
-**Telefon:** [TELEFONSKA ŠTEVILKA]
 
 **Odgovorna oseba za vsebino:** Jakob Robič, naslov kot zgoraj
 
@@ -28,6 +26,6 @@
 
 **Kontaktna točka za organe in uporabnike (Akt o digitalnih storitvah, 11. in 12. člen):** [legal@zyflow.eu](mailto:legal@zyflow.eu); jezika: slovenščina, angleščina
 
-**Potrošniški spori:** vsako pritožbo si prizadevamo rešiti neposredno; pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu). [IZBERITE: NOBENEGA IZVAJALCA IZVENSODNEGA REŠEVANJA POTROŠNIŠKIH SPOROV (IRPS) NE PRIZNAVAMO KOT PRISTOJNEGA / PRISTOJNI IZVAJALEC IRPS JE: NAZIV, NASLOV, SPLETNA STRAN]
+**Potrošniški spori:** vsako pritožbo si prizadevamo rešiti neposredno; pišite nam na [legal@zyflow.eu](mailto:legal@zyflow.eu). Nobenega izvajalca izvensodnega reševanja potrošniških sporov ne priznavamo kot pristojnega. Vsak spor z nami je mogoče predložiti pristojnemu sodišču v Kranju, pri čemer ostaja nedotaknjena obvezna pravica potrošnikov, da postopek sprožijo pri sodišču v kraju svojega prebivališča.
 
-**Varstvo osebnih podatkov:** glejte našo Politiko zasebnosti: [URL POLITIKE ZASEBNOSTI]
+**Varstvo osebnih podatkov:** glejte našo Politiko zasebnosti: [https://www.zyflow.eu/legal-pages/privacy-policy](https://www.zyflow.eu/legal-pages/privacy-policy)
