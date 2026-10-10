@@ -268,7 +268,7 @@ Zyflow is intended for people aged **16 and over** and is offered in the EU only
 >
 > Our websites are hosted by Vercel. When you visit them, Vercel processes your IP address and technical request data to deliver the site and keep it secure (legitimate interest, Art. 6(1)(f) GDPR).
 >
-> We currently do not use analytics or marketing cookies on our websites. We plan to introduce Google Tag Manager, Google Analytics 4 and the Meta (Facebook) Pixel. **These tools will only load after you give consent in our cookie banner** (Art. 6(1)(a) GDPR and ZEKom-2). You can change or withdraw your consent at any time via the "Cookie settings" link in the website footer. Before they are introduced, we will update this policy with details of Google and Meta as recipients and of any transfers to the USA.
+> We currently do not use analytics or marketing cookies on our websites. We plan to introduce Google Tag Manager, Google Analytics 4, PostHog (EU-hosted product analytics; no session recording on the marketing site) and the Meta (Facebook) Pixel. **These tools will only load after you give consent in our cookie banner** (Art. 6(1)(a) GDPR and ZEKom-2). You can change or withdraw your consent at any time via the "Cookie settings" link in the website footer. Before they are introduced, we will update this policy with details of Google, PostHog and Meta as recipients and of any transfers to the USA.
 >
 > Details of all cookies are in our separate Cookie Policy: [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy).
 >

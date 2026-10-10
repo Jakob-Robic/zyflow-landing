@@ -12,6 +12,7 @@ const SERVICE_AD_STORAGE = "ad_storage";
 const SERVICE_AD_USER_DATA = "ad_user_data";
 const SERVICE_AD_PERSONALIZATION = "ad_personalization";
 const SERVICE_ANALYTICS_STORAGE = "analytics_storage";
+const SERVICE_POSTHOG = "posthog";
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
@@ -19,6 +20,9 @@ function gtag() {
 }
 
 function analyticsGranted() {
+  if (typeof CookieConsent.acceptedCategory === "function") {
+    return CookieConsent.acceptedCategory(CAT_ANALYTICS);
+  }
   return CookieConsent.acceptedService(
     SERVICE_ANALYTICS_STORAGE,
     CAT_ANALYTICS
@@ -57,6 +61,16 @@ function updateGtagConsent() {
   });
   // If GTM's Google Tag stayed blocked after consent, load GA4 directly.
   window.setTimeout(ensureGa4Config, 750);
+  syncPosthogConsent();
+}
+
+function syncPosthogConsent() {
+  if (!window.ZyflowPosthog) return;
+  if (analyticsGranted()) {
+    window.ZyflowPosthog.grant();
+  } else {
+    window.ZyflowPosthog.withdraw();
+  }
 }
 
 function siteLocale() {
@@ -113,11 +127,20 @@ CookieConsent.run({
     },
     [CAT_ANALYTICS]: {
       autoClear: {
-        cookies: [{ name: /^_ga/ }, { name: "_gid" }, { name: /^_ga_/ }],
+        cookies: [
+          { name: /^_ga/ },
+          { name: "_gid" },
+          { name: /^_ga_/ },
+          { name: /^ph_/ },
+          { name: /^phc_/ },
+        ],
       },
       services: {
         [SERVICE_ANALYTICS_STORAGE]: {
           label: "Google Analytics (GA4)",
+        },
+        [SERVICE_POSTHOG]: {
+          label: "PostHog (product analytics)",
         },
       },
     },
@@ -179,7 +202,7 @@ CookieConsent.run({
             {
               title: "Analytics",
               description:
-                "Google Analytics 4 (via Google Tag Manager) helps us understand how visitors use the site — pages viewed, traffic sources, and key actions such as contact form submissions.",
+                "Google Analytics 4 (via Google Tag Manager) and PostHog help us understand how visitors use the site — pages viewed, traffic sources, and key actions such as app store clicks and contact form submissions. PostHog loads only after you accept this category. Session recording is off on the marketing site.",
               linkedCategory: CAT_ANALYTICS,
               cookieTable: {
                 headers: {
@@ -200,6 +223,13 @@ CookieConsent.run({
                     domain: "Google Analytics",
                     description: "Distinguishes users for 24 hours",
                     expiration: "24 hours",
+                  },
+                  {
+                    name: "ph_*_posthog",
+                    domain: "PostHog",
+                    description:
+                      "Anonymous visitor id shared across *.zyflow.eu",
+                    expiration: "Up to 1 year",
                   },
                 ],
               },
@@ -249,7 +279,7 @@ CookieConsent.run({
             {
               title: "Analitika",
               description:
-                "Google Analytics 4 (prek Google Tag Managerja) nam pomaga razumeti uporabo strani — oglede, vire prometa in ključna dejanja, npr. oddajo kontaktnega obrazca.",
+                "Google Analytics 4 (prek Google Tag Managerja) in PostHog nam pomagata razumeti uporabo strani — oglede, vire prometa in ključna dejanja, npr. klike na trgovino z aplikacijo. PostHog se naloži šele po sprejemu te kategorije. Snemanje sej na spletni strani je izklopljeno.",
               linkedCategory: CAT_ANALYTICS,
             },
             {

@@ -20,7 +20,7 @@ Production hosting is pointed at the rebuild tree via root [`vercel.json`](../ve
    - `/sitemap.xml` and `/robots.txt` (blog disallowed; Journal noindex until reopened)
    - Unknown path returns branded `404.html` (and `/sl/...` → `sl/404.html`)
    - Favicon + OG image resolve
-7. **Analytics** — site bootstrap is live (GTM `GTM-W8XX2TWZ`, CookieConsent, Consent Mode). Finish GTM workspace setup:
+7. **Analytics** — site bootstrap is live (GTM `GTM-W8XX2TWZ`, CookieConsent, Consent Mode, consent-gated PostHog). Event names, properties, and consent behaviour: [`docs/analytics.md`](docs/analytics.md). Finish GTM workspace setup:
    - Enable **Consent Overview** on the container.
    - **GA4 Configuration** tag → Measurement ID `G-6YK1EKLMGS`, trigger All Pages, require consent `analytics_storage`.
    - **GA4 Event** tag for `contact_submit` (Custom Event trigger `contact_submit`) → event name `contact_submit`; pass `event_id`, `form_topic`.
