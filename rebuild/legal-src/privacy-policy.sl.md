@@ -268,7 +268,7 @@ Zyflow je namenjen osebam, starim **16 let ali več**, in je na voljo samo v EU.
 >
 > Naša spletna mesta gostuje Vercel. Ob obisku Vercel obdeluje vaš naslov IP in tehnične podatke o zahtevi, da prikaže spletno mesto in zagotovi njegovo varnost (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe).
 >
-> Na spletnih mestih trenutno ne uporabljamo analitičnih ali trženjskih piškotkov. Načrtujemo uvedbo orodij Google Tag Manager, Google Analytics 4 in Meta (Facebook) Pixel. **Ta orodja se bodo naložila šele, ko boste v pasici za piškotke dali privolitev** (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Privolitev lahko kadar koli spremenite ali prekličete prek povezave »Nastavitve piškotkov« v nogi spletnega mesta. Pred njihovo uvedbo bomo to politiko dopolnili s podatki o družbah Google in Meta kot uporabnikih podatkov ter o morebitnih prenosih v ZDA.
+> Na spletnih mestih trenutno ne uporabljamo analitičnih ali trženjskih piškotkov. Načrtujemo uvedbo orodij Google Tag Manager, Google Analytics 4, PostHog (produktna analitika v oblaku EU; na marketinški strani brez snemanja sej) in Meta (Facebook) Pixel. **Ta orodja se bodo naložila šele, ko boste v pasici za piškotke dali privolitev** (točka (a) prvega odstavka 6. člena Splošne uredbe in ZEKom-2). Privolitev lahko kadar koli spremenite ali prekličete prek povezave »Nastavitve piškotkov« v nogi spletnega mesta. Pred njihovo uvedbo bomo to politiko dopolnili s podatki o družbah Google, PostHog in Meta kot uporabnikih podatkov ter o morebitnih prenosih v ZDA.
 >
 > Podrobnosti o vseh piškotkih so v ločeni Politiki piškotkov: [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy).
 >

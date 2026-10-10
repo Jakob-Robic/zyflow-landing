@@ -10,4 +10,10 @@ window.ZYFLOW_ANALYTICS = {
   chatgptPixelId: "3mKjmHDKXRuimF1RUa4VWm",
   /** Meta (Facebook) Pixel — configured in GTM Custom HTML tags. */
   metaPixelId: "1112893301493263",
+  /**
+   * PostHog project (EU Cloud). Public ingestion key — safe in frontend code.
+   * posthog-js loads only after the visitor grants the analytics category.
+   */
+  posthogProjectKey: "phc_Bidx6J3fgqBuQ92kHq68hJQcVkwXybr3MGvAEnvMGAme",
+  posthogApiHost: "https://eu.i.posthog.com",
 };

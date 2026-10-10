@@ -105,18 +105,57 @@
     });
   }
 
+  function attributionUtms() {
+    if (window.ZyflowAttribution && typeof window.ZyflowAttribution.getAttribution === "function") {
+      return window.ZyflowAttribution.getAttribution();
+    }
+    return { utm_source: "", utm_medium: "", utm_campaign: "" };
+  }
+
+  function decorateStoreLink(el) {
+    if (!window.ZyflowAttribution || typeof window.ZyflowAttribution.decorateAnchor !== "function") {
+      return el.getAttribute("href") || "";
+    }
+    var consented = !!(
+      window.ZyflowPosthog &&
+      window.ZyflowPosthog.hasAnalyticsConsent &&
+      window.ZyflowPosthog.hasAnalyticsConsent()
+    );
+    var distinctId =
+      consented && window.ZyflowPosthog.getDistinctId
+        ? window.ZyflowPosthog.getDistinctId()
+        : "";
+    return window.ZyflowAttribution.decorateAnchor(el, {
+      utms: attributionUtms(),
+      analyticsConsent: consented,
+      distinctId: distinctId,
+    });
+  }
+
   /** Real App Store / Google Play outbound clicks. */
   function pushAppStoreClick(el) {
-    var href = el.getAttribute("href") || "";
+    var href = decorateStoreLink(el);
+    var store = storePlatform(href);
+    var placement = ctaLocation(el);
+    var utms = attributionUtms();
     dataLayerPush({
       event: "app_store_click",
       event_id: eventId(),
-      store: storePlatform(href),
-      cta_location: ctaLocation(el),
+      store: store,
+      cta_location: placement,
       cta_label: linkLabel(el),
       link_url: href,
       oppref: getOppref(),
     });
+    if (window.ZyflowPosthog && typeof window.ZyflowPosthog.capture === "function") {
+      window.ZyflowPosthog.capture("app_store_click", {
+        store: store,
+        utm_source: utms.utm_source,
+        utm_medium: utms.utm_medium,
+        utm_campaign: utms.utm_campaign,
+        placement: placement,
+      });
+    }
   }
 
   function initAppDownloadTracking() {

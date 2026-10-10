@@ -14,12 +14,12 @@ Piškotki so majhne besedilne datoteke, ki jih spletno mesto shrani v vaš brska
 
 ## 3. Načrtovani piškotki – samo z vašo privolitvijo
 
-Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** (za razumevanje uporabe spletnih mest) in **Meta (Facebook) Pixel** (za merjenje in izboljševanje naših oglasov na Facebooku in Instagramu). **Ta orodja so blokirana in se ne naložijo, dokler v pasici za piškotke dejavno ne privolite.** Če ne privolite, se nikoli ne naložijo. Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
+Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** in **PostHog** (oblak v EU, za razumevanje uporabe spletnih mest; snemanje sej na marketinški strani je izklopljeno) ter **Meta (Facebook) Pixel** (za merjenje in izboljševanje naših oglasov na Facebooku in Instagramu). **Ta orodja so blokirana in se ne naložijo, dokler v pasici za piškotke dejavno ne privolite.** Če ne privolite, se nikoli ne naložijo. Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
 
 ## 4. Kategorije piškotkov
 
 - **Nujni** – potrebni za delovanje spletnega mesta in za shranjevanje vaše izbire glede piškotkov. Vedno aktivni.
-- **Analitični** – Google Analytics 4 prek Google Tag Managerja: statistika obiskov, ogledanih strani, naprave in približne lokacije (država/mesto). Izklopljeni, dokler ne privolite.
+- **Analitični** – Google Analytics 4 prek Google Tag Managerja in PostHog (EU): statistika obiskov, ogledanih strani, naprave in približne lokacije (država/mesto) ter ključnih dejanj, npr. klikov na trgovino z aplikacijo. Izklopljeni, dokler ne privolite. Snemanje sej na zyflow.eu ni v uporabi.
 - **Trženjski** – Meta Pixel (in Googlove oglaševalske oznake, če jih dodamo): merjenje uspešnosti naših oglasov in prikaz ustreznih oglasov na drugih platformah. Izklopljeni, dokler ne privolite.
 
 ## 5. Preglednica piškotkov
@@ -27,7 +27,9 @@ Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** (za ra
 | Ime | Ponudnik | Namen | Kategorija | Trajanje | Stanje |
 |---|---|---|---|---|---|
 | `cc_cookie` | Zyflow (CookieConsent, lastni piškotek) | Shrani vašo izbiro glede piškotkov, da vas ne sprašujemo na vsaki strani | Nujni | 182 dni | Ko bo pasica aktivna |
+| `zyflow_ft` | Zyflow (lastni piškotek) | Shrani prvi stik kampanje (utm_source / utm_medium / utm_campaign), da povezave App Store in Google Play ostanejo pripisane po prehodu na drugo stran | Nujni | 90 dni | Aktivno |
 | `_ga` | Google Ireland Ltd. (Google Analytics 4) | Z naključnim identifikatorjem razlikuje obiskovalce za statistiko | Analitični | 2 leti (privzeta vrednost po navedbah družbe Google) | Načrtovano, samo po privolitvi |
+| `ph_*_posthog` | PostHog (oblak v EU) | Anonimni identifikator obiskovalca, skupen za *.zyflow.eu | Analitični | 1 leto | Samo po privolitvi za analitiko |
 | `_ga_<ID>` (en piškotek za vsak ID merjenja Google Analytics) | Google Ireland Ltd. (Google Analytics 4) | Ohranja stanje seje za statistiko | Analitični | 2 leti (privzeta vrednost po navedbah družbe Google) | Načrtovano, samo po privolitvi |
 | `_gcl_au` | Google Ireland Ltd. (Conversion Linker) | Povezuje klike na oglase z dejanji na našem spletnem mestu | Trženjski | 90 dni (po navedbah družbe Google) | Samo če dodamo Googlove oglaševalske oznake, in samo po privolitvi |
 | `_fbp` | Meta Platforms Ireland Ltd. (Meta Pixel) | Prepozna vaš brskalnik za merjenje in prikazovanje oglasov | Trženjski | 90 dni (po navedbah družbe Meta) | Načrtovano, samo po privolitvi |
@@ -38,7 +40,7 @@ Google Tag Manager le nalaga zgoraj navedene oznake, in sicer šele po vaši pri
 
 ## 6. Uporabniki podatkov in prenosi
 
-Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) analitične podatke obdeluje v našem imenu. Družba **Meta** (Meta Platforms Ireland Ltd.; matična družba Meta Platforms, Inc., ZDA) prejema podatke iz Meta Pixla; pri zbiranju in posredovanju teh podatkov sva lahko z družbo Meta skupna upravljavca (26. člen Splošne uredbe), kot je opisano v pogojih družbe Meta za njena poslovna orodja. Podatki se lahko prenesejo v ZDA; glede na ponudnika se opiramo na okvir EU-ZDA za zasebnost podatkov ali na standardne pogodbene klavzule Evropske komisije (podrobnosti na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu)). Za njuno nadaljnjo obdelavo veljata njuni politiki zasebnosti.
+Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) analitične podatke obdeluje v našem imenu. **PostHog** (oblak v EU) po vaši privolitvi obdeluje produktno analitiko spletnega mesta; snemanje sej na marketinški strani je izklopljeno. Družba **Meta** (Meta Platforms Ireland Ltd.; matična družba Meta Platforms, Inc., ZDA) prejema podatke iz Meta Pixla; pri zbiranju in posredovanju teh podatkov sva lahko z družbo Meta skupna upravljavca (26. člen Splošne uredbe), kot je opisano v pogojih družbe Meta za njena poslovna orodja. Podatki se lahko prenesejo v ZDA; glede na ponudnika se opiramo na okvir EU-ZDA za zasebnost podatkov ali na standardne pogodbene klavzule Evropske komisije (podrobnosti na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu)). Za njuno nadaljnjo obdelavo veljata njuni politiki zasebnosti.
 
 ## 7. Privolitev, preklic in sprememba nastavitev
 

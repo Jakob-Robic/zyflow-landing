@@ -14,12 +14,12 @@ Cookies are small text files that a website stores in your browser. Similar tech
 
 ## 3. Planned cookies – only with your consent
 
-We plan to use **Google Tag Manager**, **Google Analytics 4** (to understand how our websites are used) and the **Meta (Facebook) Pixel** (to measure and improve our advertising on Facebook and Instagram). **These tools are blocked and do not load until you actively agree in our cookie banner.** If you do not agree, they are never loaded. Necessary cookies do not need consent (Article 157 of the Slovenian Electronic Communications Act, ZEKom-2, implementing Art. 5(3) of the ePrivacy Directive). For all other cookies we ask for your consent (Art. 6(1)(a) GDPR).
+We plan to use **Google Tag Manager**, **Google Analytics 4** and **PostHog** (EU cloud, to understand how our websites are used; session recording is off on the marketing site) and the **Meta (Facebook) Pixel** (to measure and improve our advertising on Facebook and Instagram). **These tools are blocked and do not load until you actively agree in our cookie banner.** If you do not agree, they are never loaded. Necessary cookies do not need consent (Article 157 of the Slovenian Electronic Communications Act, ZEKom-2, implementing Art. 5(3) of the ePrivacy Directive). For all other cookies we ask for your consent (Art. 6(1)(a) GDPR).
 
 ## 4. Cookie categories
 
 - **Necessary** – required for the website to work and to remember your cookie choice. Always active.
-- **Analytics** – Google Analytics 4 via Google Tag Manager: statistics about visits, pages viewed, device and approximate location (country/city). Off until you consent.
+- **Analytics** – Google Analytics 4 via Google Tag Manager, and PostHog (EU): statistics about visits, pages viewed, device and approximate location (country/city), plus key actions such as app store clicks. Off until you consent. Session recording is not used on zyflow.eu.
 - **Marketing** – Meta Pixel (and Google advertising tags, if we add them): measuring the success of our ads and showing relevant ads on other platforms. Off until you consent.
 
 ## 5. Cookie table
@@ -27,7 +27,9 @@ We plan to use **Google Tag Manager**, **Google Analytics 4** (to understand how
 | Name | Provider | Purpose | Category | Duration | Status |
 |---|---|---|---|---|---|
 | `cc_cookie` | Zyflow (CookieConsent, first party) | Stores your cookie choices so we do not ask again on every page | Necessary | 182 days | When the banner goes live |
+| `zyflow_ft` | Zyflow (first party) | Keeps first-touch campaign values (utm_source / utm_medium / utm_campaign) so App Store and Google Play links stay attributed after you open another page | Necessary | 90 days | Active |
 | `_ga` | Google Ireland Ltd. (Google Analytics 4) | Distinguishes visitors with a random ID for statistics | Analytics | 2 years (default documented by Google) | Planned, only after consent |
+| `ph_*_posthog` | PostHog (EU cloud) | Anonymous visitor id shared across *.zyflow.eu | Analytics | 1 year | Only after analytics consent |
 | `_ga_<ID>` (one per Google Analytics measurement ID) | Google Ireland Ltd. (Google Analytics 4) | Keeps the session state for statistics | Analytics | 2 years (default documented by Google) | Planned, only after consent |
 | `_gcl_au` | Google Ireland Ltd. (Conversion Linker) | Links ad clicks to actions on our site | Marketing | 90 days (as documented by Google) | Only if we add Google advertising tags, and only after consent |
 | `_fbp` | Meta Platforms Ireland Ltd. (Meta Pixel) | Identifies your browser to measure and deliver ads | Marketing | 90 days (as documented by Meta) | Planned, only after consent |
@@ -38,7 +40,7 @@ Google Tag Manager itself only loads the tags above, and only after you consent.
 
 ## 6. Recipients and transfers
 
-**Google** (Google Ireland Ltd.; parent company Google LLC, USA) processes analytics data on our behalf. **Meta** (Meta Platforms Ireland Ltd.; parent company Meta Platforms, Inc., USA) receives data from the Meta Pixel; for the collection and transmission of this data, Meta and we may act as joint controllers (Art. 26 GDPR), as described in Meta's terms for its business tools. Data may be transferred to the USA; depending on the provider, we rely on the EU-US Data Privacy Framework or on Standard Contractual Clauses of the European Commission (details on request at [legal@zyflow.eu](mailto:legal@zyflow.eu)). Google's and Meta's own privacy policies apply to their further processing.
+**Google** (Google Ireland Ltd.; parent company Google LLC, USA) processes analytics data on our behalf. **PostHog** (EU cloud) processes website product analytics on our behalf after you consent; session recording is disabled on the marketing site. **Meta** (Meta Platforms Ireland Ltd.; parent company Meta Platforms, Inc., USA) receives data from the Meta Pixel; for the collection and transmission of this data, Meta and we may act as joint controllers (Art. 26 GDPR), as described in Meta's terms for its business tools. Data may be transferred to the USA; depending on the provider, we rely on the EU-US Data Privacy Framework or on Standard Contractual Clauses of the European Commission (details on request at [legal@zyflow.eu](mailto:legal@zyflow.eu)). Google's and Meta's own privacy policies apply to their further processing.
 
 ## 7. Consent, withdrawal and changing your settings
 
