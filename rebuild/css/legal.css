@@ -132,8 +132,9 @@
   margin-left: auto;
 }
 
-.legal-doc__header .lang-switch {
-  vertical-align: middle;
+.legal-doc__header .legal-doc__lang .lang-switch {
+  display: inline-flex;
+  width: auto;
 }
 
 .legal-doc__toc {
