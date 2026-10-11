@@ -11,8 +11,14 @@
 
 const PRODUCTION_ORIGINS = ['https://www.zyflow.eu', 'https://zyflow.eu'];
 
+// Vercel team slug for this project (from the Vercel GitHub integration /
+// preview host zyflow-landing-*-jakobs-projects-48c1181f.vercel.app).
+// GitHub owner Jakob-Robic is not the hostname suffix.
+const PROJECT_PREVIEW_TEAM = 'jakobs-projects-48c1181f';
+
 const LIMITS = {
-  name: 200,
+  // first(100) + space + last(100) from the contact form
+  name: 201,
   email: 254,
   subject: 200,
   message: 5000,
@@ -51,11 +57,49 @@ function isValidEmail(email) {
   return EMAIL_RE.test(value);
 }
 
+function extraAllowedOrigins() {
+  return String(process.env.ALLOWED_ORIGINS || '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+function vercelDeploymentOrigins() {
+  return [process.env.VERCEL_URL, process.env.VERCEL_BRANCH_URL]
+    .filter(Boolean)
+    .map((host) => {
+      const clean = String(host).replace(/^https?:\/\//, '');
+      return `https://${clean}`;
+    });
+}
+
+function isPreviewEnv() {
+  const env = process.env.VERCEL_ENV;
+  return env === 'preview' || env === 'development';
+}
+
+function previewTeamSlug() {
+  const explicit = String(process.env.VERCEL_PREVIEW_TEAM || '').trim().toLowerCase();
+  return explicit || PROJECT_PREVIEW_TEAM;
+}
+
+function isProjectPreviewOrigin(origin) {
+  const team = previewTeamSlug();
+  if (!team) return false;
+  const escaped = team.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // This project's hosts: zyflow-landing-<hash>-<team>.vercel.app
+  // and zyflow-landing-git-<branch>-<team>.vercel.app
+  const re = new RegExp(`^https://zyflow-landing(?:-git)?-[a-z0-9-]+-${escaped}\\.vercel\\.app$`);
+  return re.test(origin);
+}
+
 function isAllowedOrigin(origin) {
   if (!origin) return true;
   if (PRODUCTION_ORIGINS.includes(origin)) return true;
+  if (extraAllowedOrigins().includes(origin)) return true;
   if (/^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) return true;
-  if (/^https:\/\/zyflow-landing[\w.-]*\.vercel\.app$/.test(origin)) return true;
+  if (vercelDeploymentOrigins().includes(origin)) return true;
+  if (isPreviewEnv() && isProjectPreviewOrigin(origin)) return true;
   return false;
 }
 
@@ -260,6 +304,8 @@ function guardRequest(req, res, bucket) {
     return false;
   }
 
+  // Count every POST that passed method/origin checks, including later
+  // validation / honeypot / Turnstile failures. Invalid bodies are not free.
   const limited = rateLimit(bucket, req);
   if (!limited.ok) {
     res.setHeader('Retry-After', String(limited.retryAfterSec));

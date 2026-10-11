@@ -232,6 +232,24 @@ test('waitlist: HTML in the email is escaped in the notification', async () => {
   assert.equal(htmlRes.statusCode, 200);
 });
 
+test('contact: invalid bodies still count toward the rate limit', async () => {
+  process.env.FORM_RATE_LIMIT_MAX = '2';
+  resetRateLimits();
+  const bad = { name: 'Ada', email: 'nope', message: 'Hi' };
+  const a = await call(contact, { origin: 'https://www.zyflow.eu', ip: '198.51.100.40', body: bad });
+  const b = await call(contact, { origin: 'https://www.zyflow.eu', ip: '198.51.100.40', body: bad });
+  const c = await call(contact, {
+    origin: 'https://www.zyflow.eu',
+    ip: '198.51.100.40',
+    body: { name: 'Ada', email: 'ada@zyflow.eu', message: 'Hi' },
+  });
+  process.env.FORM_RATE_LIMIT_MAX = '20';
+  assert.equal(a.statusCode, 400);
+  assert.equal(b.statusCode, 400);
+  assert.equal(c.statusCode, 429);
+  assert.equal(inserts.length, 0);
+});
+
 test('contact: rate limit returns 429 after the window fills', async () => {
   process.env.FORM_RATE_LIMIT_MAX = '3';
   resetRateLimits();
