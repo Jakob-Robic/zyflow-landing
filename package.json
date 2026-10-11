@@ -10,7 +10,8 @@
     "build:rebuild": "node rebuild/scripts/build.js",
     "build:rebuild:prod": "SITE_INDEX=true node rebuild/scripts/build.js",
     "serve:rebuild": "python3 rebuild/serve.py",
-    "test:rebuild": "node --test rebuild/scripts/test-attribution.js"
+    "test:rebuild": "node --test rebuild/scripts/test-attribution.js",
+    "test:api": "node --test api/_lib/security.test.js api/_lib/handlers.test.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",

@@ -9,22 +9,22 @@
       <div class="form-row">
         <div class="field">
           <label class="field__label" for="contact-first" data-i18n="contact.form.firstName">First name</label>
-          <input class="input" id="contact-first" name="firstName" type="text" autocomplete="given-name" required />
+          <input class="input" id="contact-first" name="firstName" type="text" autocomplete="given-name" maxlength="100" required />
         </div>
         <div class="field">
           <label class="field__label" for="contact-last" data-i18n="contact.form.lastName">Last name</label>
-          <input class="input" id="contact-last" name="lastName" type="text" autocomplete="family-name" required />
+          <input class="input" id="contact-last" name="lastName" type="text" autocomplete="family-name" maxlength="100" required />
         </div>
       </div>
 
       <div class="form-row">
         <div class="field">
           <label class="field__label" for="contact-email" data-i18n="contact.form.email">Email</label>
-          <input class="input" id="contact-email" name="email" type="email" autocomplete="email" required />
+          <input class="input" id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required />
         </div>
         <div class="field">
           <label class="field__label" for="contact-phone" data-i18n="contact.form.phone">Phone (optional)</label>
-          <input class="input" id="contact-phone" name="phone" type="tel" autocomplete="tel" />
+          <input class="input" id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
         </div>
       </div>
 
@@ -45,7 +45,22 @@
 
       <div class="field">
         <label class="field__label" for="contact-message" data-i18n="contact.form.message">Message</label>
-        <textarea class="textarea" id="contact-message" name="message" rows="8" required></textarea>
+        <textarea class="textarea" id="contact-message" name="message" rows="8" maxlength="5000" required></textarea>
+      </div>
+
+      <div class="visually-hidden">
+        <label for="contact-website" data-i18n="contact.form.honeypot">Company website</label>
+        <input id="contact-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <div class="js-turnstile" hidden></div>
+
+      <div class="form-copy" hidden>
+        <span data-form-msg="success" data-i18n="contact.form.success">Thanks — we got your message.</span>
+        <span data-form-msg="error" data-i18n="contact.form.error">Something went wrong. Please try again.</span>
+        <span data-form-msg="validation" data-i18n="contact.form.errorValidation">Please check your details and try again.</span>
+        <span data-form-msg="rateLimit" data-i18n="contact.form.errorRateLimit">Too many attempts. Please wait a few minutes.</span>
+        <span data-form-msg="verify" data-i18n="contact.form.errorVerify">Please complete the verification and try again.</span>
       </div>
 
       <button class="btn btn--primary" type="submit" data-i18n="contact.form.submit">Send message</button>

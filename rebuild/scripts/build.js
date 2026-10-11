@@ -491,6 +491,28 @@ function injectAnalyticsBoot(html) {
   return html;
 }
 
+function injectTurnstileSiteKey() {
+  const key = (process.env.TURNSTILE_SITE_KEY || "").trim();
+  if (!key) return;
+  if (!/^[A-Za-z0-9_-]{10,200}$/.test(key)) {
+    console.warn("TURNSTILE_SITE_KEY ignored — unexpected format");
+    return;
+  }
+  const file = path.join(DIST, "js", "analytics-config.js");
+  if (!fs.existsSync(file)) return;
+  const src = read(file);
+  const next = src.replace(
+    /turnstileSiteKey:\s*""/,
+    `turnstileSiteKey: ${JSON.stringify(key)}`
+  );
+  if (next === src) {
+    console.warn("TURNSTILE_SITE_KEY set but analytics-config.js was not updated");
+    return;
+  }
+  fs.writeFileSync(file, next, "utf8");
+  console.log("injected TURNSTILE_SITE_KEY into analytics-config.js");
+}
+
 function copyCookieConsentAssets() {
   const pkgDist = path.join(
     ROOT,
@@ -608,6 +630,7 @@ function build() {
   copyDir(path.join(ROOT, "css"), path.join(DIST, "css"));
   copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
   copyCookieConsentAssets();
+  injectTurnstileSiteKey();
 
   for (const locale of LOCALES) {
     const messages = messagesByLocale[locale];

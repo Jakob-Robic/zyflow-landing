@@ -34,9 +34,23 @@
           <p data-i18n="chrome.footer.newsletter.body">Our newsletter includes tour updates, stories from the trail and helpful resources. No spam. Ever.</p>
         </div>
         <form class="footer__email" action="#" method="post">
-          <label class="visually-hidden" for="footer-email" data-i18n="chrome.footer.newsletter.email">Email</label>
-          <input id="footer-email" type="email" name="email" data-i18n-placeholder="chrome.footer.newsletter.emailPlaceholder" required />
-          <button type="submit" data-i18n="chrome.footer.newsletter.subscribe">Subscribe</button>
+          <div class="footer__email-row">
+            <label class="visually-hidden" for="footer-email" data-i18n="chrome.footer.newsletter.email">Email</label>
+            <input id="footer-email" type="email" name="email" maxlength="254" data-i18n-placeholder="chrome.footer.newsletter.emailPlaceholder" required />
+            <button type="submit" data-i18n="chrome.footer.newsletter.subscribe">Subscribe</button>
+          </div>
+          <div class="visually-hidden">
+            <label for="footer-website" data-i18n="chrome.footer.newsletter.honeypot">Company website</label>
+            <input id="footer-website" type="text" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+          <div class="js-turnstile" hidden></div>
+          <div class="form-copy" hidden>
+            <span data-form-msg="success" data-i18n="chrome.footer.newsletter.success">Thanks — you’re on the list.</span>
+            <span data-form-msg="error" data-i18n="chrome.footer.newsletter.error">Something went wrong. Please try again.</span>
+            <span data-form-msg="validation" data-i18n="chrome.footer.newsletter.errorValidation">Please enter a valid email address.</span>
+            <span data-form-msg="rateLimit" data-i18n="chrome.footer.newsletter.errorRateLimit">Too many attempts. Please wait a few minutes.</span>
+            <span data-form-msg="verify" data-i18n="chrome.footer.newsletter.errorVerify">Please complete the verification and try again.</span>
+          </div>
         </form>
         <p class="footer__note" data-i18n="chrome.footer.newsletter.note">We never share your details.</p>
       </div>

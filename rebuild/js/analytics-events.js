@@ -196,6 +196,113 @@
     existing.dataset.state = isError ? "error" : "ok";
   }
 
+  function formMessage(form, key, fallback) {
+    var el = form.querySelector('[data-form-msg="' + key + '"]');
+    if (el && el.textContent && el.textContent.trim()) return el.textContent.trim();
+    return fallback;
+  }
+
+  function honeypotValue(form) {
+    var input = form.querySelector('input[name="website"]');
+    return input ? String(input.value || "").trim() : "";
+  }
+
+  function turnstileSiteKey() {
+    return (
+      (window.ZYFLOW_ANALYTICS && window.ZYFLOW_ANALYTICS.turnstileSiteKey) || ""
+    );
+  }
+
+  function loadTurnstileScript() {
+    if (window.turnstile) return Promise.resolve();
+    if (window.__zyflowTurnstileLoading) return window.__zyflowTurnstileLoading;
+    window.__zyflowTurnstileLoading = new Promise(function (resolve, reject) {
+      var s = document.createElement("script");
+      s.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+      s.async = true;
+      s.onload = function () {
+        var n = 0;
+        var wait = function () {
+          if (window.turnstile) {
+            resolve();
+            return;
+          }
+          n += 1;
+          if (n > 50) {
+            reject(new Error("turnstile"));
+            return;
+          }
+          setTimeout(wait, 40);
+        };
+        wait();
+      };
+      s.onerror = function () {
+        reject(new Error("turnstile"));
+      };
+      document.head.appendChild(s);
+    });
+    return window.__zyflowTurnstileLoading;
+  }
+
+  function initTurnstileWidgets() {
+    var key = turnstileSiteKey();
+    if (!key) return;
+    var slots = document.querySelectorAll(".js-turnstile");
+    if (!slots.length) return;
+    loadTurnstileScript()
+      .then(function () {
+        slots.forEach(function (slot) {
+          if (slot.dataset.widgetId) return;
+          slot.hidden = false;
+          var id = window.turnstile.render(slot, { sitekey: key });
+          if (id) slot.dataset.widgetId = String(id);
+        });
+      })
+      .catch(function () {
+        /* Widget is optional until TURNSTILE_SECRET_KEY is also set. */
+      });
+  }
+
+  function getTurnstileToken(form) {
+    if (!turnstileSiteKey()) return "";
+    var input = form.querySelector('input[name="cf-turnstile-response"]');
+    if (input && input.value) return input.value;
+    var slot = form.querySelector(".js-turnstile");
+    if (slot && slot.dataset.widgetId && window.turnstile && window.turnstile.getResponse) {
+      try {
+        return window.turnstile.getResponse(slot.dataset.widgetId) || "";
+      } catch (_) {
+        return "";
+      }
+    }
+    return "";
+  }
+
+  function resetTurnstile(form) {
+    var slot = form.querySelector(".js-turnstile");
+    if (!slot || !slot.dataset.widgetId || !window.turnstile || !window.turnstile.reset) return;
+    try {
+      window.turnstile.reset(slot.dataset.widgetId);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function formErrorKey(status, error) {
+    if (status === 429 || error === "Too many requests") return "rateLimit";
+    if (error === "Verification failed") return "verify";
+    if (
+      status === 400 ||
+      error === "Valid email required" ||
+      error === "Name, email and message are required" ||
+      error === "Input too long" ||
+      error === "Invalid input"
+    ) {
+      return "validation";
+    }
+    return "error";
+  }
+
   function initContactForm() {
     var form = document.querySelector("form.contact-form__form");
     if (!form || form.dataset.analyticsBound === "1") return;
@@ -224,6 +331,8 @@
         subject: subject,
         email: email.trim(),
         message: message.trim() + (phone ? "\n\nPhone: " + phone.trim() : ""),
+        website: honeypotValue(form),
+        turnstileToken: getTurnstileToken(form),
       };
 
       fetch("/api/contact", {
@@ -233,20 +342,22 @@
       })
         .then(function (r) {
           return r.json().then(function (data) {
-            return { ok: r.ok && data && data.success, data: data };
+            return { ok: r.ok && data && data.success, status: r.status, data: data };
           });
         })
         .then(function (result) {
           if (result.ok) {
             pushContactSubmit({ topic: topic });
-            setFormStatus(form, "Thanks — we got your message.", false);
+            setFormStatus(form, formMessage(form, "success", "Thanks — we got your message."), false);
             form.reset();
+            resetTurnstile(form);
             return;
           }
-          throw new Error((result.data && result.data.error) || "Failed");
+          var err = (result.data && result.data.error) || "Failed";
+          throw { status: result.status, error: err };
         })
-        .catch(function () {
-          if (isLocalHost()) {
+        .catch(function (err) {
+          if (isLocalHost() && !(err && err.status)) {
             pushContactSubmit({ topic: topic });
             setFormStatus(
               form,
@@ -255,7 +366,16 @@
             );
             return;
           }
-          setFormStatus(form, "Something went wrong. Please try again.", true);
+          var key = formErrorKey(err && err.status, err && err.error);
+          var fallback =
+            key === "rateLimit"
+              ? "Too many attempts. Please wait a few minutes."
+              : key === "verify"
+                ? "Please complete the verification and try again."
+                : key === "validation"
+                  ? "Please check your details and try again."
+                  : "Something went wrong. Please try again.";
+          setFormStatus(form, formMessage(form, key, fallback), true);
         })
         .finally(function () {
           if (btn) btn.disabled = false;
@@ -277,30 +397,54 @@
       var input = form.querySelector("#footer-email");
       var email = input ? input.value.trim() : "";
       if (!email) return;
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) btn.disabled = true;
 
       fetch("/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email }),
+        body: JSON.stringify({
+          email: email,
+          website: honeypotValue(form),
+          turnstileToken: getTurnstileToken(form),
+        }),
       })
         .then(function (r) {
           return r.json().then(function (data) {
-            return { ok: r.ok && data && data.success };
+            return { ok: r.ok && data && data.success, status: r.status, data: data };
           });
         })
         .then(function (result) {
           if (result.ok) {
             pushNewsletterSubscribe();
             if (input) input.value = "";
+            resetTurnstile(form);
+            setFormStatus(form, formMessage(form, "success", "Thanks — you’re on the list."), false);
             return;
           }
-          throw new Error("fail");
+          var err = (result.data && result.data.error) || "Failed";
+          throw { status: result.status, error: err };
         })
-        .catch(function () {
-          if (isLocalHost()) {
+        .catch(function (err) {
+          if (isLocalHost() && !(err && err.status)) {
             pushNewsletterSubscribe();
             if (input) input.value = "";
+            setFormStatus(form, formMessage(form, "success", "Thanks — you’re on the list."), false);
+            return;
           }
+          var key = formErrorKey(err && err.status, err && err.error);
+          var fallback =
+            key === "rateLimit"
+              ? "Too many attempts. Please wait a few minutes."
+              : key === "verify"
+                ? "Please complete the verification and try again."
+                : key === "validation"
+                  ? "Please enter a valid email address."
+                  : "Something went wrong. Please try again.";
+          setFormStatus(form, formMessage(form, key, fallback), true);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
         });
     });
   }
@@ -309,10 +453,12 @@
   initAppDownloadTracking();
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", function () {
+      initTurnstileWidgets();
       initContactForm();
       initNewsletterForm();
     });
   } else {
+    initTurnstileWidgets();
     initContactForm();
     initNewsletterForm();
   }
