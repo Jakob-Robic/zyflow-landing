@@ -154,7 +154,13 @@
         "note": "Tvojih podatkov ne delimo z nikomer.",
         "subscribe": "Naroči se",
         "email": "E-pošta",
-        "emailPlaceholder": "E-poštni naslov"
+        "emailPlaceholder": "E-poštni naslov",
+        "honeypot": "Spletna stran podjetja",
+        "success": "Hvala — e-naslov smo shranili.",
+        "error": "Nekaj je šlo narobe. Poskusi znova.",
+        "errorValidation": "Vnesi veljaven e-poštni naslov.",
+        "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
+        "errorVerify": "Dokončaj preverjanje in poskusi znova."
       },
       "company": "Zyflow ustvarja HERKO d.o.o., Slovenija",
       "copyright": "© 2026 Zyflow. Vse pravice pridržane.",
@@ -728,7 +734,13 @@
         "Drugo"
       ],
       "message": "Sporočilo",
-      "submit": "Pošlji sporočilo"
+      "submit": "Pošlji sporočilo",
+      "honeypot": "Spletna stran podjetja",
+      "success": "Hvala — sporočilo smo prejeli.",
+      "error": "Nekaj je šlo narobe. Poskusi znova.",
+      "errorValidation": "Preveri vnesene podatke in poskusi znova.",
+      "errorRateLimit": "Preveč poskusov. Počakaj nekaj minut.",
+      "errorVerify": "Dokončaj preverjanje in poskusi znova."
     }
   },
   "legal": {

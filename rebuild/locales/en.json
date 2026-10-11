@@ -154,7 +154,13 @@
         "note": "We never share your details.",
         "subscribe": "Subscribe",
         "email": "Email",
-        "emailPlaceholder": "Email address"
+        "emailPlaceholder": "Email address",
+        "honeypot": "Company website",
+        "success": "Thanks — you’re on the list.",
+        "error": "Something went wrong. Please try again.",
+        "errorValidation": "Please enter a valid email address.",
+        "errorRateLimit": "Too many attempts. Please wait a few minutes.",
+        "errorVerify": "Please complete the verification and try again."
       },
       "company": "Zyflow is made by HERKO d.o.o., Slovenia",
       "copyright": "© 2026 Zyflow. All rights reserved.",
@@ -728,7 +734,13 @@
         "Other"
       ],
       "message": "Message",
-      "submit": "Send message"
+      "submit": "Send message",
+      "honeypot": "Company website",
+      "success": "Thanks — we got your message.",
+      "error": "Something went wrong. Please try again.",
+      "errorValidation": "Please check your details and try again.",
+      "errorRateLimit": "Too many attempts. Please wait a few minutes.",
+      "errorVerify": "Please complete the verification and try again."
     }
   },
   "legal": {
