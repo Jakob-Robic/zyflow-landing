@@ -164,31 +164,47 @@ function applyI18n(html, messages) {
   );
 
   // Attribute i18n: data-i18n-attr="attr:key" or "attr1:key1;attr2:key2"
-  html = html.replace(/\sdata-i18n-attr="([^"]+)"/g, (match, spec) => {
-    const assigned = [];
-    for (const part of spec.split(";")) {
-      const trimmed = part.trim();
-      if (!trimmed) continue;
-      const colon = trimmed.indexOf(":");
-      if (colon < 1) continue;
-      const attr = trimmed.slice(0, colon).trim();
-      const key = trimmed.slice(colon + 1).trim();
-      if (!/^[a-zA-Z_][\w:-]*$/.test(attr)) continue;
-      const value = getByPath(messages, key);
-      if (typeof value !== "string") continue;
-      assigned.push(`${attr}="${escapeHtml(value)}"`);
+  html = html.replace(
+    /<([a-zA-Z0-9-]+)([^>]*?)\sdata-i18n-attr="([^"]+)"([^>]*?)(\s*\/?)>/g,
+    (match, tag, pre, spec, post, slash) => {
+      const assigned = [];
+      const names = [];
+      for (const part of spec.split(";")) {
+        const trimmed = part.trim();
+        if (!trimmed) continue;
+        const colon = trimmed.indexOf(":");
+        if (colon < 1) continue;
+        const attr = trimmed.slice(0, colon).trim();
+        const key = trimmed.slice(colon + 1).trim();
+        if (!/^[a-zA-Z_][\w:-]*$/.test(attr)) continue;
+        const value = getByPath(messages, key);
+        if (typeof value !== "string") continue;
+        names.push(attr);
+        assigned.push(`${attr}="${escapeHtml(value)}"`);
+      }
+      if (!assigned.length) return match;
+      let rest = `${pre} ${post}`;
+      for (const attr of names) {
+        rest = rest.replace(new RegExp(`\\s${attr}="[^"]*"`, "g"), "");
+      }
+      rest = rest.replace(/\s+/g, " ").trim();
+      const restBit = rest ? ` ${rest}` : "";
+      const close = slash.trim() ? " /" : "";
+      return `<${tag} ${assigned.join(" ")}${restBit} data-i18n-attr="${spec}"${close}>`;
     }
-    if (!assigned.length) return match;
-    return ` ${assigned.join(" ")} data-i18n-attr="${spec}"`;
-  });
+  );
 
   // Attribute i18n: data-i18n-aria-label / data-i18n-placeholder
   html = html.replace(
-    /\sdata-i18n-aria-label="([^"]+)"/g,
-    (match, key) => {
+    /<([a-zA-Z0-9-]+)([^>]*?)\sdata-i18n-aria-label="([^"]+)"([^>]*?)(\s*\/?)>/g,
+    (match, tag, pre, key, post, slash) => {
       const value = getByPath(messages, key);
       if (typeof value !== "string") return match;
-      return ` aria-label="${escapeHtml(value)}" data-i18n-aria-label="${key}"`;
+      let rest = `${pre} ${post}`.replace(/\saria-label="[^"]*"/g, "");
+      rest = rest.replace(/\s+/g, " ").trim();
+      const restBit = rest ? ` ${rest}` : "";
+      const close = slash.trim() ? " /" : "";
+      return `<${tag} aria-label="${escapeHtml(value)}" data-i18n-aria-label="${key}"${restBit}${close}>`;
     }
   );
   html = html.replace(
