@@ -4,7 +4,7 @@
  * Builds EN at dist/ and SL at dist/sl/, plus sitemap.xml / robots.txt.
  *
  * Include syntax: <!-- include:components/nav.html -->
- * Locale: data-i18n / data-i18n-html
+ * Locale: data-i18n / data-i18n-html / data-i18n-attr="attr:key"
  *
  * Usage:
  *   node rebuild/scripts/build.js
@@ -162,6 +162,25 @@ function applyI18n(html, messages) {
       return `${open}${value}${close}`;
     }
   );
+
+  // Attribute i18n: data-i18n-attr="attr:key" or "attr1:key1;attr2:key2"
+  html = html.replace(/\sdata-i18n-attr="([^"]+)"/g, (match, spec) => {
+    const assigned = [];
+    for (const part of spec.split(";")) {
+      const trimmed = part.trim();
+      if (!trimmed) continue;
+      const colon = trimmed.indexOf(":");
+      if (colon < 1) continue;
+      const attr = trimmed.slice(0, colon).trim();
+      const key = trimmed.slice(colon + 1).trim();
+      if (!/^[a-zA-Z_][\w:-]*$/.test(attr)) continue;
+      const value = getByPath(messages, key);
+      if (typeof value !== "string") continue;
+      assigned.push(`${attr}="${escapeHtml(value)}"`);
+    }
+    if (!assigned.length) return match;
+    return ` ${assigned.join(" ")} data-i18n-attr="${spec}"`;
+  });
 
   // Attribute i18n: data-i18n-aria-label / data-i18n-placeholder
   html = html.replace(

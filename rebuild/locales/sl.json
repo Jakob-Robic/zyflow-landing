@@ -125,8 +125,8 @@
       },
       "menu": "Meni",
       "menuClose": "Zapri meni",
-      "themeDark": "Temni način",
-      "themeLight": "Svetli način"
+      "themeDark": "preklopi na temni način",
+      "themeLight": "preklopi na svetli način"
     },
     "footer": {
       "links": {
@@ -402,17 +402,20 @@
         {
           "title": "Ljubljana–Trst",
           "place": "Slovenija / Italija",
-          "coords": "46.0569° N, 14.5058° E"
+          "coords": "46.0569° N, 14.5058° E",
+          "playLabel": "Predvajaj video: Ljubljana–Trst"
         },
         {
           "title": "Zanka čez alpske prelaze",
           "place": "Julijske Alpe, Slovenija",
-          "coords": "46.3792° N, 13.8363° E"
+          "coords": "46.3792° N, 13.8363° E",
+          "playLabel": "Predvajaj video: Zanka čez alpske prelaze"
         },
         {
           "title": "Obalni gravel",
           "place": "Istra, Hrvaška",
-          "coords": "45.2396° N, 13.9367° E"
+          "coords": "45.2396° N, 13.9367° E",
+          "playLabel": "Predvajaj video: Obalni gravel"
         }
       ]
     }
@@ -1130,5 +1133,25 @@
         "p5": "After your first cross-border ride, the elevation profile will start to look different. You'll know what a long rise feels like on your bike, and you'll plan the next one faster. Start with a route like Ljubljana to Trieste, plan the stops around the climb, and enjoy the sea at the end."
       }
     }
+  },
+  "alts": {
+    "appMap": "Zemljevid v aplikaciji Zyflow s kolesarjem prijaznimi kraji, polnilnicami in pitno vodo",
+    "polaroid1": "Kolesarja na kamniti gorski poti",
+    "aboutPolaroidCyclist": "Kolesar med zelenimi alpskimi travniki",
+    "polaroid3": "Skupina kolesarjev na postanku v borovem gozdu",
+    "bikepackSunset": "Kolo z bikepacking torbami ob sončnem zahodu",
+    "coffeeSign": "Tabla pred kavarno z napisom »cyclists need coffee«",
+    "feature2": "Kolesarja s prtljago na alpski cesti pod zasneženimi vrhovi",
+    "tourHike": "Pohodniki na meglenem travnatem grebenu",
+    "tour4wd": "Terensko vozilo s šotorom na strehi",
+    "tourKayak": "Kajakaši na reki",
+    "catSlovenia": "Blejsko jezero z otokom in Julijskimi Alpami",
+    "catCroatia": "Pogled iz zraka na staro mestno jedro Rovinja v Istri",
+    "feature1": "Kolesa, parkirana na starem mestnem trgu",
+    "journal1": "Gozdnati griči ob sončnem zahodu",
+    "feature3": "Kolesarji na dolinski poti pod nazobčanimi gorskimi vrhovi",
+    "social1": "Terensko vozilo v puščavskem kanjonu",
+    "social2": "Tabor s šotorom ob jezeru v mraku",
+    "social3": "Kajak na mirnem morju z ledenimi gorami"
   }
 }
