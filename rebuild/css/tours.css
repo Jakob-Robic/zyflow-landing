@@ -48,11 +48,20 @@
   margin-bottom: var(--space-gap-11);
 }
 
+.tours-hero__eyebrow {
+  margin: 0 0 var(--space-gap-3);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  letter-spacing: 0.02em;
+}
+
 .tours-hero__title {
   font-family: var(--font-heading);
   font-size: var(--type-display);
   line-height: var(--leading-display);
   margin: 0 0 var(--space-gap-6);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .tours-hero__lede {

@@ -41,7 +41,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 20rem;
+  max-width: 36rem;
   margin: 0 auto var(--space-gap-12);
   padding-block: var(--space-gap-9);
 }
@@ -51,6 +51,15 @@
   margin: 0;
   font-family: var(--font-badge);
   font-size: var(--type-small);
+}
+
+.about-hero__h1 {
+  margin: var(--space-gap-4) 0 0;
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 600;
+  line-height: var(--leading-lead);
+  text-wrap: balance;
 }
 
 .about-hero__heading {
@@ -348,6 +357,11 @@
 
   .about-hero__heading {
     font-size: var(--type-h1);
+  }
+
+  .about-hero__h1 {
+    font-size: var(--type-body);
+    padding-inline: var(--space-gap-4);
   }
 
   .about-value p {

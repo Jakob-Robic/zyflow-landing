@@ -715,7 +715,25 @@ html[data-theme="light"] .footer__brand-logo--light {
   max-width: 520px;
 }
 
+.hero__head {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  gap: var(--space-gap-3);
+}
+
+.hero__h1 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 600;
+  line-height: var(--leading-lead);
+  color: #fff;
+  text-wrap: balance;
+}
+
 .hero__title {
+  margin: 0;
   font-family: var(--font-heading);
   font-size: var(--type-display);
   line-height: 1;
@@ -2510,6 +2528,9 @@ html[data-theme="light"] .testimonial__bg img {
     text-align: center;
     max-width: none;
     padding: var(--space-gap-7) var(--space-gap-5) var(--space-gap-5);
+  }
+  .hero__h1 {
+    max-width: 34ch;
   }
   .hero__title {
     font-size: var(--type-display);
