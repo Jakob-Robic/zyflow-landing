@@ -1,6 +1,6 @@
 # Politika piškotkov Zyflow
 
-**Različica:** 1.0 · **Datum začetka veljavnosti:** 10. 10. 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
+**Različica:** 1.1 · **Datum začetka veljavnosti:** 14. 10. 2026 · **URL:** [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy)
 
 Ta politika piškotkov pojasnjuje, kako družba HERKO d.o.o., Pševska cesta 10, 4000 Kranj, Slovenija (v nadaljevanju: »mi«), uporablja piškotke in podobne tehnologije na spletnih mestih [zyflow.eu](http://zyflow.eu), [app.zyflow.eu](http://app.zyflow.eu) in [navigate.zyflow.eu](http://navigate.zyflow.eu). Več o obdelavi osebnih podatkov je v naši [Politiki zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy). Kontakt: [legal@zyflow.eu](mailto:legal@zyflow.eu).
 
@@ -10,23 +10,29 @@ Piškotki so majhne besedilne datoteke, ki jih spletno mesto shrani v vaš brska
 
 ## 2. Trenutna uporaba piškotkov
 
-**Naša spletna mesta trenutno ne uporabljajo analitičnih, oglaševalskih ali drugih nenujnih piškotkov.** Uporablja se lahko le tehnično nujna hramba, na primer za ohranjanje prijave, kjer je ta na voljo. Spletna mesta gostuje Vercel, ki obdeluje tehnične podatke o zahtevah (glej našo [Politiko zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy)).
+Nujna lastna hramba na zyflow.eu vključuje zapis privolitve `cc_cookie` (ko izberete) in `zyflow_ft`, da povezave App Store / Play ohranijo vrednosti kampanje. Spletna mesta gostuje Vercel, ki obdeluje tehnične podatke o zahtevah (glej našo [Politiko zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy)).
 
-## 3. Načrtovani piškotki – samo z vašo privolitvijo
+**Preden v pasici izberete**, lahko PostHog (oblak v EU) izmeri anonimni ogled strani **samo v pomnilniku brskalnika** — ne nastavi PostHogovega piškotka in ne piše v `localStorage`. Ta zahteva lahko vključuje URL strani, vrsto brskalnika/naprave in anonimiziran IP. **Če analitiko zavrnete, se to ustavi.** **Če analitiko sprejmete**, lahko PostHog nastavi lastni piškotek, skupen za *.zyflow.eu. Snemanje sej na marketinški strani je izklopljeno.
 
-Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** in **PostHog** (oblak v EU, za razumevanje uporabe spletnih mest; snemanje sej na marketinški strani je izklopljeno) ter **Meta (Facebook) Pixel** (za merjenje in izboljševanje naših oglasov na Facebooku in Instagramu). **Ta orodja so blokirana in se ne naložijo, dokler v pasici za piškotke dejavno ne privolite.** Če ne privolite, se nikoli ne naložijo. Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
+Google Tag Manager, Google Analytics 4 in Meta Pixel se še vedno naložijo **šele po vaši privolitvi**.
+
+Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
+
+## 3. Neobvezni piškotki – samo z vašo privolitvijo
+
+**Google Tag Manager**, **Google Analytics 4** in **Meta (Facebook) Pixel** ostanejo blokirani, dokler v pasici za piškotke dejavno ne privolite. PostHogovi **piškotki** se nastavijo šele po sprejemu analitike; brez te izbire PostHog na vaši napravi ne shrani ničesar.
 
 ## 4. Kategorije piškotkov
 
 - **Nujni** – potrebni za delovanje spletnega mesta in za shranjevanje vaše izbire glede piškotkov. Vedno aktivni.
-- **Analitični** – Google Analytics 4 prek Google Tag Managerja in PostHog (EU): statistika obiskov, ogledanih strani, naprave in približne lokacije (država/mesto) ter ključnih dejanj, npr. klikov na trgovino z aplikacijo. Izklopljeni, dokler ne privolite. Snemanje sej na zyflow.eu ni v uporabi.
+- **Analitični** – Google Analytics 4 prek Google Tag Managerja (piškotki šele po privolitvi) in PostHog (EU): anonimni ogledi strani v pomnilniku se lahko izvedejo pred izbiro; PostHogovi piškotki in ključna dejanja, npr. kliki na trgovino z aplikacijo, šele po privolitvi. Snemanje sej na zyflow.eu ni v uporabi.
 - **Trženjski** – Meta Pixel (in Googlove oglaševalske oznake, če jih dodamo): merjenje uspešnosti naših oglasov in prikaz ustreznih oglasov na drugih platformah. Izklopljeni, dokler ne privolite.
 
 ## 5. Preglednica piškotkov
 
 | Ime | Ponudnik | Namen | Kategorija | Trajanje | Stanje |
 |---|---|---|---|---|---|
-| `cc_cookie` | Zyflow (CookieConsent, lastni piškotek) | Shrani vašo izbiro glede piškotkov, da vas ne sprašujemo na vsaki strani | Nujni | 182 dni | Ko bo pasica aktivna |
+| `cc_cookie` | Zyflow (CookieConsent, lastni piškotek) | Shrani vašo izbiro glede piškotkov, da vas ne sprašujemo na vsaki strani | Nujni | 182 dni | Aktivno |
 | `zyflow_ft` | Zyflow (lastni piškotek) | Shrani prvi stik kampanje (utm_source / utm_medium / utm_campaign), da povezave App Store in Google Play ostanejo pripisane po prehodu na drugo stran | Nujni | 90 dni | Aktivno |
 | `_ga` | Google Ireland Ltd. (Google Analytics 4) | Z naključnim identifikatorjem razlikuje obiskovalce za statistiko | Analitični | 2 leti (privzeta vrednost po navedbah družbe Google) | Načrtovano, samo po privolitvi |
 | `ph_*_posthog` | PostHog (oblak v EU) | Anonimni identifikator obiskovalca, skupen za *.zyflow.eu | Analitični | 1 leto | Samo po privolitvi za analitiko |
@@ -40,11 +46,11 @@ Google Tag Manager le nalaga zgoraj navedene oznake, in sicer šele po vaši pri
 
 ## 6. Uporabniki podatkov in prenosi
 
-Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) analitične podatke obdeluje v našem imenu. **PostHog** (oblak v EU) po vaši privolitvi obdeluje produktno analitiko spletnega mesta; snemanje sej na marketinški strani je izklopljeno. Družba **Meta** (Meta Platforms Ireland Ltd.; matična družba Meta Platforms, Inc., ZDA) prejema podatke iz Meta Pixla; pri zbiranju in posredovanju teh podatkov sva lahko z družbo Meta skupna upravljavca (26. člen Splošne uredbe), kot je opisano v pogojih družbe Meta za njena poslovna orodja. Podatki se lahko prenesejo v ZDA; glede na ponudnika se opiramo na okvir EU-ZDA za zasebnost podatkov ali na standardne pogodbene klavzule Evropske komisije (podrobnosti na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu)). Za njuno nadaljnjo obdelavo veljata njuni politiki zasebnosti.
+Družba **Google** (Google Ireland Ltd.; matična družba Google LLC, ZDA) analitične podatke obdeluje v našem imenu po vaši privolitvi. **PostHog** (oblak v EU) obdeluje produktno analitiko spletnega mesta: anonimni ogledi strani v pomnilniku se lahko pošljejo pred vašo izbiro; piškotki in stabilni identifikator obiskovalca se uporabljajo šele po privolitvi za analitiko; snemanje sej na marketinški strani je izklopljeno. Družba **Meta** (Meta Platforms Ireland Ltd.; matična družba Meta Platforms, Inc., ZDA) prejema podatke iz Meta Pixla; pri zbiranju in posredovanju teh podatkov sva lahko z družbo Meta skupna upravljavca (26. člen Splošne uredbe), kot je opisano v pogojih družbe Meta za njena poslovna orodja. Podatki se lahko prenesejo v ZDA; glede na ponudnika se opiramo na okvir EU-ZDA za zasebnost podatkov ali na standardne pogodbene klavzule Evropske komisije (podrobnosti na zahtevo na [legal@zyflow.eu](mailto:legal@zyflow.eu)). Za njuno nadaljnjo obdelavo veljata njuni politiki zasebnosti.
 
 ## 7. Privolitev, preklic in sprememba nastavitev
 
-- Ob prvem obisku pasica ponuja možnosti **»Sprejmi vse«**, **»Zavrni vse«** in **»Uredi nastavitve«**. Zavrnitev je enako preprosta kot sprejem. Če pasico zaprete ali ne izberete ničesar, se uporabljajo samo nujni piškotki.
+- Ob prvem obisku pasica ponuja možnosti **»Sprejmi vse«**, **»Zavrni neobvezne«** in **»Upravljaj nastavitve«**. Zavrnitev je enako preprosta kot sprejem. Če pasico zaprete ali ne izberete ničesar, se uporabljajo samo nujni piškotki; PostHog lahko še vedno pošlje anonimni ogled strani v pomnilniku, dokler analitike ne zavrnete.
 - Privolitev lahko **kadar koli spremenite ali prekličete** prek povezave **»Nastavitve piškotkov«** v nogi vsake strani. Preklic ne vpliva na zakonitost obdelave pred preklicem. Ko privolitev prekličete, orodij ne nalagamo več in, kjer je tehnično mogoče, izbrišemo svoje analitične in trženjske piškotke.
 - Vašo izbiro hranimo 182 dni in vas ponovno vprašamo, ko poteče ali ko dodamo nove piškotke ali namene.
 - Za dokazovanje privolitve hranimo zapis o njej (naključni identifikator privolitve, datum in čas, vaše izbire in različico politike). Ta zapis hranimo le toliko časa, kolikor je potrebno za dokazovanje vaše privolitve in za obrambo pravnih zahtevkov, nato ga izbrišemo.

@@ -1,13 +1,16 @@
 /**
- * Consent-gated PostHog loader for the marketing site.
- * posthog-js is fetched only after the analytics category is granted.
+ * PostHog loader for the marketing site.
+ *
+ * Pending consent: load posthog-js immediately with persistence "memory"
+ * (no cookies / localStorage) so anonymous $pageview still fires.
+ * After analytics opt-in: upgrade to localStorage+cookie on .zyflow.eu.
+ * After reject / withdraw: opt_out_capturing().
  */
 (function () {
   var granted = false;
   var initialized = false;
   var loading = false;
   var loadWaiters = [];
-  var capturedInitialPageview = false;
 
   function analyticsIds() {
     return window.ZYFLOW_ANALYTICS || {};
@@ -25,6 +28,21 @@
     return apiHost().replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js";
   }
 
+  function consentHelpers() {
+    return window.ZyflowPosthogConsent || null;
+  }
+
+  function consentState() {
+    var helpers = consentHelpers();
+    if (!helpers) return "pending";
+    return helpers.analyticsConsentState(document.cookie || "");
+  }
+
+  function effectiveState() {
+    if (granted) return "granted";
+    return consentState();
+  }
+
   function installStub() {
     if (window.posthog && window.posthog.__SV) return;
     var posthog = (window.posthog = window.posthog || []);
@@ -33,7 +51,7 @@
       posthog._i.push([token, config, name]);
     };
     var methods =
-      "capture register register_once identify reset get_distinct_id opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing".split(
+      "capture register register_once identify reset get_distinct_id opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing set_config".split(
         " "
       );
     for (var i = 0; i < methods.length; i++) {
@@ -93,43 +111,67 @@
     });
   }
 
-  function initAndOptIn() {
-    var key = projectKey();
-    if (!key || !window.posthog || typeof window.posthog.init !== "function") return;
-
-    if (!initialized) {
-      window.posthog.init(key, {
-        api_host: apiHost(),
-        ui_host: "https://eu.posthog.com",
-        person_profiles: "always",
-        capture_pageview: true,
-        cross_subdomain_cookie: true,
-        persistence: "localStorage+cookie",
-        opt_out_capturing_by_default: true,
-        disable_session_recording: true,
-        loaded: function (ph) {
+  function initConfig() {
+    var state = effectiveState();
+    var consented = state === "granted";
+    var helpers = consentHelpers();
+    var persistence = helpers
+      ? helpers.persistenceForState(state)
+      : consented
+        ? "localStorage+cookie"
+        : "memory";
+    return {
+      api_host: apiHost(),
+      ui_host: "https://eu.posthog.com",
+      person_profiles: "identified_only",
+      capture_pageview: true,
+      autocapture: consented,
+      cross_subdomain_cookie: consented,
+      persistence: persistence,
+      opt_out_capturing_by_default: state === "denied",
+      disable_session_recording: true,
+      loaded: function (ph) {
+        try {
+          ph.register({ platform: "website" });
+        } catch (_e) {
+          /* ignore */
+        }
+        if (state === "denied" && typeof ph.opt_out_capturing === "function") {
           try {
-            ph.register({ platform: "website" });
+            ph.opt_out_capturing();
           } catch (_e) {
             /* ignore */
           }
-          if (granted) {
-            ph.opt_in_capturing();
-            if (!capturedInitialPageview) {
-              capturedInitialPageview = true;
-              ph.capture("$pageview");
-            }
-          }
-          applyAttribution();
-        },
-      });
-      initialized = true;
-      return;
-    }
+        }
+        applyAttribution();
+      },
+    };
+  }
 
+  function initOnce() {
+    var key = projectKey();
+    if (!key || !window.posthog || typeof window.posthog.init !== "function") return;
+    if (initialized) return;
+    window.posthog.init(key, initConfig());
+    initialized = true;
+  }
+
+  function applyConsentedPersistence() {
+    if (!window.posthog) return;
     try {
-      window.posthog.register({ platform: "website" });
-      window.posthog.opt_in_capturing();
+      if (typeof window.posthog.set_config === "function") {
+        window.posthog.set_config({
+          persistence: "localStorage+cookie",
+          cross_subdomain_cookie: true,
+          autocapture: true,
+        });
+      }
+      if (typeof window.posthog.register === "function") {
+        window.posthog.register({ platform: "website" });
+      }
+      if (typeof window.posthog.opt_in_capturing === "function") {
+        window.posthog.opt_in_capturing();
+      }
     } catch (_e) {
       /* ignore */
     }
@@ -138,7 +180,10 @@
 
   function grant() {
     granted = true;
-    loadSdk(initAndOptIn);
+    loadSdk(function () {
+      initOnce();
+      applyConsentedPersistence();
+    });
   }
 
   function withdraw() {
@@ -146,6 +191,13 @@
     if (window.posthog && typeof window.posthog.opt_out_capturing === "function") {
       try {
         window.posthog.opt_out_capturing();
+        if (typeof window.posthog.set_config === "function") {
+          window.posthog.set_config({
+            persistence: "memory",
+            cross_subdomain_cookie: false,
+            autocapture: false,
+          });
+        }
       } catch (_e) {
         /* ignore */
       }
@@ -177,6 +229,15 @@
     }
   }
 
+  function boot() {
+    var state = consentState();
+    if (state === "granted") {
+      grant();
+      return;
+    }
+    loadSdk(initOnce);
+  }
+
   window.ZyflowPosthog = {
     grant: grant,
     withdraw: withdraw,
@@ -184,4 +245,6 @@
     getDistinctId: getDistinctId,
     capture: capture,
   };
+
+  boot();
 })();

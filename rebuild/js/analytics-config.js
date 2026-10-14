@@ -12,7 +12,8 @@ window.ZYFLOW_ANALYTICS = {
   metaPixelId: "1112893301493263",
   /**
    * PostHog project (EU Cloud). Public ingestion key — safe in frontend code.
-   * posthog-js loads only after the visitor grants the analytics category.
+   * posthog-js loads on every page with memory persistence until analytics
+   * consent; cookies are used only after the visitor opts in.
    */
   posthogProjectKey: "phc_Bidx6J3fgqBuQ92kHq68hJQcVkwXybr3MGvAEnvMGAme",
   posthogApiHost: "https://eu.i.posthog.com",

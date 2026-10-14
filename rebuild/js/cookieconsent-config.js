@@ -66,6 +66,9 @@ function updateGtagConsent() {
 
 function syncPosthogConsent() {
   if (!window.ZyflowPosthog) return;
+  // Called from onFirstConsent / onConsent / onChange — a recorded choice.
+  // Pending visitors are not withdrawn here; posthog-boot.js already
+  // captures anonymous $pageview with memory persistence.
   if (analyticsGranted()) {
     window.ZyflowPosthog.grant();
   } else {
