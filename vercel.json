@@ -1,6 +1,12 @@
 {
   "buildCommand": "npm run build:rebuild:prod",
   "outputDirectory": "rebuild/dist",
+  "proxy": {
+    "entrypoint": "server-pageview-middleware.js",
+    "matcher": [
+      "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json).*)"
+    ]
+  },
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [

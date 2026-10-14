@@ -273,6 +273,8 @@ Zyflow is intended for people aged **16 and over** and is offered in the EU only
 > Details of all cookies are in our separate Cookie Policy: [https://www.zyflow.eu/legal-pages/cookie-policy](https://www.zyflow.eu/legal-pages/cookie-policy).
 >
 > The mobile app does not use browser cookies; see section 3.14 for data stored on your device.
+>
+> Without using cookies or running any code on your device, our hosting server counts page views anonymously: for each page request it sends only the page address, language and the referring website's domain to our analytics provider PostHog (EU cloud, acting as our processor), with no IP address, device information or identifier, to measure website reach (legitimate interest, Art. 6(1)(f) GDPR).
 
 ## 13. Security
 

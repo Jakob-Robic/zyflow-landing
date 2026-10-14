@@ -1,6 +1,54 @@
 # Marketing site analytics
 
-The rebuild site (`www.zyflow.eu`) ships two analytics stacks. Google Tag Manager is unchanged. PostHog is loaded from this repo only after cookie consent.
+The rebuild site (`www.zyflow.eu`) ships two analytics stacks. Google Tag Manager is unchanged. Client PostHog is loaded from this repo only after cookie consent. A separate **server-side** page-view counter (no client script) records anonymous HTML hits independently of consent.
+
+## Server-side page views (no cookies, no identifiers)
+
+Vercel Routing Middleware (`server-pageview-middleware.js`) counts HTML GET requests by fire-and-forget `waitUntil` POSTing to PostHog EU (`https://eu.i.posthog.com/i/v0/e/`, project 168051, same public ingestion key as `js/analytics-config.js`).
+
+This path does **not** load `posthog-js`, does not set cookies, and does not store an IP or visitor id. It must never delay or rewrite the page response. Consent-gated client PostHog is unchanged. The public policy sentence is in Privacy Policy §12 and Cookie Policy §2 (EN + SL).
+
+### When a hit is captured
+
+Counted: `GET` requests whose path looks like an HTML page (`/`, `/about`, `/sl/...`, `*.html`).
+
+Skipped where feasible: `/api/*`, `/assets/*`, `/css/*`, `/js/*`, `/fonts/*`, `favicon.ico`, `robots.txt`, `sitemap.xml`, `manifest.json`, non-GET methods, bot-like User-Agents, and prefetch/prerender (`Purpose` / `Sec-Purpose` / `Sec-Fetch-Dest` not `document`). User-Agent and prefetch headers are read only to skip the request — they are never sent to PostHog.
+
+### Exactly what is sent
+
+`POST` `https://eu.i.posthog.com/i/v0/e/` with header `Content-Type: application/json` only. No `X-Forwarded-For`, no client `User-Agent`, no cookies, no other visitor headers.
+
+```json
+{
+  "api_key": "<public key from js/analytics-config.js>",
+  "event": "server_pageview",
+  "distinct_id": "anonymous",
+  "properties": {
+    "$process_person_profile": false,
+    "$ip": null,
+    "$geoip_disable": true,
+    "path": "/about",
+    "locale": "en",
+    "referrer_host": "www.google.com"
+  }
+}
+```
+
+| Field | Value |
+| --- | --- |
+| `api_key` | Public project key (same as `ZYFLOW_ANALYTICS.posthogProjectKey`) |
+| `event` | `server_pageview` |
+| `distinct_id` | Constant `anonymous` (not a visitor id) |
+| `$process_person_profile` | `false` |
+| `$ip` | `null` (do not store the capture-request IP) |
+| `$geoip_disable` | `true` (do not geoip the Vercel egress IP) |
+| `path` | URL pathname only (no query, hash, or host) |
+| `locale` | `en` or `sl` from the path (`/sl` prefix, or `/legal-pages/izbris-racuna`) |
+| `referrer_host` | Referer hostname only, or `""` |
+
+Nothing else is included: no client IP, no User-Agent string, no cookies, no UTMs, no `$current_url`, no city/country.
+
+Implementation: `server-pageview-middleware.js` (CommonJS, scheduled with `waitUntil`) plus `vercel.json` `proxy.entrypoint` so this static build uses Node.js routing middleware. Helpers and tests live in `api/_lib/server-pageview.js`.
 
 ## Consent
 
@@ -76,3 +124,4 @@ Applied on load (after first-touch persist) and again at click, for real App Sto
 - `js/posthog-boot.js` — consent-gated loader
 - `js/analytics-events.js` — dataLayer + PostHog `app_store_click`
 - `js/cookieconsent-config.js` — banner, Consent Mode, PostHog grant/withdraw
+- `server-pageview-middleware.js` + `api/_lib/server-pageview.js` — server-side `server_pageview` (no client script)

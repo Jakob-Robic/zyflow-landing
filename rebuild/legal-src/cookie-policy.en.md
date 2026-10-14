@@ -12,6 +12,8 @@ Cookies are small text files that a website stores in your browser. Similar tech
 
 **At the moment our websites use no analytics, advertising or other non-essential cookies.** Only technically necessary storage may be used, for example to keep you signed in where a sign-in is offered. Our hosting provider Vercel delivers the websites and processes technical request data (see our [Privacy Policy](https://www.zyflow.eu/legal-pages/privacy-policy)).
 
+Without using cookies or running any code on your device, our hosting server counts page views anonymously: for each page request it sends only the page address, language and the referring website's domain to our analytics provider PostHog (EU cloud, acting as our processor), with no IP address, device information or identifier, to measure website reach (legitimate interest, Art. 6(1)(f) GDPR).
+
 ## 3. Planned cookies – only with your consent
 
 We plan to use **Google Tag Manager**, **Google Analytics 4** and **PostHog** (EU cloud, to understand how our websites are used; session recording is off on the marketing site) and the **Meta (Facebook) Pixel** (to measure and improve our advertising on Facebook and Instagram). **These tools are blocked and do not load until you actively agree in our cookie banner.** If you do not agree, they are never loaded. Necessary cookies do not need consent (Article 157 of the Slovenian Electronic Communications Act, ZEKom-2, implementing Art. 5(3) of the ePrivacy Directive). For all other cookies we ask for your consent (Art. 6(1)(a) GDPR).
