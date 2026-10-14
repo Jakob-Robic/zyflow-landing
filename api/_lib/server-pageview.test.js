@@ -13,6 +13,7 @@ const {
   ALLOWED_PAYLOAD_KEYS,
   ALLOWED_PROPERTY_KEYS,
   middlewareConfig,
+  pathnameOf,
   localeFromPath,
   referrerHostOf,
   isHtmlPagePath,
@@ -64,6 +65,97 @@ test('uses the same public PostHog EU key as analytics-config.js', () => {
   assert.equal(POSTHOG_API_HOST, 'https://eu.i.posthog.com');
   assert.equal(POSTHOG_CAPTURE_URL, 'https://eu.i.posthog.com/i/v0/e/');
   assert.match(POSTHOG_PROJECT_KEY, /^phc_/);
+});
+
+test('Legal: fetch does not forward visitor IP or X-Forwarded-For', async () => {
+  const calls = [];
+  await sendCapture(
+    page('https://www.zyflow.eu/about', {
+      'x-forwarded-for': '203.0.113.88, 198.51.100.10',
+      'x-real-ip': '203.0.113.88',
+      'x-vercel-forwarded-for': '203.0.113.88',
+      forwarded: 'for=203.0.113.88',
+    }),
+    {
+      fetchFn: async (url, init) => {
+        calls.push({ url, init });
+        return { ok: true, status: 200 };
+      },
+    }
+  );
+
+  assert.equal(calls.length, 1);
+  assert.deepEqual(Object.keys(calls[0].init.headers), ['Content-Type']);
+  assert.equal(calls[0].init.headers['X-Forwarded-For'], undefined);
+  assert.equal(calls[0].init.headers['x-forwarded-for'], undefined);
+  const serialized = JSON.stringify(calls[0].init);
+  assert.equal(serialized.includes('203.0.113.88'), false);
+  assert.equal(serialized.includes('198.51.100.10'), false);
+  assert.equal(serialized.includes('x-forwarded-for'), false);
+  assert.equal(serialized.includes('X-Forwarded-For'), false);
+  assert.equal(JSON.parse(calls[0].init.body).properties.$ip, null);
+});
+
+test('Legal: event sets $geoip_disable true and $process_person_profile false', () => {
+  const payload = buildCapturePayload(page('https://www.zyflow.eu/'));
+  assert.equal(payload.properties.$geoip_disable, true);
+  assert.equal(payload.properties.$process_person_profile, false);
+  assert.equal(payload.properties.$ip, null);
+});
+
+test('Legal: referrer is host only, with no path or query', () => {
+  const payload = buildCapturePayload(
+    page('https://www.zyflow.eu/tours', {
+      referer: 'https://news.example:8443/path/to/article?id=99&q=zyflow#comments',
+    })
+  );
+  assert.equal(payload.properties.referrer_host, 'news.example');
+  assert.equal(payload.properties.referrer_host.includes('/'), false);
+  assert.equal(payload.properties.referrer_host.includes('?'), false);
+  assert.equal(payload.properties.referrer_host.includes('#'), false);
+  assert.equal(payload.properties.referrer_host.includes('id=99'), false);
+  assert.equal(payload.properties.referrer_host.includes('8443'), false);
+  const serialized = JSON.stringify(payload);
+  assert.equal(serialized.includes('/path/to/article'), false);
+  assert.equal(serialized.includes('q=zyflow'), false);
+});
+
+test('Legal: path strips query strings and fragments', () => {
+  assert.equal(pathnameOf(page('https://www.zyflow.eu/about?utm_source=news&email=a@b.c#faq')), '/about');
+  assert.equal(pathnameOf(page('https://www.zyflow.eu/sl/contact/?ref=1#top')), '/sl/contact');
+  assert.equal(pathnameOf(page('/press?foo=1#bar')), '/press');
+
+  const payload = buildCapturePayload(
+    page('https://www.zyflow.eu/about?utm_source=news&email=rider@example.com#faq')
+  );
+  assert.equal(payload.properties.path, '/about');
+  assert.equal(payload.properties.path.includes('?'), false);
+  assert.equal(payload.properties.path.includes('#'), false);
+  const serialized = JSON.stringify(payload);
+  assert.equal(serialized.includes('utm_source'), false);
+  assert.equal(serialized.includes('rider@example.com'), false);
+  assert.equal(serialized.includes('#faq'), false);
+});
+
+test('Legal: payload has no user agent or device data, only path locale referrer_host plus required flags', () => {
+  const payload = buildCapturePayload(
+    page('https://www.zyflow.eu/sl/about?device=iphone', {
+      'user-agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)',
+      'sec-ch-ua': '"Chromium";v="129"',
+      'sec-ch-ua-mobile': '?1',
+      'sec-ch-ua-platform': '"iOS"',
+    })
+  );
+  assert.deepEqual(Object.keys(payload), ALLOWED_PAYLOAD_KEYS);
+  assert.deepEqual(Object.keys(payload.properties), ALLOWED_PROPERTY_KEYS);
+  assert.deepEqual(Object.keys(payload.properties).filter((key) => !key.startsWith('$')).sort(), [
+    'locale',
+    'path',
+    'referrer_host',
+  ]);
+  const serialized = JSON.stringify(payload);
+  assert.equal(/user-agent|User-Agent|iPhone|Chromium|sec-ch-ua|Mac OS X/i.test(serialized), false);
+  assert.equal(serialized.includes('device=iphone'), false);
 });
 
 test('payload is allowlisted: constant anonymous id, no IP, geoip off', () => {
@@ -248,30 +340,58 @@ test('middleware matcher skips api and hashed static prefixes', () => {
   assert.match(matcher, /js/);
 });
 
-test('root middleware.js is self-contained ESM and does not return a body', () => {
-  const source = fs.readFileSync(path.join(__dirname, '..', '..', 'middleware.js'), 'utf8');
-  const analytics = clientAnalyticsSource();
-  const key = analytics.match(/posthogProjectKey:\s*"([^"]+)"/)[1];
-  assert.match(source, /export default function middleware/);
-  assert.match(source, /waitUntil/);
-  assert.match(source, /runtime:\s*'nodejs'/);
-  assert.equal(source.includes(key), true);
-  assert.equal(source.includes("event: EVENT_NAME") || source.includes("'server_pageview'"), true);
-  assert.match(source, /distinct_id: DISTINCT_ID|distinct_id: 'anonymous'/);
-  assert.match(source, /\$process_person_profile:\s*false/);
-  assert.match(source, /\$ip:\s*null/);
-  assert.match(source, /\$geoip_disable:\s*true/);
-  assert.equal(/from ['"]\./.test(source), false);
-  assert.equal(/require\(/.test(source), false);
+test('proxy entrypoint is CommonJS and does not return a body', () => {
+  const source = fs.readFileSync(path.join(__dirname, '..', '..', 'server-pageview-middleware.js'), 'utf8');
+  assert.match(source, /handleMiddleware/);
+  assert.match(source, /module\.exports/);
+  assert.equal(/export default/.test(source), false);
   assert.equal(/new Response\(/.test(source), false);
   assert.equal(/set-cookie/i.test(source), false);
   assert.equal(/x-forwarded-for/i.test(source), false);
-  assert.equal(/require\(['"]fs['"]\)/.test(source), false);
-});
-
-test('vercel.json proxy points at middleware.js so the static build uses Node.js routing middleware', () => {
   const vercel = JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', 'vercel.json'), 'utf8'));
-  assert.equal(vercel.proxy.entrypoint, 'middleware.js');
+  assert.equal(vercel.proxy.entrypoint, 'server-pageview-middleware.js');
   assert.ok(Array.isArray(vercel.proxy.matcher));
   assert.match(vercel.proxy.matcher.join(' '), /api/);
+});
+
+const LEGAL_EN =
+  "Without using cookies or running any code on your device, our hosting server counts page views anonymously: for each page request it sends only the page address, language and the referring website's domain to our analytics provider PostHog (EU cloud, acting as our processor), with no IP address, device information or identifier, to measure website reach (legitimate interest, Art. 6(1)(f) GDPR).";
+const LEGAL_SL =
+  'Brez piškotkov in brez izvajanja kakršne koli kode na vaši napravi naš strežnik anonimno šteje oglede strani: za vsako zahtevo strani našemu ponudniku analitike PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošlje le naslov strani, jezik in domeno spletnega mesta, s katerega ste prišli, brez naslova IP, podatkov o napravi ali identifikatorja, za merjenje dosega spletnega mesta (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).';
+
+function readLegal(name) {
+  return fs.readFileSync(path.join(__dirname, '..', '..', 'rebuild', 'legal-src', name), 'utf8');
+}
+
+function markdownSection(md, heading) {
+  const startToken = `## ${heading}\n`;
+  const start = md.indexOf(startToken);
+  assert.ok(start >= 0, `missing section ${heading}`);
+  const from = start + startToken.length;
+  const next = md.indexOf('\n## ', from);
+  return md.slice(from, next === -1 ? md.length : next).trim();
+}
+
+test('Legal sentence is the final paragraph of Privacy Policy section 12 (EN + SL)', () => {
+  const en = markdownSection(readLegal('privacy-policy.en.md'), '12. Website and cookies');
+  const sl = markdownSection(readLegal('privacy-policy.sl.md'), '12. Spletno mesto in piškotki');
+  assert.equal(en.includes(LEGAL_EN), true);
+  assert.equal(sl.includes(LEGAL_SL), true);
+  assert.ok(en.trimEnd().endsWith(LEGAL_EN) || en.trimEnd().endsWith(`> ${LEGAL_EN}`));
+  assert.ok(sl.trimEnd().endsWith(LEGAL_SL) || sl.trimEnd().endsWith(`> ${LEGAL_SL}`));
+  assert.ok(en.indexOf('The mobile app does not use browser cookies') < en.indexOf(LEGAL_EN));
+  assert.ok(sl.indexOf('Mobilna aplikacija ne uporablja brskalniških piškotkov') < sl.indexOf(LEGAL_SL));
+});
+
+test('Legal sentence follows the no-analytics-cookies statement in Cookie Policy section 2 (EN + SL)', () => {
+  const en = markdownSection(readLegal('cookie-policy.en.md'), '2. Our current use of cookies');
+  const sl = markdownSection(readLegal('cookie-policy.sl.md'), '2. Trenutna uporaba piškotkov');
+  assert.equal(en.includes('use no analytics, advertising or other non-essential cookies'), true);
+  assert.equal(sl.includes('ne uporabljajo analitičnih, oglaševalskih ali drugih nenujnih piškotkov'), true);
+  assert.ok(en.indexOf(LEGAL_EN) > en.indexOf('use no analytics, advertising or other non-essential cookies'));
+  assert.ok(
+    sl.indexOf(LEGAL_SL) > sl.indexOf('ne uporabljajo analitičnih, oglaševalskih ali drugih nenujnih piškotkov')
+  );
+  assert.equal(en.includes(LEGAL_EN), true);
+  assert.equal(sl.includes(LEGAL_SL), true);
 });

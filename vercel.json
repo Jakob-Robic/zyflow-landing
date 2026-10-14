@@ -2,7 +2,7 @@
   "buildCommand": "npm run build:rebuild:prod",
   "outputDirectory": "rebuild/dist",
   "proxy": {
-    "entrypoint": "middleware.js",
+    "entrypoint": "server-pageview-middleware.js",
     "matcher": [
       "/((?!api(?:/|$)|assets/|css/|js/|fonts/|favicon.ico|robots.txt|sitemap.xml|manifest.json).*)"
     ]

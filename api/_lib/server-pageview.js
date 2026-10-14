@@ -7,8 +7,8 @@
  * is fire-and-forget: middleware must not await it, rewrite the body, set
  * cookies, or forward visitor IP / User-Agent / other headers to PostHog.
  *
- * Payload is intentionally tiny and non-identifying. Legal is drafting the
- * public policy sentence separately — do not edit cookie-policy sources here.
+ * Payload is intentionally tiny and non-identifying so the Legal sentences in
+ * privacy-policy and cookie-policy (EN + SL) stay true.
  */
 
 const POSTHOG_API_HOST = 'https://eu.i.posthog.com';

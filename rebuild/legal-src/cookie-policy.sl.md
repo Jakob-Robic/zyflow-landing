@@ -12,6 +12,8 @@ Piškotki so majhne besedilne datoteke, ki jih spletno mesto shrani v vaš brska
 
 **Naša spletna mesta trenutno ne uporabljajo analitičnih, oglaševalskih ali drugih nenujnih piškotkov.** Uporablja se lahko le tehnično nujna hramba, na primer za ohranjanje prijave, kjer je ta na voljo. Spletna mesta gostuje Vercel, ki obdeluje tehnične podatke o zahtevah (glej našo [Politiko zasebnosti](https://www.zyflow.eu/legal-pages/privacy-policy)).
 
+Brez piškotkov in brez izvajanja kakršne koli kode na vaši napravi naš strežnik anonimno šteje oglede strani: za vsako zahtevo strani našemu ponudniku analitike PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošlje le naslov strani, jezik in domeno spletnega mesta, s katerega ste prišli, brez naslova IP, podatkov o napravi ali identifikatorja, za merjenje dosega spletnega mesta (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).
+
 ## 3. Načrtovani piškotki – samo z vašo privolitvijo
 
 Načrtujemo uporabo orodij **Google Tag Manager**, **Google Analytics 4** in **PostHog** (oblak v EU, za razumevanje uporabe spletnih mest; snemanje sej na marketinški strani je izklopljeno) ter **Meta (Facebook) Pixel** (za merjenje in izboljševanje naših oglasov na Facebooku in Instagramu). **Ta orodja so blokirana in se ne naložijo, dokler v pasici za piškotke dejavno ne privolite.** Če ne privolite, se nikoli ne naložijo. Za nujne piškotke privolitev ni potrebna (157. člen Zakona o elektronskih komunikacijah, ZEKom-2, ki prenaša tretji odstavek 5. člena Direktive o zasebnosti in elektronskih komunikacijah). Za vse druge piškotke vas prosimo za privolitev (točka (a) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).

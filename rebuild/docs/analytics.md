@@ -4,9 +4,9 @@ The rebuild site (`www.zyflow.eu`) ships two analytics stacks. Google Tag Manage
 
 ## Server-side page views (no cookies, no identifiers)
 
-Vercel Routing Middleware (`middleware.js`) counts HTML GET requests by fire-and-forget `waitUntil` POSTing to PostHog EU (`https://eu.i.posthog.com/i/v0/e/`, project 168051, same public ingestion key as `js/analytics-config.js`).
+Vercel Routing Middleware (`server-pageview-middleware.js`) counts HTML GET requests by fire-and-forget `waitUntil` POSTing to PostHog EU (`https://eu.i.posthog.com/i/v0/e/`, project 168051, same public ingestion key as `js/analytics-config.js`).
 
-This path does **not** load `posthog-js`, does not set cookies, and does not store an IP or visitor id. It must never delay or rewrite the page response. Consent-gated client PostHog and the cookie policy are unchanged; Legal is adding the public policy sentence separately.
+This path does **not** load `posthog-js`, does not set cookies, and does not store an IP or visitor id. It must never delay or rewrite the page response. Consent-gated client PostHog is unchanged. The public policy sentence is in Privacy Policy §12 and Cookie Policy §2 (EN + SL).
 
 ### When a hit is captured
 
@@ -48,7 +48,7 @@ Skipped where feasible: `/api/*`, `/assets/*`, `/css/*`, `/js/*`, `/fonts/*`, `f
 
 Nothing else is included: no client IP, no User-Agent string, no cookies, no UTMs, no `$current_url`, no city/country.
 
-Implementation: root `middleware.js` (self-contained ESM, `waitUntil`) plus `vercel.json` `proxy.entrypoint` so this static build uses Node.js routing middleware. Helpers and tests live in `api/_lib/server-pageview.js`.
+Implementation: `server-pageview-middleware.js` (CommonJS, scheduled with `waitUntil`) plus `vercel.json` `proxy.entrypoint` so this static build uses Node.js routing middleware. Helpers and tests live in `api/_lib/server-pageview.js`.
 
 ## Consent
 
@@ -124,4 +124,4 @@ Applied on load (after first-touch persist) and again at click, for real App Sto
 - `js/posthog-boot.js` — consent-gated loader
 - `js/analytics-events.js` — dataLayer + PostHog `app_store_click`
 - `js/cookieconsent-config.js` — banner, Consent Mode, PostHog grant/withdraw
-- `middleware.js` + `api/_lib/server-pageview.js` — server-side `server_pageview` (no client script)
+- `server-pageview-middleware.js` + `api/_lib/server-pageview.js` — server-side `server_pageview` (no client script)
