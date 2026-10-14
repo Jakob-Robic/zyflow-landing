@@ -4,7 +4,7 @@
  * Builds EN at dist/ and SL at dist/sl/, plus sitemap.xml / robots.txt.
  *
  * Include syntax: <!-- include:components/nav.html -->
- * Locale: data-i18n / data-i18n-html
+ * Locale: data-i18n / data-i18n-html / data-i18n-attr="attr:key"
  *
  * Usage:
  *   node rebuild/scripts/build.js
@@ -143,6 +143,126 @@ function resolveIncludes(html, stack = []) {
   });
 }
 
+function findOpenTagEnd(html, start) {
+  let i = start + 1;
+  let quote = null;
+  while (i < html.length) {
+    const c = html[i];
+    if (quote) {
+      if (c === quote) quote = null;
+    } else if (c === '"' || c === "'") {
+      quote = c;
+    } else if (c === ">") {
+      return i;
+    }
+    i += 1;
+  }
+  return -1;
+}
+
+function mapOpenTags(html, fn) {
+  let out = "";
+  let i = 0;
+  const n = html.length;
+  while (i < n) {
+    const lt = html.indexOf("<", i);
+    if (lt === -1) {
+      out += html.slice(i);
+      break;
+    }
+    if (lt > i) out += html.slice(i, lt);
+    if (html.startsWith("<!--", lt)) {
+      const end = html.indexOf("-->", lt + 4);
+      const to = end === -1 ? n : end + 3;
+      out += html.slice(lt, to);
+      i = to;
+      continue;
+    }
+    const next = html[lt + 1];
+    if (next === "/" || next === "!" || next === "?") {
+      const gt = html.indexOf(">", lt + 2);
+      const to = gt === -1 ? n : gt + 1;
+      out += html.slice(lt, to);
+      i = to;
+      continue;
+    }
+    const gt = findOpenTagEnd(html, lt);
+    if (gt === -1) {
+      out += html.slice(lt);
+      break;
+    }
+    out += fn(html.slice(lt, gt + 1));
+    i = gt + 1;
+  }
+  return out;
+}
+
+function stripQuotedAttr(rest, name) {
+  return rest.replace(new RegExp(`\\s${name}="[^"]*"`, "g"), "");
+}
+
+function rewriteI18nOpenTag(tagHtml, messages) {
+  if (
+    !tagHtml.includes("data-i18n-attr=") &&
+    !tagHtml.includes("data-i18n-aria-label=")
+  ) {
+    return tagHtml;
+  }
+  const selfClose = /\/\s*>$/.test(tagHtml);
+  const innerEnd = selfClose ? tagHtml.search(/\/\s*>$/) : tagHtml.length - 1;
+  if (innerEnd < 1) return tagHtml;
+  const inner = tagHtml.slice(1, innerEnd);
+  const m = inner.match(/^([a-zA-Z][\w:-]*)([\s\S]*)$/);
+  if (!m) return tagHtml;
+  const tag = m[1];
+  let rest = m[2];
+  const assigned = [];
+
+  const specMatch = rest.match(/\sdata-i18n-attr="([^"]+)"/);
+  if (specMatch) {
+    const spec = specMatch[1];
+    const names = [];
+    for (const part of spec.split(";")) {
+      const trimmed = part.trim();
+      if (!trimmed) continue;
+      const colon = trimmed.indexOf(":");
+      if (colon < 1) continue;
+      const attr = trimmed.slice(0, colon).trim();
+      const key = trimmed.slice(colon + 1).trim();
+      if (!/^[a-zA-Z_][\w:-]*$/.test(attr)) continue;
+      const value = getByPath(messages, key);
+      if (typeof value !== "string") continue;
+      names.push(attr);
+      assigned.push(`${attr}="${escapeHtml(value)}"`);
+    }
+    rest = rest.replace(/\sdata-i18n-attr="[^"]*"/, "");
+    for (const name of names) {
+      rest = stripQuotedAttr(rest, name);
+    }
+    if (names.length) assigned.push(`data-i18n-attr="${spec}"`);
+  }
+
+  const ariaMatch = rest.match(/\sdata-i18n-aria-label="([^"]+)"/);
+  if (ariaMatch) {
+    const key = ariaMatch[1];
+    const value = getByPath(messages, key);
+    if (typeof value === "string") {
+      rest = rest.replace(/\sdata-i18n-aria-label="[^"]*"/, "");
+      rest = stripQuotedAttr(rest, "aria-label");
+      assigned.unshift(
+        `aria-label="${escapeHtml(value)}"`,
+        `data-i18n-aria-label="${key}"`
+      );
+    }
+  }
+
+  if (!assigned.length) return tagHtml;
+  rest = rest.replace(/\s+/g, " ").trim();
+  const restBit = rest ? ` ${rest}` : "";
+  const close = selfClose ? " /" : "";
+  return `<${tag} ${assigned.join(" ")}${restBit}${close}>`;
+}
+
 function applyI18n(html, messages) {
   html = html.replace(
     /(<([a-zA-Z0-9-]+)([^>]*?)\sdata-i18n="([^"]+)"([^>]*)>)([\s\S]*?)(<\/\2>)/g,
@@ -163,15 +283,8 @@ function applyI18n(html, messages) {
     }
   );
 
-  // Attribute i18n: data-i18n-aria-label / data-i18n-placeholder
-  html = html.replace(
-    /\sdata-i18n-aria-label="([^"]+)"/g,
-    (match, key) => {
-      const value = getByPath(messages, key);
-      if (typeof value !== "string") return match;
-      return ` aria-label="${escapeHtml(value)}" data-i18n-aria-label="${key}"`;
-    }
-  );
+  html = mapOpenTags(html, (tagHtml) => rewriteI18nOpenTag(tagHtml, messages));
+
   html = html.replace(
     /\sdata-i18n-placeholder="([^"]+)"/g,
     (match, key) => {

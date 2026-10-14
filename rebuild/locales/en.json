@@ -125,8 +125,8 @@
       },
       "menu": "Menu",
       "menuClose": "Close menu",
-      "themeDark": "Dark mode",
-      "themeLight": "Light mode"
+      "themeDark": "switch to dark mode",
+      "themeLight": "switch to light mode"
     },
     "footer": {
       "links": {
@@ -402,17 +402,20 @@
         {
           "title": "Ljubljana to Trieste",
           "place": "Slovenia / Italy",
-          "coords": "46.0569° N, 14.5058° E"
+          "coords": "46.0569° N, 14.5058° E",
+          "playLabel": "Play video: Ljubljana to Trieste"
         },
         {
           "title": "Alpine Pass Loop",
           "place": "Julian Alps, Slovenia",
-          "coords": "46.3792° N, 13.8363° E"
+          "coords": "46.3792° N, 13.8363° E",
+          "playLabel": "Play video: Alpine Pass Loop"
         },
         {
           "title": "Coastal Gravel Meander",
           "place": "Istria, Croatia",
-          "coords": "45.2396° N, 13.9367° E"
+          "coords": "45.2396° N, 13.9367° E",
+          "playLabel": "Play video: Coastal Gravel Meander"
         }
       ]
     }
@@ -1130,5 +1133,25 @@
         "p5": "After your first cross-border ride, the elevation profile will start to look different. You'll know what a long rise feels like on your bike, and you'll plan the next one faster. Start with a route like Ljubljana to Trieste, plan the stops around the climb, and enjoy the sea at the end."
       }
     }
+  },
+  "alts": {
+    "appMap": "Zyflow app map showing bike-friendly places, chargers and water points",
+    "polaroid1": "Two cyclists riding a rocky mountain trail",
+    "aboutPolaroidCyclist": "Cyclist riding past green alpine meadows",
+    "polaroid3": "Group of cyclists taking a break in a pine forest",
+    "bikepackSunset": "Bikepacking bike with bags at sunset",
+    "coffeeSign": "Café sign reading \"cyclists need coffee\" on a village street",
+    "feature2": "Two bike tourers on an alpine road below snowy peaks",
+    "tourHike": "Hikers on a misty grassy ridge",
+    "tour4wd": "Off-road vehicle with a rooftop tent",
+    "tourKayak": "Kayakers paddling on a river",
+    "catSlovenia": "Lake Bled with its island church and the Julian Alps",
+    "catCroatia": "Aerial view of Rovinj old town on the Istrian coast",
+    "feature1": "Bikes parked on a historic town square",
+    "journal1": "Forested hills at sunset",
+    "feature3": "Cyclists on a valley trail below jagged alpine peaks",
+    "social1": "Off-road vehicle in a desert canyon",
+    "social2": "Bikepacking camp with a tent by a lake at dusk",
+    "social3": "Kayak on a calm sea with icebergs"
   }
 }
