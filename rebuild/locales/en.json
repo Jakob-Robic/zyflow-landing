@@ -193,7 +193,8 @@
   },
   "home": {
     "hero": {
-      "titleHtml": "explore<br />further.",
+      "titleHtml": "bike-friendly stays, cafés and chargers for cyclists",
+      "brandHtml": "explore<br />further.",
       "subtitle": "Explore bike-friendly places. Ride there feeling safe. Stays, coffee stops, restaurants and chargers, all on one map.",
       "cta": "Get the app",
       "nextDepartureLabel": "Featured route",
@@ -418,7 +419,8 @@
   },
   "tours": {
     "hero": {
-      "title": "our routes",
+      "eyebrow": "our routes",
+      "title": "cycling routes past bike-friendly stops",
       "lede": "Rides through bike-friendly places, with stays, coffee stops, restaurants and chargers mapped along the way. Pick a route, then open it in the app.",
       "quals": [
         "Bike-friendly stops on every route",
@@ -550,7 +552,7 @@
     "hero": {
       "crumbParent": "Routes",
       "crumbType": "Touring",
-      "titleHtml": "ljubljana<br />to trieste",
+      "titleHtml": "ljubljana to trieste by bike: 134 km route",
       "lede": "134 km from Ljubljana to the Adriatic, past bike-friendly stays, coffee stops and restaurants, with chargers and bike services along the way.",
       "price": "134 km",
       "unit": " · 1 day",
@@ -652,7 +654,8 @@
   "about": {
     "hero": {
       "eyebrow": "Est 2024",
-      "titleHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>",
+      "titleHtml": "the team mapping bike-friendly places across europe",
+      "brandHtml": "explore<br />without<br /><span class=\"is-accent\">worry.</span>",
       "place": "Slovenia · live in 8 countries",
       "storyTitle": "Great places to stop are everywhere. Most maps just don’t show them.",
       "storyBody": "We’re Jakob and Tanja, the team behind Zyflow, made by HERKO d.o.o. in Slovenia. Zyflow helps cyclists and e-bike riders find bike-friendly stays, coffee stops, restaurants and chargers, and ride between them feeling safe. Today it is live on iOS and Android in 8 countries, with 7,400+ chargers mapped and data from partners like Open Data Hub. Next: more countries, more places, and more ways to keep riders safe.",
@@ -706,7 +709,7 @@
   },
   "contact": {
     "hero": {
-      "title": "contact us",
+      "title": "contact zyflow",
       "email": "hello@zyflow.eu",
       "support": "support@zyflow.eu",
       "social": [
@@ -753,7 +756,7 @@
     },
     "hub": {
       "tag": "Legal",
-      "title": "legal",
+      "title": "zyflow legal: terms, privacy and cookies",
       "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
       "termsLede": "Usage rules, subscriptions, liability, and legal information for Zyflow.",
       "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
@@ -795,7 +798,8 @@
     "hero": {
       "crumb1": "For businesses",
       "crumb2": "Cafés, stays, bike shops",
-      "titleHtml": "put your place<br />on the map",
+      "titleHtml": "list your bike-friendly business on zyflow",
+      "brandHtml": "put your place<br />on the map",
       "lede": "Riders choose where to stop in Zyflow before they leave. Show them your bike parking, storage or charger, and become a stop on the routes that pass your door. You manage your listing yourself.",
       "price": "Free",
       "unit": " · during launch",
@@ -914,7 +918,8 @@
     "hero": {
       "crumb1": "Press & investors",
       "crumb2": "Fact sheet",
-      "titleHtml": "zyflow<br />at a glance",
+      "eyebrow": "zyflow at a glance",
+      "titleHtml": "zyflow press kit: the app for bike-friendly places",
       "lede": "We’re just getting started. Zyflow helps cyclists and e-bike riders find bike-friendly places and ride between them feeling safe. Here are the facts, the team and how to reach us.",
       "price": "Early stage",
       "unit": " · 2026",

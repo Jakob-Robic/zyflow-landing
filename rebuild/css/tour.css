@@ -36,11 +36,31 @@
   opacity: 1;
 }
 
+.tour-hero__eyebrow {
+  margin: 0 0 var(--space-gap-3);
+  font-family: var(--font-badge);
+  font-size: var(--type-small);
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+}
+
+.tour-hero__h1 {
+  margin: 0 0 var(--space-gap-4);
+  font-family: var(--font-body);
+  font-size: var(--type-lead);
+  font-weight: 600;
+  line-height: var(--leading-h5);
+  text-wrap: balance;
+  max-width: 36rem;
+}
+
 .tour-hero__title {
   font-family: var(--font-heading);
   font-size: var(--type-h1);
   line-height: var(--leading-h1);
   margin: 0 0 var(--space-gap-6);
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .tour-hero__lede {

@@ -193,7 +193,8 @@
   },
   "home": {
     "hero": {
-      "titleHtml": "raziskuj<br>dlje.",
+      "titleHtml": "kolesarjem prijazne nastanitve, kavarne in polnilnice",
+      "brandHtml": "raziskuj<br>dlje.",
       "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
       "cta": "Prenesi aplikacijo",
       "nextDepartureLabel": "Izpostavljena pot",
@@ -418,7 +419,8 @@
   },
   "tours": {
     "hero": {
-      "title": "naše poti",
+      "eyebrow": "naše poti",
+      "title": "kolesarske poti mimo kolesarjem prijaznih postankov",
       "lede": "Vožnje skozi kolesarjem prijazne kraje, z nastanitvami, kavarnami, restavracijami in polnilnicami ob poti. Izberi pot in jo odpri v aplikaciji.",
       "quals": [
         "Kolesarjem prijazni postanki na vsaki poti",
@@ -550,7 +552,7 @@
     "hero": {
       "crumbParent": "Poti",
       "crumbType": "Potovanje",
-      "titleHtml": "ljubljana<br />– trst",
+      "titleHtml": "s kolesom iz ljubljane v trst: 134 km dolga pot",
       "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
       "price": "134 km",
       "unit": " · 1 dan",
@@ -652,7 +654,8 @@
   "about": {
     "hero": {
       "eyebrow": "Ustanovljeno 2024",
-      "titleHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
+      "titleHtml": "ekipa, ki zemljevidi kolesarjem prijazne kraje po evropi",
+      "brandHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
       "place": "Slovenija · na voljo v 8 državah",
       "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
       "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
@@ -706,7 +709,7 @@
   },
   "contact": {
     "hero": {
-      "title": "kontakt",
+      "title": "piši nam",
       "email": "hello@zyflow.eu",
       "support": "support@zyflow.eu",
       "social": [
@@ -753,7 +756,7 @@
     },
     "hub": {
       "tag": "Pravno",
-      "title": "pravno",
+      "title": "zyflow pravno: pogoji, zasebnost in piškotki",
       "lede": "Politike za aplikacijo in spletno mesto Zyflow. Upravlja HERKO d.o.o.",
       "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
       "privacyLede": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke.",
@@ -795,7 +798,8 @@
     "hero": {
       "crumb1": "Za podjetja",
       "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
-      "titleHtml": "postavi svoj kraj<br>na zemljevid",
+      "titleHtml": "dodaj svoj kolesarjem prijazen lokal na zyflow",
+      "brandHtml": "postavi svoj kraj<br>na zemljevid",
       "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
       "price": "Brezplačno",
       "unit": " · v času zagona",
@@ -914,7 +918,8 @@
     "hero": {
       "crumb1": "Mediji in vlagatelji",
       "crumb2": "Dejstva",
-      "titleHtml": "zyflow<br>na kratko",
+      "eyebrow": "zyflow na kratko",
+      "titleHtml": "zyflow za medije: aplikacija za kolesarjem prijazne kraje",
       "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
       "price": "Zgodnja faza",
       "unit": " · 2026",

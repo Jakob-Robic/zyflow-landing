@@ -44,6 +44,8 @@
   font-family: var(--font-heading);
   font-size: var(--type-h1);
   line-height: 1;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .legal-hub__lede,
