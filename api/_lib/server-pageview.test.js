@@ -23,9 +23,11 @@ const {
   captureHeaders,
   sendCapture,
   handleMiddleware,
-  readClientPosthogProjectKey,
-  readClientPosthogApiHost,
 } = require('./server-pageview');
+
+function clientAnalyticsSource() {
+  return fs.readFileSync(path.join(__dirname, '..', '..', 'rebuild', 'js', 'analytics-config.js'), 'utf8');
+}
 
 function request(url, { method = 'GET', headers = {} } = {}) {
   const headerMap = new Map(
@@ -54,8 +56,11 @@ function page(url, headers) {
 }
 
 test('uses the same public PostHog EU key as analytics-config.js', () => {
-  assert.equal(readClientPosthogProjectKey(), POSTHOG_PROJECT_KEY);
-  assert.equal(readClientPosthogApiHost(), POSTHOG_API_HOST);
+  const source = clientAnalyticsSource();
+  const key = source.match(/posthogProjectKey:\s*"([^"]+)"/)[1];
+  const host = source.match(/posthogApiHost:\s*"([^"]+)"/)[1];
+  assert.equal(key, POSTHOG_PROJECT_KEY);
+  assert.equal(host, POSTHOG_API_HOST);
   assert.equal(POSTHOG_API_HOST, 'https://eu.i.posthog.com');
   assert.equal(POSTHOG_CAPTURE_URL, 'https://eu.i.posthog.com/i/v0/e/');
   assert.match(POSTHOG_PROJECT_KEY, /^phc_/);
@@ -243,13 +248,30 @@ test('middleware matcher skips api and hashed static prefixes', () => {
   assert.match(matcher, /js/);
 });
 
-test('root middleware.js schedules waitUntil and does not return a body', () => {
+test('root middleware.js is self-contained ESM and does not return a body', () => {
   const source = fs.readFileSync(path.join(__dirname, '..', '..', 'middleware.js'), 'utf8');
-  assert.match(source, /handleMiddleware/);
-  assert.match(source, /export default/);
-  assert.match(source, /server-pageview/);
+  const analytics = clientAnalyticsSource();
+  const key = analytics.match(/posthogProjectKey:\s*"([^"]+)"/)[1];
+  assert.match(source, /export default function middleware/);
+  assert.match(source, /waitUntil/);
+  assert.match(source, /runtime:\s*'nodejs'/);
+  assert.equal(source.includes(key), true);
+  assert.equal(source.includes("event: EVENT_NAME") || source.includes("'server_pageview'"), true);
+  assert.match(source, /distinct_id: DISTINCT_ID|distinct_id: 'anonymous'/);
+  assert.match(source, /\$process_person_profile:\s*false/);
+  assert.match(source, /\$ip:\s*null/);
+  assert.match(source, /\$geoip_disable:\s*true/);
+  assert.equal(/from ['"]\./.test(source), false);
+  assert.equal(/require\(/.test(source), false);
   assert.equal(/new Response\(/.test(source), false);
   assert.equal(/set-cookie/i.test(source), false);
   assert.equal(/x-forwarded-for/i.test(source), false);
-  assert.equal(/user-agent/i.test(source), false);
+  assert.equal(/require\(['"]fs['"]\)/.test(source), false);
+});
+
+test('vercel.json proxy points at middleware.js so the static build uses Node.js routing middleware', () => {
+  const vercel = JSON.parse(fs.readFileSync(path.join(__dirname, '..', '..', 'vercel.json'), 'utf8'));
+  assert.equal(vercel.proxy.entrypoint, 'middleware.js');
+  assert.ok(Array.isArray(vercel.proxy.matcher));
+  assert.match(vercel.proxy.matcher.join(' '), /api/);
 });

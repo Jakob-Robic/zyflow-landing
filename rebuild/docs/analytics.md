@@ -48,7 +48,7 @@ Skipped where feasible: `/api/*`, `/assets/*`, `/css/*`, `/js/*`, `/fonts/*`, `f
 
 Nothing else is included: no client IP, no User-Agent string, no cookies, no UTMs, no `$current_url`, no city/country.
 
-Implementation: `middleware.js` + `api/_lib/server-pageview.js`.
+Implementation: root `middleware.js` (self-contained ESM, `waitUntil`) plus `vercel.json` `proxy.entrypoint` so this static build uses Node.js routing middleware. Helpers and tests live in `api/_lib/server-pageview.js`.
 
 ## Consent
 

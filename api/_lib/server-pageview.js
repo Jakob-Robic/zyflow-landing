@@ -11,9 +11,6 @@
  * public policy sentence separately — do not edit cookie-policy sources here.
  */
 
-const fs = require('fs');
-const path = require('path');
-
 const POSTHOG_API_HOST = 'https://eu.i.posthog.com';
 const POSTHOG_CAPTURE_PATH = '/i/v0/e/';
 const POSTHOG_CAPTURE_URL = `${POSTHOG_API_HOST}${POSTHOG_CAPTURE_PATH}`;
@@ -22,15 +19,6 @@ const DISTINCT_ID = 'anonymous';
 const CAPTURE_TIMEOUT_MS = 2500;
 const MAX_PATH_LENGTH = 512;
 const MAX_HOST_LENGTH = 253;
-
-const ANALYTICS_CONFIG_PATH = path.join(
-  __dirname,
-  '..',
-  '..',
-  'rebuild',
-  'js',
-  'analytics-config.js'
-);
 
 /**
  * Same public ingestion key as rebuild/js/analytics-config.js (project 168051).
@@ -262,18 +250,6 @@ function handleMiddleware(request, context, options) {
   return undefined;
 }
 
-function readClientPosthogProjectKey() {
-  const source = fs.readFileSync(ANALYTICS_CONFIG_PATH, 'utf8');
-  const match = source.match(/posthogProjectKey:\s*"([^"]+)"/);
-  return match ? match[1] : '';
-}
-
-function readClientPosthogApiHost() {
-  const source = fs.readFileSync(ANALYTICS_CONFIG_PATH, 'utf8');
-  const match = source.match(/posthogApiHost:\s*"([^"]+)"/);
-  return match ? match[1] : '';
-}
-
 module.exports = {
   POSTHOG_API_HOST,
   POSTHOG_CAPTURE_URL,
@@ -296,6 +272,4 @@ module.exports = {
   captureHeaders,
   sendCapture,
   handleMiddleware,
-  readClientPosthogProjectKey,
-  readClientPosthogApiHost,
 };
