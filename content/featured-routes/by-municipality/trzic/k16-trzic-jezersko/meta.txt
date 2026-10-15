@@ -1,0 +1,26 @@
+slug: k16-trzic-jezersko
+name_sl: K16 - Tržič - Jezersko
+name_en: K16 — Tržič – Jezersko
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: alpine
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: hard
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k16-trzic-jezersko
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k16-trzic-jezersko.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 10
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

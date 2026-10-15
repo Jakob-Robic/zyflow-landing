@@ -1,0 +1,26 @@
+slug: k52-pot-treh-zvonov
+name_sl: K52 - Lahkotno kolesarjenje po Poti treh zvonov
+name_en: K52 — Pot treh zvonov
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: easy
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k52-lahkotno-kolesarjenje-po-poti-treh-zvonov
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k52-pot-treh-zvonov.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 1
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

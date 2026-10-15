@@ -1,0 +1,28 @@
+slug: mali-vrh
+name_sl: Jezersko in razgledišče Mali vrh
+name_en: Jezersko – Mali vrh lookout
+municipality: jezersko
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 17.3
+elevation_m: 596
+duration: 3:10 h
+difficulty: easy
+best_season: May – Oct
+start_place: Zgornje Jezersko
+end_place: Zgornje Jezersko
+source_url: https://www.jezersko.info/jezerska-kolesarska-pot.html
+source_name: TIC Jezersko / jezersko.info
+gpx_source_url: https://out.ac/3vGOWK
+outdooractive_url: https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zg.-jezersko-lookout-point-below-visevski-hrib-zg/801694876/
+outdooractive_id: 801694876
+license_notes: Tourism content from jezersko.info; GPX via Outdooractive — confirm export rights / get file from TIC.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: GPX not yet downloaded — Outdooractive short-link export needs manual download or municipality file. Part of Jezerska kolesarska pot / Karavanke loops.
+notes_gpx: Copied from Downloads/t801694876_cycling route zg. jezersko.gpx (Outdooractive id 801694876).

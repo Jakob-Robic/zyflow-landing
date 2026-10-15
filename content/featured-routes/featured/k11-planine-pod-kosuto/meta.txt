@@ -1,0 +1,26 @@
+slug: k11-planine-pod-kosuto
+name_sl: K11 - Planine pod Košuto
+name_en: K11 — Planine pod Košuto
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: alpine
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: hard
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k11-planine-pod-kosuto
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k11-planine-pod-kosuto.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 7
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

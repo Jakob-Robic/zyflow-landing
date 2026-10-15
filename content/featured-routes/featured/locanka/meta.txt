@@ -1,0 +1,26 @@
+slug: locanka
+name_sl: Ločanka
+name_en: Ločanka
+municipality: kranj
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 64
+elevation_m: 930
+duration: 1 day
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Kranj
+end_place: Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/locanka/
+source_name: Visit Kranj — Kranjska kolesarska roža
+gpx_source_url: https://www.visitkranj.com/files/gpx/kranjska-roza-03.gpx
+maps_embed: https://www.google.com/maps/d/embed?mid=1pPLBtRxDR2CSC20fgS6sVgIRevxvHh4
+license_notes: Tourism content from Visit Kranj; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.webp
+gpx_file: route.gpx
+notes: Part of Kranjska kolesarska roža (route 03).

@@ -1,0 +1,26 @@
+slug: k51-udin-borst
+name_sl: K51 - Udin boršt - s kolesom ob vznožju in pogumno čezenj
+name_en: K51 — Udin boršt
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: gravel
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: easy
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k51-udin-borst-s-kolesom-ob-vznozju-in-pogumno-cezenj
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k51-udin-borst.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 2
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

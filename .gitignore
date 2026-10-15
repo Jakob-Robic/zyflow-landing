@@ -10,3 +10,18 @@ vercel.json.production.bak
 .env
 .env.*
 !.env.example
+
+# Featured-route staging media (keep structure + text; ignore binaries)
+content/featured-routes/**/*.gpx
+content/featured-routes/**/*.jpg
+content/featured-routes/**/*.jpeg
+content/featured-routes/**/*.png
+content/featured-routes/**/*.webp
+content/featured-routes/**/*.gif
+content/featured-routes/**/*.heic
+content/featured-routes/**/*.tif
+content/featured-routes/**/*.tiff
+content/featured-routes/**/*.zip
+content/featured-routes/**/*.rar
+content/featured-routes/**/*.7z
+content/featured-routes/**/*.pdf

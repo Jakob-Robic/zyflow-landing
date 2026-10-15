@@ -1,0 +1,28 @@
+slug: ravenska-kocna
+name_sl: Ravenska Kočna in Štularjeva planina
+name_en: Ravenska Kočna – Štularjeva planina
+municipality: jezersko
+region: gorenjska
+country: slovenia
+category: alpine
+distance_km: 16.6
+elevation_m: 408
+duration: 2:15 h
+difficulty: intermediate
+best_season: May – Oct
+start_place: Zgornje Jezersko
+end_place: Zgornje Jezersko
+source_url: https://www.jezersko.info/jezerska-kolesarska-pot.html
+source_name: TIC Jezersko / jezersko.info
+gpx_source_url: https://out.ac/3vGOX4
+outdooractive_url: https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zgornje-jezersko-stularjeva-planina-zgornje-jezersko/801694896/
+outdooractive_id: 801694896
+license_notes: Tourism content from jezersko.info; GPX via Outdooractive — confirm export rights / get file from TIC.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: GPX not yet downloaded — Outdooractive short-link export needs manual download or municipality file. Part of Jezerska kolesarska pot / Karavanke loops.
+notes_gpx: Copied from Downloads/t801694896_cycling route zgornje.gpx (Outdooractive id 801694896).

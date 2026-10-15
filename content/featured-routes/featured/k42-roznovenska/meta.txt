@@ -1,0 +1,26 @@
+slug: k42-roznovenska
+name_sl: K42 - Rožnovenska pot po kolesarsko
+name_en: K42 — Rožnovenska pot
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k42-roznovenska-pot-po-kolesarsko
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k42-peracica-roznovenska.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 5
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

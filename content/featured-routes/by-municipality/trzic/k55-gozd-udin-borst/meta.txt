@@ -1,0 +1,26 @@
+slug: k55-gozd-udin-borst
+name_sl: K55 - Gozd - Udin boršt
+name_en: K55 — Gozd – Udin boršt
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: gravel
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: easy
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k55-gozd-udin-borst
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k55-gozd-udin-borst.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 4
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

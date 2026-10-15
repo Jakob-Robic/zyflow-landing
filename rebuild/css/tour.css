@@ -91,8 +91,9 @@
 
 .tour-hero__cta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-gap-6);
+  gap: var(--space-gap-4);
 }
 
 .tour-hero__next {
@@ -314,8 +315,22 @@
   justify-content: center;
 }
 
+.tour-aside__card .tour-aside__cta + .tour-aside__cta,
+.tour-aside__card .tour-aside__cta + .tour-aside__gpx {
+  margin-top: var(--space-gap-3);
+}
+
+.tour-aside__gpx {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: var(--space-gap-3);
+  font-size: var(--type-small);
+}
+
 .tour-aside__note {
   margin: 0;
+  margin-top: var(--space-gap-4);
   text-align: center;
   font-size: var(--type-small);
   color: var(--color-text-body-muted);

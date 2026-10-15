@@ -1,0 +1,26 @@
+slug: blejcanka
+name_sl: Blejčanka
+name_en: Blejčanka
+municipality: kranj
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 79
+elevation_m: 944
+duration: 1 day
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Kranj
+end_place: Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/blejcanka/
+source_name: Visit Kranj — Kranjska kolesarska roža
+gpx_source_url: https://www.visitkranj.com/files/gpx/kranjska-roza-04.gpx
+maps_embed: https://www.google.com/maps/d/embed?mid=19CwLdFYQf_BolQ_8IcV_CgMgtJs7VayZ
+license_notes: Tourism content from Visit Kranj; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.webp
+gpx_file: route.gpx
+notes: Part of Kranjska kolesarska roža (route 04).

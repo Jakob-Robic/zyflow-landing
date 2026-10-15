@@ -1,0 +1,26 @@
+slug: ljubljancanka
+name_sl: Ljubljančanka
+name_en: Ljubljančanka
+municipality: kranj
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 70
+elevation_m: 460
+duration: 1 day
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Kranj
+end_place: Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/ljubljancanka/
+source_name: Visit Kranj — Kranjska kolesarska roža
+gpx_source_url: https://www.visitkranj.com/files/gpx/kranjska-roza-02.gpx
+maps_embed: https://www.google.com/maps/d/embed?mid=1C4fXW_YFhJBrCJavc06It5xr4ziWq4fU
+license_notes: Tourism content from Visit Kranj; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Part of Kranjska kolesarska roža (route 02).

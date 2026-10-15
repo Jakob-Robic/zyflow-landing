@@ -17,12 +17,12 @@
         "description": "Spoznaj ekipo za Zyflowom, aplikacijo za iskanje kolesarjem prijaznih nastanitev, kavarn, restavracij in polnilnic. Narejeno v Sloveniji, HERKO d.o.o."
       },
       "tours": {
-        "title": "Zyflow: kolesarske poti skozi kolesarjem prijazne kraje",
-        "description": "Kolesarske poti in poti za e-kolesa po Sloveniji, Hrvaški, Avstriji in Italiji, s kolesarjem prijaznimi nastanitvami, kavarnami, restavracijami in polnilnicami ob poti."
+        "title": "Zyflow: Kolesarske poti po Gorenjski",
+        "description": "20 kolesarskih poti po Kranju, Tržiču in Jezerskem. Izberi pot in jo odpri v Zyflow."
       },
       "tour": {
-        "title": "S kolesom iz Ljubljane v Trst: 134 km dolga pot | Zyflow",
-        "description": "Z Zyflowom od Ljubljane do Trsta: 134 km mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami ob poti."
+        "title": "Zyflow: Kolesarske poti",
+        "description": "Razišči kolesarske poti po Gorenjski in jih odpri v Zyflow."
       },
       "blog": {
         "title": "Zyflow: Dnevnik",
@@ -47,30 +47,6 @@
       "legal-terms": {
         "title": "Zyflow — Terms of Service",
         "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
-      },
-      "legal-pages-privacy-policy": {
-        "title": "Zyflow — Politika zasebnosti",
-        "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
-      },
-      "legal-pages-terms": {
-        "title": "Zyflow — Pogoji uporabe",
-        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
-      },
-      "legal-pages-cookie-policy": {
-        "title": "Zyflow — Politika piškotkov",
-        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljate."
-      },
-      "legal-pages-impressum": {
-        "title": "Zyflow — Impressum",
-        "description": "Pravno obvestilo in podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
-      },
-      "legal-pages-delete-account": {
-        "title": "Zyflow — Delete your account",
-        "description": "How to request deletion of your Zyflow account and what happens to your data."
-      },
-      "legal-pages-izbris-racuna": {
-        "title": "Zyflow — Izbris računa",
-        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
       },
       "styleguide": {
         "title": "Zyflow — Design System Styleguide",
@@ -103,6 +79,110 @@
       "blog-reading-elevation-before-a-cross-border-ride": {
         "title": "Zyflow: Reading Elevation Before a Cross-Border Ride",
         "description": "How to read the climbs on a ride like Ljubljana to Trieste, and where to plan your stops."
+      },
+      "tour-blejcanka": {
+        "title": "Zyflow: Blejčanka",
+        "description": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre"
+      },
+      "tour-jezerjanka": {
+        "title": "Zyflow: Jezerjanka",
+        "description": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na "
+      },
+      "tour-jezerski-vrh": {
+        "title": "Zyflow: Jezerski vrh in Ankova planina",
+        "description": "Zgornje Jezersko–Jezerska slatina–Jezerski vrh–Ankova planina–cerkev sv. Andreja–Šenkova domačija–Planšarsko jezero–Zgornje Jezersko"
+      },
+      "tour-k11-planine-pod-kosuto": {
+        "title": "Zyflow: Planine pod Košuto",
+        "description": "Tržič–Jelendol–Medvodje–Košutnik–planina Pungrat–planina Šija–planina Kofce–Ravne–Jelendol–Tržič"
+      },
+      "tour-k16-trzic-jezersko": {
+        "title": "Zyflow: Tržič - Jezersko",
+        "description": "Tržič–Dovžanova soteska–Jelendol–Medvodje–Bukov hrib–Pečovnik–Jezersko"
+      },
+      "tour-k21-dom-pod-storzicem": {
+        "title": "Zyflow: Dom pod Storžičem",
+        "description": "Tržič–Slap–Lom pod Storžičem–Grahovše–Slaparska vas–Planinski dom pod Storžičem–nazaj"
+      },
+      "tour-k35-prelaz-ljubelj": {
+        "title": "Zyflow: Prelaz Ljubelj",
+        "description": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj"
+      },
+      "tour-k42-roznovenska": {
+        "title": "Zyflow: Rožnovenska pot po kolesarsko",
+        "description": "Tržič–Bistrica pri Tržiču–Loka–Hušica–Brezje pri Tržiču–Vadiče–Leše–Peračica–čez Strašnik–smer Hudo–smer Brdo–Podbreška gmajna–Zvirče–Kovor–Brezovo–Tržič"
+      },
+      "tour-k43-dobrca": {
+        "title": "Zyflow: Dobrča",
+        "description": "Tržič–Brezje pri Tržiču–proti Zadnji vasi–koča na Dobrči–Lešanska planina–Bistriška planina–Brezje pri Tržiču–Tržič"
+      },
+      "tour-k51-udin-borst": {
+        "title": "Zyflow: Udin boršt - s kolesom ob vznožju in pogumno čezenj",
+        "description": "Tržič - Križe - Duplje - Strahinj - čez Udin boršt - Tenetiše - Letenice - Sebenje - Tržič"
+      },
+      "tour-k52-pot-treh-zvonov": {
+        "title": "Zyflow: Lahkotno kolesarjenje po Poti treh zvonov",
+        "description": "Križe–Sebenje–čez Udin boršt–Novake–proti Letenicam–Žiganja vas–Sebenje–Križe"
+      },
+      "tour-k53-kriva-jelka": {
+        "title": "Zyflow: Na Udin boršt do Krive jelke",
+        "description": "Tržič–Križe–Duplje–Strahinj–Kriva jelka–Žiganja vas–Tržič"
+      },
+      "tour-k55-gozd-udin-borst": {
+        "title": "Zyflow: Gozd - Udin boršt",
+        "description": "Tržič–Križe–Poljana–Gozd–Zalog–Goriče–Tenetiše–Udin boršt–Kriva jelka–Žiganja vas–Križe–Tržič"
+      },
+      "tour-kamnicanka": {
+        "title": "Zyflow: Kamničanka",
+        "description": "Ravninska trasa nas pri Voklem najprej zapelje na edini kolesarski most čez avtocesto v Sloveniji."
+      },
+      "tour-ljubljancanka": {
+        "title": "Zyflow: Ljubljančanka",
+        "description": "Plečnikova Ljubljana, ki se uvršča med najpomembnejše celostne umetnine 20. stoletja, je svetovni urbanistični fenomen."
+      },
+      "tour-locanka": {
+        "title": "Zyflow: Ločanka",
+        "description": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranje"
+      },
+      "tour-mali-vrh": {
+        "title": "Zyflow: Jezersko in razgledišče Mali vrh",
+        "description": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko"
+      },
+      "tour-ravenska-kocna": {
+        "title": "Zyflow: Ravenska Kočna in Štularjeva planina",
+        "description": "Zgornje Jezersko–Planšarsko jezero–Ravenska Kočna–Štularjeva planina–Ravenska Kočna–Planšarsko jezero–Zgornje Jezersko"
+      },
+      "tour-spodnji-virnik": {
+        "title": "Zyflow: Spodnji Virnik in kamnolom Kehnjaka",
+        "description": "Zgornje Jezersko–Spodnji Kraj–kamnolom lehnjaka–Sp. Virnik–Zgornje Jezersko"
+      },
+      "tour-trzicanka": {
+        "title": "Zyflow: Tržičanka",
+        "description": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadalj"
+      },
+      "legal-pages-privacy-policy": {
+        "title": "Zyflow — Politika zasebnosti",
+        "description": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke, ko uporabljate Zyflow."
+      },
+      "legal-pages-terms": {
+        "title": "Zyflow — Pogoji uporabe",
+        "description": "Pogoji uporabe Zyflowa: pravila uporabe, naročnine, odgovornost in pravne informacije."
+      },
+      "legal-pages-cookie-policy": {
+        "title": "Zyflow — Politika piškotkov",
+        "description": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in kako jih lahko upravljate."
+      },
+      "legal-pages-impressum": {
+        "title": "Zyflow — Impressum",
+        "description": "Pravno obvestilo in podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+      },
+      "legal-pages-delete-account": {
+        "title": "Zyflow — Delete your account",
+        "description": "How to request deletion of your Zyflow account and what happens to your data."
+      },
+      "legal-pages-izbris-racuna": {
+        "title": "Zyflow — Izbris računa",
+        "description": "Kako zahtevate izbris računa Zyflow in kaj se zgodi z vašimi podatki."
       }
     }
   },
@@ -125,8 +205,8 @@
       },
       "menu": "Meni",
       "menuClose": "Zapri meni",
-      "themeDark": "preklopi na temni način",
-      "themeLight": "preklopi na svetli način"
+      "themeDark": "Temni način",
+      "themeLight": "Svetli način"
     },
     "footer": {
       "links": {
@@ -193,13 +273,13 @@
   },
   "home": {
     "hero": {
-      "titleHtml": "kolesarjem prijazne nastanitve, kavarne in polnilnice",
-      "brandHtml": "raziskuj<br>dlje.",
+      "titleHtml": "raziskuj<br>dlje.",
       "subtitle": "Raziskuj kolesarjem prijazne kraje. Kolesari tja brez skrbi. Nastanitve, kavarne, restavracije in polnilnice na enem zemljevidu.",
       "cta": "Prenesi aplikacijo",
       "nextDepartureLabel": "Izpostavljena pot",
       "nextDepartureTitle": "Ljubljana–Trst",
-      "nextDepartureDate": "134 km · +1.766 m"
+      "nextDepartureDate": "134 km · +1.766 m",
+      "brandHtml": "raziskuj<br>dlje."
     },
     "appBanner": {
       "eyebrow": "Aplikacija Zyflow",
@@ -226,37 +306,37 @@
       "viewCta": "Poglej pot",
       "cards": [
         {
-          "place": "Ljubljana",
-          "region": "Slovenija–Italija",
-          "title": "Ljubljana–Trst",
-          "meta0": "Potovanje",
+          "place": "Tržič",
+          "region": "Gorenjska, Slovenija",
+          "title": "Prelaz Ljubelj",
+          "meta0": "Alpska",
           "meta1": "1 dan",
-          "meta2": "134 km",
-          "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
-          "price": "134 km",
-          "unit": " · 1 dan"
+          "meta2": "+803 m",
+          "body": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj",
+          "price": "+803 m",
+          "unit": " · Gorenjska"
         },
         {
-          "place": "Julijske Alpe",
-          "region": "Slovenija",
-          "title": "Zanka čez alpske prelaze",
-          "meta0": "Alpsko",
-          "meta1": "1 dan",
-          "meta2": "89 km",
-          "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
-          "price": "+890 m",
-          "unit": " · vzpon"
+          "place": "Kranj",
+          "region": "Gorenjska, Slovenija",
+          "title": "Kamničanka",
+          "meta0": "Turistična",
+          "meta1": "½–1 dan",
+          "meta2": "70 km",
+          "body": "Ravninska trasa nas pri Voklem najprej zapelje na edini kolesarski most čez avtocesto v Sloveniji.",
+          "price": "70 km",
+          "unit": " · +254 m"
         },
         {
-          "place": "Istra",
-          "region": "Hrvaška",
-          "title": "Obalni gravel",
-          "meta0": "Gravel",
-          "meta1": "2 dni",
-          "meta2": "156 km",
-          "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
-          "price": "156 km",
-          "unit": " · 2 dni"
+          "place": "Jezersko",
+          "region": "Gorenjska, Slovenija",
+          "title": "Jezersko in razgledišče Mali vrh",
+          "meta0": "Turistična",
+          "meta1": "½–1 dan",
+          "meta2": "17.3 km",
+          "body": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko",
+          "price": "17.3 km",
+          "unit": " · +596 m"
         }
       ]
     },
@@ -402,36 +482,33 @@
         {
           "title": "Ljubljana–Trst",
           "place": "Slovenija / Italija",
-          "coords": "46.0569° N, 14.5058° E",
-          "playLabel": "Predvajaj video: Ljubljana–Trst"
+          "coords": "46.0569° N, 14.5058° E"
         },
         {
           "title": "Zanka čez alpske prelaze",
           "place": "Julijske Alpe, Slovenija",
-          "coords": "46.3792° N, 13.8363° E",
-          "playLabel": "Predvajaj video: Zanka čez alpske prelaze"
+          "coords": "46.3792° N, 13.8363° E"
         },
         {
           "title": "Obalni gravel",
           "place": "Istra, Hrvaška",
-          "coords": "45.2396° N, 13.9367° E",
-          "playLabel": "Predvajaj video: Obalni gravel"
+          "coords": "45.2396° N, 13.9367° E"
         }
       ]
     }
   },
   "tours": {
     "hero": {
-      "eyebrow": "naše poti",
-      "title": "kolesarske poti mimo kolesarjem prijaznih postankov",
-      "lede": "Vožnje skozi kolesarjem prijazne kraje, z nastanitvami, kavarnami, restavracijami in polnilnicami ob poti. Izberi pot in jo odpri v aplikaciji.",
+      "title": "naše poti",
+      "lede": "Kolesarske poti po Gorenjski — Kranj, Tržič in Jezersko — s kolesarju prijaznimi postanki. Izberi pot in jo odpri v Zyflow.",
       "quals": [
-        "Kolesarjem prijazni postanki na vsaki poti",
-        "7.400+ polnilnic na zemljevidu",
-        "8 držav",
+        "20 poti po Gorenjski",
+        "GPX in opisi pripravljeni",
+        "Odpri v Zyflow",
         "iOS in Android",
         "Brezplačen prenos"
-      ]
+      ],
+      "eyebrow": "naše poti"
     },
     "filter": {
       "label": "pregled:",
@@ -451,103 +528,224 @@
     },
     "cards": [
       {
-        "place": "Ljubljana",
-        "region": "Slovenija–Italija",
-        "title": "Ljubljana–Trst",
-        "meta0": "Potovanje",
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Blejčanka",
+        "meta0": "Turistična",
         "meta1": "1 dan",
-        "meta2": "134 km",
-        "body": "Od prestolnice do Jadrana, mimo kraških vasi z gostišči in restavracijami, ki sprejmejo kolesa.",
-        "price": "134 km",
-        "unit": " · 1 dan"
+        "meta2": "79 km",
+        "body": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre pogled proti Karavankam …",
+        "price": "79 km",
+        "unit": " · +944 m"
       },
       {
-        "place": "Julijske Alpe",
-        "region": "Slovenija",
-        "title": "Zanka čez alpske prelaze",
-        "meta0": "Alpsko",
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Jezerjanka",
+        "meta0": "Turistična",
         "meta1": "1 dan",
-        "meta2": "89 km",
-        "body": "Visoki prelazi s planinskimi kočami, kavo na vrhu in polnilnicami pred najtežjimi vzponi.",
-        "price": "+890 m",
-        "unit": " · vzpon"
+        "meta2": "76 km",
+        "body": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na cesti, ki se po ozki doli…",
+        "price": "76 km",
+        "unit": " · +603 m"
       },
       {
-        "place": "Istra",
-        "region": "Hrvaška",
-        "title": "Obalni gravel",
-        "meta0": "Gravel",
-        "meta1": "2 dni",
-        "meta2": "156 km",
-        "body": "Morski zrak, valovit makadam in dva dneva obalnih kavarn ter kolesarjem prijaznih nastanitev.",
-        "price": "156 km",
-        "unit": " · 2 dni"
-      },
-      {
-        "place": "Dunaj",
-        "region": "Avstrija",
-        "title": "Donavski koridor",
-        "meta0": "Vsakdan",
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Jezerski vrh in Ankova planina",
+        "meta0": "Alpska",
         "meta1": "1 dan",
-        "meta2": "42 km",
-        "body": "Vsakodnevna vožnja s kavo na poti, parkiriščem za kolesa na cilju in polnilnicami, če se obrne veter.",
-        "price": "42 km",
-        "unit": " · 1 dan"
+        "meta2": "18.2 km",
+        "body": "Zgornje Jezersko–Jezerska slatina–Jezerski vrh–Ankova planina–cerkev sv. Andreja–Šenkova domačija–Planšarsko jezero–Zgornje Jezersko",
+        "price": "18.2 km",
+        "unit": " · +457 m"
       },
       {
-        "place": "Bled",
-        "region": "Slovenija",
-        "title": "Okoli blejskih jezer",
-        "meta0": "Potovanje",
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Planine pod Košuto",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "+1740 m",
+        "body": "Tržič–Jelendol–Medvodje–Košutnik–planina Pungrat–planina Šija–planina Kofce–Ravne–Jelendol–Tržič",
+        "price": "+1740 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Tržič - Jezersko",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "+1299 m",
+        "body": "Tržič–Dovžanova soteska–Jelendol–Medvodje–Bukov hrib–Pečovnik–Jezersko",
+        "price": "+1299 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Dom pod Storžičem",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "+280 m",
+        "body": "Tržič–Slap–Lom pod Storžičem–Grahovše–Slaparska vas–Planinski dom pod Storžičem–nazaj",
+        "price": "+280 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Prelaz Ljubelj",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "+803 m",
+        "body": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj",
+        "price": "+803 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Rožnovenska pot po kolesarsko",
+        "meta0": "Turistična",
+        "meta1": "1 dan",
+        "meta2": "+369 m",
+        "body": "Tržič–Bistrica pri Tržiču–Loka–Hušica–Brezje pri Tržiču–Vadiče–Leše–Peračica–čez Strašnik–smer Hudo–smer Brdo–Podbreška gmajna–Zvirče–Kovor–Brezovo–Tržič",
+        "price": "+369 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Dobrča",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "+2067 m",
+        "body": "Tržič–Brezje pri Tržiču–proti Zadnji vasi–koča na Dobrči–Lešanska planina–Bistriška planina–Brezje pri Tržiču–Tržič",
+        "price": "+2067 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Udin boršt - s kolesom ob vznožju in pogumno čezenj",
+        "meta0": "Makadam",
+        "meta1": "½–1 dan",
+        "meta2": "+286 m",
+        "body": "Tržič - Križe - Duplje - Strahinj - čez Udin boršt - Tenetiše - Letenice - Sebenje - Tržič",
+        "price": "+286 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Lahkotno kolesarjenje po Poti treh zvonov",
+        "meta0": "Turistična",
+        "meta1": "½–1 dan",
+        "meta2": "+144 m",
+        "body": "Križe–Sebenje–čez Udin boršt–Novake–proti Letenicam–Žiganja vas–Sebenje–Križe",
+        "price": "+144 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Na Udin boršt do Krive jelke",
+        "meta0": "Makadam",
+        "meta1": "½–1 dan",
+        "meta2": "+386 m",
+        "body": "Tržič–Križe–Duplje–Strahinj–Kriva jelka–Žiganja vas–Tržič",
+        "price": "+386 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Tržič",
+        "region": "Gorenjska, Slovenija",
+        "title": "Gozd - Udin boršt",
+        "meta0": "Makadam",
+        "meta1": "½–1 dan",
+        "meta2": "+763 m",
+        "body": "Tržič–Križe–Poljana–Gozd–Zalog–Goriče–Tenetiše–Udin boršt–Kriva jelka–Žiganja vas–Križe–Tržič",
+        "price": "+763 m",
+        "unit": " · Gorenjska"
+      },
+      {
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Kamničanka",
+        "meta0": "Turistična",
+        "meta1": "½–1 dan",
+        "meta2": "70 km",
+        "body": "Ravninska trasa nas pri Voklem najprej zapelje na edini kolesarski most čez avtocesto v Sloveniji.",
+        "price": "70 km",
+        "unit": " · +254 m"
+      },
+      {
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ljubljančanka",
+        "meta0": "Turistična",
+        "meta1": "1 dan",
+        "meta2": "70 km",
+        "body": "Plečnikova Ljubljana, ki se uvršča med najpomembnejše celostne umetnine 20. stoletja, je svetovni urbanistični fenomen.",
+        "price": "70 km",
+        "unit": " · +460 m"
+      },
+      {
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ločanka",
+        "meta0": "Turistična",
+        "meta1": "1 dan",
+        "meta2": "64 km",
+        "body": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranjem. Sledi spust v Selško d…",
+        "price": "64 km",
+        "unit": " · +930 m"
+      },
+      {
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Jezersko in razgledišče Mali vrh",
+        "meta0": "Turistična",
+        "meta1": "½–1 dan",
+        "meta2": "17.3 km",
+        "body": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko",
+        "price": "17.3 km",
+        "unit": " · +596 m"
+      },
+      {
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Ravenska Kočna in Štularjeva planina",
+        "meta0": "Alpska",
+        "meta1": "1 dan",
+        "meta2": "16.6 km",
+        "body": "Zgornje Jezersko–Planšarsko jezero–Ravenska Kočna–Štularjeva planina–Ravenska Kočna–Planšarsko jezero–Zgornje Jezersko",
+        "price": "16.6 km",
+        "unit": " · +408 m"
+      },
+      {
+        "place": "Jezersko",
+        "region": "Gorenjska, Slovenija",
+        "title": "Spodnji Virnik in kamnolom Kehnjaka",
+        "meta0": "Turistična",
+        "meta1": "½–1 dan",
+        "meta2": "9.4 km",
+        "body": "Zgornje Jezersko–Spodnji Kraj–kamnolom lehnjaka–Sp. Virnik–Zgornje Jezersko",
+        "price": "9.4 km",
+        "unit": " · +304 m"
+      },
+      {
+        "place": "Kranj",
+        "region": "Gorenjska, Slovenija",
+        "title": "Tržičanka",
+        "meta0": "Turistična",
         "meta1": "1 dan",
         "meta2": "68 km",
-        "body": "Ceste ob jezeru, kavarne z razgledom in kolesarjem prijazna gostišča, če želiš ostati čez noč.",
+        "body": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadaljujemo pod obronki Storžič…",
         "price": "68 km",
-        "unit": " · 1 dan"
-      },
-      {
-        "place": "Dolomiti",
-        "region": "Italija",
-        "title": "Greben Dolomitov",
-        "meta0": "Alpsko",
-        "meta1": "2 dni",
-        "meta2": "118 km",
-        "body": "Dva dneva visokih prelazov, planinskih koč in polnilnic pred dolgimi vzponi.",
-        "price": "+1,420 m",
-        "unit": " · vzpon"
-      },
-      {
-        "place": "Koroška",
-        "region": "Avstrija",
-        "title": "Gozdna gravel zanka",
-        "meta0": "Gravel",
-        "meta1": "1 dan",
-        "meta2": "94 km",
-        "body": "Mirne gozdne poti s pitno vodo, servisom koles in toplim obrokom na cilju.",
-        "price": "94 km",
-        "unit": " · 1 dan"
-      },
-      {
-        "place": "Ljubljana",
-        "region": "Slovenija",
-        "title": "Ljubljanski krog",
-        "meta0": "Vsakdan",
-        "meta1": "½ dneva",
-        "meta2": "28 km",
-        "body": "Kratek krog mimo ljubljanskih kavarn, z označenimi parkirišči za kolesa in polnilnicami.",
-        "price": "28 km",
-        "unit": " · ½ dneva"
-      },
-      {
-        "place": "Dolina Soče",
-        "region": "Slovenija",
-        "title": "Prečenje doline Soče",
-        "meta0": "Potovanje",
-        "meta1": "2 dni",
-        "meta2": "162 km",
-        "body": "Dva dneva ob smaragdni reki, s kolesarjem prijaznimi nastanitvami za noč vmes.",
-        "price": "162 km",
-        "unit": " · 2 dni"
+        "unit": " · Gorenjska"
       }
     ]
   },
@@ -555,13 +753,14 @@
     "hero": {
       "crumbParent": "Poti",
       "crumbType": "Potovanje",
-      "titleHtml": "s kolesom iz ljubljane v trst: 134 km dolga pot",
+      "titleHtml": "ljubljana<br />– trst",
       "lede": "134 km od Ljubljane do Jadrana, mimo kolesarjem prijaznih nastanitev, kavarn in restavracij, s polnilnicami in kolesarskimi storitvami ob poti.",
       "price": "134 km",
       "unit": " · 1 dan",
       "nextLabel": "Najboljša sezona",
       "nextValue": "Apr – Oct",
-      "cta": "Načrtuj to pot"
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo"
     },
     "meta": {
       "place": "ljubljana",
@@ -604,8 +803,10 @@
         "Načrtovanje tudi brez povezave",
         "iOS in Android"
       ],
-      "cta": "Načrtuj to pot",
-      "note": "Brezplačno za iOS in Android."
+      "cta": "Odpri v Zyflow",
+      "note": "Odpri pot v Zyflow — načrtovanje z baterijo, višino in polnilnicami.",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "gpxLabel": "Prenesi GPX"
     },
     "quote": {
       "quote": "Je tvoj kraj ob tej poti?",
@@ -657,12 +858,12 @@
   "about": {
     "hero": {
       "eyebrow": "Ustanovljeno 2024",
-      "titleHtml": "ekipa, ki zemljevidi kolesarjem prijazne kraje po evropi",
-      "brandHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
+      "titleHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>",
       "place": "Slovenija · na voljo v 8 državah",
       "storyTitle": "Dobrih krajev za postanek je povsod dovolj. Večina zemljevidov jih le ne pokaže.",
       "storyBody": "Sva Jakob in Tanja, ekipa za Zyflowom, ki ga razvija HERKO d.o.o. v Sloveniji. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne nastanitve, kavarne, restavracije in polnilnice ter med njimi kolesariti brez skrbi. Danes je na voljo za iOS in Android v 8 državah, s 7.400+ polnilnicami na zemljevidu in podatki partnerjev, kot je Open Data Hub. Naslednji koraki: več držav, več krajev in več načinov, kako kolesarjem zagotoviti varnost.",
-      "sign": "Jakob in Tanja"
+      "sign": "Jakob in Tanja",
+      "brandHtml": "raziskuj<br>brez<br><span class=\"is-accent\">skrbi.</span>"
     },
     "values": {
       "title": "naše vrednote",
@@ -712,7 +913,7 @@
   },
   "contact": {
     "hero": {
-      "title": "piši nam",
+      "title": "kontakt",
       "email": "hello@zyflow.eu",
       "support": "support@zyflow.eu",
       "social": [
@@ -759,12 +960,33 @@
     },
     "hub": {
       "tag": "Pravno",
-      "title": "zyflow pravno: pogoji, zasebnost in piškotki",
-      "lede": "Politike za aplikacijo in spletno mesto Zyflow. Upravlja HERKO d.o.o.",
+      "title": "pravno",
+      "lede": "Policies for the Zyflow app and website. Operated by HERKO d.o.o.",
       "termsLede": "Pravila uporabe, naročnine, odgovornost in pravne informacije za Zyflow.",
-      "privacyLede": "Kako HERKO d.o.o. zbira, uporablja, hrani in varuje vaše osebne podatke.",
+      "privacyLede": "How HERKO d.o.o. Collects, uses, stores, and protects your personal data.",
       "cookiesLede": "Kako Zyflow uporablja piškotke in podobne tehnologije na zyflow.eu in v aplikaciji.",
       "impressumLede": "Podatki o družbi HERKO d.o.o., upravljavcu Zyflow."
+    },
+    "terms": {
+      "tag": "Posodobljeno",
+      "date": "15. 5. 2026",
+      "dateLabel": "Updated 15. 5. 2026 · v1.0",
+      "title": "pogoji uporabe",
+      "lede": "These Terms of Service constitute a legally binding agreement between you and HERKO d.o.o. Please read them carefully before using Zyflow."
+    },
+    "privacy": {
+      "tag": "Posodobljeno",
+      "date": "30. 6. 2026",
+      "dateLabel": "Updated 30. 6. 2026 · v1.1",
+      "title": "politika zasebnosti",
+      "lede": "This Privacy Policy explains what personal data HERKO d.o.o. Collects when you use Zyflow, why we collect it, how we use it, and what rights you have under GDPR."
+    },
+    "cookies": {
+      "tag": "Posodobljeno",
+      "date": "9. 10. 2026",
+      "dateLabel": "Posodobljeno 9. 10. 2026 · v1.1",
+      "title": "politika piškotkov",
+      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
     },
     "doc": {
       "tag": "Posodobljeno"
@@ -774,41 +996,20 @@
     },
     "impressum": {
       "dateLabel": "Pravno obvestilo"
-    },
-    "terms": {
-      "tag": "Posodobljeno",
-      "date": "10. 10. 2026",
-      "dateLabel": "Posodobljeno 10. 10. 2026 · v2.0.0",
-      "title": "pogoji uporabe",
-      "lede": "Ti Pogoji uporabe predstavljajo pravno zavezujoč sporazum med vami in HERKO d.o.o. Pred uporabo Zyflow jih pozorno preberite."
-    },
-    "privacy": {
-      "tag": "Posodobljeno",
-      "date": "10. 10. 2026",
-      "dateLabel": "Posodobljeno 10. 10. 2026 · v2.0",
-      "title": "politika zasebnosti",
-      "lede": "Ta Politika zasebnosti pojasnjuje, katere osebne podatke HERKO d.o.o. zbira, ko uporabljate Zyflow, zakaj jih zbira, kako jih uporablja in katere pravice imate po GDPR."
-    },
-    "cookies": {
-      "tag": "Posodobljeno",
-      "date": "10. 10. 2026",
-      "dateLabel": "Posodobljeno 10. 10. 2026 · v1.0",
-      "title": "politika piškotkov",
-      "lede": "Kako Zyflow uporablja piškotke in podobne sledilne tehnologije v aplikaciji in na zyflow.eu — vključno z neobveznimi analitičnimi in oglaševalskimi piškotki, ki jih lahko upravljate."
     }
   },
   "business": {
     "hero": {
       "crumb1": "Za podjetja",
       "crumb2": "Kavarne, nastanitve, kolesarske trgovine",
-      "titleHtml": "dodaj svoj kolesarjem prijazen lokal na zyflow",
-      "brandHtml": "postavi svoj kraj<br>na zemljevid",
+      "titleHtml": "postavi svoj kraj<br>na zemljevid",
       "lede": "Kolesarji v Zyflowu izberejo postanke, še preden se odpravijo na pot. Pokaži jim svoje parkirišče za kolesa, shrambo ali polnilnico in postani postanek na poteh, ki vodijo mimo tvojih vrat. Svoj vnos urejaš sam.",
       "price": "Brezplačno",
       "unit": " · v času zagona",
       "nextLabel": "Na voljo v",
       "nextValue": "8 državah",
-      "cta": "Dodaj svoj kraj"
+      "cta": "Dodaj svoj kraj",
+      "brandHtml": "postavi svoj kraj<br>na zemljevid"
     },
     "tiles": [
       {
@@ -921,14 +1122,14 @@
     "hero": {
       "crumb1": "Mediji in vlagatelji",
       "crumb2": "Dejstva",
-      "eyebrow": "zyflow na kratko",
-      "titleHtml": "zyflow za medije: aplikacija za kolesarjem prijazne kraje",
+      "titleHtml": "zyflow<br>na kratko",
       "lede": "Šele začenjamo. Zyflow kolesarjem in e-kolesarjem pomaga najti kolesarjem prijazne kraje in med njimi kolesariti brez skrbi. Tu so dejstva, ekipa in kontakt.",
       "price": "Zgodnja faza",
       "unit": " · 2026",
       "nextLabel": "Narejeno v",
       "nextValue": "Sloveniji",
-      "cta": "Zaprosi za predstavitev"
+      "cta": "Zaprosi za predstavitev",
+      "eyebrow": "zyflow na kratko"
     },
     "tiles": [
       {
@@ -1132,6 +1333,648 @@
         "h5": "ride it once, read it better next time",
         "p5": "After your first cross-border ride, the elevation profile will start to look different. You'll know what a long rise feels like on your bike, and you'll plan the next one faster. Start with a route like Ljubljana to Trieste, plan the stops around the climb, and enjoy the sea at the end."
       }
+    }
+  },
+  "routes": {
+    "blejcanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "blejčanka",
+      "lede": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre pogled proti Karavankam in Kamniškim Alpam. Spustimo se v Kropo, ki je že od 14. stoletja dalje center umetelnega kovaštva.",
+      "price": "79 km",
+      "unit": " · +944 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2412° N, 14.3563° E",
+      "durationHtml": "1 dan<br />79 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+944 m",
+      "climbLabel": "Višina",
+      "intro": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre pogled proti Karavankam in Kamniškim Alpam. Spustimo se v Kropo, ki je že od 14. stoletja dalje center umetelnega kovaštva.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Verjetno ena najlepših kolesarskih povezav »Kranjske rože«! Iz centra Kranja se usmerimo proti Jamniku. Po nekaj kilometrih vzpona se nam vrh Jamnika odpre pogled proti Karavankam in Kamniškim Alpam. Spustimo se v Kropo, ki je že od 14. stoletja dalje center umetelnega kovaštva."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Kolesarju prijazni postanki, razgledi in teren, kjer se v Zyflow izplača načrtovanje z mislijo na baterijo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "jezerjanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "jezerjanka",
+      "lede": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na cesti, ki se po ozki dolini vije čez Jezersko vse do državne meje z Avstrijo.",
+      "price": "76 km",
+      "unit": " · +603 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2412° N, 14.3561° E",
+      "durationHtml": "1 dan<br />76 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+603 m",
+      "climbLabel": "Višina",
+      "intro": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na cesti, ki se po ozki dolini vije čez Jezersko vse do državne meje z Avstrijo.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Čez Maistrov trg peljemo naprej mimo parka Brdo in kmalu se spustimo v začetek kanjona reke Kokre in ob njej do Preddvora. Mimo jezera Črnava in že smo na cesti, ki se po ozki dolini vije čez Jezersko vse do državne meje z Avstrijo."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Kolesarju prijazni postanki, razgledi in teren, kjer se v Zyflow izplača načrtovanje z mislijo na baterijo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "jezerski-vrh": {
+      "crumbType": "Alpska",
+      "titleHtml": "Jezerski vrh in<br />Ankova planina",
+      "lede": "Zgornje Jezersko–Jezerska slatina–Jezerski vrh–Ankova planina–cerkev sv. Andreja–Šenkova domačija–Planšarsko jezero–Zgornje Jezersko",
+      "price": "18.2 km",
+      "unit": " · +457 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "May – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "jezersko",
+      "coords": "46.3929° N, 14.4985° E",
+      "durationHtml": "1 dan<br />18.2 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+457 m",
+      "climbLabel": "Višina",
+      "intro": "Zgornje Jezersko–Jezerska slatina–Jezerski vrh–Ankova planina–cerkev sv. Andreja–Šenkova domačija–Planšarsko jezero–Zgornje Jezersko",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Vzpon na nekdanji mejni prehod Jezerski vrh in naprej do Ankove planine z razgledi na Ravensko Kočno in Kamniško-Savinjske Alpe. Ob povratku Jezerska slatina, sv. Andrej in Šenkova domačija."
+        },
+        {
+          "title": "Ob poti",
+          "body": "*GPX (Outdooractive): https://out.ac/3vGOXv → https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zgornje-jezersko-ankova-planina-zgornje-jezersko/801694918/*"
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k11-planine-pod-kosuto": {
+      "crumbType": "Alpska",
+      "titleHtml": "planine pod košuto",
+      "lede": "Tržič–Jelendol–Medvodje–Košutnik–planina Pungrat–planina Šija–planina Kofce–Ravne–Jelendol–Tržič",
+      "price": "Pot",
+      "unit": " · +1740 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "zahtevna",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+1740 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Jelendol–Medvodje–Košutnik–planina Pungrat–planina Šija–planina Kofce–Ravne–Jelendol–Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "Skozi Tržič se odpravimo po glavni cesti proti severovzhodu (smer Lom/Dovžanova soteska). Na Slapu nadaljujemo naravnost skozi Dovžanovo sotesko, kjer se začnemo vzpenjati proti Dolini. Iz Doline do Jelendola se pot prijetno izravna in poteka v hladu ob Tržiški Bistrici. Pod Bornovo graščino v Jelendolu nadaljujemo desno, makadam nas vodi po dolini proti Medvodju, kjer zavijemo levo in se vzpnemo proti Košutniku. Pri mali HE zavijemo levo proti Šiji, po krajšem položnem delu sledi strm vzpon in nato prijeten del ceste po gozdu do odcepa za Pungrat/Šijo. Zavijemo desno in po kilometru in pol pribrcamo do slikovite planine Pungrat, kjer se poleti lahko okrepčamo. Ko po cesti nadaljujemo proti Šiji, kmalu dosežemo najvišjo točko ture, daljši postanek si privoščimo v Taborniškem domu Šija. Vlaka nas vodi prek planine Ilovica proti Kofcam, kjer prav tako z veseljem poskrbijo za lačne in žejne. Spust se začne pod planinskim domom na Kofcah naravnost navzdol v proti Ravnem. Na dnu vlake zavijemo levo na gozdno cesto, po kateri peljemo mimo odcepa za Kal vse do križišča z gozdno cesto, ki pelje proti Šiji. Zavijemo desno in se spustimo proti Jelendolu - zaključimo s spustom skozi Dovžanovo sotesko proti Tržiču."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k16-trzic-jezersko": {
+      "crumbType": "Alpska",
+      "titleHtml": "tržič - jezersko",
+      "lede": "Tržič–Dovžanova soteska–Jelendol–Medvodje–Bukov hrib–Pečovnik–Jezersko",
+      "price": "Pot",
+      "unit": " · +1299 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "zahtevna",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+1299 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Dovžanova soteska–Jelendol–Medvodje–Bukov hrib–Pečovnik–Jezersko",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Zaradi podrtega drevja je pot trenutno težko prehodna, zato vam prehod odsvetujemo."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k21-dom-pod-storzicem": {
+      "crumbType": "Alpska",
+      "titleHtml": "dom pod storžičem",
+      "lede": "Tržič–Slap–Lom pod Storžičem–Grahovše–Slaparska vas–Planinski dom pod Storžičem–nazaj",
+      "price": "Pot",
+      "unit": " · +280 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+280 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Slap–Lom pod Storžičem–Grahovše–Slaparska vas–Planinski dom pod Storžičem–nazaj",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "Skozi Tržič se odpravimo po glavni cesti proti severovzhodu (smer Lom/Dovžanova soteska). Na Slapu zavijemo desno in pred nami je prvi strmejši odsek do vasi Lom pod Storžičem. Nadaljujemo mimo cerkve sv. Katarine po glavni cesti proti Grahovšam. Zgornja lomska dolina je širša in bolj uravnana, s pogledom na Belo peč, Javornik in Storžič. Peskokop pred Slaparsko vasjo nam v zgornjem delu razkrije ostanke morenskega gradiva, ki ga je tu odložil ledenik. V Slaparski vasi preidemo na gozdno cesto in če bi v križišču zavili levo, bi lahko obiskali Turistično kmetijo Rekar ali pa se podali na Javornik. Mi se ves čas držimo potoka in nadaljujemo po dolini. Do planinskega doma pod Storžičem nas loči še 2,6 km vzpona. Po okrepčilu v domu se po isti poti spustimo nazaj v Tržič."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k35-prelaz-ljubelj": {
+      "crumbType": "Alpska",
+      "titleHtml": "prelaz ljubelj",
+      "lede": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj",
+      "price": "Pot",
+      "unit": " · +803 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+803 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Podljubelj–Ljubelj–prelaz Ljubelj–nazaj",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "Iz Tržiča se odpeljemo skozi mestno jedro proti severu v smeri Podljubelja. V Podljubelju se peljemo skozi vas in nadaljujemo do Lajba, naravnost mimo opuščenega večjega gostinskega objekta na makadamsko cesto, ki nas vodi ob glavni cesti proti Ljubelju. Ko se cesta priključi glavni cesti, nadaljujemo po njej do parkirišča pred predorom Ljubelj. Pozor - glavna cesta je zelo prometna, potrebna je skrajna previdnost pri vožnji. Pred predorom se odcepi makadamska pot desno proti prelazu Ljubelju. Pred nami je še 300 višinskih metrov vzpona, cesta pa je na nekaterih mestih zelo strma."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k42-roznovenska": {
+      "crumbType": "Turistična",
+      "titleHtml": "Rožnovenska pot<br />po kolesarsko",
+      "lede": "Tržič–Bistrica pri Tržiču–Loka–Hušica–Brezje pri Tržiču–Vadiče–Leše–Peračica–čez Strašnik–smer Hudo–smer Brdo–Podbreška gmajna–Zvirče–Kovor–Brezovo–Tržič",
+      "price": "Pot",
+      "unit": " · +369 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+369 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Bistrica pri Tržiču–Loka–Hušica–Brezje pri Tržiču–Vadiče–Leše–Peračica–čez Strašnik–smer Hudo–smer Brdo–Podbreška gmajna–Zvirče–Kovor–Brezovo–Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "Iz Tržiča se po cesti proti jugozahodu odpeljemo proti Bistrici pri Tržiču, kjer se usmerimo levo proti Kovorju. Pred avtobusno postajo na Loki z glavne ceste zavijemo desno na gozdno pot. Prečkamo potok in sledimo poti proti Hušici. Ko pridemo do prve jase, nadaljujemo po levi. Sledi kratek slabši vzpon, ki nas pripelje do naslednje jase. Tu zavijemo desno, po 50 m pa sledimo poti levo. Po 500 m vzpona - krajše odseke bo zaradi zahtevnejše podlage potrebno peš ob kolesu - pridemo na Hušico. Pri znamenju se usmerimo na cesto desno skozi Hušico proti Brezjam pri Tržiču. Na dnu vasi zavijemo levo, v smeri Leše/Vadiče. Ko se pripeljemo v spodnji del vasi Leše, zavijemo levo, asfalt preide v lepo makadamsko cesto. Peljemo se skozi vas Peračica in 900 m za vasjo zavijemo ostro levo na stransko cesto (gledamo oznake za Rožnovensko pot). Če bi nadaljevali naravnost, bi se pripeljali na Brezje, kjer je pričetek in konec prave romarske Rožnovenske poti."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k43-dobrca": {
+      "crumbType": "Alpska",
+      "titleHtml": "dobrča",
+      "lede": "Tržič–Brezje pri Tržiču–proti Zadnji vasi–koča na Dobrči–Lešanska planina–Bistriška planina–Brezje pri Tržiču–Tržič",
+      "price": "Pot",
+      "unit": " · +2067 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+2067 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Brezje pri Tržiču–proti Zadnji vasi–koča na Dobrči–Lešanska planina–Bistriška planina–Brezje pri Tržiču–Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "V Tržiču se usmerimo proti jugu, po 200 m zavijemo desno proti zdravstvenemu domu in nato po 250 m (pred zdravstvenim domom) zavijemo levo v breg, na t.i. Kovtrn'co. Cesta je speljana pod glavno cesto poti Ljubelju. Ko se konča, zavijemo desno skozi manjši predor in nadaljujemo skozi Bistrico pri Tržiču. V križišču z glavno cesto in kapelico se usmerimo desno, v breg (smer Begunje). Sledi vzpon do Brezij pri Tržiču."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k51-udin-borst": {
+      "crumbType": "Makadam",
+      "titleHtml": "Udin boršt - s kolesom<br />ob vznožju in pogumno čezenj",
+      "lede": "Tržič - Križe - Duplje - Strahinj - čez Udin boršt - Tenetiše - Letenice - Sebenje - Tržič",
+      "price": "Pot",
+      "unit": " · +286 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+286 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič - Križe - Duplje - Strahinj - čez Udin boršt - Tenetiše - Letenice - Sebenje - Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom,…)"
+        },
+        {
+          "title": "Ob poti",
+          "body": "V Tržiču se usmerimo po glavni cesti proti jugu. V križišču izberemo levo cesto, ki se rahlo vzpenja proti Pristavi. V Pristavi peljemo mimo avtobusne postaje še kakih 200 m, nato zavijemo desno na stransko cesto, ki pelje med hišami. V križiščih nadaljujemo naravnost (pazimo na prednostno cesto!), na koncu naselja cesta preide v makadam. Čez polje se peljemo proti osnovni šoli in teniškim igriščem. Pri športnem parku zavijemo desno na asfaltirano cesto proti Retnjam. V večjem križišču zavijemo levo proti Dupljam in se takoj po 100 m usmerimo na stransko cesto skozi Retnje. Nadaljujemo skozi Retnje in Breg ob Bistrici, kjer cesta ostro zavije levo proti glavni cesti. Zavijemo desno in po 50 m vožnje po glavni cesti spet zavijemo desno na stransko cesto proti Zadragi. Vmes že lahko pogledujemo na Udin boršt, ki je ves čas na naši levi strani, za njim pa se dvigata Kriška gora s Tolstim vrhom in Storžič. Na koncu krajšega vzpona se vnovič priključimo glavni cesti in se peljemo skozi Zg. Duplje. Za avtobusno postajo in gasilskim domom previdno zavijemo z glavne ceste levo skozi Sp. Duplje proti Strahinju. V Strahinju v glavnem križišču zavijemo levo. Na koncu vasi se konča asfalt in začne krajši vzpon, ki mu sledi spust. Čez Udin boršt sledimo glavni cesti proti Tenetišam, pri Zbirnem centru Tenetiše zavijemo levo. Na glavni cesti se obrnemo levo proti Tenetišam in Golniku ter po 1,5 km v križišču zavijemo proti Letenicam. Sledimo cesti naravnost skozi Letenice in naprej proti Novakam, mimo odcepa za Golnik. Na naslednjem križišču pri enem od zvonov naše Poti treh zvonov zavijemo desno proti pristajališču za jadralne padalce. Le 100 m za pristajališčem zavijemo levo in sledimo tej gozdni cesti, ki nas bo prek Udin boršta pripeljala do Sebenj. Po zadnjem spustu pred Sebenjami se lahko razgibamo na trim poligonu, kmalu zatem pa preidemo na asfalt. Po 300 m pridemo do prednostne ceste in se usmerimo desno proti Križam. Zavijemo na poljsko pot proti Križam, kjer prečkamo glavno cesto in se skozi Pristavo vrnemo do izhodišča."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k52-pot-treh-zvonov": {
+      "crumbType": "Turistična",
+      "titleHtml": "Lahkotno kolesarjenje po<br />Poti treh zvonov",
+      "lede": "Križe–Sebenje–čez Udin boršt–Novake–proti Letenicam–Žiganja vas–Sebenje–Križe",
+      "price": "Pot",
+      "unit": " · +144 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+144 m",
+      "climbLabel": "Višina",
+      "intro": "Križe–Sebenje–čez Udin boršt–Novake–proti Letenicam–Žiganja vas–Sebenje–Križe",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Z izhodišča se odpeljemo po stranski cesti proti Sebenjam, kjer v središču vasi zavijemo levo, mimo kmetije Pr' Obstarju, v smeri proti Skakalnemu centru Sebenje. Ob transformatorski postaji na koncu vasi zapeljemo na gozdno cesto rahlo navkreber do trim poligona, kjer se pripravimo na kratek vzpon na Udin boršt. Na vrhu klanca nadaljujemo po glavni gozdni cesti, po kateri sledimo oznakam Poti treh zvonov. Ko pridemo iz gozda in prečkamo mostič čez sničanski potok Parovnica, zapeljemo med travnike pod vasjo Senično. Odpre se prekrasen razgled na pobočja Kriške gore in Tolstega vrha ter naprej proti Storžiču. Za drugim mostičem zavijemo desno, proti jugu, po cesti iz Seničnega proti Novakam in mimo pristajališča jadralnih padalcev. V križišču za vas Novake zavijemo levo po asfaltirani cesti, kjer desno ob poti lahko pozvonimo na drugem od zvonov na poti. V naslednjem križišču pod Golnikom gremo desno do najbolj južnih hiš in naprej proti Letenicam. 100 metrov za hišami nas makadamska pot zapelje desno čez potok proti Udin borštu. Cesta se kmalu prične zlagoma vzpenjati in po daljšem, a ne prestrmem klancu pridemo do tretjega zvona in drugega trim poligona. Nadaljujemo skozi Novine nad Žiganjo vasjo v središče Žiganje vasi, kjer se ustavimo pri stoletni lipi in cerkvici sv. Urha. Do Sebenj peljemo po cesti skozi naselje in nadaljujemo naprej do izhodišča v Križah."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Ne kolesarim v območjih, kjer bi zaradi kolesarjenja lahko prišlo do nezaželenih okoljskih vplivov, konfliktov z drugimi uporabniki naravnega okolja ali lastniki. Način kolesarjenja vpliva na odločitve in odnos lastnikov in upravljavcev zemljišč do kolesarjev."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k53-kriva-jelka": {
+      "crumbType": "Makadam",
+      "titleHtml": "na udin boršt do krive jelke",
+      "lede": "Tržič–Križe–Duplje–Strahinj–Kriva jelka–Žiganja vas–Tržič",
+      "price": "Pot",
+      "unit": " · +386 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+386 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Križe–Duplje–Strahinj–Kriva jelka–Žiganja vas–Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom …)."
+        },
+        {
+          "title": "Ob poti",
+          "body": "V Tržiču se usmerimo po glavni cesti proti jugu. V križišču izberemo levo cesto, ki se rahlo vzpenja proti Pristavi. V Pristavi peljemo mimo avtobusne postaje še kakih 200 m, nato zavijemo desno na stransko cesto, ki pelje med hišami. V križiščih nadaljujemo naravnost (pazimo na prednostno cesto!), na koncu naselja cesta preide v makadam. Čez polje se peljemo proti osnovni šoli in teniškim igriščem. Pri športnem parku zavijemo desno na asfaltirano cesto proti Retnjam. V večjem križišču zavijemo levo proti Dupljam in se takoj po 100 m usmerimo na stransko cesto skozi Retnje. Nadaljujemo skozi Retnje in Breg ob Bistrici, kjer cesta ostro zavije levo proti glavni cesti. Zavijemo desno in po 50 m vožnje po glavni cesti spet zavijemo desno na stransko cesto proti Zadragi. Vmes že lahko pogledujemo na Udin boršt, ki je ves čas na naši levi strani, za njim pa se dvigata Kriška gora s Tolstim vrhom in Storžič. Na koncu krajšega vzpona se vnovič priključimo glavni cesti in se peljemo skozi Zg. Duplje. Za avtobusno postajo in gasilskim domom previdno zavijemo z glavne ceste levo skozi Sp. Duplje proti Strahinju. V Strahinju v glavnem križišču zavijemo levo. Na koncu vasi se konča asfalt in začne krajši vzpon, ki mu sledi spust. V križišču se lahko usmerimo levo in peljemo 50 m do ribnika, ki je prijetna točka za počitek. Vrnemo se na cesto in nadaljujemo še 300 m proti Tenetišam, nato zavijemo levo in se skozi Udin boršt po cesti, ki se nekaj časa rahlo vzpenja, 3,4 km peljemo proti Krivi jelki."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "k55-gozd-udin-borst": {
+      "crumbType": "Makadam",
+      "titleHtml": "gozd - udin boršt",
+      "lede": "Tržič–Križe–Poljana–Gozd–Zalog–Goriče–Tenetiše–Udin boršt–Kriva jelka–Žiganja vas–Križe–Tržič",
+      "price": "Pot",
+      "unit": " · +763 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "tržič",
+      "coords": "Gorenjska, Slovenija",
+      "durationHtml": "1 dan",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+763 m",
+      "climbLabel": "Višina",
+      "intro": "Tržič–Križe–Poljana–Gozd–Zalog–Goriče–Tenetiše–Udin boršt–Kriva jelka–Žiganja vas–Križe–Tržič",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Izhodišče kolesarskih tur je v centru mesta, nasproti avtobusne postaje Tržič. Parkiranje osebnih vozil je možno na javnih parkirnih mestih (parkirišča pri Občini Tržič, na Predilniški cesti ob vpadnici v mesto-BPT, pri Dvorani tržiških olimpijcev, za Mošenikom …)."
+        },
+        {
+          "title": "Ob poti",
+          "body": "V Tržiču se usmerimo po glavni cesti proti jugu. V križišču izberemo levo cesto, ki se rahlo vzpenja proti Pristavi. V Pristavi peljemo mimo avtobusne postaje in naprej proti Križam. V vasi zavijemo levo (sledimo markacijam) na cesto, ki na koncu vasi preide v makadamsko in se vzpenja proti Poljani ter naprej proti Zg. Vetrnemu. Tu se priključimo na asfaltno cesto, do Gozda ji sledimo še dobra 2 km."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "kamnicanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "kamničanka",
+      "lede": "Ravninska trasa nas pri Voklem najprej zapelje na edini kolesarski most čez avtocesto v Sloveniji.",
+      "price": "70 km",
+      "unit": " · +254 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2415° N, 14.3566° E",
+      "durationHtml": "1 dan<br />70 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+254 m",
+      "climbLabel": "Višina",
+      "intro": "Ravninska trasa nas pri Voklem najprej zapelje na edini kolesarski most čez avtocesto v Sloveniji.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Skozi Šenčur do Adergasa, kjer leži cerkev Marijinega oznanjenja, mimo jezerc Češnjevek, gradu Strmol in Gradu pri Cerkljah kolesarimo do Komendske dobrave."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Od tu je le še par kilometrov do Kamnika, kjer si ogledamo staro mestno jedro. Skozi Šmarco nas pot pripelje do Arboretuma Volčji Potok in ta park je res vreden ogleda. Skozi Radomlje in Mengeš pridemo do Vodic. Od tu do vasi Voglje je makadam, je pa v dobrem stanju in ga tudi zaradi prijetnih zvokov gozda mirno in z užitkom prevozimo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "ljubljancanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "ljubljančanka",
+      "lede": "Plečnikova Ljubljana, ki se uvršča med najpomembnejše celostne umetnine 20. stoletja, je svetovni urbanistični fenomen.",
+      "price": "70 km",
+      "unit": " · +460 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2413° N, 14.3565° E",
+      "durationHtml": "1 dan<br />70 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+460 m",
+      "climbLabel": "Višina",
+      "intro": "Plečnikova Ljubljana, ki se uvršča med najpomembnejše celostne umetnine 20. stoletja, je svetovni urbanistični fenomen.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Iz centra Kranja zavijemo čez Delavski most in ob desnem bregu Save kolesarimo vse do Zbilj, kjer se obrnemo proti Goričanam in od tam mimo vasi Sora na Topol nad Katarino. Klanec ni dolg, vije se po prijetnem hladu in se zaključi s čudovitim razgledom. Sledi zahteven spust v dolino reke Gradaščice."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Kolesarju prijazni postanki, razgledi in teren, kjer se v Zyflow izplača načrtovanje z mislijo na baterijo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "locanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "ločanka",
+      "lede": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranjem. Sledi spust v Selško dolino, tam se obrnemo proti Bukovici in od tu na Stari vrh, priljubljeno smučišče. Klanec je kar dolg, a ponuja enkratne razglede.",
+      "price": "64 km",
+      "unit": " · +930 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2414° N, 14.3559° E",
+      "durationHtml": "1 dan<br />64 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+930 m",
+      "climbLabel": "Višina",
+      "intro": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranjem. Sledi spust v Selško dolino, tam se obrnemo proti Bukovici in od tu na Stari vrh, priljubljeno smučišče. Klanec je kar dolg, a ponuja enkratne razglede.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Potem ko smo prečkali most čez kanjon Kokre, zavijemo desno in čez Delavski most v naselje Stražišče in od tod na Sedlo, ki leži pod hribom Jošt nad Kranjem. Sledi spust v Selško dolino, tam se obrnemo proti Bukovici in od tu na Stari vrh, priljubljeno smučišče. Klanec je kar dolg, a ponuja enkratne razglede."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Kolesarju prijazni postanki, razgledi in teren, kjer se v Zyflow izplača načrtovanje z mislijo na baterijo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "mali-vrh": {
+      "crumbType": "Turistična",
+      "titleHtml": "Jezersko in razgledišče<br />Mali vrh",
+      "lede": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko",
+      "price": "17.3 km",
+      "unit": " · +596 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "May – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "jezersko",
+      "coords": "46.3929° N, 14.4986° E",
+      "durationHtml": "1 dan<br />17.3 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+596 m",
+      "climbLabel": "Višina",
+      "intro": "Zgornje Jezersko–Makekova Kočna–razgledišče pod Malim vrhom–razgledna točka na koncu poti–razgledišče pod Malim vrhom–Makekova kočna–Zgornje Jezersko",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Idilična, manj zahtevna tura po gozdni cesti z nepozabnimi razgledi. Orientacija pri TIC, nato proti Makekovi Kočni in blago navkreber do razgledišča pod Malim vrhom."
+        },
+        {
+          "title": "Ob poti",
+          "body": "*GPX (Outdooractive): https://out.ac/3vGOWK → https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zg.-jezersko-lookout-point-below-visevski-hrib-zg/801694876/*"
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "ravenska-kocna": {
+      "crumbType": "Alpska",
+      "titleHtml": "Ravenska Kočna in<br />Štularjeva planina",
+      "lede": "Zgornje Jezersko–Planšarsko jezero–Ravenska Kočna–Štularjeva planina–Ravenska Kočna–Planšarsko jezero–Zgornje Jezersko",
+      "price": "16.6 km",
+      "unit": " · +408 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "May – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "jezersko",
+      "coords": "46.3928° N, 14.4982° E",
+      "durationHtml": "1 dan<br />16.6 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+408 m",
+      "climbLabel": "Višina",
+      "intro": "Zgornje Jezersko–Planšarsko jezero–Ravenska Kočna–Štularjeva planina–Ravenska Kočna–Planšarsko jezero–Zgornje Jezersko",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Razgledna tura mimo Planšarskega jezera v dolino Ravenske Kočne in naprej do Štularjeve planine. Del poti si delite s pohodniki."
+        },
+        {
+          "title": "Ob poti",
+          "body": "*GPX (Outdooractive): https://out.ac/3vGOX4 → https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zgornje-jezersko-stularjeva-planina-zgornje-jezersko/801694896/*"
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "spodnji-virnik": {
+      "crumbType": "Turistična",
+      "titleHtml": "Spodnji Virnik in<br />kamnolom Kehnjaka",
+      "lede": "Zgornje Jezersko–Spodnji Kraj–kamnolom lehnjaka–Sp. Virnik–Zgornje Jezersko",
+      "price": "9.4 km",
+      "unit": " · +304 m",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "May – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "jezersko",
+      "coords": "46.3929° N, 14.4986° E",
+      "durationHtml": "1 dan<br />9.4 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "lahka",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "+304 m",
+      "climbLabel": "Višina",
+      "intro": "Zgornje Jezersko–Spodnji Kraj–kamnolom lehnjaka–Sp. Virnik–Zgornje Jezersko",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Krajši poučen izlet do lehnjakotvornega izvira in ekološke kmetije Spodnji Virnik. En vzpon lahko tudi prehodite."
+        },
+        {
+          "title": "Ob poti",
+          "body": "*GPX (Outdooractive): https://out.ac/3vGOaZ → https://www.outdooractive.com/en/route/mountain-biking/koroska/cycling-route-zgornje-jezersko-sp.-virnik-organic-farm-zgornje-jezersko/801694947/*"
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
+    },
+    "trzicanka": {
+      "crumbType": "Turistična",
+      "titleHtml": "tržičanka",
+      "lede": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadaljujemo pod obronki Storžiča do Tržiča. Mesto je znano po mnogih obrteh, ki so že od rimskih časov dajale kruh številnim Tržičanom. Nadaljujemo na »balkonu Gorenjske«, ki je svoje ime dobil zaradi enkratnih razgledov.",
+      "price": "68 km",
+      "unit": " · Gorenjska",
+      "nextLabel": "Najboljša sezona",
+      "nextValue": "Apr – Oct",
+      "cta": "Odpri v Zyflow",
+      "ctaSecondary": "Prenesi aplikacijo",
+      "place": "kranj",
+      "coords": "46.2411° N, 14.3564° E",
+      "durationHtml": "1 dan<br />68 km",
+      "durationLabel": "Trajanje",
+      "difficulty": "srednja",
+      "difficultyLabel": "Zahtevnost",
+      "climb": "—",
+      "climbLabel": "Višina",
+      "intro": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadaljujemo pod obronki Storžiča do Tržiča. Mesto je znano po mnogih obrteh, ki so že od rimskih časov dajale kruh številnim Tržičanom. Nadaljujemo na »balkonu Gorenjske«, ki je svoje ime dobil zaradi enkratnih razgledov.",
+      "sections": [
+        {
+          "title": "Potek",
+          "body": "Z Glavnega trga se čez Maistrov trg peljemo mimo Prešernovega gaja in se spustimo v kanjon reke Kokre, ki se vije skozi stari Kranj. Mimo parka Brdo nadaljujemo pod obronki Storžiča do Tržiča. Mesto je znano po mnogih obrteh, ki so že od rimskih časov dajale kruh številnim Tržičanom. Nadaljujemo na »balkonu Gorenjske«, ki je svoje ime dobil zaradi enkratnih razgledov."
+        },
+        {
+          "title": "Ob poti",
+          "body": "Kolesarju prijazni postanki, razgledi in teren, kjer se v Zyflow izplača načrtovanje z mislijo na baterijo."
+        }
+      ],
+      "asideNote": "Odpri to pot v Zyflow in načrtuj z baterijo, višino in polnilnicami.",
+      "gpxLabel": "Prenesi GPX"
     }
   },
   "alts": {

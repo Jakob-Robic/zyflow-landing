@@ -1,0 +1,26 @@
+slug: k21-dom-pod-storzicem
+name_sl: K21 - Dom pod Storžičem
+name_en: K21 — Dom pod Storžičem
+municipality: trzic
+region: gorenjska
+country: slovenia
+category: alpine
+distance_km: 
+elevation_m: 
+duration: 
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Tržič
+end_place: Tržič
+source_url: https://visit-trzic.com/sl/poti/kolesarske-poti/k21-dom-pod-storzicem
+source_name: Visit Tržič
+gpx_source_url: https://visit-trzic.com/storage/services/files/k21-pod-storzic.gpx
+license_notes: Tourism content from Visit Tržič; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+featured_priority: 8
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Selected for Zyflow featured shortlist from Visit Tržič catalogue. Route type: Gorsko-kolesarska.

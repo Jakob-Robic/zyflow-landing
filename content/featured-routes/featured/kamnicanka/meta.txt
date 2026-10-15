@@ -1,0 +1,26 @@
+slug: kamnicanka
+name_sl: Kamničanka
+name_en: Kamničanka
+municipality: kranj
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 70
+elevation_m: 254
+duration: 1 day
+difficulty: easy
+best_season: Apr – Oct
+start_place: Kranj
+end_place: Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/kamnicanka-2/
+source_name: Visit Kranj — Kranjska kolesarska roža
+gpx_source_url: https://www.visitkranj.com/files/gpx/kranjska-roza-01.gpx
+maps_embed: https://www.google.com/maps/d/embed?mid=1S5w2LhahsSbmvgDBBsM2-G8EsnQTUrSe
+license_notes: Tourism content from Visit Kranj; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.webp
+gpx_file: route.gpx
+notes: Flat-ish loop via Šenčur, Adergas, Cerklje, Kamnik, Arboretum Volčji Potok, Mengeš, Vodice. Part of Kranjska kolesarska roža (route 01).

@@ -25,6 +25,7 @@ const {
 } = require("./pages");
 const { articleBySlug, blogCardI18n } = require("./articles");
 const { renderLegalMarkdown } = require("./legal-markdown");
+const { routeBySlug, ROUTES } = require("./routes");
 
 const ROOT = path.join(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -400,6 +401,91 @@ function injectArticleContent(html, articleSlug) {
     .replace("<!-- ARTICLE_MORE -->", more);
 }
 
+function galleryFigure(src) {
+  if (!src) return "";
+  return `<figure class="tour-article__figure">
+        <img src="${src}" alt="" />
+      </figure>`;
+}
+
+function renderTourMore(slug) {
+  const route = routeBySlug(slug);
+  const cards = route.related.map((relSlug) => {
+    const rel = routeBySlug(relSlug);
+    const idx = ROUTES.findIndex((r) => r.slug === relSlug);
+    const href = `./tours/${rel.slug}.html`;
+    return `      <article class="tour-card">
+        <div class="tour-card__media">
+          <img src="${rel.cover}" alt="" />
+          <div class="tour-card__loc">
+            <div class="tour-card__pin"><img src="./assets/images/icons/location.svg" alt="" /></div>
+            <div class="tour-card__loc-text"><span data-i18n="tours.cards.${idx}.place"></span><span data-i18n="tours.cards.${idx}.region"></span></div>
+          </div>
+        </div>
+        <div class="tour-card__body">
+          <div>
+            <h3 class="tour-card__name" data-i18n="tours.cards.${idx}.title"></h3>
+            <div class="tour-card__meta"><span data-i18n="tours.cards.${idx}.meta0"></span><span class="motif" aria-hidden="true"></span><span data-i18n="tours.cards.${idx}.meta1"></span><span class="motif" aria-hidden="true"></span><span data-i18n="tours.cards.${idx}.meta2"></span></div>
+          </div>
+          <p class="tour-card__desc" data-i18n="tours.cards.${idx}.body"></p>
+          <div class="tour-card__foot">
+            <p class="tour-card__price"><span data-i18n="tours.cards.${idx}.price"></span><span data-i18n="tours.cards.${idx}.unit"></span></p>
+            <a class="tour-card__cta" href="${href}"><span data-i18n="tours.viewCta">View route</span> <img src="./assets/images/icons/arrow-right-sm.svg" alt="" /></a>
+          </div>
+        </div>
+      </article>`;
+  });
+
+  return `<section class="tour-more section" data-section="tour.more">
+  <div class="container">
+    <div class="tour-more__head">
+      <h2 class="tour-more__title" data-i18n="tour.more.title">more routes</h2>
+      <a class="link link--arrow" href="./tours.html" data-i18n="tour.more.allLink">View all</a>
+    </div>
+    <div class="adventures__grid">
+${cards.join("\n")}
+    </div>
+  </div>
+</section>`;
+}
+
+function injectTourContent(html, routeSlug) {
+  const route = routeBySlug(routeSlug);
+  let hero = read(path.join(ROOT, "sections/tour/hero.html"));
+  let body = read(path.join(ROOT, "sections/tour/body.html"));
+
+  const gpxLink = route.gpx
+    ? `<a class="link tour-aside__gpx" href="${route.gpx}" download data-i18n="routes.${routeSlug}.gpxLabel">Download GPX</a>`
+    : "";
+
+  const replaceTokens = (tpl) =>
+    tpl
+      .replaceAll("__SLUG__", routeSlug)
+      .replaceAll("__DEEP_LINK__", route.deepLink)
+      .replaceAll("__COVER__", route.cover)
+      .replaceAll("__GALLERY_0__", galleryFigure(route.gallery[0]))
+      .replaceAll("__GALLERY_1__", galleryFigure(route.gallery[1]))
+      .replaceAll("__GALLERY_2__", galleryFigure(route.gallery[2]))
+      .replaceAll("__GPX_LINK__", gpxLink);
+
+  hero = replaceTokens(hero);
+  body = replaceTokens(body);
+  const more = renderTourMore(routeSlug);
+
+  if (
+    !html.includes("<!-- TOUR_HERO -->") ||
+    !html.includes("<!-- TOUR_BODY -->") ||
+    !html.includes("<!-- TOUR_MORE -->")
+  ) {
+    throw new Error("tour.html must contain TOUR_HERO, TOUR_BODY, and TOUR_MORE placeholders");
+  }
+
+  return html
+    .replace("<!-- TOUR_HERO -->", hero)
+    .replace("<!-- TOUR_BODY -->", body)
+    .replace("<!-- TOUR_MORE -->", more);
+}
+
 function pageLangHrefs(page) {
   if (page.langSwitch) {
     return {
@@ -693,6 +779,9 @@ function buildPage(page, locale, messages) {
   let html = read(sourcePath);
   if (page.articleSlug) {
     html = injectArticleContent(html, page.articleSlug);
+  }
+  if (page.routeSlug) {
+    html = injectTourContent(html, page.routeSlug);
   }
   html = resolveIncludes(html);
   html = injectLegalDocument(html, page, locale);

@@ -1,0 +1,26 @@
+slug: trzicanka
+name_sl: Tržičanka
+name_en: Tržičanka
+municipality: kranj
+region: gorenjska
+country: slovenia
+category: tour
+distance_km: 68
+elevation_m: 
+duration: 1 day
+difficulty: intermediate
+best_season: Apr – Oct
+start_place: Kranj
+end_place: Kranj
+source_url: https://www.visitkranj.com/aktivni-oddih/kranjska-kolesarska-roza/trzicanka/
+source_name: Visit Kranj — Kranjska kolesarska roža
+gpx_source_url: https://www.visitkranj.com/files/gpx/kranjska-roza-05.gpx
+maps_embed: https://www.google.com/maps/d/embed?mid=10_WqXygAhD3AYDWyJu7S_Z-vhsvoHTow
+license_notes: Tourism content from Visit Kranj; municipality partnership / tender — confirm attribution before publish.
+featured: yes
+status: raw
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes: Part of Kranjska kolesarska roža (route 05).

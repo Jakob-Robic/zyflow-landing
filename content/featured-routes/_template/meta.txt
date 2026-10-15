@@ -1,0 +1,24 @@
+slug:
+name_sl:
+name_en:
+municipality:
+region: gorenjska
+country: slovenia
+category:          # tour | alpine | commute | gravel
+distance_km:
+elevation_m:
+duration:
+difficulty:        # easy | intermediate | hard
+best_season:
+start_place:
+end_place:
+source_url:
+source_name:       # e.g. Visit Kranj, Visit Cerklje
+license_notes:     # usage / attribution if required
+featured: no       # yes when promoted to featured/
+status: raw        # raw | ready | imported | on-site
+zyflow_route_id:
+zyflow_deep_link:
+cover_file: cover.jpg
+gpx_file: route.gpx
+notes:

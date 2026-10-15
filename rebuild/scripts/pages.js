@@ -2,6 +2,7 @@
  * Single source of truth for rebuild routes, SEO, and locale output.
  */
 const { ARTICLE_PAGES } = require("./articles");
+const { ROUTE_PAGES } = require("./routes");
 
 const SITE_ORIGIN = process.env.SITE_ORIGIN || "https://www.zyflow.eu";
 const LOCALES = ["en", "sl"];
@@ -38,8 +39,10 @@ const PAGES = [
     file: "tour.html",
     out: "tour.html",
     path: "/tour",
-    indexable: true,
+    // Legacy single-tour URL — redirect to /tours in vercel.json
+    indexable: false,
   },
+  ...ROUTE_PAGES,
   {
     id: "blog",
     file: "blog.html",
