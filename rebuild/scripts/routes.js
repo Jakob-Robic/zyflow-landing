@@ -1,6 +1,6 @@
 /**
  * Featured Gorenjska routes — generated from content/featured-routes.
- * Deep link contract: https://navigate.app.zyflow.eu/route/{slug}
+ * Deep link contract: https://navigate.zyflow.eu/login?next=/route/{slug}
  */
 /** @typedef {{ id: string, slug: string, municipality: string, category: string, difficulty: string, region: string, cover: string, gallery: string[], gpx: string, deepLink: string, featuredHome: boolean, related: string[], distanceKm: string, elevationM: string }} RouteDef */
 
@@ -15,13 +15,12 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/blejcanka/cover.webp",
     "gallery": [
-      "./assets/images/tours/blejcanka/gallery/CerDee-Visit-Kranj_150px-1.webp",
-      "./assets/images/tours/blejcanka/gallery/bled.w462h462c-1.jpg",
-      "./assets/images/tours/blejcanka/gallery/blejski-grad.w680h405.jpg",
-      "./assets/images/tours/blejcanka/gallery/eden-visit-kranj-1-e1683997878685.jpg"
+      "./assets/images/tours/blejcanka/gallery/01.jpg",
+      "./assets/images/tours/blejcanka/gallery/02.jpg",
+      "./assets/images/tours/blejcanka/gallery/03.jpg"
     ],
     "gpx": "./assets/gpx/blejcanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/blejcanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/blejcanka",
     "featuredHome": false,
     "related": [
       "jezerjanka",
@@ -40,13 +39,12 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/jezerjanka/cover.jpg",
     "gallery": [
-      "./assets/images/tours/jezerjanka/gallery/CerDee-Visit-Kranj_150px-1.webp",
-      "./assets/images/tours/jezerjanka/gallery/eden-visit-kranj-1-e1683997878685.jpg",
-      "./assets/images/tours/jezerjanka/gallery/jezersko-spring.w680h405.jpg",
-      "./assets/images/tours/jezerjanka/gallery/preddvor.w680h405.jpg"
+      "./assets/images/tours/jezerjanka/gallery/01.jpg",
+      "./assets/images/tours/jezerjanka/gallery/02.jpg",
+      "./assets/images/tours/jezerjanka/gallery/03.jpg"
     ],
     "gpx": "./assets/gpx/jezerjanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/jezerjanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/jezerjanka",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -64,9 +62,12 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/jezerski-vrh/cover.jpg",
-    "gallery": [],
+    "gallery": [
+      "./assets/images/tours/jezerski-vrh/gallery/01.jpg",
+      "./assets/images/tours/jezerski-vrh/gallery/02.jpg"
+    ],
     "gpx": "./assets/gpx/jezerski-vrh.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/jezerski-vrh",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/jezerski-vrh",
     "featuredHome": false,
     "related": [
       "k11-planine-pod-kosuto",
@@ -84,14 +85,9 @@ const ROUTES = [
     "difficulty": "hard",
     "region": "slovenia",
     "cover": "./assets/images/tours/k11-planine-pod-kosuto/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k11-planine-pod-kosuto/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k11-planine-pod-kosuto/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k11-planine-pod-kosuto/gallery/grb-trzic.png",
-      "./assets/images/tours/k11-planine-pod-kosuto/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k11-planine-pod-kosuto.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k11-planine-pod-kosuto",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k11-planine-pod-kosuto",
     "featuredHome": false,
     "related": [
       "jezerski-vrh",
@@ -109,14 +105,9 @@ const ROUTES = [
     "difficulty": "hard",
     "region": "slovenia",
     "cover": "./assets/images/tours/k16-trzic-jezersko/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k16-trzic-jezersko/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k16-trzic-jezersko/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k16-trzic-jezersko/gallery/grb-trzic.png",
-      "./assets/images/tours/k16-trzic-jezersko/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k16-trzic-jezersko.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k16-trzic-jezersko",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k16-trzic-jezersko",
     "featuredHome": false,
     "related": [
       "jezerski-vrh",
@@ -134,14 +125,9 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/k21-dom-pod-storzicem/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k21-dom-pod-storzicem/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k21-dom-pod-storzicem/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k21-dom-pod-storzicem/gallery/grb-trzic.png",
-      "./assets/images/tours/k21-dom-pod-storzicem/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k21-dom-pod-storzicem.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k21-dom-pod-storzicem",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k21-dom-pod-storzicem",
     "featuredHome": false,
     "related": [
       "jezerski-vrh",
@@ -159,14 +145,9 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/k35-prelaz-ljubelj/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k35-prelaz-ljubelj/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k35-prelaz-ljubelj/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k35-prelaz-ljubelj/gallery/grb-trzic.png",
-      "./assets/images/tours/k35-prelaz-ljubelj/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k35-prelaz-ljubelj.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k35-prelaz-ljubelj",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k35-prelaz-ljubelj",
     "featuredHome": true,
     "related": [
       "jezerski-vrh",
@@ -184,14 +165,9 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/k42-roznovenska/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k42-roznovenska/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k42-roznovenska/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k42-roznovenska/gallery/grb-trzic.png",
-      "./assets/images/tours/k42-roznovenska/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k42-roznovenska.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k42-roznovenska",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k42-roznovenska",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -209,14 +185,9 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/k43-dobrca/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k43-dobrca/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k43-dobrca/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k43-dobrca/gallery/grb-trzic.png",
-      "./assets/images/tours/k43-dobrca/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k43-dobrca.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k43-dobrca",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k43-dobrca",
     "featuredHome": false,
     "related": [
       "jezerski-vrh",
@@ -234,14 +205,9 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/k51-udin-borst/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k51-udin-borst/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k51-udin-borst/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k51-udin-borst/gallery/grb-trzic.png",
-      "./assets/images/tours/k51-udin-borst/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k51-udin-borst.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k51-udin-borst",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k51-udin-borst",
     "featuredHome": false,
     "related": [
       "k11-planine-pod-kosuto",
@@ -259,14 +225,9 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/k52-pot-treh-zvonov/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k52-pot-treh-zvonov/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k52-pot-treh-zvonov/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k52-pot-treh-zvonov/gallery/grb-trzic.png",
-      "./assets/images/tours/k52-pot-treh-zvonov/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k52-pot-treh-zvonov.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k52-pot-treh-zvonov",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k52-pot-treh-zvonov",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -284,14 +245,9 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/k53-kriva-jelka/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k53-kriva-jelka/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k53-kriva-jelka/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k53-kriva-jelka/gallery/grb-trzic.png",
-      "./assets/images/tours/k53-kriva-jelka/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k53-kriva-jelka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k53-kriva-jelka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k53-kriva-jelka",
     "featuredHome": false,
     "related": [
       "k11-planine-pod-kosuto",
@@ -309,14 +265,9 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/k55-gozd-udin-borst/cover.jpg",
-    "gallery": [
-      "./assets/images/tours/k55-gozd-udin-borst/gallery/grb-ifslovenia.png",
-      "./assets/images/tours/k55-gozd-udin-borst/gallery/grb-tripadvisor.png",
-      "./assets/images/tours/k55-gozd-udin-borst/gallery/grb-trzic.png",
-      "./assets/images/tours/k55-gozd-udin-borst/gallery/odprimopoti.si.png"
-    ],
+    "gallery": [],
     "gpx": "./assets/gpx/k55-gozd-udin-borst.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/k55-gozd-udin-borst",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/k55-gozd-udin-borst",
     "featuredHome": false,
     "related": [
       "k11-planine-pod-kosuto",
@@ -335,13 +286,12 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/kamnicanka/cover.webp",
     "gallery": [
-      "./assets/images/tours/kamnicanka/gallery/adergas.jpg",
-      "./assets/images/tours/kamnicanka/gallery/arboretum-volcji-potok.jpg",
-      "./assets/images/tours/kamnicanka/gallery/elevation-profile.jpg",
-      "./assets/images/tours/kamnicanka/gallery/grad-strmol.jpg"
+      "./assets/images/tours/kamnicanka/gallery/01.jpg",
+      "./assets/images/tours/kamnicanka/gallery/02.jpg",
+      "./assets/images/tours/kamnicanka/gallery/03.jpg"
     ],
     "gpx": "./assets/gpx/kamnicanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/kamnicanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/kamnicanka",
     "featuredHome": true,
     "related": [
       "blejcanka",
@@ -360,13 +310,11 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/ljubljancanka/cover.jpg",
     "gallery": [
-      "./assets/images/tours/ljubljancanka/gallery/CerDee-Visit-Kranj_150px-1.webp",
-      "./assets/images/tours/ljubljancanka/gallery/eden-visit-kranj-1-e1683997878685.jpg",
-      "./assets/images/tours/ljubljancanka/gallery/grad-smlednik.w680h405.jpg",
-      "./assets/images/tours/ljubljancanka/gallery/ljubljanski-grad.w680h405.jpg"
+      "./assets/images/tours/ljubljancanka/gallery/01.jpg",
+      "./assets/images/tours/ljubljancanka/gallery/02.jpg"
     ],
     "gpx": "./assets/gpx/ljubljancanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/ljubljancanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/ljubljancanka",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -385,13 +333,12 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/locanka/cover.webp",
     "gallery": [
-      "./assets/images/tours/locanka/gallery/CerDee-Visit-Kranj_150px-1.webp",
-      "./assets/images/tours/locanka/gallery/crngrob-skofja-loka.w680h405.jpg",
-      "./assets/images/tours/locanka/gallery/eden-visit-kranj-1-e1683997878685.jpg",
-      "./assets/images/tours/locanka/gallery/skofja-loka-grad.w462h462c-1.jpg"
+      "./assets/images/tours/locanka/gallery/01.jpg",
+      "./assets/images/tours/locanka/gallery/02.jpg",
+      "./assets/images/tours/locanka/gallery/03.jpg"
     ],
     "gpx": "./assets/gpx/locanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/locanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/locanka",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -409,9 +356,12 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/mali-vrh/cover.jpg",
-    "gallery": [],
+    "gallery": [
+      "./assets/images/tours/mali-vrh/gallery/01.jpg",
+      "./assets/images/tours/mali-vrh/gallery/02.jpg"
+    ],
     "gpx": "./assets/gpx/mali-vrh.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/mali-vrh",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/mali-vrh",
     "featuredHome": true,
     "related": [
       "blejcanka",
@@ -429,9 +379,12 @@ const ROUTES = [
     "difficulty": "intermediate",
     "region": "slovenia",
     "cover": "./assets/images/tours/ravenska-kocna/cover.jpg",
-    "gallery": [],
+    "gallery": [
+      "./assets/images/tours/ravenska-kocna/gallery/01.jpg",
+      "./assets/images/tours/ravenska-kocna/gallery/02.jpg"
+    ],
     "gpx": "./assets/gpx/ravenska-kocna.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/ravenska-kocna",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/ravenska-kocna",
     "featuredHome": false,
     "related": [
       "jezerski-vrh",
@@ -449,9 +402,12 @@ const ROUTES = [
     "difficulty": "easy",
     "region": "slovenia",
     "cover": "./assets/images/tours/spodnji-virnik/cover.jpg",
-    "gallery": [],
+    "gallery": [
+      "./assets/images/tours/spodnji-virnik/gallery/01.jpg",
+      "./assets/images/tours/spodnji-virnik/gallery/02.jpg"
+    ],
     "gpx": "./assets/gpx/spodnji-virnik.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/spodnji-virnik",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/spodnji-virnik",
     "featuredHome": false,
     "related": [
       "blejcanka",
@@ -470,13 +426,12 @@ const ROUTES = [
     "region": "slovenia",
     "cover": "./assets/images/tours/trzicanka/cover.jpg",
     "gallery": [
-      "./assets/images/tours/trzicanka/gallery/CerDee-Visit-Kranj_150px-1.webp",
-      "./assets/images/tours/trzicanka/gallery/brezje-bazilika.w680h405.jpg",
-      "./assets/images/tours/trzicanka/gallery/eden-visit-kranj-1-e1683997878685.jpg",
-      "./assets/images/tours/trzicanka/gallery/grad-kamen.w680h405.jpg"
+      "./assets/images/tours/trzicanka/gallery/00_old_square.jpg",
+      "./assets/images/tours/trzicanka/gallery/02.jpg",
+      "./assets/images/tours/trzicanka/gallery/03.jpg"
     ],
     "gpx": "./assets/gpx/trzicanka.gpx",
-    "deepLink": "https://navigate.app.zyflow.eu/route/trzicanka",
+    "deepLink": "https://navigate.zyflow.eu/login?next=/route/trzicanka",
     "featuredHome": false,
     "related": [
       "blejcanka",
