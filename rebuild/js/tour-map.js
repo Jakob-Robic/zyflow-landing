@@ -1,19 +1,51 @@
 /**
  * Tour detail hero map — embedded GPX route + stop pins.
+ * Drawn with the design-system map kit (/assets/design-system/map/), so the
+ * base map, route line, start/end markers and POI pins match the mobile app.
  * MapLibre is self-hosted; Overpass enriches pins in the background (cached).
  */
 (function () {
   const MAPLIBRE_CSS = "/assets/vendor/maplibre-gl/maplibre-gl.css";
   const MAPLIBRE_JS = "/assets/vendor/maplibre-gl/maplibre-gl.js";
-  const STYLE_URL = "https://tiles.openfreemap.org/styles/liberty";
+  const MAP_KIT_CSS = "/assets/design-system/map/map-kit.css";
+  const MAP_KIT_JS = "/assets/design-system/map/map-kit.js";
+  const MAP_PINS_PATH = "/assets/design-system/map-pins/";
+  /** Base map when no MapTiler key is configured or MapTiler is unreachable. */
+  const OPENFREEMAP_STYLE_URL = "https://tiles.openfreemap.org/styles/liberty";
+  /**
+   * Client-side MapTiler key (restricted to Zyflow domains in MapTiler).
+   * rebuild/scripts/build.js fills this from the MAPTILER_KEY env var at build
+   * time. Never commit a real key here.
+   */
+  const MAPTILER_KEY = "";
   const STOP_COUNT = 12;
-  const ROUTE_COLOR = "#e94b17";
   const STOPS_CACHE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
   const STOPS_CACHE_PREFIX = "zyflow-tour-stops:v1:";
 
-  let maplibrePromise = null;
+  /**
+   * Website stop kinds (OSM amenity / tourism / shop values) → design-system
+   * place types. Kinds not listed get a numbered stop marker.
+   */
+  const KIND_TO_PLACE_TYPE = {
+    cafe: "cafe",
+    restaurant: "restaurant",
+    biergarten: "food",
+    fast_food: "food",
+    hotel: "accommodation",
+    guest_house: "accommodation",
+    apartment: "accommodation",
+    hostel: "accommodation",
+    camp_site: "accommodation",
+    charging_station: "charging_station",
+    bicycle: "bicycle_shop",
+  };
 
-  /** Last-resort style if OpenFreeMap is unreachable. */
+  let maplibrePromise = null;
+  let kitPromise = null;
+  let stylePromise = null;
+  let warnedNoKey = false;
+
+  /** Last-resort style if no base map is reachable. */
   const FALLBACK_STYLE = {
     version: 8,
     sources: {},
@@ -27,7 +59,9 @@
   };
 
   function loadCss(href) {
-    if (document.querySelector(`link[href="${href}"]`)) return;
+    // Match only stylesheets: build.js also emits <link rel="preload"> for
+    // these files, and a preload alone never applies the CSS.
+    if (document.querySelector(`link[rel="stylesheet"][href="${href}"]`)) return;
     const link = document.createElement("link");
     link.rel = "stylesheet";
     link.href = href;
@@ -61,6 +95,47 @@
       maplibrePromise = loadScript(MAPLIBRE_JS);
     }
     return maplibrePromise;
+  }
+
+  function ensureMapKit() {
+    if (!kitPromise) {
+      loadCss(MAP_KIT_CSS);
+      kitPromise = import(MAP_KIT_JS);
+    }
+    return kitPromise;
+  }
+
+  /**
+   * The app's base map: MapTiler streets-v2 with the app's hidden layers
+   * (calm, like the route hero). Without a key, or if MapTiler can't be
+   * reached, fall back to OpenFreeMap so the map is never blank.
+   */
+  function resolveBaseStyle(zyMap) {
+    if (!stylePromise) {
+      stylePromise = (async () => {
+        const key = (MAPTILER_KEY || "").trim();
+        if (!key) {
+          if (!warnedNoKey) {
+            warnedNoKey = true;
+            console.warn(
+              "[tour-map] MAPTILER_KEY not set at build time; using the OpenFreeMap fallback base map."
+            );
+          }
+          return OPENFREEMAP_STYLE_URL;
+        }
+        const style = await zyMap.loadStyle(zyMap.styleUrl({ key }), {
+          calm: true,
+        });
+        if (typeof style === "string") {
+          console.warn(
+            "[tour-map] MapTiler style unavailable; using the OpenFreeMap fallback base map."
+          );
+          return OPENFREEMAP_STYLE_URL;
+        }
+        return style;
+      })();
+    }
+    return stylePromise;
   }
 
   function parseGpx(xmlText) {
@@ -254,54 +329,61 @@
     }));
   }
 
-  function stopColor(kind) {
-    if (
-      kind === "cafe" ||
-      kind === "restaurant" ||
-      kind === "biergarten" ||
-      kind === "fast_food"
-    ) {
-      return "#c45c26";
-    }
-    if (
-      kind === "hotel" ||
-      kind === "guest_house" ||
-      kind === "apartment" ||
-      kind === "hostel" ||
-      kind === "camp_site"
-    ) {
-      return "#2f5d50";
-    }
-    if (kind === "charging_station") return "#1f6feb";
-    if (kind === "bicycle") return "#5b4fcf";
-    if (kind === "start") return "#1a1a1a";
-    if (kind === "end") return ROUTE_COLOR;
-    return ROUTE_COLOR;
+  function stopLabel(stop) {
+    return stop.name || "Stop on route";
   }
 
-  function addStopMarkers(map, stops, markerBag) {
+  /**
+   * Typed stops get the app's POI pin, untyped stops a numbered stop marker.
+   * "start" / "end" entries are skipped: the route's own endpoints carry the
+   * start / end markers.
+   */
+  function addStopMarkers(zyMap, map, stops, markerBag) {
     for (const m of markerBag.splice(0, markerBag.length)) {
       m.remove();
     }
+    let n = 0;
     for (const stop of stops) {
-      const pin = document.createElement("button");
-      pin.type = "button";
-      pin.className = "tour-hero__stop";
-      pin.style.setProperty("--stop-color", stopColor(stop.kind));
-      pin.title = stop.name || stop.kind;
-      pin.setAttribute("aria-label", stop.name || "Stop on route");
-      const marker = new maplibregl.Marker({ element: pin, anchor: "bottom" })
-        .setLngLat(stop.coordinates)
-        .addTo(map);
-      markerBag.push(marker);
+      if (stop.kind === "start" || stop.kind === "end") continue;
+      const type = KIND_TO_PLACE_TYPE[stop.kind];
+      let el;
+      if (type) {
+        el = zyMap.poiMarker(type, {
+          basePath: MAP_PINS_PATH,
+          title: stopLabel(stop),
+        });
+        el.alt = stopLabel(stop);
+      } else {
+        n += 1;
+        el = zyMap.stopMarker(n, { title: stopLabel(stop) });
+      }
+      el.setAttribute("aria-label", stopLabel(stop));
+      markerBag.push(zyMap.addMarker(maplibregl, map, stop.coordinates, el));
     }
   }
 
+  function addEndpointMarkers(zyMap, map, coords, markerBag) {
+    if (markerBag.length) return;
+    markerBag.push(
+      zyMap.addMarker(
+        maplibregl,
+        map,
+        coords[0],
+        zyMap.endpointMarker("start", { title: "Start" })
+      ),
+      zyMap.addMarker(
+        maplibregl,
+        map,
+        coords[coords.length - 1],
+        zyMap.endpointMarker("end", { title: "Finish" })
+      )
+    );
+  }
 
-  function mountMap(el, coords, stops) {
+  function mountMap(zyMap, baseStyle, el, coords, stops) {
     const map = new maplibregl.Map({
       container: el,
-      style: STYLE_URL,
+      style: baseStyle,
       attributionControl: { compact: true },
       interactive: true,
       cooperativeGestures: true,
@@ -314,50 +396,26 @@
     );
 
     const markers = [];
+    const endpoints = [];
     let routeReady = false;
     let usedFallback = false;
 
     function paintRoute() {
       try {
         if (!map.isStyleLoaded()) return;
-        if (!map.getSource("route")) {
-          map.addSource("route", {
-            type: "geojson",
-            data: {
-              type: "Feature",
-              properties: {},
-              geometry: { type: "LineString", coordinates: coords },
-            },
-          });
-          map.addLayer({
-            id: "route-halo",
-            type: "line",
-            source: "route",
-            paint: {
-              "line-color": "#ffffff",
-              "line-width": 8,
-              "line-opacity": 0.9,
-            },
-            layout: { "line-cap": "round", "line-join": "round" },
-          });
-          map.addLayer({
-            id: "route-line",
-            type: "line",
-            source: "route",
-            paint: {
-              "line-color": ROUTE_COLOR,
-              "line-width": 4,
-              "line-opacity": 1,
-            },
-            layout: { "line-cap": "round", "line-join": "round" },
+        // App route-hero line: white casing + route-blue core.
+        zyMap.addRoute(map, "route", coords, { variant: "hero" });
+        const bounds = zyMap.routeBounds(coords);
+        if (bounds) {
+          map.fitBounds(bounds, {
+            padding: zyMap.tokens.route.fitPadding.hero,
+            maxZoom: 13,
+            duration: 0,
           });
         }
-        const bounds = coords.reduce(
-          (b, c) => b.extend(c),
-          new maplibregl.LngLatBounds(coords[0], coords[0])
-        );
-        map.fitBounds(bounds, { padding: 36, maxZoom: 13, duration: 0 });
-        addStopMarkers(map, stops, markers);
+        addStopMarkers(zyMap, map, stops, markers);
+        // Endpoints last so they sit above the stop pins.
+        addEndpointMarkers(zyMap, map, coords, endpoints);
         routeReady = true;
       } catch (err) {
         console.warn("[tour-map] paintRoute", err);
@@ -367,7 +425,7 @@
     map.on("load", paintRoute);
     map.on("style.load", paintRoute);
 
-    // If OpenFreeMap never becomes ready, show route on a plain background.
+    // If the base map never becomes ready, show the route on a plain background.
     setTimeout(() => {
       if (routeReady || usedFallback) return;
       usedFallback = true;
@@ -394,7 +452,7 @@
     return {
       map,
       setStops(next) {
-        const apply = () => addStopMarkers(map, next, markers);
+        const apply = () => addStopMarkers(zyMap, map, next, markers);
         if (routeReady || map.isStyleLoaded()) apply();
         else map.once("load", apply);
       },
@@ -438,17 +496,20 @@
     el.classList.add("is-loading");
 
     const maplibreReady = ensureMapLibre();
+    const kitReady = ensureMapKit();
 
     try {
-      const [{ coords, stops }] = await Promise.all([
+      const [{ coords, stops }, , zyMap] = await Promise.all([
         resolveCoords(el),
         maplibreReady,
+        kitReady,
       ]);
+      const baseStyle = await resolveBaseStyle(zyMap);
 
       el.innerHTML = "";
       el.classList.remove("is-loading");
       el.classList.add("is-ready");
-      const mapApi = mountMap(el, coords, stops);
+      const mapApi = mountMap(zyMap, baseStyle, el, coords, stops);
       upgradeStops(slug, coords, mapApi);
     } catch (err) {
       console.warn("[tour-map]", err);
@@ -461,6 +522,7 @@
 
   function boot() {
     ensureMapLibre();
+    ensureMapKit();
     document.querySelectorAll("[data-tour-map]").forEach((el) => {
       void initOne(el);
     });

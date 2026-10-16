@@ -32,6 +32,22 @@ const DIST = path.join(ROOT, "dist");
 const PAGES_DIR = path.join(ROOT, "pages");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const SITE_INDEX = process.env.SITE_INDEX === "true";
+/**
+ * Client MapTiler key for the tour maps (app base map, streets-v2). Set in
+ * Vercel (Production + Preview). Unset → tour maps use the OpenFreeMap
+ * fallback style. Restricted to Zyflow domains in MapTiler, never committed.
+ */
+const MAPTILER_KEY = readMapTilerKey();
+
+function readMapTilerKey() {
+  const key = (process.env.MAPTILER_KEY || "").trim();
+  if (!key) return "";
+  if (!/^[A-Za-z0-9_-]{10,200}$/.test(key)) {
+    console.warn("MAPTILER_KEY ignored — unexpected format");
+    return "";
+  }
+  return key;
+}
 
 const OG_IMAGE_PATH = "/assets/images/home/hero.jpg";
 const OG_LOCALES = { en: "en_US", sl: "sl_SI" };
@@ -682,13 +698,22 @@ function buildHead(page, locale, messages) {
     );
   }
   if (page.routeSlug) {
+    const tileOrigin = MAPTILER_KEY
+      ? "https://api.maptiler.com"
+      : "https://tiles.openfreemap.org";
     preloads.push(
-      `<link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />`,
-      `<link rel="dns-prefetch" href="https://tiles.openfreemap.org" />`,
+      `<link rel="preconnect" href="${tileOrigin}" crossorigin />`,
+      `<link rel="dns-prefetch" href="${tileOrigin}" />`,
       `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.js" as="script" />`,
       `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.css" as="style" />`,
-      `<link rel="preload" href="https://tiles.openfreemap.org/styles/liberty" as="fetch" crossorigin />`
+      `<link rel="modulepreload" href="/assets/design-system/map/map-kit.js" />`,
+      `<link rel="preload" href="/assets/design-system/map/map-kit.css" as="style" />`
     );
+    if (!MAPTILER_KEY) {
+      preloads.push(
+        `<link rel="preload" href="https://tiles.openfreemap.org/styles/liberty" as="fetch" crossorigin />`
+      );
+    }
   }
 
   let head = read(path.join(ROOT, "components/head.html"));
@@ -834,6 +859,28 @@ function injectTurnstileSiteKey() {
   console.log("injected TURNSTILE_SITE_KEY into analytics-config.js");
 }
 
+function injectMapTilerKey() {
+  const file = path.join(DIST, "js", "tour-map.js");
+  if (!fs.existsSync(file)) return;
+  if (!MAPTILER_KEY) {
+    console.warn(
+      "MAPTILER_KEY not set — tour maps use the OpenFreeMap fallback base map"
+    );
+    return;
+  }
+  const src = read(file);
+  const next = src.replace(
+    /const MAPTILER_KEY = "";/,
+    `const MAPTILER_KEY = ${JSON.stringify(MAPTILER_KEY)};`
+  );
+  if (next === src) {
+    console.warn("MAPTILER_KEY set but tour-map.js was not updated");
+    return;
+  }
+  fs.writeFileSync(file, next, "utf8");
+  console.log("injected MAPTILER_KEY into js/tour-map.js");
+}
+
 function copyCookieConsentAssets() {
   const pkgDist = path.join(
     ROOT,
@@ -955,6 +1002,7 @@ function build() {
   copyDir(path.join(ROOT, "js"), path.join(DIST, "js"));
   copyCookieConsentAssets();
   injectTurnstileSiteKey();
+  injectMapTilerKey();
 
   for (const locale of LOCALES) {
     const messages = messagesByLocale[locale];
