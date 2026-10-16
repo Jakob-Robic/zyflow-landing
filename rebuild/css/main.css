@@ -2,7 +2,7 @@
  * Main stylesheet entry — import order matters.
  */
 
-@import url("./fonts.css");
+@import url("../assets/design-system/css/zyflow.css"); /* design system: fonts, --zy-* tokens, type classes */
 @import url("./tokens.css");
 @import url("./reset.css");
 @import url("./base.css");
