@@ -26,7 +26,8 @@ document.querySelectorAll(".faq__q").forEach((btn) => {
   const buttons = Array.from(document.querySelectorAll(".theme-toggle [data-theme]"));
 
   function normalize(value) {
-    return value === "dark" ? "dark" : "light";
+    // "auto" follows the OS (design-system tokens ship all three selectors).
+    return value === "dark" || value === "auto" ? value : "light";
   }
 
   function readStored() {

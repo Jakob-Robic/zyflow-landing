@@ -9,7 +9,7 @@
  *   optional Turnstile.
  * - style-src: self + inline (cookie banner, a few style= attrs). Banner CSS is self-hosted.
  * - img-src: self + data; GTM/GA/Ads/Meta pixels.
- * - font-src: self (DM Sans, Tanker, Courier Prime in /assets/fonts).
+ * - font-src: self (DM Sans, Tanker, Courier Prime in /assets/design-system/fonts).
  * - connect-src: self (/api/* including csp-report); GA4; GTM; Google Ads;
  *   PostHog EU ingest + assets; Meta; ChatGPT pixel; Turnstile.
  * - frame-src: GTM noscript; Meta; Ads; Turnstile.
