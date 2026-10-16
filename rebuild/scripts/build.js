@@ -26,9 +26,13 @@ const {
 const { articleBySlug, blogCardI18n } = require("./articles");
 const { renderLegalMarkdown } = require("./legal-markdown");
 const { routeBySlug, ROUTES } = require("./routes");
+const { versionAssets } = require("./version-assets");
 
 const ROOT = path.join(__dirname, "..");
-const DIST = path.join(ROOT, "dist");
+// REBUILD_DIST lets tests build into a temp dir; Vercel uses the default.
+const DIST = process.env.REBUILD_DIST
+  ? path.resolve(process.env.REBUILD_DIST)
+  : path.join(ROOT, "dist");
 const PAGES_DIR = path.join(ROOT, "pages");
 const LOCALES_DIR = path.join(ROOT, "locales");
 const SITE_INDEX = process.env.SITE_INDEX === "true";
@@ -1013,6 +1017,12 @@ function build() {
   }
 
   writeSeoFiles();
+
+  // Must run last: hashes the final bytes (after key injection) and rewrites
+  // every /js, /css and /assets JS/CSS reference to ?v=<hash> so the immutable
+  // Cache-Control in vercel.json can never pin a stale file.
+  const versions = versionAssets(DIST);
+  console.log(`versioned ${versions.size} JS/CSS assets`);
 
   console.log(
     `\nRebuild complete → ${path.relative(process.cwd(), DIST)} (locales=${LOCALES.join(
