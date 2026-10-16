@@ -25,6 +25,7 @@ html {
   max-width: var(--grid-col-12);
   margin-inline: auto;
   padding-inline: 0;
+  box-sizing: border-box;
 }
 
 .container--padded {
@@ -34,6 +35,19 @@ html {
 @media (min-width: 1440px) {
   .container--padded {
     padding-inline: 0;
+  }
+}
+
+/* Below the 1280 content width, keep the same side gutter as mobile */
+@media (max-width: 1280px) {
+  .container {
+    padding-inline: var(--page-pad-sm);
+  }
+
+  .nav__inner,
+  .announcement__inner {
+    padding-inline: var(--page-pad-sm);
+    box-sizing: border-box;
   }
 }
 

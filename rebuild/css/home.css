@@ -73,6 +73,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1280px) {
+  .nav__inner,
+  .announcement__inner {
+    padding-inline: var(--page-pad-sm);
+  }
+}
+
 .nav__links {
   display: flex;
   align-items: center;

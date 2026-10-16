@@ -449,24 +449,137 @@ ${cards.join("\n")}
 </section>`;
 }
 
+/** Cache of simplified route geometry embedded in tour heroes (avoids runtime GPX fetch). */
+const routeGeomCache = new Map();
+
+function parseGpxCoords(xml) {
+  const coords = [];
+  const re = /<(?:trkpt|rtept)\s+([^>/]+)/g;
+  let m;
+  while ((m = re.exec(xml))) {
+    const attrs = m[1];
+    const lat = /lat="([^"]+)"/.exec(attrs);
+    const lon = /lon="([^"]+)"/.exec(attrs);
+    if (!lat || !lon) continue;
+    const la = parseFloat(lat[1]);
+    const lo = parseFloat(lon[1]);
+    if (Number.isFinite(la) && Number.isFinite(lo)) {
+      coords.push([
+        Math.round(lo * 1e5) / 1e5,
+        Math.round(la * 1e5) / 1e5,
+      ]);
+    }
+  }
+  return coords;
+}
+
+function haversineM(a, b) {
+  const toRad = (d) => (d * Math.PI) / 180;
+  const R = 6371000;
+  const dLat = toRad(b[1] - a[1]);
+  const dLon = toRad(b[0] - a[0]);
+  const lat1 = toRad(a[1]);
+  const lat2 = toRad(b[1]);
+  const h =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+function simplifyCoords(coords, maxPoints = 360) {
+  if (coords.length <= maxPoints) return coords;
+  const out = [];
+  const step = (coords.length - 1) / (maxPoints - 1);
+  for (let i = 0; i < maxPoints; i++) {
+    out.push(coords[Math.round(i * step)]);
+  }
+  return out;
+}
+
+function sampleStopsAlong(coords, count = 12) {
+  if (coords.length <= count) {
+    return coords.map((coordinates, i) => ({
+      coordinates,
+      kind: i === 0 ? "start" : i === coords.length - 1 ? "end" : "stop",
+      name: "",
+    }));
+  }
+  const seg = [];
+  let total = 0;
+  for (let i = 1; i < coords.length; i++) {
+    const d = haversineM(coords[i - 1], coords[i]);
+    seg.push(d);
+    total += d;
+  }
+  const out = [];
+  for (let i = 0; i < count; i++) {
+    const target = (total * i) / (count - 1 || 1);
+    let acc = 0;
+    let picked = coords[coords.length - 1];
+    for (let j = 0; j < seg.length; j++) {
+      if (acc + seg[j] >= target) {
+        const t = seg[j] === 0 ? 0 : (target - acc) / seg[j];
+        const a = coords[j];
+        const b = coords[j + 1];
+        picked = [
+          Math.round((a[0] + (b[0] - a[0]) * t) * 1e5) / 1e5,
+          Math.round((a[1] + (b[1] - a[1]) * t) * 1e5) / 1e5,
+        ];
+        break;
+      }
+      acc += seg[j];
+    }
+    out.push({
+      coordinates: picked,
+      kind: i === 0 ? "start" : i === count - 1 ? "end" : "stop",
+      name: "",
+    });
+  }
+  return out;
+}
+
+function getRouteGeometry(route) {
+  if (routeGeomCache.has(route.slug)) return routeGeomCache.get(route.slug);
+  const empty = { coords: [], stops: [] };
+  if (!route.gpx) {
+    routeGeomCache.set(route.slug, empty);
+    return empty;
+  }
+  const gpxPath = path.join(ROOT, route.gpx.replace(/^\.\//, ""));
+  if (!fs.existsSync(gpxPath)) {
+    console.warn(`[build] missing GPX for ${route.slug}: ${gpxPath}`);
+    routeGeomCache.set(route.slug, empty);
+    return empty;
+  }
+  const raw = parseGpxCoords(read(gpxPath));
+  const coords = simplifyCoords(raw, 360);
+  const geom = { coords, stops: sampleStopsAlong(coords, 12) };
+  routeGeomCache.set(route.slug, geom);
+  return geom;
+}
+
 function injectTourContent(html, routeSlug) {
   const route = routeBySlug(routeSlug);
   let hero = read(path.join(ROOT, "sections/tour/hero.html"));
   let body = read(path.join(ROOT, "sections/tour/body.html"));
 
-  const gpxLink = route.gpx
-    ? `<a class="link tour-aside__gpx" href="${route.gpx}" download data-i18n="routes.${routeSlug}.gpxLabel">Download GPX</a>`
-    : "";
+  const gpxHref = route.gpx ? route.gpx.replace(/^\.\//, "/") : "";
+  const geom = getRouteGeometry(route);
+  const routeJson =
+    geom.coords.length >= 2
+      ? JSON.stringify({ coords: geom.coords, stops: geom.stops })
+      : "null";
 
   const replaceTokens = (tpl) =>
     tpl
       .replaceAll("__SLUG__", routeSlug)
       .replaceAll("__DEEP_LINK__", route.deepLink)
-      .replaceAll("__COVER__", route.cover)
+      .replaceAll("__COVER__", route.cover.replace(/^\.\//, "/"))
+      .replaceAll("__GPX__", gpxHref)
+      .replaceAll("__ROUTE_JSON__", routeJson)
       .replaceAll("__GALLERY_0__", galleryFigure(route.gallery[0]))
       .replaceAll("__GALLERY_1__", galleryFigure(route.gallery[1]))
-      .replaceAll("__GALLERY_2__", galleryFigure(route.gallery[2]))
-      .replaceAll("__GPX_LINK__", gpxLink);
+      .replaceAll("__GALLERY_2__", galleryFigure(route.gallery[2]));
 
   hero = replaceTokens(hero);
   body = replaceTokens(body);
@@ -566,6 +679,15 @@ function buildHead(page, locale, messages) {
   if (page.preloadHero) {
     preloads.push(
       `<link rel="preload" href="/assets/images/home/hero.jpg" as="image" fetchpriority="high" />`
+    );
+  }
+  if (page.routeSlug) {
+    preloads.push(
+      `<link rel="preconnect" href="https://tiles.openfreemap.org" crossorigin />`,
+      `<link rel="dns-prefetch" href="https://tiles.openfreemap.org" />`,
+      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.js" as="script" />`,
+      `<link rel="preload" href="/assets/vendor/maplibre-gl/maplibre-gl.css" as="style" />`,
+      `<link rel="preload" href="https://tiles.openfreemap.org/styles/liberty" as="fetch" crossorigin />`
     );
   }
 

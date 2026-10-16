@@ -21,8 +21,20 @@
           </div>
         </div>
       </div>
-      <div class="tour-hero__media">
-        <img src="__COVER__" alt="" />
+      <div class="tour-hero__media tour-hero__media--map">
+        <div
+          class="tour-hero__map"
+          id="tour-hero-map"
+          data-tour-map
+          data-gpx="__GPX__"
+          data-slug="__SLUG__"
+          role="img"
+          aria-label="Route map"
+        ></div>
+        <script type="application/json" data-tour-route-json>__ROUTE_JSON__</script>
+        <noscript>
+          <img src="__COVER__" alt="" />
+        </noscript>
       </div>
     </div>
 
