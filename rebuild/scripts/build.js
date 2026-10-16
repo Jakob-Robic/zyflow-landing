@@ -673,8 +673,8 @@ function buildHead(page, locale, messages) {
     .join("\n");
 
   const preloads = [
-    `<link rel="preload" href="/assets/fonts/DMSans.woff2" as="font" type="font/woff2" crossorigin />`,
-    `<link rel="preload" href="/assets/fonts/Tanker-Regular.woff2" as="font" type="font/woff2" crossorigin />`,
+    `<link rel="preload" href="/assets/design-system/fonts/DMSans.woff2" as="font" type="font/woff2" crossorigin />`,
+    `<link rel="preload" href="/assets/design-system/fonts/Tanker-Regular.woff2" as="font" type="font/woff2" crossorigin />`,
   ];
   if (page.preloadHero) {
     preloads.push(

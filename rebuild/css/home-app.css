@@ -304,7 +304,7 @@
 }
 
 .phone__bezel {
-  background: #1a1a1a;
+  background: var(--zy-color-neutral-900);
   border-radius: 28px;
   padding: 10px;
   box-shadow:

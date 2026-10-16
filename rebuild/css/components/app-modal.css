@@ -94,7 +94,7 @@
 }
 
 .phone--modal .phone__bezel {
-  background: #1a1a1a;
+  background: var(--zy-text-primary);
   border-radius: 28px;
   padding: 10px;
   box-shadow:
@@ -160,7 +160,7 @@
   margin-top: auto;
   border-radius: 12px;
   background:
-    radial-gradient(circle at 70% 35%, #e94b17 0 6px, transparent 7px),
+    radial-gradient(circle at 70% 35%, var(--zy-accent) 0 6px, transparent 7px),
     linear-gradient(160deg, #434738, #2a2e1e);
 }
 
