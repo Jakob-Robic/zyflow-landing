@@ -275,6 +275,8 @@ Zyflow is intended for people aged **16 and over** and is offered in the EU only
 > The mobile app does not use browser cookies; see section 3.14 for data stored on your device.
 >
 > Without using cookies or running any code on your device, our hosting server counts page views anonymously: for each page request it sends only the page address, language and the referring website's domain to our analytics provider PostHog (EU cloud, acting as our processor), with no IP address, device information or identifier, to measure website reach (legitimate interest, Art. 6(1)(f) GDPR).
+>
+> On our partner portal (app.zyflow.eu) we use PostHog (EU cloud) to measure usage only if you agree after signing in; session recording is not used. You can change your choice at any time in the portal settings.
 
 ## 13. Security
 
