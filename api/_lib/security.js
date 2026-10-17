@@ -4,7 +4,8 @@
  * Shared hardening for public form endpoints.
  *
  * Rate limiting for /api/contact and /api/waitlist is a shared Postgres
- * fixed window (see api/_lib/rate-limit.js + supabase/migrations).
+ * fixed window (see api/_lib/rate-limit.js; uses the existing
+ * take_rate_limit_token RPC in the shared Supabase project).
  * CSP report collection still uses a best-effort in-memory limiter.
  *
  * Cloudflare Turnstile is required in production (VERCEL_ENV=production,

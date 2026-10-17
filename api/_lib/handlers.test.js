@@ -15,6 +15,7 @@ delete process.env.TURNSTILE_SECRET_KEY;
 const inserts = [];
 const emails = [];
 const rpcCounts = new Map();
+const rpcKeys = [];
 let nextInsertError = null;
 let nextRpcError = null;
 let rpcShouldThrow = false;
@@ -44,20 +45,23 @@ Module._load = function (request, parent, isMain) {
               nextRpcError = null;
               return { data: null, error };
             }
-            if (name !== 'check_and_increment_rate_limit') {
+            if (name !== 'take_rate_limit_token') {
               return { data: null, error: { message: 'unknown rpc' } };
             }
+            // Mirrors public.take_rate_limit_token: a blocked call does not
+            // increment, and reset_at is the end of the key's window.
             const key = args.p_key;
-            const max = args.p_max;
+            const max = args.p_max_attempts;
             const windowSeconds = args.p_window_seconds;
-            const count = (rpcCounts.get(key) || 0) + 1;
-            rpcCounts.set(key, count);
+            rpcKeys.push(key);
+            const resetAt = new Date(Date.now() + windowSeconds * 1000).toISOString();
+            const count = rpcCounts.get(key) || 0;
+            if (count >= max) {
+              return { data: { allowed: false, remaining: 0, reset_at: resetAt }, error: null };
+            }
+            rpcCounts.set(key, count + 1);
             return {
-              data: {
-                allowed: count <= max,
-                count,
-                retry_after_seconds: windowSeconds,
-              },
+              data: { allowed: true, remaining: max - count - 1, reset_at: resetAt },
               error: null,
             };
           },
@@ -129,6 +133,7 @@ test.beforeEach(() => {
   inserts.length = 0;
   emails.length = 0;
   rpcCounts.clear();
+  rpcKeys.length = 0;
   nextInsertError = null;
   nextRpcError = null;
   rpcShouldThrow = false;
@@ -312,6 +317,8 @@ test('contact: IP limiter blocks after 5 requests per 10 minutes', async () => {
   );
   assert.equal(results[RATE_LIMIT_WINDOWS.ip.max].statusCode, 429);
   assert.equal(results[RATE_LIMIT_WINDOWS.ip.max].body.error, 'Too many requests');
+  const retryAfter = Number(results[RATE_LIMIT_WINDOWS.ip.max].headers['Retry-After']);
+  assert.ok(retryAfter > 0 && retryAfter <= RATE_LIMIT_WINDOWS.ip.windowSeconds);
   assert.equal(inserts.length, RATE_LIMIT_WINDOWS.ip.max);
 });
 
@@ -351,6 +358,24 @@ test('rate limits are per endpoint', async () => {
     body: { email: 'other@zyflow.eu' },
   });
   assert.equal(wait.statusCode, 200);
+});
+
+test('rate-limit keys use contact:/waitlist: prefixes and never the raw IP or email', async () => {
+  const ip = '198.51.100.88';
+  await call(contact, {
+    origin: 'https://www.zyflow.eu',
+    ip,
+    body: { name: 'Ada', email: 'keys@zyflow.eu', message: 'Hi' },
+  });
+  await call(waitlist, { origin: 'https://www.zyflow.eu', ip, body: { email: 'keys@zyflow.eu' } });
+  assert.ok(rpcKeys.length >= 4);
+  for (const key of rpcKeys) {
+    assert.match(key, /^(contact|waitlist):(ip|email):[0-9a-f]{64}$/);
+    assert.equal(key.includes(ip), false);
+    assert.equal(key.includes('keys@zyflow.eu'), false);
+  }
+  assert.ok(rpcKeys.some((k) => k.startsWith('contact:')));
+  assert.ok(rpcKeys.some((k) => k.startsWith('waitlist:')));
 });
 
 test('contact: limiter errors fail closed with 503', async () => {

@@ -5,7 +5,12 @@ const assert = require('node:assert/strict');
 
 process.env.RATE_LIMIT_IP_SALT = process.env.RATE_LIMIT_IP_SALT || 'test-rate-limit-salt';
 
-const { RATE_LIMIT_WINDOWS, hashIdentifier, normalizeEmail } = require('./rate-limit');
+const {
+  RATE_LIMIT_WINDOWS,
+  hashIdentifier,
+  normalizeEmail,
+  retryAfterSeconds,
+} = require('./rate-limit');
 
 test('windows are 5 per 10 minutes per IP and 3 per hour per email', () => {
   assert.equal(RATE_LIMIT_WINDOWS.ip.max, 5);
@@ -33,4 +38,13 @@ test('normalizeEmail trims and lowercases, and ignores non-emails', () => {
   assert.equal(normalizeEmail('nope'), '');
   assert.equal(normalizeEmail(''), '');
   assert.equal(normalizeEmail(null), '');
+});
+
+test('retryAfterSeconds derives Retry-After from reset_at', () => {
+  const in90s = new Date(Date.now() + 90 * 1000).toISOString();
+  const value = retryAfterSeconds(in90s, 600);
+  assert.ok(value >= 89 && value <= 90);
+  assert.equal(retryAfterSeconds(new Date(Date.now() - 1000).toISOString(), 600), 1);
+  assert.equal(retryAfterSeconds(undefined, 600), 600);
+  assert.equal(retryAfterSeconds('not a date', 600), 600);
 });

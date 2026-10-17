@@ -10,11 +10,18 @@
  * Identifiers are stored as SHA-256(salt || kind || value), never raw IP
  * or email. Salt comes from RATE_LIMIT_IP_SALT.
  *
+ * Keys are `<endpoint>:<kind>:<hash>`, i.e. they start with `contact:` or
+ * `waitlist:`, so they never collide with zyflow-admin's `partner-signup:`
+ * / `partner-confirm-resend:` keys in the same table.
+ *
+ * Backend: the existing `public.take_rate_limit_token(p_key, p_max_attempts,
+ * p_window_seconds)` RPC and `public.rate_limits` table (created by
+ * zyflow-admin's 20261011120000_rate_limits.sql; EXECUTE is service_role
+ * only). It returns `{ allowed, remaining, reset_at }`, and the window
+ * starts at a key's first hit. It deletes the key's expired row itself.
+ *
  * Fails closed: any error (missing salt, missing Supabase env, RPC
  * failure) is treated as unavailable — callers must return 503, not 200.
- *
- * Cleanup: the SQL function deletes expired rows (bounded). Optional
- * pg_cron is documented in the migration file.
  */
 
 const crypto = require('crypto');
@@ -49,6 +56,13 @@ function normalizeEmail(email) {
   return value;
 }
 
+function retryAfterSeconds(resetAt, fallbackSeconds) {
+  const resetMs = Date.parse(resetAt);
+  if (!Number.isFinite(resetMs)) return fallbackSeconds;
+  const seconds = Math.ceil((resetMs - Date.now()) / 1000);
+  return seconds > 0 ? seconds : 1;
+}
+
 function parseRpcPayload(data) {
   let payload = data;
   if (typeof payload === 'string') {
@@ -80,9 +94,9 @@ async function consumeRateLimit({ kind, bucket, identifier }) {
   }
   const key = `${bucket}:${kind}:${digest}`;
   try {
-    const { data, error } = await getSupabase().rpc('check_and_increment_rate_limit', {
+    const { data, error } = await getSupabase().rpc('take_rate_limit_token', {
       p_key: key,
-      p_max: window.max,
+      p_max_attempts: window.max,
       p_window_seconds: window.windowSeconds,
     });
     if (error) {
@@ -95,11 +109,10 @@ async function consumeRateLimit({ kind, bucket, identifier }) {
       return { ok: false };
     }
     if (!payload.allowed) {
-      const retry = Number(payload.retry_after_seconds);
       return {
         ok: false,
         limited: true,
-        retryAfterSec: Number.isFinite(retry) && retry > 0 ? Math.ceil(retry) : window.windowSeconds,
+        retryAfterSec: retryAfterSeconds(payload.reset_at, window.windowSeconds),
       };
     }
     return { ok: true };
@@ -142,6 +155,7 @@ async function enforceEmailRateLimit(res, bucket, email) {
 
 module.exports = {
   RATE_LIMIT_WINDOWS,
+  retryAfterSeconds,
   hashIdentifier,
   normalizeEmail,
   consumeRateLimit,
