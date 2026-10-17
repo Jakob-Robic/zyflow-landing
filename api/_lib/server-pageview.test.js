@@ -359,9 +359,9 @@ const LEGAL_EN =
 const LEGAL_SL =
   'Brez piškotkov in brez izvajanja kakršne koli kode na vaši napravi naš strežnik anonimno šteje oglede strani: za vsako zahtevo strani našemu ponudniku analitike PostHog (oblak v EU, ki deluje kot naš obdelovalec) pošlje le naslov strani, jezik in domeno spletnega mesta, s katerega ste prišli, brez naslova IP, podatkov o napravi ali identifikatorja, za merjenje dosega spletnega mesta (zakoniti interes, točka (f) prvega odstavka 6. člena Splošne uredbe o varstvu podatkov).';
 const PORTAL_EN =
-  'On our partner portal (app.zyflow.eu) we use PostHog (EU cloud) to measure usage only if you agree after signing in; session recording is not used. You can change your choice at any time in the portal settings.';
+  'On our partner portal (app.zyflow.eu) we use PostHog (EU cloud) only if you agree after signing in, with separate choices for usage statistics and for session recordings. Session recordings show your clicks and page views with all text and form inputs hidden, and are kept for 30 days. You can change your choices at any time in the portal settings.';
 const PORTAL_SL =
-  'Na partnerskem portalu (app.zyflow.eu) PostHog (oblak v EU) za merjenje uporabe uporabljamo le, če po prijavi privolite; snemanja sej ne uporabljamo. Izbiro lahko kadar koli spremenite v nastavitvah portala.';
+  'Na partnerskem portalu (app.zyflow.eu) PostHog (oblak v EU) uporabljamo le, če po prijavi privolite, pri čemer ločeno izberete statistiko uporabe in snemanje sej. Posnetki sej prikazujejo vaše klike in oglede strani, pri čemer so vsa besedila in vnosi v obrazce skriti, hranimo pa jih 30 dni. Izbiro lahko kadar koli spremenite v nastavitvah portala.';
 
 function readLegal(name) {
   return fs.readFileSync(path.join(__dirname, '..', '..', 'rebuild', 'legal-src', name), 'utf8');
